@@ -8,6 +8,9 @@ Stories about technology and science, explained simply, in English and Amharic.
 
 | Date | Story | Link |
 |---|---|---|
+| 13 Nov 2026 | Ethiopia series 1/3 · From Resource to Product: Ethiopia's honey, coffee, leather, minerals and energy, the science behind each value step, real Ethiopian founders, and an engineer-entrepreneur method | [Read](https://muler-21.github.io/Teck_Stories/ethiopia-resources/) |
+| 13 Nov 2026 | Ethiopia series 2/3 · Where to Focus: interactive map of 31 resource sites and ten opportunities scored for young starters, with adjustable weights | [Open](https://muler-21.github.io/Teck_Stories/ethiopia-sites/) |
+| 13 Nov 2026 | Ethiopia series 3/3 · Hive & Wax Works: a honey and beeswax business plan from scratch, with budget, profit calculator, three-year plan, legal steps and risks | [Read](https://muler-21.github.io/Teck_Stories/honey-business-plan/) |
 | 13 Nov 2026 | From Sand to Computer: how a chip is built step by step (wafer, layer loop, packaging), how chips become circuit boards and complete computers, the science, real African inventors, hands-on builds from scrap, and Africa's role | [Read](https://muler-21.github.io/Teck_Stories/chips-africa/) |
 | 13 Nov 2026 | From a Diner Booth to the Heart of AI: how chips work, how Jensen Huang built Nvidia, and how his story reached November 2026 | [Read](https://muler-21.github.io/Teck_Stories/nvidia-story/) |
 
@@ -21,6 +24,9 @@ nvidia-story/
 chips-africa/
   index.html            From Sand to Computer: lesson (English + Amharic, sources at the end)
   og.png                1200×630 cover image
+ethiopia-resources/      Ethiopia series 1: lesson on resources and value addition
+ethiopia-sites/          Ethiopia series 2: interactive map and opportunity scores
+honey-business-plan/     Ethiopia series 3: honey and beeswax business plan with calculator
 CITATION.cff            How to cite this work
 ```
 

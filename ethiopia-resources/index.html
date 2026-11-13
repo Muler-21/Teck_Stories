@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From Resource to Product</title>
+<meta name="description" content="A bilingual lesson (English and Amharic) on Ethiopia&#x27;s resources: the science of honey, coffee, leather, minerals and energy, real Ethiopian entrepreneurs, and a step-by-step method to add value and start a business.">
+<meta name="author" content="Mulusew Kassa Bitew">
+<link rel="canonical" href="https://muler-21.github.io/Teck_Stories/ethiopia-resources/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tech Stories · የቴክ ታሪኮች">
+<meta property="og:title" content="From Resource to Product: Ethiopia&#x27;s resources and the engineer-entrepreneur">
+<meta property="og:description" content="Honey, coffee, leather, minerals and energy: the science, the real numbers, real Ethiopian founders, and how to start. English + Amharic · በእንግሊዝኛ እና በአማርኛ">
+<meta property="og:url" content="https://muler-21.github.io/Teck_Stories/ethiopia-resources/">
+<meta property="og:image" content="https://muler-21.github.io/Teck_Stories/ethiopia-resources/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://muler-21.github.io/Teck_Stories/ethiopia-resources/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Noto+Serif+Ethiopic:wght@400;600;700&family=Noto+Sans+Ethiopic:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: same Tech Stories system as the chips lesson. Here copper stands for honey, gold and coffee — the resources — and teal for the work done on them. */
+:root {
+  --paper: #f2f4f6;
+  --panel: #ffffff;
+  --ink: #131a24;
+  --muted: #56606f;
+  --rule: #d6dbe2;
+  --accent: #0f7a6c;
+  --accent-soft: #e0f1ee;
+  --copper: #b5602b;
+  --copper-soft: #f7e7dc;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --ethi: "Noto Serif Ethiopic", "Nyala", "Abyssinica SIL", serif;
+  --ethi-sans: "Noto Sans Ethiopic", "Nyala", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1318; --panel: #151c24; --ink: #e6eaef; --muted: #9aa5b3; --rule: #27313d;
+    --accent: #4cc3b0; --accent-soft: #15302d; --copper: #e08a52; --copper-soft: #33231a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1318; --panel: #151c24; --ink: #e6eaef; --muted: #9aa5b3; --rule: #27313d;
+  --accent: #4cc3b0; --accent-soft: #15302d; --copper: #e08a52; --copper-soft: #33231a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.65; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+header.hero { padding: 36px 0 28px; border-bottom: 1px solid var(--rule); }
+.home-link { font: 600 14px var(--display); text-decoration: none; display: inline-block; margin-bottom: 16px; }
+.kicker { font: 500 13px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--copper); margin: 0 0 12px; }
+h1 { font: 800 clamp(34px, 6vw, 60px)/1.03 var(--display); margin: 0; letter-spacing: -0.02em; text-wrap: balance; max-width: 18ch; }
+h1 .am-title { display: block; font: 700 .58em/1.4 var(--ethi-sans); color: var(--accent); margin-top: 10px; letter-spacing: 0; max-width: none; }
+.dek { color: var(--muted); max-width: 64ch; margin: 14px 0 0; }
+.dek.am { font-family: var(--ethi); line-height: 1.9; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 24px; }
+.stat { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; }
+.stat b { display: block; font: 800 34px/1.1 var(--display); color: var(--copper); font-variant-numeric: tabular-nums; }
+.stat span { display: block; font-size: 15px; color: var(--muted); line-height: 1.45; }
+.stat span.am { font-family: var(--ethi); margin-top: 4px; }
+
+.toolbar { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+.toolbar .wrap { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; padding-top: 10px; padding-bottom: 10px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: var(--panel); }
+.seg button { font: 600 14px/1 var(--display); color: var(--muted); background: none; border: 0; padding: 9px 14px; border-radius: 999px; cursor: pointer; }
+.seg button .e { font-family: var(--ethi-sans); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+nav.chapters { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+nav.chapters::-webkit-scrollbar { display: none; }
+nav.chapters a { font: 500 13px/1 var(--mono); color: var(--muted); text-decoration: none; padding: 8px 9px; border-radius: 6px; white-space: nowrap; }
+nav.chapters a:hover { background: var(--accent-soft); color: var(--ink); }
+
+main { padding: 8px 0 30px; }
+section.ch { padding: 44px 0 36px; border-bottom: 1px solid var(--rule); scroll-margin-top: 70px; }
+.ch-tag { display: flex; gap: 12px; align-items: baseline; margin-bottom: 18px; flex-wrap: wrap; }
+.ch-tag .yr { font: 700 14px/1 var(--mono); color: var(--paper); background: var(--copper); padding: 6px 9px; border-radius: 4px; }
+.ch-tag .part { font: 500 13px/1 var(--mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.pair { display: grid; grid-template-columns: 1fr; gap: 26px; }
+@media (min-width: 900px) { body[data-lang="both"] .pair { grid-template-columns: 1fr 1fr; gap: 44px; } }
+body[data-lang="en"] .am, body[data-lang="am"] .en { display: none !important; }
+body[data-lang="en"] .pair > .en, body[data-lang="am"] .pair > .am { max-width: 70ch; }
+h2 { font: 800 clamp(26px, 3.4vw, 36px)/1.12 var(--display); margin: 0 0 14px; text-wrap: balance; letter-spacing: -0.01em; }
+.am h2 { font: 700 clamp(23px, 3vw, 31px)/1.4 var(--ethi-sans); letter-spacing: 0; }
+h3 { font: 700 19px/1.3 var(--display); margin: 22px 0 8px; }
+.am h3 { font: 700 18px/1.5 var(--ethi-sans); }
+.pair p { margin: 0 0 14px; }
+.pair ul, .pair ol { margin: 0 0 14px; padding-left: 22px; }
+.pair li { margin-bottom: 6px; }
+.am { font-family: var(--ethi); line-height: 1.95; font-size: 18.5px; }
+@media (max-width: 899px) { body[data-lang="both"] .pair > .am { background: var(--accent-soft); border-radius: 12px; padding: 18px 18px 6px; } }
+.callout { border-left: 4px solid var(--copper); background: var(--copper-soft); padding: 12px 16px; border-radius: 0 10px 10px 0; margin: 16px 0; }
+
+figure { margin: 28px 0 0; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
+figure .scroll { overflow-x: auto; }
+figure svg { display: block; width: 100%; min-width: 600px; height: auto; }
+figcaption { display: grid; gap: 4px; margin-top: 10px; font-size: 15px; color: var(--muted); }
+figcaption .am { font-size: 15.5px; line-height: 1.7; }
+body[data-lang="en"] figcaption .am, body[data-lang="am"] figcaption .en { display: none; }
+.t-ink { fill: var(--ink); } .t-muted { fill: var(--muted); } .t-copper { fill: var(--copper); } .t-accent { fill: var(--accent); }
+.s-rule { stroke: var(--rule); } .f-panel { fill: var(--panel); } .f-copper { fill: var(--copper); } .f-accent { fill: var(--accent); } .f-accent-soft { fill: var(--accent-soft); } .f-copper-soft { fill: var(--copper-soft); } .f-rule { fill: var(--rule); }
+.svg-lbl { font: 600 15px var(--display); } .svg-lbl-am { font: 600 14px var(--ethi-sans); } .svg-mono { font: 500 13px var(--mono); } .svg-big { font: 800 18px var(--display); }
+
+/* materials table */
+.tbl-wrap { overflow-x: auto; margin-top: 26px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 15.5px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 700 13px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--paper); }
+td .am { display: block; font-size: 15px; line-height: 1.7; color: var(--muted); margin-top: 3px; }
+td.el { font: 800 17px var(--display); white-space: nowrap; }
+td.el small { display: block; font: 500 12px var(--mono); color: var(--copper); }
+tr:last-child td { border-bottom: 0; }
+
+/* process steps */
+.steps { list-style: none; padding: 0; margin: 26px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; counter-reset: s; }
+.steps li { counter-increment: s; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; position: relative; }
+.steps li::before { content: counter(s); font: 700 14px/28px var(--mono); text-align: center; width: 28px; height: 28px; border-radius: 6px; background: var(--copper); color: var(--paper); display: block; margin-bottom: 10px; }
+.steps li.loop { border-color: var(--accent); background: var(--accent-soft); }
+.steps b { font: 700 17px/1.3 var(--display); display: block; }
+.steps .am b { font: 700 16px/1.5 var(--ethi-sans); }
+.steps p { margin: 6px 0 0; font-size: 15.5px; line-height: 1.55; }
+.steps .am { font-size: 15.5px; line-height: 1.75; margin-top: 8px; }
+body[data-lang="both"] .steps .am { border-top: 1px dashed var(--rule); padding-top: 8px; }
+
+/* country cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 26px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; display: grid; gap: 6px; align-content: start; }
+.card .cn { font: 800 19px var(--display); }
+.card .cn .am { font: 700 16px var(--ethi-sans); color: var(--accent); margin-left: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 600 12px/1 var(--mono); padding: 5px 8px; border-radius: 999px; background: var(--copper-soft); color: var(--copper); }
+.chip.ind { background: var(--accent-soft); color: var(--accent); }
+.card p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+.card p.am { font-size: 15.5px; line-height: 1.75; }
+.card.et { border: 2px solid var(--copper); }
+
+/* youth ladder */
+.ladder { display: grid; gap: 12px; margin-top: 26px; }
+.rung { display: grid; grid-template-columns: 1fr; gap: 10px; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
+@media (min-width: 900px) { body[data-lang="both"] .rung { grid-template-columns: 170px 1fr 1fr; gap: 26px; } body[data-lang="en"] .rung, body[data-lang="am"] .rung { grid-template-columns: 170px 1fr; gap: 26px; } }
+.rung .age { font: 800 20px/1.2 var(--display); color: var(--copper); }
+.rung .age small { display: block; font: 500 13px var(--mono); color: var(--muted); margin-top: 4px; }
+.rung ul { margin: 0; padding-left: 20px; font-size: 16px; }
+.rung li { margin-bottom: 5px; }
+.rung .am ul { font-size: 16px; line-height: 1.8; }
+
+details { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 16px; margin-top: 10px; }
+summary { cursor: pointer; font: 600 17px var(--display); }
+details .am summary, summary .am { font-family: var(--ethi-sans); }
+details p { margin: 10px 0 0; }
+
+footer { padding: 30px 0 60px; color: var(--muted); font-size: 15px; }
+footer h3 { font: 700 14px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin: 0 0 10px; }
+footer ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.author { margin-top: 30px; padding: 20px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); color: var(--ink); font-size: 15.5px; line-height: 1.6; }
+.author .name { font: 800 20px var(--display); margin: 0 0 4px; }
+.author p { margin: 0 0 6px; }
+.author .meta, .author .copy { color: var(--muted); }
+.author .apps a { margin-right: 10px; }
+.author .copy { font-size: 14px; margin-top: 10px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+.real { border-left: 4px solid var(--accent); padding: 4px 0 4px 16px; margin: 0 0 16px; }
+.lbl { font: 700 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+.am .lbl { font-family: var(--ethi-sans); letter-spacing: 0; font-size: 13px; }
+.real .lbl { color: var(--accent); }
+.sci { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+.sci .lbl { color: var(--ink); }
+.formula { font: 600 16px/1.6 var(--mono); background: var(--paper); border-radius: 8px; padding: 8px 12px; margin: 8px 0; overflow-x: auto; white-space: nowrap; }
+.tool { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+.tool .lbl { color: var(--accent); }
+.mission { background: var(--copper-soft); border: 1px dashed var(--copper); border-radius: 12px; padding: 14px 16px; margin: 16px 0 0; }
+.mission .lbl { color: var(--copper); }
+.safety { background: #fff4f2; border: 1px solid #d9472b; border-radius: 12px; padding: 14px 16px; margin: 16px 0; color: #5a1a0c; }
+.safety .lbl { color: #b8321a; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .safety { background: #3a1a14; color: #f6d6cf; border-color: #e0705a; } }
+:root[data-theme="dark"] .safety { background: #3a1a14; color: #f6d6cf; border-color: #e0705a; }
+.tool p, .mission p, .sci p, .safety p { margin: 0 0 6px; }
+.tool ul, .mission ul, .sci ul, .safety ul, .mission ol { margin: 6px 0 0; }
+.parts { overflow-x: auto; margin-top: 22px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); }
+.parts table { min-width: 640px; }
+.canvas { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; margin-top: 22px; }
+.box { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; min-height: 120px; }
+.box .n { font: 700 13px var(--mono); color: var(--copper); }
+.box b { display: block; font: 700 16px/1.3 var(--display); margin: 4px 0; }
+.box .am { display: block; font: 600 15px/1.6 var(--ethi-sans); color: var(--accent); }
+.box small { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 6px; }
+.box small.am { font-family: var(--ethi); font-weight: 400; color: var(--muted); }
+body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
+.weeks { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 18px; }
+.week { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; }
+.week .w { font: 800 18px var(--display); color: var(--copper); }
+.week p { margin: 6px 0 0; font-size: 15.5px; line-height: 1.55; }
+.week p.am { font-size: 15.5px; line-height: 1.75; }
+.s-ink { stroke: var(--ink); } .s-copper { stroke: var(--copper); } .s-accent { stroke: var(--accent); } .f-ink { fill: var(--ink); } .f-paper { fill: var(--paper); }
+
+.journey { margin-top: 26px; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; }
+.journey .scroll { overflow-x: auto; }
+.journey svg { display: block; width: 100%; min-width: 760px; height: auto; }
+.substeps { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; counter-reset: ss; }
+.substeps li { counter-increment: ss; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; }
+.substeps li::before { content: counter(ss, lower-alpha); font: 700 14px/28px var(--mono); text-align: center; width: 28px; height: 28px; border-radius: 6px; background: var(--accent); color: var(--paper); }
+.substeps b { font-family: var(--display); }
+.am .substeps b { font-family: var(--ethi-sans); }
+.truth { border-collapse: collapse; margin: 8px 0; font: 600 15px var(--mono); min-width: 0; width: auto; }
+.truth th, .truth td { border: 1px solid var(--rule); padding: 4px 12px; text-align: center; }
+
+.pair > div { min-width: 0; }
+.formula { white-space: normal; }
+.series { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.series a { font: 600 14px/1 var(--display); text-decoration: none; border: 1px solid var(--rule); background: var(--panel); color: var(--ink); padding: 9px 12px; border-radius: 999px; }
+.series a .e { font-family: var(--ethi-sans); color: var(--accent); margin-left: 4px; }
+.series a[aria-current="page"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.series a[aria-current="page"] .e { color: var(--paper); }
+.series .n { font: 700 12px var(--mono); color: var(--copper); margin-right: 6px; }
+.series a[aria-current="page"] .n { color: var(--paper); }
+.num { font-variant-numeric: tabular-nums; }
+td.r, th.r { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.tot td { font-weight: 700; border-top: 2px solid var(--ink); }
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 18px; }
+.kv div { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 14px; }
+.kv b { display: block; font: 800 24px/1.15 var(--display); color: var(--copper); font-variant-numeric: tabular-nums; }
+.kv span { display: block; font-size: 14.5px; color: var(--muted); line-height: 1.45; }
+.kv span.am { font-family: var(--ethi); }
+.two { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 900px) { .two { grid-template-columns: 1fr 1fr; } }
+/* map */
+.mapwrap { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 22px; }
+@media (min-width: 980px) { .mapwrap { grid-template-columns: 1.35fr 1fr; } }
+.mapbox { background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 10px; }
+.mapbox svg { display: block; width: 100%; height: auto; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+.filters button { font: 600 13px/1 var(--display); border: 1px solid var(--rule); background: var(--paper); color: var(--ink); padding: 8px 11px; border-radius: 999px; cursor: pointer; }
+.filters button .e { font-family: var(--ethi-sans); color: var(--muted); margin-left: 4px; }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.filters button[aria-pressed="true"] .e { color: var(--paper); }
+.site-dot { cursor: pointer; }
+.site-dot:focus { outline: none; }
+.site-dot:focus circle.d, .site-dot.on circle.d { stroke: var(--ink); stroke-width: 3; }
+.cat-agri { fill: #c98a12; } .cat-min { fill: var(--copper); } .cat-energy { fill: #2f7fd1; } .cat-hub { fill: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; color: var(--muted); margin-top: 8px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 16px 18px; align-self: start; }
+.panel h3 { margin-top: 0; }
+.panel .where { font: 500 13px var(--mono); color: var(--copper); }
+.panel p { margin: 6px 0; font-size: 16px; line-height: 1.55; }
+.panel .am { font-size: 16px; line-height: 1.8; }
+.panel .risk { font-size: 14.5px; color: var(--muted); }
+/* score table */
+.weights { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px 18px; margin: 18px 0 8px; }
+.weights label { display: grid; gap: 2px; font: 600 14px var(--display); }
+.weights label .am { font: 500 13.5px var(--ethi-sans); color: var(--muted); }
+.weights input[type=range] { width: 100%; accent-color: var(--copper); }
+.weights output { font: 700 13px var(--mono); color: var(--copper); }
+.bar { height: 10px; border-radius: 5px; background: var(--copper); display: block; margin-top: 6px; min-width: 2px; }
+.score { font: 800 20px var(--display); color: var(--ink); font-variant-numeric: tabular-nums; }
+.dots { font: 700 13px var(--mono); letter-spacing: 1px; color: var(--copper); white-space: nowrap; }
+.rank { font: 800 18px var(--display); color: var(--copper); }
+/* calculator */
+.calc { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 22px; }
+@media (min-width: 900px) { .calc { grid-template-columns: 1fr 1fr; } }
+.calc .inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 16px; align-content: start; }
+.calc label { display: grid; gap: 4px; font: 600 13.5px/1.3 var(--display); }
+.calc label .am { font: 500 13px/1.5 var(--ethi-sans); color: var(--muted); }
+.calc input[type=number] { font: 600 16px var(--mono); padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); color: var(--ink); width: 100%; }
+.calc .outs { display: grid; gap: 10px; align-content: start; }
+.out { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 16px; }
+.out b { display: block; font: 800 28px/1.15 var(--display); color: var(--copper); font-variant-numeric: tabular-nums; }
+.out.good b { color: var(--accent); }
+.out.bad b { color: #c0392b; }
+.out span { font-size: 14.5px; color: var(--muted); }
+.out span.am { display: block; font-family: var(--ethi); }
+.timeline { display: grid; gap: 10px; margin-top: 22px; }
+.tl { display: grid; grid-template-columns: 110px 1fr; gap: 14px; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; }
+@media (min-width: 900px) { body[data-lang="both"] .tl { grid-template-columns: 130px 1fr 1fr; } }
+.tl .when { font: 800 17px/1.2 var(--display); color: var(--copper); }
+.tl .when small { display: block; font: 500 12px var(--mono); color: var(--muted); margin-top: 4px; }
+.tl ul { margin: 0; padding-left: 18px; font-size: 15.5px; }
+.tl .am ul { line-height: 1.8; }
+.check { list-style: none; padding: 0; }
+.check li::before { content: "☐ "; color: var(--copper); font-weight: 700; }
+@media print { .toolbar, .series, .weights, .filters { display: none !important; } section.ch { break-inside: avoid-page; } }
+</style>
+</head>
+<body data-lang="both">
+
+<header class="hero">
+  <div class="wrap">
+    <a class="home-link" href="../">← Tech Stories · የቴክ ታሪኮች</a>
+    <p class="kicker">Lesson · ትምህርት · Ethiopia series 1 of 3</p>
+    <h1>From Resource to Product
+      <span class="am-title" lang="am">ከሀብት እስከ ምርት</span>
+    </h1>
+    <p class="dek en">Ethiopia's resources, the science that turns them into products, and a practical engineer-entrepreneur method. With real Ethiopian founders, real 2025–2026 numbers, things to build, and missions to start this month.</p>
+    <p class="dek am" lang="am">የኢትዮጵያ ሀብቶች፣ ወደ ምርት የሚቀይራቸው ሳይንስ፣ እና ተግባራዊ የመሐንዲስ-ሥራ ፈጣሪ ዘዴ። ከእውነተኛ ኢትዮጵያውያን መሥራቾች፣ ከ2025–2026 እውነተኛ ቁጥሮች፣ ከሚገነቡ ነገሮችና በዚህ ወር ከሚጀመሩ ተልዕኮዎች ጋር።</p>
+    <nav class="series" aria-label="Ethiopia series · የኢትዮጵያ ተከታታይ"><a href="../ethiopia-resources/" aria-current="page"><span class="n">1</span>Lesson<span class="e">ትምህርት</span></a><a href="../ethiopia-sites/"><span class="n">2</span>Where to focus<span class="e">የትኩረት ቦታዎች</span></a><a href="../honey-business-plan/"><span class="n">3</span>Business plan<span class="e">የንግድ ዕቅድ</span></a></nav>
+    <div class="stats">
+  <div class="stat"><b>$5.65 B</b><span class="en">gold exports in 2025/26, mostly raw</span><span class="am" lang="am">በ2025/26 የወርቅ ኤክስፖርት፣ ባብዛኛው ጥሬ</span></div>
+  <div class="stat"><b>99.5%</b><span class="en">of coffee exports leave as green beans</span><span class="am" lang="am">ከቡና ኤክስፖርት ሳይቆላ የሚወጣው</span></div>
+  <div class="stat"><b>&lt; 2%</b><span class="en">of Africa's largest honey crop is exported</span><span class="am" lang="am">ከአፍሪካ ትልቁ የማር ምርት ወደ ውጭ የሚላከው</span></div>
+  <div class="stat"><b>~45%</b><span class="en">of Ethiopians still have no electricity</span><span class="am" lang="am">አሁንም መብራት የሌላቸው ኢትዮጵያውያን</span></div>
+</div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap">
+    <div class="seg" role="group" aria-label="Language">
+      <button type="button" data-lang="both" aria-pressed="true">Both · <span class="e">ሁለቱም</span></button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+      <button type="button" data-lang="am" aria-pressed="false"><span class="e">አማርኛ</span></button>
+    </div>
+    <nav class="chapters" aria-label="Parts"><a href="#staircase">1 Value</a><a href="#method">2 Method</a><a href="#map">3 Map</a><a href="#honey">4 Honey</a><a href="#coffee">5 Coffee</a><a href="#leather">6 Leather</a><a href="#minerals">7 Minerals</a><a href="#energy">8 Energy</a><a href="#rules">9 Rules</a><a href="#path">10 Path</a></nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="ch" id="staircase">
+  <div class="ch-tag"><span class="yr">PART 1</span><span class="part">The value staircase · የእሴት መሰላል</span></div>
+  <div class="pair">
+    <div class="en"><h2>The same resource can earn two to ten times more</h2>
+<p>Ethiopia earned a record amount from exports in 2025/26, but most of it came from two products sold almost raw: gold and coffee. Honey, hides, opal and minerals follow the same pattern. They leave the farm or the mine at the lowest price, and someone else does the cleaning, processing, branding and selling.</p>
+<p>Each of those missing steps is a business. This lesson teaches you to see the steps, understand the science that makes each one possible, and build the first one with what you have.</p>
+<div class="callout"><b>The rule of this lesson:</b> every fact is real and sourced below. Prices are from 2025–2026 and change quickly with inflation and the exchange rate (about 162 birr per US dollar in November 2026). Always check today's prices in your own market.</div></div>
+    <div class="am" lang="am"><h2>አንድ ዓይነት ሀብት ከሁለት እስከ አሥር እጥፍ ሊያስገኝ ይችላል</h2>
+<p>ኢትዮጵያ በ2025/26 ከኤክስፖርት ከፍተኛ ገቢ አገኘች፤ ነገር ግን አብዛኛው የመጣው ጥሬ ሆነው ከሚሸጡ ሁለት ምርቶች ነው፦ ወርቅና ቡና። ማር፣ ቆዳ፣ ኦፓልና ማዕድናትም ተመሳሳይ ናቸው። ከእርሻ ወይም ከማዕድን ማውጫው የሚወጡት በዝቅተኛው ዋጋ ሲሆን ማጽዳቱን፣ ማቀነባበሩን፣ ስም መስጠቱንና መሸጡን ሌላ ሰው ይሠራዋል።</p>
+<p>እያንዳንዱ የጎደለ ደረጃ የንግድ ሥራ ነው። ይህ ትምህርት ደረጃዎቹን ማየት፣ እያንዳንዱን የሚያስችለውን ሳይንስ መረዳትና የመጀመሪያውን ደረጃ ባለዎት ነገር መገንባት ያስተምርዎታል።</p>
+<div class="callout"><b>የዚህ ትምህርት ሕግ፦</b> እያንዳንዱ መረጃ እውነተኛ ሲሆን ምንጩ ከታች ተጠቅሷል። ዋጋዎቹ የ2025–2026 ናቸው፤ በዋጋ ግሽበትና በምንዛሪ ተመን (በኖቬምበር 2026 ለአንድ ዶላር 162 ብር ገደማ) በፍጥነት ይለዋወጣሉ። ሁልጊዜ የዛሬውን ዋጋ በራስዎ ገበያ ያረጋግጡ።</div></div>
+  </div>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Resource · ሀብት</th><th>Sold today as · ዛሬ የሚሸጠው</th><th>First value step · የመጀመሪያ የእሴት ደረጃ</th><th>Finished products · የተጠናቀቁ ምርቶች</th></tr></thead>
+<tbody>
+<tr><td class="el">Honey<small>ማር</small></td><td>Crude honey at the farm gate: under 400 birr/kg (2025)<span class="am">ጥሬ ማር በአርሶ አደሩ ደጃፍ፦ ከ400 ብር/ኪግ በታች (2025)</span></td><td>Strained, moisture-tested, packed: up to 800 birr/kg in Addis Ababa<span class="am">የተጣራ፣ እርጥበቱ የተለካ፣ የታሸገ፦ በአዲስ አበባ እስከ 800 ብር/ኪግ</span></td><td>Branded single-origin honey, honey for tej makers<span class="am">ስም ያለው የአንድ አካባቢ ማር፣ ለጠጅ ቤቶች የሚቀርብ ማር</span></td></tr>
+<tr><td class="el">Beeswax<small>ሰም</small></td><td>Often thrown away; once 200–300 birr/kg<span class="am">ብዙ ጊዜ ይጣላል፤ ቀድሞ 200–300 ብር/ኪግ</span></td><td>Clean wax blocks: over 1,500 birr/kg now that local demand is rising<span class="am">ንጹሕ የሰም ጡብ፦ የአገር ውስጥ ፍላጎት በማደጉ ከ1,500 ብር/ኪግ በላይ</span></td><td>Foundation sheets for modern hives, soap, cosmetics, candles<span class="am">ለዘመናዊ ቀፎ የሰም ዳብ (ፋውንዴሽን)፣ ሳሙና፣ ኮስሞቲክስ፣ ሻማ</span></td></tr>
+<tr><td class="el">Coffee<small>ቡና</small></td><td>Green beans: 99.5% of coffee exports<span class="am">ያልተቆላ ቡና፦ ከቡና ኤክስፖርት 99.5%</span></td><td>Roasted and packed coffee<span class="am">የተቆላና የታሸገ ቡና</span></td><td>Café brands, roasted coffee for export<span class="am">የካፌ ብራንዶች፣ ለውጭ የሚላክ የተቆላ ቡና</span></td></tr>
+<tr><td class="el">Hides &amp; skins<small>ቆዳና ሌጦ</small></td><td>Raw or salted hides, many damaged<span class="am">ጥሬ ወይም ጨው የተደረገ ቆዳ፤ ብዙዎቹ የተጎዱ</span></td><td>Finished leather from a tannery<span class="am">ከፋብሪካ የወጣ የተለፋ ቆዳ</span></td><td>Shoes, bags, belts, gloves<span class="am">ጫማ፣ ቦርሳ፣ ቀበቶ፣ ጓንት</span></td></tr>
+<tr><td class="el">Opal<small>ኦፓል</small></td><td>Rough stones, sold far below polished prices<span class="am">ያልተቀረጸ ድንጋይ፤ ከተወለወለው በጣም ባነሰ ዋጋ</span></td><td>Cut and polished gems<span class="am">የተቀረጸና የተወለወለ ዕንቁ</span></td><td>Jewellery<span class="am">ጌጣጌጥ</span></td></tr>
+<tr><td class="el">Gold<small>ወርቅ</small></td><td>Raw gold, until recently refined only abroad<span class="am">ጥሬ ወርቅ፤ እስከ ቅርብ ጊዜ የሚጣራው በውጭ ብቻ ነበር</span></td><td>Refined bars at a new domestic refinery<span class="am">በአዲሱ የአገር ውስጥ ማጣሪያ የተጣራ ወርቅ</span></td><td>Jewellery, electronic contacts<span class="am">ጌጣጌጥ፣ የኤሌክትሮኒክስ መገናኛዎች</span></td></tr>
+<tr><td class="el">Natural gas<small>የተፈጥሮ ጋዝ</small></td><td>Mostly unused<span class="am">ባብዛኛው ጥቅም ላይ ያልዋለ</span></td><td>Urea fertilizer (Gode plant, expected 2029)<span class="am">ዩሪያ ማዳበሪያ (የጎዴ ፋብሪካ፣ በ2029 ይጠበቃል)</span></td><td>Blended fertilizer, soil-testing services<span class="am">የተቀላቀለ ማዳበሪያ፣ የአፈር ምርመራ አገልግሎት</span></td></tr>
+</tbody></table></div>
+<figure><div class="scroll"><svg viewBox="0 0 1040 300" role="img" aria-labelledby="st-t"><title id="st-t">A staircase of six steps: raw, cleaned and graded, processed, product, brand, service and know-how. Value grows with each step.</title><g id="stair"></g></svg></div>
+<figcaption><span class="en">Every step up the staircase is a job, a skill and a margin. Most Ethiopian resources leave the country on the first or second step.</span><span class="am" lang="am">በመሰላሉ ላይ እያንዳንዱ ደረጃ ሥራ፣ ክህሎትና ትርፍ ነው። አብዛኞቹ የኢትዮጵያ ሀብቶች አገሪቱን የሚለቁት በመጀመሪያው ወይም በሁለተኛው ደረጃ ላይ ሆነው ነው።</span></figcaption></figure>
+</section>
+<section class="ch" id="method">
+  <div class="ch-tag"><span class="yr">PART 2</span><span class="part">The engineer-entrepreneur method · የመሐንዲስ-ሥራ ፈጣሪ ዘዴ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Seven steps from a problem to a business</h2>
+<p>An engineer asks <i>how does it work, and how can I make it?</i> An entrepreneur asks <i>who needs it, and what will they pay?</i> You need both questions. The seven steps below work for honey, coffee, leather, minerals or energy.</p>
+<div class="sci"><span class="lbl">Three formulas every starter needs</span>
+<p><b>1. Margin per unit</b></p><div class="formula">margin = price − (raw material + energy + packaging + transport + labour)</div>
+<p><b>2. Break-even</b>: how many units a month you must sell before you earn anything</p><div class="formula">break-even units = fixed costs per month ÷ margin per unit</div>
+<p><b>3. Mass balance</b>: what goes in must come out as product, by-product or waste</p><div class="formula">100 kg crude honey → ≈ 70–80 kg honey + 6–10 kg wax + residue</div>
+<p>Weigh your own batches. Your real numbers beat any book.</p></div></div>
+    <div class="am" lang="am"><h2>ከችግር እስከ ንግድ፦ ሰባት ደረጃዎች</h2>
+<p>መሐንዲስ <i>እንዴት ይሠራል፣ እኔስ እንዴት ልሠራው እችላለሁ?</i> ብሎ ይጠይቃል። ሥራ ፈጣሪ ደግሞ <i>ማን ያስፈልገዋል፣ ስንትስ ይከፍላል?</i> ብሎ ይጠይቃል። ሁለቱም ጥያቄዎች ያስፈልጉዎታል። ከታች ያሉት ሰባት ደረጃዎች ለማር፣ ለቡና፣ ለቆዳ፣ ለማዕድን ወይም ለኃይል ይሠራሉ።</p>
+<div class="sci"><span class="lbl">እያንዳንዱ ጀማሪ የሚያስፈልገው ሦስት ቀመር</span>
+<p><b>1. በአንድ ምርት የሚገኝ ትርፍ (ማርጂን)</b></p><div class="formula">ማርጂን = ዋጋ − (ጥሬ ዕቃ + ኃይል + ማሸጊያ + ትራንስፖርት + ጉልበት)</div>
+<p><b>2. የመመጣጠኛ ነጥብ</b>፦ ትርፍ ከማግኘትዎ በፊት በወር ምን ያህል መሸጥ እንዳለብዎ</p><div class="formula">የመመጣጠኛ ብዛት = ቋሚ ወርሃዊ ወጪ ÷ በአንድ ምርት ማርጂን</div>
+<p><b>3. የክብደት ሚዛን</b>፦ የገባው ሁሉ እንደ ምርት፣ ተረፈ ምርት ወይም ቆሻሻ መውጣት አለበት</p><div class="formula">100 ኪግ ጥሬ ማር → ≈ 70–80 ኪግ ማር + 6–10 ኪግ ሰም + ዝቃጭ</div>
+<p>የራስዎን ምርት ይመዝኑ። የእርስዎ እውነተኛ ቁጥሮች ከማንኛውም መጽሐፍ ይበልጣሉ።</p></div></div>
+  </div>
+<ol class="steps">
+<li><div class="en"><b>Find the leak</b><p>Where is value lost? What is thrown away, sold cheap, or imported even though we have the raw material?</p></div><div class="am" lang="am"><b>የሚያፈስበትን ይፈልጉ</b><p>እሴት የሚጠፋው የት ነው? ምን ይጣላል፣ በርካሽ ይሸጣል፣ ወይም ጥሬ ዕቃው እያለን ከውጭ ይገባል?</p></div></li>
+<li><div class="en"><b>Measure it</b><p>How much, how often, at what price and quality? A scale, a notebook and a phone are enough to start.</p></div><div class="am" lang="am"><b>ይለኩት</b><p>ምን ያህል፣ በየስንት ጊዜ፣ በምን ዋጋና ጥራት? ለመጀመር ሚዛን፣ ማስታወሻ ደብተርና ስልክ በቂ ናቸው።</p></div></li>
+<li><div class="en"><b>Learn the science</b><p>What is the material made of? What changes it, and what ruins it? This decides your process.</p></div><div class="am" lang="am"><b>ሳይንሱን ይማሩ</b><p>ዕቃው ከምን ተሠራ? ምን ይለውጠዋል፣ ምን ያበላሸዋል? ይህ ሂደትዎን ይወስናል።</p></div></li>
+<li><div class="en"><b>Build the smallest working version</b><p>Use local wood, metal, glass and scrap. Make it work before you make it pretty.</p></div><div class="am" lang="am"><b>ትንሹን የሚሠራ ሞዴል ይገንቡ</b><p>የአገር ውስጥ እንጨት፣ ብረት፣ መስታወትና ቁርጥራጭ ይጠቀሙ። ከማሳመርዎ በፊት እንዲሠራ ያድርጉት።</p></div></li>
+<li><div class="en"><b>Test against a standard</b><p>Ethiopian standards, Codex or ISO tell buyers what "good" means. Quality you can prove sets your price.</p></div><div class="am" lang="am"><b>ከደረጃ ጋር ያወዳድሩ</b><p>የኢትዮጵያ ደረጃዎች፣ ኮዴክስ ወይም ISO «ጥሩ» ማለት ምን እንደሆነ ለገዢ ይነግራሉ። ማረጋገጥ የሚችሉት ጥራት ዋጋዎን ይወስናል።</p></div></li>
+<li><div class="en"><b>Sell a small batch</b><p>Sell 20 to 50 units. Ask buyers what they would change. Fix it, then sell again.</p></div><div class="am" lang="am"><b>ትንሽ ምርት ይሽጡ</b><p>ከ20 እስከ 50 ምርቶችን ይሽጡ። ገዢዎችን ምን እንደሚቀይሩ ይጠይቁ። ያስተካክሉ፣ ከዚያ እንደገና ይሽጡ።</p></div></li>
+<li><div class="en"><b>Grow with others</b><p>Register the business, join or form a cooperative, find steady suppliers, and borrow only against proven sales.</p></div><div class="am" lang="am"><b>ከሌሎች ጋር ያድጉ</b><p>ንግዱን ያስመዝግቡ፣ ማኅበር ይቀላቀሉ ወይም ያቋቁሙ፣ ቋሚ አቅራቢዎችን ያግኙ፣ የተረጋገጠ ሽያጭ ሲኖር ብቻ ይበደሩ።</p></div></li>
+</ol>
+</section>
+<section class="ch" id="map">
+  <div class="ch-tag"><span class="yr">PART 3</span><span class="part">Ethiopia's resources · የኢትዮጵያ ሀብቶች</span></div>
+  <div class="pair">
+    <div class="en"><h2>Twelve resources, one map</h2>
+<p>Here is what Ethiopia has, where it is, and the fact that matters most for a starter. Parts 4 to 8 go deep into the five groups a young person can work with: honey, coffee, leather, minerals and energy.</p>
+<p>For a map with every site, a score for each opportunity, and your own weights, open <a href="../ethiopia-sites/">Part 2 of the series: Where to focus</a>.</p></div>
+    <div class="am" lang="am"><h2>አሥራ ሁለት ሀብቶች፣ አንድ ካርታ</h2>
+<p>ኢትዮጵያ ያላት፣ የት እንዳለ፣ እና ለጀማሪ ዋናው መረጃ ይኸውና። ከክፍል 4 እስከ 8 አንድ ወጣት ሊሠራባቸው የሚችላቸውን አምስት ቡድኖች በጥልቀት እናያለን፦ ማር፣ ቡና፣ ቆዳ፣ ማዕድናትና ኃይል።</p>
+<p>ሁሉንም ቦታዎች የሚያሳይ ካርታ፣ ለእያንዳንዱ ዕድል ነጥብ፣ እና የራስዎን ክብደት ለመስጠት <a href="../ethiopia-sites/">የተከታታዩን ክፍል 2፦ የትኩረት ቦታዎች</a> ይክፈቱ።</p></div>
+  </div><div class="cards"><div class="card"><div class="cn">Coffee<span class="am" lang="am">ቡና</span></div><div class="chips"><span class="chip">Sidama</span><span class="chip">Gedeo</span><span class="chip">Guji</span><span class="chip">Jimma</span><span class="chip">Kaffa</span><span class="chip">Harar</span></div><p class="en">$3 billion in 2025/26, about 28% of exports; 99.5% leaves as green beans.</p><p class="am" lang="am">በ2025/26 3 ቢሊዮን ዶላር፣ ከኤክስፖርት 28% ገደማ፤ 99.5% የሚወጣው ሳይቆላ ነው።</p></div><div class="card"><div class="cn">Honey & beeswax<span class="am" lang="am">ማርና ሰም</span></div><div class="chips"><span class="chip">Sheka</span><span class="chip">Kaffa</span><span class="chip">Gojjam</span><span class="chip">Tigray</span><span class="chip">West Oromia</span></div><p class="en">Africa's largest producer; under 2% exported; modern hives yield about 3× more.</p><p class="am" lang="am">የአፍሪካ ትልቁ አምራች፤ ከ2% በታች ወደ ውጭ ይላካል፤ ዘመናዊ ቀፎ 3 እጥፍ ገደማ ያመርታል።</p></div><div class="card"><div class="cn">Hides & leather<span class="am" lang="am">ቆዳና ሌጦ</span></div><div class="chips"><span class="chip">Modjo</span><span class="chip">Bati</span><span class="chip">Selale</span><span class="chip">Addis Ababa</span></div><p class="en">66–70 million cattle; Bati and Selale skins are among the world's finest.</p><p class="am" lang="am">66–70 ሚሊዮን ከብቶች፤ የባቲና የሰላሌ ሌጦ ከዓለም ምርጦች መካከል ናቸው።</p></div><div class="card"><div class="cn">Gold<span class="am" lang="am">ወርቅ</span></div><div class="chips"><span class="chip">Guji (Shakiso)</span><span class="chip">Benishangul</span><span class="chip">Tigray</span><span class="chip">Gambella</span></div><p class="en">$5.65 billion and 44 tonnes in 2025/26; most from artisanal miners.</p><p class="am" lang="am">በ2025/26 5.65 ቢሊዮን ዶላርና 44 ቶን፤ አብዛኛው ከባህላዊ ማዕድን አውጪዎች።</p></div><div class="card"><div class="cn">Opal<span class="am" lang="am">ኦፓል</span></div><div class="chips"><span class="chip">Wegel Tena</span><span class="chip">Delanta</span><span class="chip">Stayish (Gashena)</span></div><p class="en">World-class opal found in 2008; most sold rough.</p><p class="am" lang="am">በ2008 የተገኘ ዓለም አቀፍ ደረጃ ያለው ኦፓል፤ አብዛኛው ሳይቀረጽ ይሸጣል።</p></div><div class="card"><div class="cn">Lithium & tantalum<span class="am" lang="am">ሊቲየምና ታንታለም</span></div><div class="chips"><span class="chip">Kenticha (Guji)</span></div><p class="en">Ore body of 87.7 million tonnes at 0.78% lithium oxide.</p><p class="am" lang="am">0.78% ሊቲየም ኦክሳይድ ያለው 87.7 ሚሊዮን ቶን ማዕድን።</p></div><div class="card"><div class="cn">Salt & potash<span class="am" lang="am">ጨውና ፖታሽ</span></div><div class="chips"><span class="chip">Afdera</span><span class="chip">Dobe</span><span class="chip">Berhale</span><span class="chip">Danakil</span></div><p class="en">Afar supplies over 90% of Ethiopia's salt; Danakil holds billions of tonnes of potash salts.</p><p class="am" lang="am">አፋር ከኢትዮጵያ ጨው ከ90% በላይ ያቀርባል፤ ዳናኪል ቢሊዮን ቶኖች የፖታሽ ጨው ይዟል።</p></div><div class="card"><div class="cn">Natural gas<span class="am" lang="am">የተፈጥሮ ጋዝ</span></div><div class="chips"><span class="chip">Calub</span><span class="chip">Hilala</span><span class="chip">Gode</span></div><p class="en">Will feed a 3-million-tonne urea plant, expected 2029.</p><p class="am" lang="am">በ2029 ይጠበቃል ተብሎ ለሚገነባው 3 ሚሊዮን ቶን የዩሪያ ፋብሪካ ግብዓት ይሆናል።</p></div><div class="card"><div class="cn">Hydropower<span class="am" lang="am">የውሃ ኃይል</span></div><div class="chips"><span class="chip">GERD</span><span class="chip">Blue Nile</span></div><p class="en">GERD: 5,150 MW, about 15,700 GWh a year; yet ~45% of people lack power.</p><p class="am" lang="am">ሕዳሴ ግድብ፦ 5,150 ሜጋ ዋት፣ በዓመት 15,700 ጊጋ ዋት ሰዓት ገደማ፤ ሆኖም 45% ገደማ ሕዝብ መብራት የለውም።</p></div><div class="card"><div class="cn">Geothermal<span class="am" lang="am">ጂኦተርማል</span></div><div class="chips"><span class="chip">Aluto-Langano</span><span class="chip">Tulu Moye</span><span class="chip">Corbetti</span><span class="chip">Tendaho</span></div><p class="en">About 10,000 MW potential in the Rift; projects restarting.</p><p class="am" lang="am">በስምጥ ሸለቆ 10,000 ሜጋ ዋት ገደማ አቅም፤ ፕሮጀክቶች እንደገና እየጀመሩ ነው።</p></div><div class="card"><div class="cn">Sunshine<span class="am" lang="am">የፀሐይ ብርሃን</span></div><div class="chips"><span class="chip">Afar</span><span class="chip">Somali</span><span class="chip">Rift Valley</span><span class="chip">Tigray</span></div><p class="en">5.5–6.5 kWh per m² per day on average; up to 7.5 in the Somali region.</p><p class="am" lang="am">በአማካይ በቀን 5.5–6.5 ኪሎ ዋት ሰዓት በካሬ ሜትር፤ በሶማሌ ክልል እስከ 7.5።</p></div><div class="card"><div class="cn">Silica sand<span class="am" lang="am">የሲሊካ አሸዋ</span></div><div class="chips"><span class="chip">Blue Nile basin</span></div><p class="en">Glass-grade sands near 96% SiO₂ (see the chips lesson).</p><p class="am" lang="am">96% ገደማ SiO₂ ያለው ለመስታወት የሚሆን አሸዋ (የቺፕ ትምህርቱን ይመልከቱ)።</p></div></div>
+</section>
+<section class="ch" id="honey">
+  <div class="ch-tag"><span class="yr">PART 4</span><span class="part">Honey and beeswax · ማርና ሰም</span></div>
+  <div class="pair">
+    <div class="en"><h2>Honey: Africa's biggest hive, barely exported</h2>
+<div class="real"><span class="lbl">True story</span><p>In 2003, Beza Mar Agro-Industry set up a honey processing plant in Adama. It became the first Ethiopian honey company with organic certification and also holds ISO 22000, and it sells to Europe, the Middle East, Japan and the USA. In 2012, Sheka-Nordic started in the forests of the south-west with its own wood workshop that builds transitional and modern hives, plus a processing plant, aiming at 500 tonnes of organic honey and 50 tonnes of wax a year.</p></div>
+<p>Ethiopia produces roughly 45,000 to 55,000 tonnes of honey a year, more than any other African country, and about 5,000 tonnes of wax. Experts put the potential at 500,000 tonnes of honey and 50,000 tonnes of wax. Less than 2% of the honey is exported, and most hives are still traditional: they give 5–8 kg a year, while a modern hive gives about 20 kg of better-quality honey.</p>
+<div class="sci"><span class="lbl">The science</span><ul>
+<li><b>Honey is about 80% sugar</b> (mostly fructose and glucose) and 17–20% water. Above about 20% water, natural yeasts start to ferment it. That is why the international Codex standard allows at most 20% moisture.</li>
+<li><b>Heat damages honey.</b> Warming turns sugars into HMF (hydroxymethylfurfural). Codex allows at most 40 mg/kg (80 for tropical honey). Keep honey below about 40 °C at every step.</li>
+<li><b>Crystals are normal.</b> Glucose slowly forms crystals. Crystallised honey is not "sugar added".</li>
+<li><b>Wax floats.</b> Beeswax melts at about 62–64 °C and is lighter than water (density about 0.96). Melt it with water, let it settle, and clean wax rises above the dirt.</li></ul></div><div class="tool"><span class="lbl">Build it</span><p><b>1. Solar wax melter.</b> An insulated wooden box, a black metal tray, a double-glass lid, tilted to face the sun. On a sunny day the inside reaches 70–90 °C. Old comb melts, runs through a mesh and sets in a mould. No fuel needed.</p>
+<p><b>2. Settling tank.</b> A food-grade bucket or a stainless tank with a tap at the bottom. Strain the honey through a coarse, then a fine mesh, and let it stand 2–3 days at room temperature. Bubbles and wax rise; draw clear honey from the tap.</p>
+<p><b>3. Moisture check.</b> A honey refractometer reads the water content from one drop. Above 20%: do not sell as table honey.</p></div><div class="mission"><span class="lbl">Your mission</span><ol><li>Visit five beekeepers. Record hive type, kg per hive, price, and what they do with wax.</li><li>Buy 20 kg of crude honey. Strain, settle, weigh the honey and the wax: that is your own mass balance.</li><li>Pack 40 jars, label them with the place and harvest month, sell them, and calculate your margin.</li></ol></div></div>
+    <div class="am" lang="am"><h2>ማር፦ የአፍሪካ ትልቁ ቀፎ፣ ግን ወደ ውጭ የሚላከው ጥቂት</h2>
+<div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በ2003 ቤዛ ማር አግሮ ኢንዱስትሪ በአዳማ የማር ማቀነባበሪያ አቋቋመ። የኦርጋኒክ ሰርተፊኬት ያገኘ የመጀመሪያው የኢትዮጵያ የማር ኩባንያ ሲሆን ISO 22000ም አለው፤ ወደ አውሮፓ፣ መካከለኛው ምሥራቅ፣ ጃፓንና አሜሪካ ይሸጣል። በ2012 ሼካ-ኖርዲክ በደቡብ ምዕራብ ደኖች ውስጥ የሽግግርና ዘመናዊ ቀፎዎችን የሚሠራ የራሱ የእንጨት ሥራ ክፍልና ማቀነባበሪያ ይዞ ተጀመረ፤ በዓመት 500 ቶን ኦርጋኒክ ማርና 50 ቶን ሰም ለመላክ ያቅዳል።</p></div>
+<p>ኢትዮጵያ በዓመት ከ45,000 እስከ 55,000 ቶን ገደማ ማር ታመርታለች፤ ይህ ከየትኛውም የአፍሪካ አገር ይበልጣል፤ ሰም ደግሞ 5,000 ቶን ገደማ። ባለሙያዎች አቅሙን 500,000 ቶን ማርና 50,000 ቶን ሰም ይሉታል። ከማሩ ከ2% በታች ወደ ውጭ ይላካል፤ አብዛኞቹ ቀፎዎችም ባህላዊ ናቸው፦ በዓመት 5–8 ኪግ ይሰጣሉ፤ ዘመናዊ ቀፎ ግን 20 ኪግ ገደማ የተሻለ ጥራት ያለው ማር ይሰጣል።</p>
+<div class="sci"><span class="lbl">ሳይንሱ</span><ul>
+<li><b>ማር 80% ገደማ ስኳር ነው</b> (ባብዛኛው ፍሩክቶስና ግሉኮስ)፤ 17–20% ውሃ። ውሃው ከ20% ሲበልጥ የተፈጥሮ እርሾዎች ያቦኩታል። ለዚህ ነው ዓለም አቀፉ የኮዴክስ ደረጃ እርጥበትን እስከ 20% ብቻ የሚፈቅደው።</li>
+<li><b>ሙቀት ማርን ይጎዳል።</b> ሲሞቅ ስኳሩ ወደ HMF (ሃይድሮክሲሜቲልፈርፈራል) ይቀየራል። ኮዴክስ እስከ 40 mg/kg (ለሞቃታማ አካባቢ ማር 80) ብቻ ይፈቅዳል። በሁሉም ደረጃ ማርን ከ40 °C በታች ያቆዩ።</li>
+<li><b>መርጋት የተለመደ ነው።</b> ግሉኮስ በቀስታ ክሪስታል ይሠራል። የረጋ ማር «ስኳር የተጨመረበት» ማለት አይደለም።</li>
+<li><b>ሰም ይንሳፈፋል።</b> ሰም በ62–64 °C ገደማ ይቀልጣል፤ ከውሃም ይቀላል (ጥግግቱ 0.96 ገደማ)። ከውሃ ጋር አቅልጠው ሲያስቀምጡት ንጹሕ ሰም ከቆሻሻው በላይ ይወጣል።</li></ul></div><div class="tool"><span class="lbl">ይገንቡት</span><p><b>1. በፀሐይ የሚሠራ ሰም ማቅለጫ።</b> ሙቀት የማያሳልፍ የእንጨት ሳጥን፣ ጥቁር የብረት ትሪ፣ ድርብ መስታወት ክዳን፣ ወደ ፀሐይ ያዘነበለ። ፀሐያማ ቀን ውስጡ 70–90 °C ይደርሳል። አሮጌ እንጀራ ይቀልጣል፣ በወንፊት አልፎ በቅርጽ ውስጥ ይረጋል። ነዳጅ አያስፈልግም።</p>
+<p><b>2. ማስቀመጫ ታንክ።</b> ለምግብ የሚሆን ባልዲ ወይም ከታች ቧንቧ ያለው አይዝጌ ታንክ። ማሩን በሻካራ ከዚያም በቀጭን ወንፊት አጣርተው በክፍል ሙቀት ለ2–3 ቀን ያስቀምጡት። አረፋውና ሰሙ ወደ ላይ ይወጣሉ፤ ንጹሑን ማር ከቧንቧው ይቅዱ።</p>
+<p><b>3. የእርጥበት ምርመራ።</b> የማር ሪፍራክቶሜትር ከአንድ ጠብታ የውሃውን መጠን ያነባል። ከ20% በላይ ከሆነ እንደ ገበታ ማር አይሽጡት።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><ol><li>አምስት ንብ አናቢዎችን ይጎብኙ። የቀፎ ዓይነት፣ በቀፎ ስንት ኪግ፣ ዋጋና ሰሙን ምን እንደሚያደርጉት ይመዝግቡ።</li><li>20 ኪግ ጥሬ ማር ይግዙ። ያጣሩ፣ ያስቀምጡ፣ ማሩንና ሰሙን ይመዝኑ፦ ይህ የራስዎ የክብደት ሚዛን ነው።</li><li>40 ብልቃጦች ያሽጉ፣ ቦታውንና የምርት ወሩን የሚገልጽ መለያ ይለጥፉ፣ ይሽጡ፣ ማርጂንዎን ያስሉ።</li></ol></div></div>
+  </div>
+</section>
+<section class="ch" id="coffee">
+  <div class="ch-tag"><span class="yr">PART 5</span><span class="part">Coffee · ቡና</span></div>
+  <div class="pair">
+    <div class="en"><h2>Coffee: the birthplace still sells it green</h2>
+<p>Coffee earned a record $3 billion in 2025/26, close to 30% of all export earnings. Production is forecast at a record 11.56 million 60-kg bags (about 694,000 tonnes), and Ethiopians drink about a third of it themselves. Yet green beans are 99.5% of exports. Roasted exports are small but tripled in 2023/24 to about 27,000 bags, and a reform now lets local roasters export roasted coffee for foreign currency.</p>
+<div class="real"><span class="lbl">True story</span><p>Bethlehem Tilahun Alemu, the founder of soleRebels (Part 6), went on to build a second brand, Garden of Coffee, built on Ethiopian coffee. The pattern is the one this lesson teaches: keep the last steps, the roasting, branding and selling, in the country.</p></div><div class="sci"><span class="lbl">The science</span><ul>
+<li><b>Green coffee</b> holds about 10–12% water.</li>
+<li><b>Drying</b> (to about 150 °C): water leaves and the bean turns yellow.</li>
+<li><b>Browning</b>: sugars and amino acids react (Maillard reactions) and sugars caramelise. Together they make hundreds of aroma compounds.</li>
+<li><b>First crack</b> at about 196 °C: steam and CO₂ crack the bean open. Light to medium roasts finish soon after.</li>
+<li><b>Weight loss</b>: beans lose 12–20% of their weight, mostly water. So 1 kg of roasted coffee needs about 1.2 kg of green coffee.</li>
+<li><b>Degassing</b>: roasted beans release CO₂ for days. That is why good bags have a one-way valve.</li></ul></div><div class="tool"><span class="lbl">Build it</span><p><b>A 1–2 kg drum roaster.</b> A perforated steel drum turned at 30–60 rpm by a geared motor (or a hand crank), over a gas burner. Put a K-type thermocouple in the bean mass, read it with an Arduino or ESP32 through a MAX6675 board, and log the temperature every 10 seconds. That is a roast curve: the record that lets you repeat a good roast. Dump into a cooling tray with a fan and cool within 4 minutes.</p></div><div class="safety"><span class="lbl">Safety and the law</span><p>Chaff (the papery skin) can catch fire. Roast with good ventilation, keep a fire blanket close, and never leave a hot roaster alone.</p></div><div class="mission"><span class="lbl">Your mission</span><ol><li>Buy 5 kg each of three origins (for example Sidama, Guji, Jimma).</li><li>Roast each light, medium and dark. Log every curve.</li><li>Hold a tasting with 10 people. Choose a profile, price it, and sell 30 bags.</li></ol></div></div>
+    <div class="am" lang="am"><h2>ቡና፦ የቡና መገኛ አገር አሁንም ሳይቆላ ትሸጣለች</h2>
+<p>ቡና በ2025/26 ከፍተኛውን 3 ቢሊዮን ዶላር አስገኘ፤ ይህ ከጠቅላላ የኤክስፖርት ገቢ 30% ገደማ ነው። ምርቱ ከፍተኛው 11.56 ሚሊዮን የ60 ኪግ ከረጢት (694,000 ቶን ገደማ) እንደሚሆን ይገመታል፤ ኢትዮጵያውያን ራሳቸው አንድ ሦስተኛ ያህሉን ይጠጣሉ። ሆኖም ከኤክስፖርቱ 99.5% ያልተቆላ ቡና ነው። የተቆላ ቡና ኤክስፖርት ትንሽ ቢሆንም በ2023/24 በሦስት እጥፍ አድጎ 27,000 ከረጢት ገደማ ደርሷል፤ አዲስ ማሻሻያም የአገር ውስጥ ቆይዎች የተቆላ ቡና በውጭ ምንዛሪ እንዲልኩ ይፈቅዳል።</p>
+<div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>የሶልሬበልስ መሥራች ቤተልሔም ጥላሁን ዓለሙ (ክፍል 6) ቀጥላ በኢትዮጵያ ቡና ላይ የተመሠረተ ሁለተኛ ብራንድ «ጋርደን ኦፍ ኮፊ»ን ገነባች። ይህ ትምህርቱ የሚያስተምረው መንገድ ነው፦ የመጨረሻዎቹን ደረጃዎች፣ መቁላትን፣ ስም መስጠትንና መሸጥን በአገር ውስጥ ማቆየት።</p></div><div class="sci"><span class="lbl">ሳይንሱ</span><ul>
+<li><b>ያልተቆላ ቡና</b> 10–12% ገደማ ውሃ ይይዛል።</li>
+<li><b>ማድረቅ</b> (እስከ 150 °C ገደማ)፦ ውሃው ይወጣል፣ ፍሬው ቢጫ ይሆናል።</li>
+<li><b>መቅላት</b>፦ ስኳሮችና አሚኖ አሲዶች ይገናኛሉ (የሜላርድ ግብረመልሶች)፣ ስኳሮችም ካራሜል ይሆናሉ። በአንድ ላይ በመቶዎች የሚቆጠሩ የመዓዛ ውሕዶችን ይፈጥራሉ።</li>
+<li><b>የመጀመሪያ ፍንዳታ</b> በ196 °C ገደማ፦ እንፋሎትና CO₂ ፍሬውን ይሰነጥቁታል። ቀላልና መካከለኛ ቁሎ ከዚህ ብዙም ሳይቆይ ያልቃል።</li>
+<li><b>የክብደት መቀነስ</b>፦ ፍሬው ከክብደቱ 12–20% ያጣል፣ ባብዛኛው ውሃ። ስለዚህ 1 ኪግ የተቆላ ቡና 1.2 ኪግ ገደማ ያልተቆላ ቡና ይፈልጋል።</li>
+<li><b>ጋዝ መልቀቅ</b>፦ የተቆላ ቡና ለቀናት CO₂ ይለቃል። ለዚህ ነው ጥሩ ማሸጊያዎች አንድ አቅጣጫ ብቻ የሚያሳልፍ ቫልቭ ያላቸው።</li></ul></div><div class="tool"><span class="lbl">ይገንቡት</span><p><b>ከ1–2 ኪግ የሚይዝ ከበሮ ቆይ።</b> በጋዝ ምድጃ ላይ በማርሽ ሞተር (ወይም በእጅ መዘውር) በደቂቃ 30–60 ጊዜ የሚዞር ቀዳዳ ያለው የብረት ከበሮ። K-ዓይነት ቴርሞኩፕልን በፍሬው መካከል ያስገቡ፣ በMAX6675 ቦርድ በአርዱኢኖ ወይም ESP32 ያንብቡት፣ በየ10 ሰከንዱ ሙቀቱን ይመዝግቡ። ይህ የቁሎ ኩርባ ነው፦ ጥሩ ቁሎን ለመድገም የሚያስችል መዝገብ። በማራገቢያ ወዳለ ማቀዝቀዣ ትሪ ያፍሱት፣ በ4 ደቂቃ ውስጥ ያቀዝቅዙት።</p></div><div class="safety"><span class="lbl">ደህንነትና ሕግ</span><p>ገለባው (ቀጭኑ ልጣጭ) እሳት ሊይዝ ይችላል። አየር በደንብ በሚዘዋወርበት ቦታ ይቁሉ፣ የእሳት ብርድ ልብስ በአጠገብዎ ያስቀምጡ፣ የሞቀ ቆይን ብቻውን አይተዉት።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><ol><li>ከሦስት አካባቢዎች እያንዳንዳቸውን 5 ኪግ ይግዙ (ለምሳሌ ሲዳማ፣ ጉጂ፣ ጅማ)።</li><li>እያንዳንዱን ቀላል፣ መካከለኛና ጠቆር ያለ አድርገው ይቁሉ። እያንዳንዱን ኩርባ ይመዝግቡ።</li><li>ከ10 ሰዎች ጋር ቅምሻ ያድርጉ። አንዱን ይምረጡ፣ ዋጋ ያውጡለት፣ 30 ፓኬት ይሽጡ።</li></ol></div></div>
+  </div>
+</section>
+<section class="ch" id="leather">
+  <div class="ch-tag"><span class="yr">PART 6</span><span class="part">Hides and leather · ቆዳና ሌጦ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Leather: Africa's largest herd, few finished goods</h2>
+<div class="real"><span class="lbl">True story</span><p>In 2004–05, fresh out of college, Bethlehem Tilahun Alemu started soleRebels with five workers in a workshop on her grandmother's plot in Zenebework, Addis Ababa. The shoes used soles from recycled car tyres and local materials. soleRebels grew into a global brand selling in over 45 countries, and in 2014 she launched a second company, Republic of Leather. Her rule, in her words: produce locally and sell globally.</p></div>
+<p>Ethiopia has an estimated 66–70 million cattle, and Bati and Selale skins are among the finest leathers in the world. But many hides are damaged by flaying cuts and poor curing, there is little grading or price reward for quality, and tanneries have closed for pollution. Most tanneries are now in Modjo, where a Leather City with shared waste-water treatment is planned and young people have been trained to make bags, belts and shoes.</p>
+<div class="sci"><span class="lbl">The science</span><ul>
+<li><b>Skin is mostly collagen</b>, a protein made of long fibres.</li>
+<li><b>Bacteria start rotting a hide within hours</b> in warm weather. Salting or drying removes the water they need. A hide must be cured on the day of slaughter.</li>
+<li><b>Tanning links collagen fibres together</b> so the skin stops rotting and stays flexible. Chrome tanning uses chromium(III) salts: fast, but its waste water must be treated, because chromium(III) can turn into toxic chromium(VI). Vegetable tanning uses tannins from bark and pods (such as acacia): slower, weeks instead of days, but simpler for small workshops.</li></ul></div><div class="tool"><span class="lbl">Build it</span><p><b>A leather-goods bench.</b> Buy finished leather from a tannery. Tools: a cutting mat, a sharp knife, a skiving knife to thin edges, an edge beveller, an awl, two needles and waxed thread (wax it with your own beeswax from Part 4), and a wooden stitching clamp. Make patterns from cardboard. Start with a belt, then a wallet, then a bag.</p>
+<p><b>A hide-quality service.</b> Teach butchers clean flaying, salt hides the same day, and sell graded hides. Better hides fetch better prices.</p></div><div class="mission"><span class="lbl">Your mission</span><ol><li>Make 10 belts. Time each one.</li><li>Cost = leather + buckle + thread + your hours × your hourly rate.</li><li>Sell them, ask buyers what to change, and make the next 10 faster.</li></ol></div></div>
+    <div class="am" lang="am"><h2>ቆዳ፦ የአፍሪካ ትልቁ የከብት ሀብት፣ ግን ጥቂት የተጠናቀቁ ምርቶች</h2>
+<div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በ2004–05 ከኮሌጅ እንደወጣች ቤተልሔም ጥላሁን ዓለሙ በአዲስ አበባ ዘነበወርቅ በአያቷ ቦታ ላይ በሚገኝ የሥራ ክፍል ከአምስት ሠራተኞች ጋር ሶልሬበልስን ጀመረች። ጫማዎቹ ከተጣሉ የመኪና ጎማዎች የተሠራ ሶልና የአገር ውስጥ ዕቃዎችን ይጠቀሙ ነበር። ሶልሬበልስ ከ45 በላይ አገሮች የሚሸጥ ዓለም አቀፍ ብራንድ ሆነ፤ በ2014 ደግሞ «ሪፐብሊክ ኦፍ ሌዘር» የተባለ ሁለተኛ ኩባንያ ጀመረች። መርሕዋ፦ በአገር ውስጥ አምርቶ ለዓለም መሸጥ።</p></div>
+<p>ኢትዮጵያ ከ66–70 ሚሊዮን ከብቶች እንዳሏት ይገመታል፤ የባቲና የሰላሌ ሌጦም ከዓለም ምርጥ ቆዳዎች መካከል ናቸው። ነገር ግን ብዙ ቆዳዎች በአገፋፈፍ ቁስልና በአጠባበቅ ችግር ይጎዳሉ፣ ደረጃ መስጠትም ሆነ ለጥራት የተሻለ ዋጋ የለም፣ አንዳንድ ፋብሪካዎችም በብክለት ተዘግተዋል። አብዛኞቹ የቆዳ ፋብሪካዎች አሁን በሞጆ ይገኛሉ፤ እዚያም የጋራ የፍሳሽ ማጣሪያ ያለው «የቆዳ ከተማ» ታቅዷል፣ ወጣቶችም ቦርሳ፣ ቀበቶና ጫማ እንዲሠሩ ሠልጥነዋል።</p>
+<div class="sci"><span class="lbl">ሳይንሱ</span><ul>
+<li><b>ቆዳ ባብዛኛው ኮላጅን ነው</b>፤ ረጃጅም ፋይበሮች ያሉት ፕሮቲን።</li>
+<li><b>ባክቴሪያዎች በሞቃት አየር ቆዳን በሰዓታት ውስጥ ማበስበስ ይጀምራሉ።</b> ጨው ወይም ማድረቅ የሚፈልጉትን ውሃ ያስወግዳል። ቆዳ በእርድ ቀን መጠበቅ አለበት።</li>
+<li><b>ማልፋት የኮላጅን ፋይበሮችን ያስተሳስራል</b>፤ ስለዚህ ቆዳው መበስበስ ያቆማል፣ ተጣጣፊም ይሆናል። የክሮም ማልፊያ ክሮሚየም(III) ጨዎችን ይጠቀማል፦ ፈጣን ነው፣ ነገር ግን ፍሳሹ መጣራት አለበት፤ ምክንያቱም ክሮሚየም(III) ወደ መርዛማው ክሮሚየም(VI) ሊለወጥ ይችላል። የዕፅዋት ማልፊያ ከቅርፊትና ከፍሬ (እንደ ግራር) የሚገኝ ታኒን ይጠቀማል፦ ቀርፋፋ ነው፣ ከቀናት ይልቅ ሳምንታት ይወስዳል፣ ግን ለትንሽ የሥራ ክፍል ቀላል ነው።</li></ul></div><div class="tool"><span class="lbl">ይገንቡት</span><p><b>የቆዳ ዕቃዎች መሥሪያ ጠረጴዛ።</b> የተለፋ ቆዳ ከፋብሪካ ይግዙ። መሣሪያዎች፦ መቁረጫ ምንጣፍ፣ ስለታም ቢላ፣ ጠርዝ ማሳሳ ቢላ፣ የጠርዝ ማለስለሻ፣ ወስፌ፣ ሁለት መርፌና በሰም የተወለወለ ክር (ከክፍል 4 ባገኙት የራስዎ ሰም ይወልውሉት)፣ እና የእንጨት መስፊያ መያዣ። ቅርጾችን ከካርቶን ይሥሩ። በቀበቶ ይጀምሩ፣ ከዚያ ቦርሳ ማስቀመጫ (ዋሌት)፣ ከዚያ ቦርሳ።</p>
+<p><b>የቆዳ ጥራት አገልግሎት።</b> ሥጋ ቤቶችን ንጹሕ አገፋፈፍ ያስተምሩ፣ ቆዳውን በዕለቱ ጨው ያድርጉ፣ ደረጃ የወጣለትን ቆዳ ይሽጡ። የተሻለ ቆዳ የተሻለ ዋጋ ያስገኛል።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><ol><li>10 ቀበቶዎችን ይሥሩ። የእያንዳንዱን ጊዜ ይለኩ።</li><li>ወጪ = ቆዳ + ዘለበት + ክር + ሰዓትዎ × የሰዓት ክፍያዎ።</li><li>ይሽጧቸው፣ ገዢዎችን ምን እንደሚቀየር ይጠይቁ፣ የሚቀጥሉትን 10 በፍጥነት ይሥሩ።</li></ol></div></div>
+  </div>
+</section>
+<section class="ch" id="minerals">
+  <div class="ch-tag"><span class="yr">PART 7</span><span class="part">Minerals · ማዕድናት</span></div>
+  <div class="pair">
+    <div class="en"><h2>Gold, opal, lithium and salt: separate by science, not by poison</h2>
+<p><b>Gold</b> earned $5.65 billion in 2025/26 from 44 tonnes, most of it from artisanal miners in Tigray, Gambella, Oromia and Benishangul-Gumuz. The large deposits are Lega Dembi and Tulu Kapi in Oromia and Kurmuk in Benishangul. A domestic refinery is coming online, and the National Bank plans to leave the gold market around the end of 2026 so that other banks can buy.</p>
+<p><b>Opal</b> was found near Wegel Tena in Wollo in 2008. It is hydrophane: it turns transparent when it soaks up water. Miners sell most of it rough, far below the price of polished stones.</p>
+<p><b>Lithium and tantalum</b> come from Kenticha in Guji: an ore body of 87.7 million tonnes at 0.78% lithium oxide, with a dense-media separation plant. <b>Salt</b>: Afdera, Dobe and Berhale in Afar supply about 92% of the country's salt, and the law requires it to be iodised.</p>
+<div class="sci"><span class="lbl">The science</span><ul>
+<li><b>Density separates minerals.</b> Gold weighs 19.3 g/cm³, quartz only 2.65: gold is about 7 times heavier. Panning, sluice boxes, shaking tables and centrifugal concentrators use that difference. No mercury needed.</li>
+<li><b>Spodumene</b> (LiAlSi₂O₆, about 3.15 g/cm³) sinks in a heavy liquid that quartz and feldspar (about 2.6) float on. That is dense-media separation, the method at Kenticha.</li>
+<li><b>Opal</b> is silica with water (SiO₂·nH₂O). Tiny silica spheres stacked in rows split light into colours: "play of colour". Hardness about 5.5–6.5, so it is cut with diamond wheels and polished with cerium oxide.</li>
+<li><b>Salt from brine</b>: as brine evaporates, the least soluble salts come out first: gypsum, then table salt (NaCl), then potassium and magnesium salts. That order is why the Danakil holds potash beds.</li></ul></div><div class="tool"><span class="lbl">Build it</span><p><b>A small opal cabbing machine.</b> A motor, a shaft, diamond wheels from coarse to fine (about 220, 600, 1200 grit), a water drip to keep stone and dust wet, and a felt pad with cerium oxide to polish. Cut opal wet, and let hydrophane stones dry slowly.</p></div><div class="safety"><span class="lbl">Safety and the law</span><ul><li><b>Mercury</b>: burning gold–mercury amalgam releases vapour that damages nerves and kidneys. Gravity methods avoid it.</li><li><b>Cyanide</b> is used at industrial gold plants; rights monitors have called the area around Lega Dembi one of Africa's most polluted sites.</li><li><b>Dust</b>: grinding stone dry can cause silicosis. Always cut wet.</li><li><b>Licences</b>: mining needs a licence from the regional mining bureau, and gold must be sold through legal channels. Never buy from sites run by armed groups.</li></ul></div></div>
+    <div class="am" lang="am"><h2>ወርቅ፣ ኦፓል፣ ሊቲየምና ጨው፦ በሳይንስ እንጂ በመርዝ አይለዩ</h2>
+<p><b>ወርቅ</b> በ2025/26 ከ44 ቶን 5.65 ቢሊዮን ዶላር አስገኘ፤ አብዛኛው ከትግራይ፣ ከጋምቤላ፣ ከኦሮሚያና ከቤኒሻንጉል-ጉሙዝ ባህላዊ ማዕድን አውጪዎች ነው። ትላልቅ ክምችቶች በኦሮሚያ ለገደምቢና ቱሉ ካፒ፣ በቤኒሻንጉል ደግሞ ኩርሙክ ናቸው። የአገር ውስጥ ማጣሪያ ሥራ እየጀመረ ሲሆን ብሔራዊ ባንክ ሌሎች ባንኮች እንዲገዙ በ2026 መጨረሻ ገደማ ከወርቅ ገበያው ለመውጣት አቅዷል።</p>
+<p><b>ኦፓል</b> በ2008 በወሎ ወገል ጤና አቅራቢያ ተገኘ። ውሃ ሲጠጣ ግልጽ የሚሆን (ሃይድሮፌን) ዓይነት ነው። ማዕድን አውጪዎች አብዛኛውን ሳይቀርጹ ከተወለወለው ዋጋ በጣም በታች ይሸጡታል።</p>
+<p><b>ሊቲየምና ታንታለም</b> በጉጂ ከቀንጢቻ ይገኛሉ፦ 0.78% ሊቲየም ኦክሳይድ ያለው 87.7 ሚሊዮን ቶን ማዕድን፣ በጥግግት የሚለይ ፋብሪካም አለው። <b>ጨው</b>፦ በአፋር አፍዴራ፣ ዶቤና በርሃሌ የአገሪቱን ጨው 92% ገደማ ያቀርባሉ፤ ሕጉም አዮዲን እንዲጨመርበት ያዛል።</p>
+<div class="sci"><span class="lbl">ሳይንሱ</span><ul>
+<li><b>ጥግግት ማዕድናትን ይለያል።</b> ወርቅ 19.3 g/cm³ ይመዝናል፣ ኳርትዝ 2.65 ብቻ፦ ወርቅ 7 እጥፍ ገደማ ይከብዳል። ማጠብ (ፓኒንግ)፣ የውሃ ቦይ፣ የሚንቀጠቀጥ ጠረጴዛና የሚሽከረከር መለያ ይህንን ልዩነት ይጠቀማሉ። ሜርኩሪ አያስፈልግም።</li>
+<li><b>ስፖዱሚን</b> (LiAlSi₂O₆፣ 3.15 g/cm³ ገደማ) ኳርትዝና ፌልድስፓር (2.6 ገደማ) በሚንሳፈፉበት ከባድ ፈሳሽ ውስጥ ይሰምጣል። ይህ በቀንጢቻ የሚሠራበት በጥግግት የመለየት ዘዴ ነው።</li>
+<li><b>ኦፓል</b> ውሃ ያለው ሲሊካ ነው (SiO₂·nH₂O)። በረድፍ የተደረደሩ ጥቃቅን የሲሊካ ኳሶች ብርሃንን ወደ ቀለማት ይከፍላሉ፦ «የቀለም ጨዋታ»። ጥንካሬው 5.5–6.5 ገደማ ስለሆነ በአልማዝ ጎማ ይቀረጻል፣ በሴሪየም ኦክሳይድ ይወለወላል።</li>
+<li><b>ጨው ከጨዋማ ውሃ</b>፦ ጨዋማ ውሃ ሲተን በቀላሉ የማይሟሙ ጨዎች ቀድመው ይወጣሉ፦ ጂፕሰም፣ ከዚያ የገበታ ጨው (NaCl)፣ ከዚያ የፖታሲየምና የማግኒዢየም ጨዎች። ዳናኪል የፖታሽ ንብርብሮች የያዘው በዚህ ቅደም ተከተል ነው።</li></ul></div><div class="tool"><span class="lbl">ይገንቡት</span><p><b>ትንሽ የኦፓል መቅረጫ ማሽን።</b> ሞተር፣ ዘንግ፣ ከሻካራ እስከ ለስላሳ የአልማዝ ጎማዎች (220፣ 600፣ 1200 ግሪት ገደማ)፣ ድንጋዩንና አቧራውን እርጥብ የሚያደርግ የውሃ ጠብታ፣ ለማወልወል ሴሪየም ኦክሳይድ ያለው ፌልት። ኦፓልን በውሃ እያረጠቡ ይቅረጹ፤ ሃይድሮፌን ድንጋዮች በቀስታ ይድረቁ።</p></div><div class="safety"><span class="lbl">ደህንነትና ሕግ</span><ul><li><b>ሜርኩሪ</b>፦ የወርቅና የሜርኩሪ ቅልቅልን ማቃጠል ነርቭንና ኩላሊትን የሚጎዳ ትነት ይለቃል። በጥግግት የመለየት ዘዴዎች ከዚህ ያድናሉ።</li><li><b>ሳይናይድ</b> በኢንዱስትሪ የወርቅ ፋብሪካዎች ይጠቀማል፤ የመብት ተቆጣጣሪዎች የለገደምቢን አካባቢ ከአፍሪካ በጣም ከተበከሉ ቦታዎች አንዱ ብለውታል።</li><li><b>አቧራ</b>፦ ድንጋይን ደረቅ አድርጎ መፍጨት ሲሊኮሲስ የተባለ የሳንባ በሽታ ያስከትላል። ሁልጊዜ በውሃ ይቅረጹ።</li><li><b>ፈቃድ</b>፦ ማዕድን ማውጣት ከክልል ማዕድን ቢሮ ፈቃድ ይፈልጋል፤ ወርቅም በሕጋዊ መንገድ መሸጥ አለበት። በታጣቂዎች ከሚተዳደሩ ቦታዎች በጭራሽ አይግዙ።</li></ul></div></div>
+  </div>
+</section>
+<section class="ch" id="energy">
+  <div class="ch-tag"><span class="yr">PART 8</span><span class="part">Energy · ኃይል</span></div>
+  <div class="pair">
+    <div class="en"><h2>Energy: a giant dam, and half the country still in the dark</h2>
+<p>The Grand Ethiopian Renaissance Dam (GERD), 5,150 MW, was inaugurated on 9 September 2025 and should produce about 15,700 GWh a year. Yet some 45% of Ethiopians have no electricity. Sunshine averages 5.5–6.5 kWh per square metre per day. The Rift Valley holds an estimated 10,000 MW of geothermal heat: Aluto-Langano opened in 1998 and is being rehabilitated, and the Tulu Moye and Corbetti projects are restarting. Gas from Calub and Hilala will feed a 3-million-tonne urea fertilizer plant at Gode, expected by 2029; Ethiopia now uses about 1.7 million tonnes of fertilizer a year.</p>
+<div class="real"><span class="lbl">True story</span><p>Abel, a young Ethiopian entrepreneur, started Green Hope to make solar affordable by building combiner boxes (the boxes that safely join panels) locally instead of importing them. By 2025 it had 18 people, a contract for solar street lights in Addis Ababa's CMC district, and clients running solar water pumps of up to 45 kW.</p></div><div class="sci"><span class="lbl">The science</span><p><b>Power and energy are different.</b> Power (watts, W) is how fast energy is used. Energy (watt-hours, Wh) is power × time. A 10 W lamp on for 5 hours uses 50 Wh.</p>
+<p><b>Size a solar kit in three lines:</b></p>
+<div class="formula">daily energy = Σ (watts × hours)</div>
+<div class="formula">panel watts = daily energy ÷ (sun hours × 0.75)</div>
+<div class="formula">battery Wh = daily energy × days of backup ÷ usable fraction</div>
+<p><b>Example: a village kiosk.</b> 4 LED lamps × 9 W × 5 h = 180 Wh; charging 10 phones × 15 Wh = 150 Wh; a 20 W radio and fan × 6 h = 120 Wh. Total 450 Wh a day. Panel: 450 ÷ (5.5 × 0.75) ≈ 109 W, so use 120–150 W. Battery (lithium iron phosphate, 80% usable, one day): 450 ÷ 0.8 ≈ 560 Wh, so a 12 V 50 Ah battery (600 Wh).</p>
+<p><b>Gas to fertilizer:</b> CH₄ + H₂O → CO + 3H₂, then N₂ + 3H₂ → 2NH₃ (Haber–Bosch), then 2NH₃ + CO₂ → CO(NH₂)₂ + H₂O: urea.</p></div><div class="mission"><span class="lbl">Your mission</span><ol><li>List every electrical need in one shop or clinic: watts and hours.</li><li>Size the panel and battery with the formulas above.</li><li>Price the kit in your town and offer to install and maintain it for a monthly fee.</li></ol></div></div>
+    <div class="am" lang="am"><h2>ኃይል፦ ግዙፍ ግድብ፣ ግን የአገሪቱ ግማሽ አሁንም በጨለማ</h2>
+<p>5,150 ሜጋ ዋት የሆነው ታላቁ የኢትዮጵያ ሕዳሴ ግድብ በሴፕቴምበር 9 ቀን 2025 ተመርቋል፤ በዓመት 15,700 ጊጋ ዋት ሰዓት ገደማ ያመርታል ተብሎ ይጠበቃል። ሆኖም 45% ገደማ ኢትዮጵያውያን መብራት የላቸውም። የፀሐይ ብርሃን በአማካይ በቀን 5.5–6.5 ኪሎ ዋት ሰዓት በካሬ ሜትር ነው። ስምጥ ሸለቆ 10,000 ሜጋ ዋት ገደማ የጂኦተርማል ሙቀት እንዳለው ይገመታል፦ አሉቶ-ላንጋኖ በ1998 ተከፍቶ አሁን እየታደሰ ነው፤ የቱሉ ሞዬና የኮርቤቲ ፕሮጀክቶች እንደገና እየጀመሩ ነው። ከካሉብና ሂላላ የሚገኘው ጋዝ በ2029 ይጠበቃል ተብሎ በጎዴ ለሚገነባው 3 ሚሊዮን ቶን የዩሪያ ማዳበሪያ ፋብሪካ ይውላል፤ ኢትዮጵያ አሁን በዓመት 1.7 ሚሊዮን ቶን ገደማ ማዳበሪያ ትጠቀማለች።</p>
+<div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>አቤል የተባለ ወጣት ኢትዮጵያዊ ሥራ ፈጣሪ ፓነሎችን በደህንነት የሚያገናኙ «ኮምባይነር ቦክሶችን» ከውጭ ከማስገባት ይልቅ በአገር ውስጥ በመሥራት የፀሐይ ኃይልን ተመጣጣኝ ለማድረግ «ግሪን ሆፕ»ን ጀመረ። በ2025 18 ሠራተኞች፣ በአዲስ አበባ ሲኤምሲ አካባቢ የፀሐይ የመንገድ መብራቶችን የመትከል ውል፣ እና እስከ 45 ኪሎ ዋት የፀሐይ ውሃ ፓምፖችን የሚያንቀሳቅሱ ደንበኞች ነበሩት።</p></div><div class="sci"><span class="lbl">ሳይንሱ</span><p><b>ኃይል (ፓወር) እና ኢነርጂ ይለያያሉ።</b> ፓወር (ዋት፣ W) ኢነርጂ ምን ያህል በፍጥነት እንደሚውል ነው። ኢነርጂ (ዋት ሰዓት፣ Wh) ፓወር × ጊዜ ነው። 10 W መብራት ለ5 ሰዓት ሲበራ 50 Wh ይጠቀማል።</p>
+<p><b>የፀሐይ ኪትን በሦስት መስመር ይለኩ፦</b></p>
+<div class="formula">ዕለታዊ ኢነርጂ = ድምር (ዋት × ሰዓት)</div>
+<div class="formula">የፓነል ዋት = ዕለታዊ ኢነርጂ ÷ (የፀሐይ ሰዓት × 0.75)</div>
+<div class="formula">የባትሪ Wh = ዕለታዊ ኢነርጂ × የመጠባበቂያ ቀናት ÷ ጥቅም ላይ የሚውለው ክፍል</div>
+<p><b>ምሳሌ፦ የገጠር ሱቅ።</b> 4 የLED መብራቶች × 9 W × 5 ሰዓት = 180 Wh፤ 10 ስልኮችን መሙላት × 15 Wh = 150 Wh፤ 20 W ሬዲዮና ማራገቢያ × 6 ሰዓት = 120 Wh። ድምር በቀን 450 Wh። ፓነል፦ 450 ÷ (5.5 × 0.75) ≈ 109 W፣ ስለዚህ 120–150 W ይጠቀሙ። ባትሪ (ሊቲየም አይረን ፎስፌት፣ 80% ጥቅም ላይ የሚውል፣ ለአንድ ቀን)፦ 450 ÷ 0.8 ≈ 560 Wh፣ ስለዚህ 12 V 50 Ah ባትሪ (600 Wh)።</p>
+<p><b>ጋዝ ወደ ማዳበሪያ፦</b> CH₄ + H₂O → CO + 3H₂፣ ከዚያ N₂ + 3H₂ → 2NH₃ (ሃበር–ቦሽ)፣ ከዚያ 2NH₃ + CO₂ → CO(NH₂)₂ + H₂O፦ ዩሪያ።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><ol><li>በአንድ ሱቅ ወይም ክሊኒክ ያሉትን የኤሌክትሪክ ፍላጎቶች ሁሉ ይዘርዝሩ፦ ዋትና ሰዓት።</li><li>ከላይ ባሉት ቀመሮች የፓነሉንና የባትሪውን መጠን ያስሉ።</li><li>በከተማዎ ያለውን የኪቱን ዋጋ ያጣሩ፣ በወርሃዊ ክፍያ ለመትከልና ለመጠገን ያቅርቡ።</li></ol></div></div>
+  </div>
+</section>
+<section class="ch" id="rules">
+  <div class="ch-tag"><span class="yr">PART 9</span><span class="part">Safety, law and fairness · ደህንነት፣ ሕግና ፍትሐዊነት</span></div>
+  <div class="pair">
+    <div class="en"><h2>Build a business that lasts</h2>
+<div class="safety"><span class="lbl">Safety and the law</span><ul>
+<li><b>Register.</b> Commercial registration and business licences are now done online on the e-Trade portal (etrade.gov.et). You need a TIN, a trade name and premises; licences are renewed every year. Regulated sectors such as food and mining also need a <i>certificate of competence</i> from the sector office.</li>
+<li><b>Food rules.</b> Honey and coffee are food: clean premises, food-grade containers, labels with the product, place, weight and date.</li>
+<li><b>Chemicals.</b> Mercury, cyanide and chromium harm workers and rivers. Choose methods that avoid them, and treat waste water.</li>
+<li><b>Fair work.</b> No child labour. Pay suppliers on time; fair prices make loyal suppliers.</li>
+<li><b>Security.</b> In November 2026, armed conflict affects parts of Amhara, Tigray and Afar, and roads such as Dessie–Woldia are contested. Check the situation before you travel or sign supply deals, and keep stock small where roads are unsafe.</li></ul></div></div>
+    <div class="am" lang="am"><h2>የሚዘልቅ ንግድ ይገንቡ</h2>
+<div class="safety"><span class="lbl">ደህንነትና ሕግ</span><ul>
+<li><b>ያስመዝግቡ።</b> የንግድ ምዝገባና ፈቃድ አሁን በኢ-ትሬድ ፖርታል (etrade.gov.et) በመስመር ላይ ይሠራል። የግብር ከፋይ መለያ ቁጥር (TIN)፣ የንግድ ስምና የሥራ ቦታ ያስፈልጋል፤ ፈቃድ በየዓመቱ ይታደሳል። እንደ ምግብና ማዕድን ያሉ ቁጥጥር የሚደረግባቸው ዘርፎች ከዘርፉ መሥሪያ ቤት <i>የብቃት ማረጋገጫ</i> ይፈልጋሉ።</li>
+<li><b>የምግብ ሕጎች።</b> ማርና ቡና ምግብ ናቸው፦ ንጹሕ የሥራ ቦታ፣ ለምግብ የሚሆኑ ዕቃዎች፣ ምርቱን፣ ቦታውን፣ ክብደቱንና ቀኑን የሚገልጽ መለያ።</li>
+<li><b>ኬሚካሎች።</b> ሜርኩሪ፣ ሳይናይድና ክሮሚየም ሠራተኞችንና ወንዞችን ይጎዳሉ። የማይጠቀሙባቸውን ዘዴዎች ይምረጡ፣ ፍሳሽ ውሃን ያጣሩ።</li>
+<li><b>ፍትሐዊ ሥራ።</b> የሕፃናት ጉልበት ብዝበዛ የለም። አቅራቢዎችን በሰዓቱ ይክፈሉ፤ ፍትሐዊ ዋጋ ታማኝ አቅራቢ ያፈራል።</li>
+<li><b>ደህንነት።</b> በኖቬምበር 2026 የትጥቅ ግጭት የአማራ፣ የትግራይና የአፋር ክፍሎችን ይጎዳል፤ እንደ ደሴ–ወልዲያ ያሉ መንገዶችም አከራካሪ ናቸው። ከመጓዝዎ ወይም የአቅርቦት ውል ከመፈረምዎ በፊት ሁኔታውን ያረጋግጡ፤ መንገዶች ደህና ባልሆኑበት ክምችትዎን ትንሽ ያድርጉ።</li></ul></div></div>
+  </div>
+</section>
+<section class="ch" id="path">
+  <div class="ch-tag"><span class="yr">PART 10</span><span class="part">Your path · የእርስዎ መንገድ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Start this month, with what you have</h2>
+<p>You do not need a factory to start. You need one resource, one problem, a notebook and the courage to sell a small batch. Here is a plan for the first six months, and a quiz to check what you learned.</p></div>
+    <div class="am" lang="am"><h2>ባለዎት ነገር በዚህ ወር ይጀምሩ</h2>
+<p>ለመጀመር ፋብሪካ አያስፈልግዎትም። አንድ ሀብት፣ አንድ ችግር፣ ማስታወሻ ደብተርና ትንሽ ምርት ለመሸጥ ድፍረት ያስፈልግዎታል። የመጀመሪያዎቹ ስድስት ወራት ዕቅድና የተማሩትን የሚፈትሽ ጥያቄዎች ይኸውና።</p></div>
+  </div>
+<div class="weeks">
+<div class="week"><div class="w">Weeks 1–2</div><p class="en">Pick one resource near you. Visit producers and buyers. Measure quantities and prices.</p><p class="am" lang="am">ሳምንት 1–2፦ በአቅራቢያዎ አንድ ሀብት ይምረጡ። አምራቾችንና ገዢዎችን ይጎብኙ። መጠንና ዋጋ ይለኩ።</p></div>
+<div class="week"><div class="w">Weeks 3–4</div><p class="en">Learn the science. Build your first tool: a wax melter, a roaster, a cutting bench or a solar kit.</p><p class="am" lang="am">ሳምንት 3–4፦ ሳይንሱን ይማሩ። የመጀመሪያ መሣሪያዎን ይገንቡ፦ ሰም ማቅለጫ፣ ቆይ፣ መቁረጫ ጠረጴዛ ወይም የፀሐይ ኪት።</p></div>
+<div class="week"><div class="w">Weeks 5–8</div><p class="en">Make and sell a first batch of 20–50 units. Record every cost. Calculate your margin and break-even.</p><p class="am" lang="am">ሳምንት 5–8፦ ከ20–50 የሚሆኑ የመጀመሪያ ምርቶችን ሠርተው ይሽጡ። እያንዳንዱን ወጪ ይመዝግቡ። ማርጂንና የመመጣጠኛ ነጥብ ያስሉ።</p></div>
+<div class="week"><div class="w">Month 3</div><p class="en">Register on e-Trade. Write a one-page plan (see <a href="../honey-business-plan/">Part 3: the business plan</a>).</p><p class="am" lang="am">ወር 3፦ በኢ-ትሬድ ይመዝገቡ። የአንድ ገጽ ዕቅድ ይጻፉ (<a href="../honey-business-plan/">ክፍል 3፦ የንግድ ዕቅዱን</a> ይመልከቱ)።</p></div>
+<div class="week"><div class="w">Month 6</div><p class="en">Steady suppliers, a second product from your by-product, and a partner or cooperative.</p><p class="am" lang="am">ወር 6፦ ቋሚ አቅራቢዎች፣ ከተረፈ ምርትዎ ሁለተኛ ምርት፣ እና አጋር ወይም ማኅበር።</p></div>
+</div><h3 style="margin-top:28px">Quiz · ጥያቄዎች</h3><details><summary><span class="en">1. Why must table honey stay below about 20% water?</span><span class="am" lang="am"> የገበታ ማር ውሃው ከ20% በታች መሆን ያለበት ለምንድን ነው?</span></summary><p class="en">Above that, natural yeasts ferment it.</p><p class="am" lang="am">ከዚያ በላይ ሲሆን የተፈጥሮ እርሾዎች ያቦኩታል።</p></details><details><summary><span class="en">2. Why should you never heat honey above about 40 °C?</span><span class="am" lang="am"> ማርን ከ40 °C በላይ ለምን አያሞቁትም?</span></summary><p class="en">Heat turns sugars into HMF, a quality marker with a legal limit.</p><p class="am" lang="am">ሙቀት ስኳሩን ወደ HMF ይቀይራል፤ ይህ ሕጋዊ ገደብ ያለው የጥራት መለኪያ ነው።</p></details><details><summary><span class="en">3. How can you separate wax from dirt without chemicals?</span><span class="am" lang="am"> ሰምን ከቆሻሻ ያለ ኬሚካል እንዴት ይለያሉ?</span></summary><p class="en">Melt it with water; wax (density about 0.96) floats.</p><p class="am" lang="am">ከውሃ ጋር ያቅልጡት፤ ሰም (ጥግግቱ 0.96 ገደማ) ይንሳፈፋል።</p></details><details><summary><span class="en">4. How much green coffee makes 1 kg of roasted coffee?</span><span class="am" lang="am"> 1 ኪግ የተቆላ ቡና ስንት ያልተቆላ ቡና ይፈልጋል?</span></summary><p class="en">About 1.2 kg, because roasting removes 12–20% of the weight.</p><p class="am" lang="am">1.2 ኪግ ገደማ፤ መቁላት ከክብደቱ 12–20% ስለሚቀንስ።</p></details><details><summary><span class="en">5. What does tanning do to skin?</span><span class="am" lang="am"> ማልፋት በቆዳ ላይ ምን ያደርጋል?</span></summary><p class="en">It links collagen fibres so the skin stops rotting and stays flexible.</p><p class="am" lang="am">የኮላጅን ፋይበሮችን ያስተሳስራል፤ ስለዚህ ቆዳው አይበሰብስም፣ ተጣጣፊም ይሆናል።</p></details><details><summary><span class="en">6. How can gold be concentrated without mercury?</span><span class="am" lang="am"> ወርቅን ያለ ሜርኩሪ እንዴት መሰብሰብ ይቻላል?</span></summary><p class="en">By density: gold is about 7 times heavier than quartz (panning, sluices, shaking tables).</p><p class="am" lang="am">በጥግግት፦ ወርቅ ከኳርትዝ 7 እጥፍ ገደማ ይከብዳል (ማጠብ፣ የውሃ ቦይ፣ የሚንቀጠቀጥ ጠረጴዛ)።</p></details><details><summary><span class="en">7. A kiosk uses 450 Wh a day with 5.5 sun hours. About what panel size?</span><span class="am" lang="am"> አንድ ሱቅ በቀን 450 Wh ይጠቀማል፤ የፀሐይ ሰዓቱ 5.5 ነው። ስንት ዋት ፓነል ያስፈልገዋል?</span></summary><p class="en">450 ÷ (5.5 × 0.75) ≈ 109 W, so 120–150 W.</p><p class="am" lang="am">450 ÷ (5.5 × 0.75) ≈ 109 W፣ ስለዚህ 120–150 W።</p></details><details><summary><span class="en">8. What is a break-even point?</span><span class="am" lang="am"> የመመጣጠኛ ነጥብ ምንድን ነው?</span></summary><p class="en">Fixed monthly costs ÷ margin per unit: the sales you need before you earn a profit.</p><p class="am" lang="am">ቋሚ ወርሃዊ ወጪ ÷ በአንድ ምርት ማርጂን፦ ትርፍ ከማግኘትዎ በፊት የሚያስፈልግዎ ሽያጭ።</p></details>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="pair">
+    <div class="en"><p>Written on November 13, 2026. Every person, company and number here is real and sourced below. Prices and security conditions change quickly: check them locally before you invest.</p></div>
+    <div class="am" lang="am"><p>ይህ ትምህርት የተጻፈው ኖቬምበር 13 ቀን 2026 ነው። እዚህ ያሉት ሰዎች፣ ኩባንያዎችና ቁጥሮች ሁሉ እውነተኛ ሲሆኑ ምንጮቻቸው ከታች ተዘርዝረዋል። ዋጋዎችና የደህንነት ሁኔታዎች በፍጥነት ይለዋወጣሉ፦ ገንዘብ ከማውጣትዎ በፊት በአካባቢዎ ያረጋግጡ።</p></div>
+  </div>
+  <nav class="series" aria-label="Ethiopia series · የኢትዮጵያ ተከታታይ"><a href="../ethiopia-resources/" aria-current="page"><span class="n">1</span>Lesson<span class="e">ትምህርት</span></a><a href="../ethiopia-sites/"><span class="n">2</span>Where to focus<span class="e">የትኩረት ቦታዎች</span></a><a href="../honey-business-plan/"><span class="n">3</span>Business plan<span class="e">የንግድ ዕቅድ</span></a></nav>
+  <h3 style="margin-top:24px">Sources · ምንጮች</h3>
+  <ul>
+    <li><a href="https://capitalethiopia.com/2026/07/12/gold-and-coffee-deepen-dominance-as-ethiopias-export-basket-remains-narrow/">Capital Ethiopia: gold and coffee dominate a narrow export basket (2026)</a></li>
+    <li><a href="https://www.foodbusinessmea.com/ethiopia-coffee-export-earnings-reach-record-us3b-in-2025-26-fiscal-year/">Food Business MEA: coffee export earnings reach record US$3B in 2025/26</a></li>
+    <li><a href="https://cropgpt.ai/ethiopia-coffee-outlook-2025-26-season-update">CropGPT: Ethiopia coffee outlook 2025/26 (production, 99.5% green)</a></li>
+    <li><a href="https://dailycoffeenews.com/2025/06/09/ethiopia-coffee-report-production-consumption-and-exports-all-up">Daily Coffee News: roasted coffee exports tripled</a></li>
+    <li><a href="https://www.ena.et/web/eng/w/eng_8086312">ENA: value-added coffee exports in foreign currency</a></li>
+    <li><a href="https://capitalethiopia.com/2025/03/31/honey-boom-faces-market-challenges-despite-high-potential/">Capital Ethiopia: honey boom faces market challenges (prices)</a></li>
+    <li><a href="https://sundayworld.co.za/africa/watch-ethiopia-turns-overlooked-beeswax-into-a-growing-source-of-income/">Sunday World: Ethiopia turns overlooked beeswax into income</a></li>
+    <li><a href="https://brandmine.ai/insights/ethiopia-honey-bee-products/">Brandmine: Ethiopia honey, exports under 2%, standards</a></li>
+    <li><a href="https://www.giz.de/en/downloads/GBN_Sector%20Brief_%C3%84thiopien_HonigBienenwachs_E_Web.pdf">GIZ / GBN: Partnership Ready Ethiopia, honey and beeswax</a></li>
+    <li><a href="https://cri-world.com/publications/qed_dp_241.pdf">Cambridge Resources International: modern vs traditional hives</a></li>
+    <li><a href="https://refugeeinvestments.org/?p=5472">Refugee Investment Network: Beza Mar</a></li>
+    <li><a href="https://www.tridge.com/sellers/sheka-nordic-honey-bees-wax-dev-ind">Tridge: Sheka-Nordic Honey &amp; Bees Wax</a></li>
+    <li><a href="https://www.ilo.org/resource/article/100-years-100-lives-ethiopia-i-always-wanted-produce-locally-and-sale">ILO: Bethlehem Tilahun Alemu, produce locally and sell globally</a></li>
+    <li><a href="https://www.howwemadeitinafrica.com/celebrated-ethiopian-entrepreneur-behind-solerebels-reveals-her-next-big-idea/39386/">How We Made It In Africa: soleRebels founder&#x27;s next idea</a></li>
+    <li><a href="https://Www.wikipedia.org/wiki/Bethlehem_Tilahun_Alemu">Wikipedia: Bethlehem Tilahun Alemu</a></li>
+    <li><a href="https://capitalethiopia.com/?p=83014">Capital Ethiopia: tanneries and hides</a></li>
+    <li><a href="https://ethiopia.un.org/en/node/277274">UN Ethiopia: youth skills in the leather sector, Modjo</a></li>
+    <li><a href="https://addisfortune.news/leather-export-machine-being-regulated-into-retreat">Addis Fortune: leather export machine regulated into retreat</a></li>
+    <li><a href="https://www.geeska.com/en/ethiopias-mining-paradox">Geeska: Ethiopia&#x27;s mining paradox (deposits)</a></li>
+    <li><a href="https://www.thereporterethiopia.com/46496/">The Reporter: Shire hub and gold by region</a></li>
+    <li><a href="https://www.thereporterethiopia.com/48875/">The Reporter: central bank to exit the gold market</a></li>
+    <li><a href="https://www.sphericalinsights.com/blogs/ethiopia-gold-refinery-2026-new-facility-aims-to-boost-exports-and-local-value-addition">Spherical Insights: Ethiopia gold refinery 2026</a></li>
+    <li><a href="https://www.lolinemag.com/article/ethiopias-mining-sector-between-promise-profit-and-peril">Lo Line: Ethiopia&#x27;s mining sector, promise and peril (Lega Dembi pollution)</a></li>
+    <li><a href="https://gia.edu/gems-gemology/summer-2010-opal-ethiopia-rondeau">GIA Gems &amp; Gemology: play-of-colour opal from Wegel Tena</a></li>
+    <li><a href="https://f1000research.com/articles/13-1388/v1">F1000Research: traditional opal mining in Wollo</a></li>
+    <li><a href="https://capitalethiopia.com/?p=49695">Capital Ethiopia: Kenticha lithium concentrate (ore body)</a></li>
+    <li><a href="https://capitalethiopia.com/2023/09/25/kenticha-site-ushers-in-lithium-processing-plant/">Capital Ethiopia: Kenticha dense media separation plant</a></li>
+    <li><a href="https://www.thereporterethiopia.com/41691/">The Reporter: Afar&#x27;s salt supply by district</a></li>
+    <li><a href="https://news.frontierafricareports.com/article/ethiopian-investment-holdings-to-start-potash-production">Frontier Africa Reports: potash production licence</a></li>
+    <li><a href="https://theafricanmirror.africa/news/africas-4-billion-move-on-food-sovereignty-dangote-abiy-rewrite-the-rules-in-gode/">The African Mirror: Gode urea plant</a></li>
+    <li><a href="https://www.waterpowermagazine.com/?p=30783">Water Power Magazine: GERD</a></li>
+    <li><a href="https://www.standardmedia.co.ke/business/amp/africa/article/2001528966/ethiopia-inaugurates-africas-biggest-dam">Standard Media: GERD and electricity access</a></li>
+    <li><a href="https://www.thinkgeoenergy.com/wp-content/uploads/2021/03/Ethiopia-short.pdf">ThinkGeoEnergy: Ethiopia geothermal market overview (10,000 MW)</a></li>
+    <li><a href="https://www.thinkgeoenergy.com/ethiopia-advances-restart-of-two-geothermal-projects/">ThinkGeoEnergy: Tulu Moye and Corbetti restart</a></li>
+    <li><a href="https://www.constructafrica.com/news/ethiopias-corbetti-geothermal-project-gains-new-life">Construct Africa: Corbetti and Aluto-Langano</a></li>
+    <li><a href="https://shega.co/news/a-young-entrepreneurs-bid-to-make-solar-power-affordable-in-ethiopia">Shega: a young entrepreneur&#x27;s bid to make solar affordable (Green Hope)</a></li>
+    <li><a href="https://sun-connect.org/wpcont/uploads/SSRN-id4419475-compressed.pdf">SSRN / SunConnect: off-grid solar in Ethiopia (irradiance by region)</a></li>
+    <li><a href="https://www.infoproff.com/en/open-data/ethiopia/214/business-register-in-ethiopia">Infoproff: business register in Ethiopia (e-Trade, certificate of competence)</a></li>
+    <li><a href="https://www.currency.me.uk/convert/usd/etb?amount=1">Currency.me.uk: USD to ETB, Aug–Nov 2026</a></li>
+    <li><a href="https://www.criticalthreats.org/briefs/ethiopia-war-security-review/ethiopia-war-security-review-november-3-2026">Critical Threats: Ethiopia war security review, 3 Nov 2026</a></li>
+  </ul>
+  <div class="author">
+    <p class="name">Mulusew Kassa Bitew</p>
+    <p>Postdoctoral Research Fellow, University of Molise, Italy</p>
+    <p>Department of Plant Science, College of Agriculture and Natural Resources, Debre Markos University, Ethiopia</p>
+    <p class="meta">ORCID <a href="https://orcid.org/0000-0001-6223-0037">0000-0001-6223-0037</a> · GitHub <a href="https://github.com/Muler-21">@Muler-21</a> · <a href="https://muler-21.github.io">muler-21.github.io</a></p>
+    <p class="apps">Other apps: <a href="https://muler-21.github.io/apps/adaptfit/">AdaptFit</a> <a href="https://muler-21.github.io/sebel-hakim/">Sebel Hakim</a> <a href="https://muler-21.github.io/research-integrity-compass/">Research Integrity Compass</a> <a href="https://muler-21.github.io/AMBKidsJoy/">AMBKidsJoy</a></p>
+    <p class="copy">© 2026 Mulusew Kassa Bitew. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll(".seg button");
+  function setLang(l) {
+    document.body.setAttribute("data-lang", l);
+    document.documentElement.setAttribute("lang", l === "am" ? "am" : "en");
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+    try { localStorage.setItem("ts-lang", l); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  try { var saved = localStorage.getItem("ts-lang"); if (saved) setLang(saved); } catch (e) {}
+})();
+</script>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function mk(p, n, a, t) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (t) e.textContent = t; p.appendChild(e); return e; }
+  var g = document.getElementById("stair");
+  if (!g) return;
+  var st = [["Raw", "ጥሬ", ["crude honey", "green coffee"]], ["Cleaned & graded", "የጸዳና ደረጃ የወጣለት", ["strained", "sorted"]], ["Processed", "የተቀነባበረ", ["roasted, tanned", "cut, refined"]], ["Product", "ምርት", ["jar, bag,", "belt, gem"]], ["Brand", "ብራንድ", ["name, story,", "trust"]], ["Service & know-how", "አገልግሎትና ዕውቀት", ["training, tools,", "testing"]]];
+  var x0 = 20, w = 162, gap = 6, base = 250, sh = 30;
+  st.forEach(function (s, i) {
+    var h = sh * (i + 1) + 40, x = x0 + i * (w + gap);
+    mk(g, "rect", { x: x, y: base - h, width: w, height: h, rx: 6, "class": i < 2 ? "f-copper" : "f-accent", opacity: (0.4 + i * 0.12).toFixed(2) });
+    mk(g, "text", { x: x + w / 2, y: base - h + 22, "text-anchor": "middle", "class": "t-ink svg-lbl" }, s[0]);
+    mk(g, "text", { x: x + w / 2, y: base - h + 42, "text-anchor": "middle", "class": "t-ink svg-lbl-am" }, s[1]);
+    mk(g, "text", { x: x + w / 2, y: base + 20, "text-anchor": "middle", "class": "t-muted svg-mono" }, s[2][0]);
+    mk(g, "text", { x: x + w / 2, y: base + 38, "text-anchor": "middle", "class": "t-muted svg-mono" }, s[2][1]);
+  });
+  mk(g, "line", { x1: 20, x2: 1030, y1: base, y2: base, "class": "s-rule", "stroke-width": 2 });
+  mk(g, "text", { x: 20, y: 30, "class": "t-copper svg-mono" }, "Ethiopia today: steps 1–2 · ኢትዮጵያ ዛሬ፦ ደረጃ 1–2");
+  mk(g, "text", { x: 1030, y: 20, "text-anchor": "end", "class": "t-muted svg-mono" }, "value and jobs grow → · እሴትና ሥራ ያድጋል →");
+})();
+</script>
+<script data-goatcounter="https://ambkidsjoy.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hive &amp; Wax Works: a Business Plan from Scratch</title>
+<meta name="description" content="A complete bilingual business plan for a small Ethiopian honey and beeswax processing business: budget, profit calculator, three-year plan, registration steps, risks and milestones.">
+<meta name="author" content="Mulusew Kassa Bitew">
+<link rel="canonical" href="https://muler-21.github.io/Teck_Stories/honey-business-plan/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tech Stories · የቴክ ታሪኮች">
+<meta property="og:title" content="Hive &amp; Wax Works: a honey and beeswax business plan from scratch">
+<meta property="og:description" content="Budget, profit calculator, three-year plan, legal steps and risks for a small honey and wax business in Ethiopia. English + Amharic · በእንግሊዝኛ እና በአማርኛ">
+<meta property="og:url" content="https://muler-21.github.io/Teck_Stories/honey-business-plan/">
+<meta property="og:image" content="https://muler-21.github.io/Teck_Stories/honey-business-plan/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://muler-21.github.io/Teck_Stories/honey-business-plan/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Noto+Serif+Ethiopic:wght@400;600;700&family=Noto+Sans+Ethiopic:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: same Tech Stories system as the chips lesson. Here copper stands for honey, gold and coffee — the resources — and teal for the work done on them. */
+:root {
+  --paper: #f2f4f6;
+  --panel: #ffffff;
+  --ink: #131a24;
+  --muted: #56606f;
+  --rule: #d6dbe2;
+  --accent: #0f7a6c;
+  --accent-soft: #e0f1ee;
+  --copper: #b5602b;
+  --copper-soft: #f7e7dc;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --ethi: "Noto Serif Ethiopic", "Nyala", "Abyssinica SIL", serif;
+  --ethi-sans: "Noto Sans Ethiopic", "Nyala", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1318; --panel: #151c24; --ink: #e6eaef; --muted: #9aa5b3; --rule: #27313d;
+    --accent: #4cc3b0; --accent-soft: #15302d; --copper: #e08a52; --copper-soft: #33231a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1318; --panel: #151c24; --ink: #e6eaef; --muted: #9aa5b3; --rule: #27313d;
+  --accent: #4cc3b0; --accent-soft: #15302d; --copper: #e08a52; --copper-soft: #33231a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.65; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+header.hero { padding: 36px 0 28px; border-bottom: 1px solid var(--rule); }
+.home-link { font: 600 14px var(--display); text-decoration: none; display: inline-block; margin-bottom: 16px; }
+.kicker { font: 500 13px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--copper); margin: 0 0 12px; }
+h1 { font: 800 clamp(34px, 6vw, 60px)/1.03 var(--display); margin: 0; letter-spacing: -0.02em; text-wrap: balance; max-width: 18ch; }
+h1 .am-title { display: block; font: 700 .58em/1.4 var(--ethi-sans); color: var(--accent); margin-top: 10px; letter-spacing: 0; max-width: none; }
+.dek { color: var(--muted); max-width: 64ch; margin: 14px 0 0; }
+.dek.am { font-family: var(--ethi); line-height: 1.9; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 24px; }
+.stat { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; }
+.stat b { display: block; font: 800 34px/1.1 var(--display); color: var(--copper); font-variant-numeric: tabular-nums; }
+.stat span { display: block; font-size: 15px; color: var(--muted); line-height: 1.45; }
+.stat span.am { font-family: var(--ethi); margin-top: 4px; }
+
+.toolbar { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+.toolbar .wrap { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; padding-top: 10px; padding-bottom: 10px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: var(--panel); }
+.seg button { font: 600 14px/1 var(--display); color: var(--muted); background: none; border: 0; padding: 9px 14px; border-radius: 999px; cursor: pointer; }
+.seg button .e { font-family: var(--ethi-sans); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+nav.chapters { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+nav.chapters::-webkit-scrollbar { display: none; }
+nav.chapters a { font: 500 13px/1 var(--mono); color: var(--muted); text-decoration: none; padding: 8px 9px; border-radius: 6px; white-space: nowrap; }
+nav.chapters a:hover { background: var(--accent-soft); color: var(--ink); }
+
+main { padding: 8px 0 30px; }
+section.ch { padding: 44px 0 36px; border-bottom: 1px solid var(--rule); scroll-margin-top: 70px; }
+.ch-tag { display: flex; gap: 12px; align-items: baseline; margin-bottom: 18px; flex-wrap: wrap; }
+.ch-tag .yr { font: 700 14px/1 var(--mono); color: var(--paper); background: var(--copper); padding: 6px 9px; border-radius: 4px; }
+.ch-tag .part { font: 500 13px/1 var(--mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.pair { display: grid; grid-template-columns: 1fr; gap: 26px; }
+@media (min-width: 900px) { body[data-lang="both"] .pair { grid-template-columns: 1fr 1fr; gap: 44px; } }
+body[data-lang="en"] .am, body[data-lang="am"] .en { display: none !important; }
+body[data-lang="en"] .pair > .en, body[data-lang="am"] .pair > .am { max-width: 70ch; }
+h2 { font: 800 clamp(26px, 3.4vw, 36px)/1.12 var(--display); margin: 0 0 14px; text-wrap: balance; letter-spacing: -0.01em; }
+.am h2 { font: 700 clamp(23px, 3vw, 31px)/1.4 var(--ethi-sans); letter-spacing: 0; }
+h3 { font: 700 19px/1.3 var(--display); margin: 22px 0 8px; }
+.am h3 { font: 700 18px/1.5 var(--ethi-sans); }
+.pair p { margin: 0 0 14px; }
+.pair ul, .pair ol { margin: 0 0 14px; padding-left: 22px; }
+.pair li { margin-bottom: 6px; }
+.am { font-family: var(--ethi); line-height: 1.95; font-size: 18.5px; }
+@media (max-width: 899px) { body[data-lang="both"] .pair > .am { background: var(--accent-soft); border-radius: 12px; padding: 18px 18px 6px; } }
+.callout { border-left: 4px solid var(--copper); background: var(--copper-soft); padding: 12px 16px; border-radius: 0 10px 10px 0; margin: 16px 0; }
+
+figure { margin: 28px 0 0; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
+figure .scroll { overflow-x: auto; }
+figure svg { display: block; width: 100%; min-width: 600px; height: auto; }
+figcaption { display: grid; gap: 4px; margin-top: 10px; font-size: 15px; color: var(--muted); }
+figcaption .am { font-size: 15.5px; line-height: 1.7; }
+body[data-lang="en"] figcaption .am, body[data-lang="am"] figcaption .en { display: none; }
+.t-ink { fill: var(--ink); } .t-muted { fill: var(--muted); } .t-copper { fill: var(--copper); } .t-accent { fill: var(--accent); }
+.s-rule { stroke: var(--rule); } .f-panel { fill: var(--panel); } .f-copper { fill: var(--copper); } .f-accent { fill: var(--accent); } .f-accent-soft { fill: var(--accent-soft); } .f-copper-soft { fill: var(--copper-soft); } .f-rule { fill: var(--rule); }
+.svg-lbl { font: 600 15px var(--display); } .svg-lbl-am { font: 600 14px var(--ethi-sans); } .svg-mono { font: 500 13px var(--mono); } .svg-big { font: 800 18px var(--display); }
+
+/* materials table */
+.tbl-wrap { overflow-x: auto; margin-top: 26px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 15.5px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 700 13px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--paper); }
+td .am { display: block; font-size: 15px; line-height: 1.7; color: var(--muted); margin-top: 3px; }
+td.el { font: 800 17px var(--display); white-space: nowrap; }
+td.el small { display: block; font: 500 12px var(--mono); color: var(--copper); }
+tr:last-child td { border-bottom: 0; }
+
+/* process steps */
+.steps { list-style: none; padding: 0; margin: 26px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; counter-reset: s; }
+.steps li { counter-increment: s; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; position: relative; }
+.steps li::before { content: counter(s); font: 700 14px/28px var(--mono); text-align: center; width: 28px; height: 28px; border-radius: 6px; background: var(--copper); color: var(--paper); display: block; margin-bottom: 10px; }
+.steps li.loop { border-color: var(--accent); background: var(--accent-soft); }
+.steps b { font: 700 17px/1.3 var(--display); display: block; }
+.steps .am b { font: 700 16px/1.5 var(--ethi-sans); }
+.steps p { margin: 6px 0 0; font-size: 15.5px; line-height: 1.55; }
+.steps .am { font-size: 15.5px; line-height: 1.75; margin-top: 8px; }
+body[data-lang="both"] .steps .am { border-top: 1px dashed var(--rule); padding-top: 8px; }
+
+/* country cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 26px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; display: grid; gap: 6px; align-content: start; }
+.card .cn { font: 800 19px var(--display); }
+.card .cn .am { font: 700 16px var(--ethi-sans); color: var(--accent); margin-left: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 600 12px/1 var(--mono); padding: 5px 8px; border-radius: 999px; background: var(--copper-soft); color: var(--copper); }
+.chip.ind { background: var(--accent-soft); color: var(--accent); }
+.card p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+.card p.am { font-size: 15.5px; line-height: 1.75; }
+.card.et { border: 2px solid var(--copper); }
+
+/* youth ladder */
+.ladder { display: grid; gap: 12px; margin-top: 26px; }
+.rung { display: grid; grid-template-columns: 1fr; gap: 10px; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
+@media (min-width: 900px) { body[data-lang="both"] .rung { grid-template-columns: 170px 1fr 1fr; gap: 26px; } body[data-lang="en"] .rung, body[data-lang="am"] .rung { grid-template-columns: 170px 1fr; gap: 26px; } }
+.rung .age { font: 800 20px/1.2 var(--display); color: var(--copper); }
+.rung .age small { display: block; font: 500 13px var(--mono); color: var(--muted); margin-top: 4px; }
+.rung ul { margin: 0; padding-left: 20px; font-size: 16px; }
+.rung li { margin-bottom: 5px; }
+.rung .am ul { font-size: 16px; line-height: 1.8; }
+
+details { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 16px; margin-top: 10px; }
+summary { cursor: pointer; font: 600 17px var(--display); }
+details .am summary, summary .am { font-family: var(--ethi-sans); }
+details p { margin: 10px 0 0; }
+
+footer { padding: 30px 0 60px; color: var(--muted); font-size: 15px; }
+footer h3 { font: 700 14px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin: 0 0 10px; }
+footer ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.author { margin-top: 30px; padding: 20px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); color: var(--ink); font-size: 15.5px; line-height: 1.6; }
+.author .name { font: 800 20px var(--display); margin: 0 0 4px; }
+.author p { margin: 0 0 6px; }
+.author .meta, .author .copy { color: var(--muted); }
+.author .apps a { margin-right: 10px; }
+.author .copy { font-size: 14px; margin-top: 10px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+.real { border-left: 4px solid var(--accent); padding: 4px 0 4px 16px; margin: 0 0 16px; }
+.lbl { font: 700 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+.am .lbl { font-family: var(--ethi-sans); letter-spacing: 0; font-size: 13px; }
+.real .lbl { color: var(--accent); }
+.sci { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+.sci .lbl { color: var(--ink); }
+.formula { font: 600 16px/1.6 var(--mono); background: var(--paper); border-radius: 8px; padding: 8px 12px; margin: 8px 0; overflow-x: auto; white-space: nowrap; }
+.tool { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+.tool .lbl { color: var(--accent); }
+.mission { background: var(--copper-soft); border: 1px dashed var(--copper); border-radius: 12px; padding: 14px 16px; margin: 16px 0 0; }
+.mission .lbl { color: var(--copper); }
+.safety { background: #fff4f2; border: 1px solid #d9472b; border-radius: 12px; padding: 14px 16px; margin: 16px 0; color: #5a1a0c; }
+.safety .lbl { color: #b8321a; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .safety { background: #3a1a14; color: #f6d6cf; border-color: #e0705a; } }
+:root[data-theme="dark"] .safety { background: #3a1a14; color: #f6d6cf; border-color: #e0705a; }
+.tool p, .mission p, .sci p, .safety p { margin: 0 0 6px; }
+.tool ul, .mission ul, .sci ul, .safety ul, .mission ol { margin: 6px 0 0; }
+.parts { overflow-x: auto; margin-top: 22px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); }
+.parts table { min-width: 640px; }
+.canvas { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; margin-top: 22px; }
+.box { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; min-height: 120px; }
+.box .n { font: 700 13px var(--mono); color: var(--copper); }
+.box b { display: block; font: 700 16px/1.3 var(--display); margin: 4px 0; }
+.box .am { display: block; font: 600 15px/1.6 var(--ethi-sans); color: var(--accent); }
+.box small { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 6px; }
+.box small.am { font-family: var(--ethi); font-weight: 400; color: var(--muted); }
+body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
+.weeks { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 18px; }
+.week { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; }
+.week .w { font: 800 18px var(--display); color: var(--copper); }
+.week p { margin: 6px 0 0; font-size: 15.5px; line-height: 1.55; }
+.week p.am { font-size: 15.5px; line-height: 1.75; }
+.s-ink { stroke: var(--ink); } .s-copper { stroke: var(--copper); } .s-accent { stroke: var(--accent); } .f-ink { fill: var(--ink); } .f-paper { fill: var(--paper); }
+
+.journey { margin-top: 26px; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; }
+.journey .scroll { overflow-x: auto; }
+.journey svg { display: block; width: 100%; min-width: 760px; height: auto; }
+.substeps { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; counter-reset: ss; }
+.substeps li { counter-increment: ss; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; }
+.substeps li::before { content: counter(ss, lower-alpha); font: 700 14px/28px var(--mono); text-align: center; width: 28px; height: 28px; border-radius: 6px; background: var(--accent); color: var(--paper); }
+.substeps b { font-family: var(--display); }
+.am .substeps b { font-family: var(--ethi-sans); }
+.truth { border-collapse: collapse; margin: 8px 0; font: 600 15px var(--mono); min-width: 0; width: auto; }
+.truth th, .truth td { border: 1px solid var(--rule); padding: 4px 12px; text-align: center; }
+
+.pair > div { min-width: 0; }
+.formula { white-space: normal; }
+.series { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.series a { font: 600 14px/1 var(--display); text-decoration: none; border: 1px solid var(--rule); background: var(--panel); color: var(--ink); padding: 9px 12px; border-radius: 999px; }
+.series a .e { font-family: var(--ethi-sans); color: var(--accent); margin-left: 4px; }
+.series a[aria-current="page"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.series a[aria-current="page"] .e { color: var(--paper); }
+.series .n { font: 700 12px var(--mono); color: var(--copper); margin-right: 6px; }
+.series a[aria-current="page"] .n { color: var(--paper); }
+.num { font-variant-numeric: tabular-nums; }
+td.r, th.r { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.tot td { font-weight: 700; border-top: 2px solid var(--ink); }
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 18px; }
+.kv div { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 14px; }
+.kv b { display: block; font: 800 24px/1.15 var(--display); color: var(--copper); font-variant-numeric: tabular-nums; }
+.kv span { display: block; font-size: 14.5px; color: var(--muted); line-height: 1.45; }
+.kv span.am { font-family: var(--ethi); }
+.two { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 900px) { .two { grid-template-columns: 1fr 1fr; } }
+/* map */
+.mapwrap { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 22px; }
+@media (min-width: 980px) { .mapwrap { grid-template-columns: 1.35fr 1fr; } }
+.mapbox { background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 10px; }
+.mapbox svg { display: block; width: 100%; height: auto; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+.filters button { font: 600 13px/1 var(--display); border: 1px solid var(--rule); background: var(--paper); color: var(--ink); padding: 8px 11px; border-radius: 999px; cursor: pointer; }
+.filters button .e { font-family: var(--ethi-sans); color: var(--muted); margin-left: 4px; }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.filters button[aria-pressed="true"] .e { color: var(--paper); }
+.site-dot { cursor: pointer; }
+.site-dot:focus { outline: none; }
+.site-dot:focus circle.d, .site-dot.on circle.d { stroke: var(--ink); stroke-width: 3; }
+.cat-agri { fill: #c98a12; } .cat-min { fill: var(--copper); } .cat-energy { fill: #2f7fd1; } .cat-hub { fill: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; color: var(--muted); margin-top: 8px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 16px 18px; align-self: start; }
+.panel h3 { margin-top: 0; }
+.panel .where { font: 500 13px var(--mono); color: var(--copper); }
+.panel p { margin: 6px 0; font-size: 16px; line-height: 1.55; }
+.panel .am { font-size: 16px; line-height: 1.8; }
+.panel .risk { font-size: 14.5px; color: var(--muted); }
+/* score table */
+.weights { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px 18px; margin: 18px 0 8px; }
+.weights label { display: grid; gap: 2px; font: 600 14px var(--display); }
+.weights label .am { font: 500 13.5px var(--ethi-sans); color: var(--muted); }
+.weights input[type=range] { width: 100%; accent-color: var(--copper); }
+.weights output { font: 700 13px var(--mono); color: var(--copper); }
+.bar { height: 10px; border-radius: 5px; background: var(--copper); display: block; margin-top: 6px; min-width: 2px; }
+.score { font: 800 20px var(--display); color: var(--ink); font-variant-numeric: tabular-nums; }
+.dots { font: 700 13px var(--mono); letter-spacing: 1px; color: var(--copper); white-space: nowrap; }
+.rank { font: 800 18px var(--display); color: var(--copper); }
+/* calculator */
+.calc { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 22px; }
+@media (min-width: 900px) { .calc { grid-template-columns: 1fr 1fr; } }
+.calc .inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 16px; align-content: start; }
+.calc label { display: grid; gap: 4px; font: 600 13.5px/1.3 var(--display); }
+.calc label .am { font: 500 13px/1.5 var(--ethi-sans); color: var(--muted); }
+.calc input[type=number] { font: 600 16px var(--mono); padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); color: var(--ink); width: 100%; }
+.calc .outs { display: grid; gap: 10px; align-content: start; }
+.out { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 16px; }
+.out b { display: block; font: 800 28px/1.15 var(--display); color: var(--copper); font-variant-numeric: tabular-nums; }
+.out.good b { color: var(--accent); }
+.out.bad b { color: #c0392b; }
+.out span { font-size: 14.5px; color: var(--muted); }
+.out span.am { display: block; font-family: var(--ethi); }
+.timeline { display: grid; gap: 10px; margin-top: 22px; }
+.tl { display: grid; grid-template-columns: 110px 1fr; gap: 14px; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; }
+@media (min-width: 900px) { body[data-lang="both"] .tl { grid-template-columns: 130px 1fr 1fr; } }
+.tl .when { font: 800 17px/1.2 var(--display); color: var(--copper); }
+.tl .when small { display: block; font: 500 12px var(--mono); color: var(--muted); margin-top: 4px; }
+.tl ul { margin: 0; padding-left: 18px; font-size: 15.5px; }
+.tl .am ul { line-height: 1.8; }
+.check { list-style: none; padding: 0; }
+.check li::before { content: "☐ "; color: var(--copper); font-weight: 700; }
+@media print { .toolbar, .series, .weights, .filters { display: none !important; } section.ch { break-inside: avoid-page; } }
+</style>
+</head>
+<body data-lang="both">
+
+<header class="hero">
+  <div class="wrap">
+    <a class="home-link" href="../">← Tech Stories · የቴክ ታሪኮች</a>
+    <p class="kicker">Business plan · የንግድ ዕቅድ · Ethiopia series 3 of 3</p>
+    <h1>Hive &amp; Wax Works: a Business Plan from Scratch
+      <span class="am-title" lang="am">የቀፎና የሰም ሥራዎች፦ ከባዶ የሚጀመር የንግድ ዕቅድ</span>
+    </h1>
+    <p class="dek en">A complete plan to start a honey and beeswax processing business with little money: what to sell and to whom, the equipment to build, a start-up budget, a calculator for your own numbers, three years of growth, and the risks.</p>
+    <p class="dek am" lang="am">በትንሽ ገንዘብ የማርና የሰም ማቀነባበሪያ ንግድ ለመጀመር የተሟላ ዕቅድ፦ ምን ለማን እንደሚሸጥ፣ የሚገነቡ መሣሪያዎች፣ የመነሻ በጀት፣ የራስዎን ቁጥሮች የሚያሰላ ማስያ፣ የሦስት ዓመት ዕድገትና ስጋቶቹ።</p>
+    <nav class="series" aria-label="Ethiopia series · የኢትዮጵያ ተከታታይ"><a href="../ethiopia-resources/"><span class="n">1</span>Lesson<span class="e">ትምህርት</span></a><a href="../ethiopia-sites/"><span class="n">2</span>Where to focus<span class="e">የትኩረት ቦታዎች</span></a><a href="../honey-business-plan/" aria-current="page"><span class="n">3</span>Business plan<span class="e">የንግድ ዕቅድ</span></a></nav>
+    <div class="stats">
+  <div class="stat"><b>106,700</b><span class="en">birr to start lean (≈ $659)</span><span class="am" lang="am">በቀላሉ ለመጀመር የሚያስፈልግ ብር</span></div>
+  <div class="stat"><b>100 kg</b><span class="en">of crude honey a month to break even</span><span class="am" lang="am">ለመመጣጠን በወር የሚያስፈልግ ጥሬ ማር</span></div>
+  <div class="stat"><b>2×</b><span class="en">Addis price vs farm-gate price for the same honey</span><span class="am" lang="am">የአዲስ አበባ ዋጋ ከአርሶ አደሩ ደጃፍ ዋጋ ጋር ሲነጻጸር</span></div>
+</div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap">
+    <div class="seg" role="group" aria-label="Language">
+      <button type="button" data-lang="both" aria-pressed="true">Both · <span class="e">ሁለቱም</span></button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+      <button type="button" data-lang="am" aria-pressed="false"><span class="e">አማርኛ</span></button>
+    </div>
+    <nav class="chapters" aria-label="Parts"><a href="#summary">1 Summary</a><a href="#market">2 Market</a><a href="#ops">3 Operations</a><a href="#money">4 Budget</a><a href="#calc">5 Calculator</a><a href="#growth">6 3 years</a><a href="#legal">7 Legal</a><a href="#risks">8 Risks</a><a href="#plan">9 Milestones</a></nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="ch" id="summary">
+  <div class="ch-tag"><span class="yr">PART 1</span><span class="part">One-page summary · የአንድ ገጽ ማጠቃለያ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Hive &amp; Wax Works: buy fairly, process cleanly, sell with a name</h2>
+<p><b>What:</b> a small honey and beeswax processing business. It buys crude honey from beekeepers, strains and settles it without heat, tests the moisture, and sells it in labelled jars that show the place of origin. Wax that beekeepers used to throw away is melted in a solar box and sold as clean blocks or made into products.</p>
+<p><b>Why honey:</b> it scored first of ten opportunities in <a href="../ethiopia-sites/">Part 2</a>. Raw material is everywhere, farm-gate honey sells for about half the Addis Ababa price, wax has jumped to over 1,500 birr/kg, and all the tools can be built locally.</p>
+<p><b>Where:</b> in a honey area with an open road to a town market, for example Masha, Bonga, Jimma, or Debre Markos when roads there are safe again. Sell first in your town, then in Addis Ababa and Hawassa.</p>
+<p><b>Who:</b> one founder plus one helper in year 1; beekeeper suppliers paid fairly and on time.</p>
+<p><b>Growth:</b> later sell modern hives and wax foundation sheets to the same beekeepers, buy back their bigger harvests, and add a hive-scale sensor service.</p>
+<p class="callout">The name "Hive &amp; Wax Works" is an example: use your own. All prices are November 2026 estimates (about 162 birr per US dollar). Get three quotes for every item before you buy.</p></div>
+    <div class="am" lang="am"><h2>የቀፎና የሰም ሥራዎች፦ በፍትሐዊ ዋጋ ይግዙ፣ በንጽሕና ያቀነባብሩ፣ በስም ይሽጡ</h2>
+<p><b>ምን፦</b> አነስተኛ የማርና የሰም ማቀነባበሪያ ንግድ። ከንብ አናቢዎች ጥሬ ማር ይገዛል፣ ያለ ሙቀት ያጣራዋል፣ ያስቀምጠዋል፣ እርጥበቱን ይለካል፣ የመነሻ ቦታውን በሚያሳይ መለያ በብልቃጥ ይሸጠዋል። ንብ አናቢዎች ይጥሉት የነበረውን ሰም በፀሐይ ሳጥን አቅልጦ እንደ ንጹሕ ጡብ ይሸጠዋል ወይም ወደ ምርት ይቀይረዋል።</p>
+<p><b>ለምን ማር፦</b> በ<a href="../ethiopia-sites/">ክፍል 2</a> ከአሥር ዕድሎች አንደኛ ወጥቷል። ጥሬ ዕቃው በየቦታው አለ፣ የአርሶ አደሩ ማር ከአዲስ አበባው ዋጋ ግማሽ ያህል ይሸጣል፣ ሰም ከ1,500 ብር/ኪግ በላይ ደርሷል፣ መሣሪያዎቹ ሁሉ በአገር ውስጥ ሊሠሩ ይችላሉ።</p>
+<p><b>የት፦</b> ወደ ከተማ ገበያ ክፍት መንገድ ባለው የማር አካባቢ፤ ለምሳሌ ማሻ፣ ቦንጋ፣ ጅማ፣ ወይም መንገዶቹ እንደገና ደህና ሲሆኑ ደብረ ማርቆስ። መጀመሪያ በከተማዎ፣ ከዚያ በአዲስ አበባና በሀዋሳ ይሽጡ።</p>
+<p><b>ማን፦</b> በመጀመሪያው ዓመት አንድ መሥራችና አንድ ረዳት፤ በፍትሐዊ ዋጋና በሰዓቱ የሚከፈላቸው ንብ አናቢ አቅራቢዎች።</p>
+<p><b>ዕድገት፦</b> በኋላ ለእነዚሁ ንብ አናቢዎች ዘመናዊ ቀፎና የሰም ዳብ መሸጥ፣ የጨመረውን ምርታቸውን መልሶ መግዛት፣ እና የቀፎ ሚዛን ዳሳሽ አገልግሎት መጨመር።</p>
+<p class="callout">«የቀፎና የሰም ሥራዎች» የሚለው ስም ምሳሌ ነው፦ የራስዎን ይጠቀሙ። ዋጋዎቹ ሁሉ የኖቬምበር 2026 ግምቶች ናቸው (ለአንድ ዶላር 162 ብር ገደማ)። ማንኛውንም ዕቃ ከመግዛትዎ በፊት ሦስት የዋጋ ማቅረቢያ ይውሰዱ።</p></div>
+  </div><div class="kv">
+<div><b>294,800 birr</b><span class="en">standard start-up capital (≈ $1,820); lean start 106,700 birr</span><span class="am" lang="am">መደበኛ መነሻ ካፒታል፤ ቀላል ጅምር 106,700 ብር</span></div>
+<div><b>219 birr</b><span class="en">margin per kg of crude honey processed</span><span class="am" lang="am">በአንድ ኪግ የተቀነባበረ ጥሬ ማር የሚገኝ ማርጂን</span></div>
+<div><b>100 kg/month</b><span class="en">break-even volume at 22,000 birr fixed costs</span><span class="am" lang="am">በ22,000 ብር ቋሚ ወጪ የመመጣጠኛ መጠን</span></div>
+<div><b>43,700 birr</b><span class="en">monthly profit before tax at 300 kg/month</span><span class="am" lang="am">በወር 300 ኪግ ሲቀነባበር ከግብር በፊት ወርሃዊ ትርፍ</span></div>
+</div>
+</section>
+<section class="ch" id="market">
+  <div class="ch-tag"><span class="yr">PART 2</span><span class="part">Problem, customers and edge · ችግር፣ ደንበኞችና ብልጫ</span></div>
+  <div class="pair">
+    <div class="en"><h2>The problem you solve, and who pays you</h2>
+<p><b>The problem.</b> Beekeepers sell crude honey for less than 400 birr/kg because they have no direct route to market, while the same honey fetches up to 800 birr/kg in Addis Ababa. Most Ethiopian honey is sold unbranded, much of it to tej makers, and the country has no internationally accredited honey-testing laboratory. Buyers cannot easily tell good honey from watered or adulterated honey.</p>
+<p><b>Your customers.</b></p>
+<ul>
+<li><b>Shops and supermarkets</b>: 250 g, 500 g and 1 kg jars.</li>
+<li><b>Hotels, cafés and bakeries</b>: 5 kg tubs at a wholesale price.</li>
+<li><b>Tej houses</b>: strained honey in bulk; they buy most of the honey sold in Ethiopia.</li>
+<li><b>Gift and diaspora buyers</b>: single-origin jars sold online by Telegram, TikTok and WhatsApp.</li>
+<li><b>Soap, cosmetic and candle makers</b>: clean wax blocks.</li>
+<li><b>Beekeepers</b> (from year 2): hives and wax foundation sheets.</li></ul>
+<p><b>Your edge.</b> Every jar shows the place, the harvest month, a lot number and the measured water content. You never heat the honey. You pay beekeepers a posted price, above the farm-gate price, on the day of delivery.</p></div>
+    <div class="am" lang="am"><h2>የሚፈቱት ችግርና የሚከፍሉዎ ሰዎች</h2>
+<p><b>ችግሩ።</b> ንብ አናቢዎች ቀጥተኛ የገበያ መንገድ ስለሌላቸው ጥሬ ማርን ከ400 ብር/ኪግ በታች ይሸጣሉ፤ ያው ማር በአዲስ አበባ እስከ 800 ብር/ኪግ ያወጣል። አብዛኛው የኢትዮጵያ ማር ያለ ስም ይሸጣል፣ ብዙው ለጠጅ ቤቶች ይሄዳል፤ አገሪቱም በዓለም አቀፍ ደረጃ እውቅና ያለው የማር መመርመሪያ ላቦራቶሪ የላትም። ገዢዎች ጥሩ ማርን ውሃ ከተጨመረበት ወይም ከተበረዘ ማር በቀላሉ መለየት አይችሉም።</p>
+<p><b>ደንበኞችዎ።</b></p>
+<ul>
+<li><b>ሱቆችና ሱፐርማርኬቶች</b>፦ 250 ግ፣ 500 ግና 1 ኪግ ብልቃጦች።</li>
+<li><b>ሆቴሎች፣ ካፌዎችና ዳቦ ቤቶች</b>፦ በጅምላ ዋጋ 5 ኪግ ዕቃዎች።</li>
+<li><b>ጠጅ ቤቶች</b>፦ በጅምላ የተጣራ ማር፤ በኢትዮጵያ ከሚሸጠው ማር አብዛኛውን የሚገዙት እነርሱ ናቸው።</li>
+<li><b>የስጦታና የዲያስፖራ ገዢዎች</b>፦ በቴሌግራም፣ በቲክቶክና በዋትስአፕ የሚሸጡ የአንድ አካባቢ ማር ብልቃጦች።</li>
+<li><b>የሳሙና፣ የኮስሞቲክስና የሻማ አምራቾች</b>፦ ንጹሕ የሰም ጡቦች።</li>
+<li><b>ንብ አናቢዎች</b> (ከ2ኛው ዓመት)፦ ቀፎና የሰም ዳብ።</li></ul>
+<p><b>ብልጫዎ።</b> እያንዳንዱ ብልቃጥ ቦታውን፣ የምርት ወሩን፣ የምርት ቁጥሩንና የተለካውን የውሃ መጠን ያሳያል። ማሩን በጭራሽ አያሞቁትም። ለንብ አናቢዎች ከአርሶ አደሩ ደጃፍ ዋጋ የበለጠ፣ የተለጠፈ ዋጋ፣ ባስረከቡበት ቀን ይከፍላሉ።</p></div>
+  </div>
+</section>
+<section class="ch" id="ops">
+  <div class="ch-tag"><span class="yr">PART 3</span><span class="part">Operations and engineering · አሠራርና ምሕንድስና</span></div>
+  <div class="pair">
+    <div class="en"><h2>How it works, and the equipment you build</h2>
+<ol>
+<li><b>Buy and test.</b> Weigh, smell and taste each delivery and check a sample with the refractometer. Reject honey above 20% water as table honey; it can still go to tej makers.</li>
+<li><b>Strain.</b> Coarse mesh, then fine mesh, into food-grade buckets. Press the comb with the screw press.</li>
+<li><b>Settle.</b> 2–3 days at room temperature in the tank. Bubbles and wax rise.</li>
+<li><b>Check and pack.</b> Measure the water again, fill jars from the bottom tap, label with place, month, lot number and water %.</li>
+<li><b>Wax line.</b> Pressed comb and cappings go into the solar melter, through a mesh, into moulds. Clean blocks are weighed and stored.</li></ol>
+<div class="tool"><span class="lbl">Build it</span><p><b>Settling tank.</b> 100 L stainless steel, with a sloping bottom and a honey gate (tap) 3 cm above the base so sediment stays behind. A local metal workshop can make it; insist on food-grade stainless steel and smooth welds.</p>
+<p><b>Solar wax melter.</b> A wooden box about 100 × 60 cm, 5 cm of insulation, a black-painted metal tray, a double-glass lid, set at about 30° facing the sun. 70–90 °C inside on a clear day.</p>
+<p><b>Year 3: hive-scale sensor.</b> A 200 kg load cell under the hive, an HX711 amplifier, an ESP32 board, and a SIM800L module that sends one SMS a day; powered by a 6 V solar panel and an 18650 battery. Weight going up means nectar is flowing, so harvest at the right time. A sudden drop means a swarm or theft. Parts cost an estimated 5,000–8,000 birr.</p></div><div class="sci"><span class="lbl">Quality standard you work to</span><ul><li>Water ≤ 20% (Codex Alimentarius honey standard).</li><li>HMF ≤ 40 mg/kg: never heat above 40 °C.</li><li>Ethiopian standards for honey (ES 1202), beeswax (ES 1203) and beehives (ES 1204), first published in 2005 and revised in 2025.</li><li>Send one sample per season to a lab for HMF and adulteration tests; keep the report for buyers.</li></ul></div></div>
+    <div class="am" lang="am"><h2>እንዴት እንደሚሠራ፣ የሚገነቧቸውም መሣሪያዎች</h2>
+<ol>
+<li><b>መግዛትና መሞከር።</b> እያንዳንዱን ማስረከቢያ ይመዝኑ፣ ያሽቱ፣ ይቅመሱ፣ ናሙናውን በሪፍራክቶሜትር ይለኩ። ውሃው ከ20% በላይ የሆነውን እንደ ገበታ ማር አይቀበሉ፤ ለጠጅ ቤቶች ግን ሊሄድ ይችላል።</li>
+<li><b>ማጣራት።</b> በሻካራ ከዚያ በቀጭን ወንፊት ወደ ምግብ ባልዲዎች። እንጀራውን በመጭመቂያው ይጭመቁ።</li>
+<li><b>ማስቀመጥ።</b> በታንኩ ውስጥ በክፍል ሙቀት ለ2–3 ቀን። አረፋና ሰም ወደ ላይ ይወጣሉ።</li>
+<li><b>መለካትና ማሸግ።</b> ውሃውን እንደገና ይለኩ፣ ከታችኛው ቧንቧ ብልቃጦችን ይሙሉ፣ ቦታ፣ ወር፣ የምርት ቁጥርና የውሃ መቶኛ የያዘ መለያ ይለጥፉ።</li>
+<li><b>የሰም መስመር።</b> የተጨመቀ እንጀራና ክዳን ሰም ወደ ፀሐይ ማቅለጫው፣ በወንፊት አልፎ ወደ ቅርጾች ይገባል። ንጹሕ ጡቦች ተመዝነው ይቀመጣሉ።</li></ol>
+<div class="tool"><span class="lbl">ይገንቡት</span><p><b>ማስቀመጫ ታንክ።</b> 100 ሊትር አይዝጌ ብረት፣ ተዳፋት ታች ያለውና ዝቃጩ እንዲቀር ከታች 3 ሳ.ሜ ከፍ ብሎ የተገጠመ የማር ቧንቧ። የአገር ውስጥ የብረት ሥራ ሊሠራው ይችላል፤ ለምግብ የሚሆን አይዝጌ ብረትና ለስላሳ ብየዳ እንዲሆን አጥብቀው ይጠይቁ።</p>
+<p><b>የፀሐይ ሰም ማቅለጫ።</b> 100 × 60 ሳ.ሜ ገደማ የእንጨት ሳጥን፣ 5 ሳ.ሜ ሙቀት መከላከያ፣ ጥቁር ቀለም የተቀባ የብረት ትሪ፣ ድርብ መስታወት ክዳን፣ ወደ ፀሐይ በ30° ገደማ ያዘነበለ። ጥርት ባለ ቀን ውስጡ 70–90 °C።</p>
+<p><b>ዓመት 3፦ የቀፎ ሚዛን ዳሳሽ።</b> ከቀፎው ሥር 200 ኪግ የሚመዝን ሎድ ሴል፣ HX711 ማጉያ፣ ESP32 ቦርድ፣ በቀን አንድ SMS የሚልክ SIM800L፤ በ6 V የፀሐይ ፓነልና በ18650 ባትሪ የሚሠራ። ክብደቱ ሲጨምር የአበባ ማር እየገባ ነው፣ ስለዚህ በትክክለኛው ጊዜ ይቁረጡ። ድንገት ሲቀንስ የንብ መንጋ ወጥቷል ወይም ተሰርቋል። ዕቃዎቹ ከ5,000–8,000 ብር ገደማ ይገመታሉ።</p></div><div class="sci"><span class="lbl">የሚሠሩበት የጥራት ደረጃ</span><ul><li>ውሃ ≤ 20% (የኮዴክስ አሊሜንታሪየስ የማር ደረጃ)።</li><li>HMF ≤ 40 mg/kg፦ ከ40 °C በላይ በጭራሽ አያሞቁ።</li><li>የኢትዮጵያ ደረጃዎች ለማር (ES 1202)፣ ለሰም (ES 1203) እና ለቀፎ (ES 1204)፤ በ2005 ወጥተው በ2025 ተሻሽለዋል።</li><li>በየወቅቱ አንድ ናሙና ለHMFና ለብረዛ ምርመራ ወደ ላቦራቶሪ ይላኩ፤ ሪፖርቱን ለገዢዎች ያስቀምጡ።</li></ul></div></div>
+  </div><figure><div class="scroll"><svg viewBox="0 0 1040 260" role="img" aria-labelledby="fl-t"><title id="fl-t">Process flow. Honey line: buy and test, strain, settle 2 to 3 days, check moisture, pack and label, sell. Wax line: comb residue, solar melt, filter, block, sell or make products.</title><g id="flow"></g></svg></div>
+<figcaption><span class="en">Two lines from one raw material. Nothing is heated above 40 °C on the honey line; the wax line uses free solar heat.</span><span class="am" lang="am">ከአንድ ጥሬ ዕቃ ሁለት የምርት መስመሮች። በማር መስመሩ ላይ ምንም ነገር ከ40 °C በላይ አይሞቅም፤ የሰም መስመሩ ነፃ የፀሐይ ሙቀት ይጠቀማል።</span></figcaption></figure>
+</section>
+<section class="ch" id="money">
+  <div class="ch-tag"><span class="yr">PART 4</span><span class="part">Start-up budget · የመነሻ በጀት</span></div>
+  <div class="pair">
+    <div class="en"><h2>What it costs to start: standard or lean</h2>
+<p>The standard plan starts with 300 kg of honey a month and a proper workshop. The lean plan starts with 100 kg, buckets instead of a tank, no press, and a smaller room, and grows from its own profit. The biggest item in both is the first stock of honey: that money comes back as soon as you sell.</p>
+<p>Equipment prices are estimates. Ask three suppliers for each item, and build what you can yourself.</p></div>
+    <div class="am" lang="am"><h2>ለመጀመር የሚያስፈልገው ወጪ፦ መደበኛ ወይም ቀላል</h2>
+<p>መደበኛው ዕቅድ በወር 300 ኪግ ማርና ተገቢ የሥራ ቦታ ይዞ ይጀምራል። ቀላሉ ዕቅድ በ100 ኪግ፣ ከታንክ ይልቅ በባልዲ፣ ያለ መጭመቂያና በትንሽ ክፍል ይጀምርና በራሱ ትርፍ ያድጋል። በሁለቱም ትልቁ ወጪ የመጀመሪያው የማር ክምችት ነው፦ ያ ገንዘብ እንደሸጡ ይመለሳል።</p>
+<p>የመሣሪያ ዋጋዎቹ ግምቶች ናቸው። ለእያንዳንዱ ዕቃ ሦስት አቅራቢዎችን ይጠይቁ፣ የሚችሉትንም ራስዎ ይሥሩ።</p></div>
+  </div><div class="tbl-wrap"><table><thead><tr><th>Item · ዝርዝር</th><th class="r">Standard · መደበኛ (birr)</th><th class="r">Lean · ቀላል (birr)</th></tr></thead><tbody><tr><td>Registration, TIN, licence, certificate of competence, first lab test<span class="am" lang="am">ምዝገባ፣ TIN፣ ፈቃድ፣ የብቃት ማረጋገጫ፣ የመጀመሪያ የላብራቶሪ ምርመራ</span></td><td class="r">6,000</td><td class="r">6,000</td></tr><tr><td>Workshop rent deposit (2 months)<span class="am" lang="am">የሥራ ቦታ ኪራይ ቅድመ ክፍያ (2 ወር)</span></td><td class="r">16,000</td><td class="r">10,000</td></tr><tr><td>Hygiene fit-out: washable table and walls, fly screens, sink<span class="am" lang="am">የንጽሕና ዝግጅት፦ የሚታጠብ ጠረጴዛና ግድግዳ፣ የዝንብ መከላከያ፣ ማጠቢያ</span></td><td class="r">15,000</td><td class="r">6,000</td></tr><tr><td>Settling: 100 L stainless tank with honey gate (lean: 2 food-grade buckets with taps)<span class="am" lang="am">ማስቀመጫ፦ 100 ሊትር አይዝጌ ታንክ ከቧንቧ ጋር (ቀላሉ፦ ቧንቧ ያላቸው 2 የምግብ ባልዲዎች)</span></td><td class="r">28,000</td><td class="r">4,000</td></tr><tr><td>Strainers (coarse and fine) and 20-litre food-grade buckets<span class="am" lang="am">ወንፊቶች (ሻካራና ቀጭን) እና 20 ሊትር የምግብ ባልዲዎች</span></td><td class="r">9,000</td><td class="r">3,000</td></tr><tr><td>Honey refractometer<span class="am" lang="am">የማር ሪፍራክቶሜትር</span></td><td class="r">7,000</td><td class="r">7,000</td></tr><tr><td>Scales: 30 kg platform and 0.1 g kitchen scale<span class="am" lang="am">ሚዛኖች፦ 30 ኪግ እና 0.1 ግራም</span></td><td class="r">6,000</td><td class="r">3,000</td></tr><tr><td>Solar wax melter (self-built) and moulds<span class="am" lang="am">የፀሐይ ሰም ማቅለጫ (በራስ የተሠራ) እና ቅርጾች</span></td><td class="r">8,000</td><td class="r">5,000</td></tr><tr><td>Hand screw press for comb (local metal workshop)<span class="am" lang="am">ለእንጀራ የእጅ መጭመቂያ (የአገር ውስጥ ብረት ሥራ)</span></td><td class="r">15,000</td><td class="r">—</td></tr><tr><td>Jars and labels, first lot (600 / lean 200 jars of 500 g)<span class="am" lang="am">ብልቃጦችና መለያዎች፣ የመጀመሪያ ዙር (600 / ቀላሉ 200 የ500 ግ ብልቃጦች)</span></td><td class="r">24,000</td><td class="r">8,000</td></tr><tr><td>Brand: logo, label design, samples, banner<span class="am" lang="am">ብራንድ፦ አርማ፣ የመለያ ንድፍ፣ ናሙናዎች፣ ባነር</span></td><td class="r">8,000</td><td class="r">3,000</td></tr><tr><td>First stock of crude honey (300 kg / lean 100 kg at 420 birr)<span class="am" lang="am">የመጀመሪያ ጥሬ ማር ክምችት (300 ኪግ / ቀላሉ 100 ኪግ በ420 ብር)</span></td><td class="r">126,000</td><td class="r">42,000</td></tr><tr><td>Subtotal<span class="am" lang="am">ንዑስ ድምር</span></td><td class="r">268,000</td><td class="r">97,000</td></tr><tr><td>Contingency 10%<span class="am" lang="am">ለድንገተኛ 10%</span></td><td class="r">26,800</td><td class="r">9,700</td></tr><tr class="tot"><td>Total start-up capital<span class="am" lang="am">ጠቅላላ መነሻ ካፒታል</span></td><td class="r">294,800<br><small>≈ $1,820</small></td><td class="r">106,700<br><small>≈ $659</small></td></tr></tbody></table></div>
+</section>
+<section class="ch" id="calc">
+  <div class="ch-tag"><span class="yr">PART 5</span><span class="part">Profit calculator · የትርፍ ማስያ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Put in your own numbers</h2>
+<p>Change any box and the results update. The standard case: crude honey at 420 birr/kg, 75% becomes table honey sold at an average of 850 birr/kg (wholesale and retail mixed), 7% becomes wax sold at 1,200 birr/kg, and jars, labels, transport and selling cost 110 birr per kg of honey.</p>
+<p>Try the <b>bad season</b> button: crude honey up 20%, yield down, prices flat. If the business still covers its fixed costs in a bad season, it is a sound plan.</p></div>
+    <div class="am" lang="am"><h2>የራስዎን ቁጥሮች ያስገቡ</h2>
+<p>ማንኛውንም ሳጥን ሲቀይሩ ውጤቱ ይዘምናል። መደበኛው ሁኔታ፦ ጥሬ ማር በ420 ብር/ኪግ፣ 75% የገበታ ማር ሆኖ በአማካይ በ850 ብር/ኪግ ይሸጣል (ጅምላና ችርቻሮ ተቀላቅሎ)፣ 7% ሰም ሆኖ በ1,200 ብር/ኪግ ይሸጣል፣ ብልቃጥ፣ መለያ፣ ትራንስፖርትና ሽያጭ በአንድ ኪግ ማር 110 ብር ያስወጣሉ።</p>
+<p><b>መጥፎ ወቅት</b> የሚለውን ቁልፍ ይሞክሩ፦ ጥሬ ማር በ20% ይጨምራል፣ ምርቱ ይቀንሳል፣ ዋጋው አይለወጥም። ንግዱ በመጥፎ ወቅትም ቋሚ ወጪውን ከሸፈነ ጤናማ ዕቅድ ነው።</p></div>
+  </div>
+<div class="filters" role="group" aria-label="Scenario" id="scen">
+  <button type="button" data-s="lean" aria-pressed="false">Lean<span class="e">ቀላል</span></button>
+  <button type="button" data-s="std" aria-pressed="true">Standard<span class="e">መደበኛ</span></button>
+  <button type="button" data-s="bad" aria-pressed="false">Bad season<span class="e">መጥፎ ወቅት</span></button>
+</div>
+<div class="calc">
+  <div class="inputs" id="cin"></div>
+  <div class="outs">
+    <div class="out"><b id="o-rev">–</b><span>Revenue per month</span><span class="am" lang="am">ወርሃዊ ገቢ</span></div>
+    <div class="out"><b id="o-c">–</b><span>Margin per kg of crude honey</span><span class="am" lang="am">በአንድ ኪግ ጥሬ ማር ማርጂን</span></div>
+    <div class="out" id="pbox"><b id="o-p">–</b><span>Profit per month, before tax</span><span class="am" lang="am">ወርሃዊ ትርፍ፣ ከግብር በፊት</span></div>
+    <div class="out"><b id="o-be">–</b><span>Break-even: crude honey you must process each month</span><span class="am" lang="am">የመመጣጠኛ ነጥብ፦ በየወሩ ማቀነባበር ያለብዎ ጥሬ ማር</span></div>
+    <div class="out"><b id="o-pb">–</b><span>Months to earn back the start-up capital</span><span class="am" lang="am">መነሻ ካፒታሉን ለመመለስ የሚያስፈልጉ ወራት</span></div>
+  </div>
+</div>
+</section>
+<section class="ch" id="growth">
+  <div class="ch-tag"><span class="yr">PART 6</span><span class="part">Three-year plan · የሦስት ዓመት ዕቅድ</span></div>
+  <div class="pair">
+    <div class="en"><h2>From a jar business to a beekeeping supplier</h2>
+<p><b>Year 1:</b> honey and wax only, building to an average of 200 kg of crude honey a month. <b>Year 2:</b> 450 kg a month; sell 150 modern hives to supplier beekeepers, on credit repaid in honey, so their harvests roughly triple and your supply grows. <b>Year 3:</b> 800 kg a month, 300 hives, wax foundation sheets made with an embossing roller, and 30 hive-scale sensors.</p>
+<p>The table uses today's prices and the standard margin. It is a plan, not a promise: update it every quarter with your real numbers.</p></div>
+    <div class="am" lang="am"><h2>ከብልቃጥ ንግድ እስከ ንብ አናቢዎች አቅራቢ</h2>
+<p><b>ዓመት 1፦</b> ማርና ሰም ብቻ፤ በወር በአማካይ 200 ኪግ ጥሬ ማር ለማድረስ። <b>ዓመት 2፦</b> በወር 450 ኪግ፤ ለአቅራቢ ንብ አናቢዎች 150 ዘመናዊ ቀፎዎችን በማር በሚከፈል ብድር መሸጥ፤ በዚህም ምርታቸው በሦስት እጥፍ ገደማ ያድጋል፣ የእርስዎም አቅርቦት ይጨምራል። <b>ዓመት 3፦</b> በወር 800 ኪግ፣ 300 ቀፎዎች፣ በማተሚያ ሮለር የሚሠራ የሰም ዳብ፣ እና 30 የቀፎ ሚዛን ዳሳሾች።</p>
+<p>ሰንጠረዡ የዛሬውን ዋጋና መደበኛውን ማርጂን ይጠቀማል። ዕቅድ እንጂ ቃል ኪዳን አይደለም፦ በየሩብ ዓመቱ በእውነተኛ ቁጥሮችዎ ያዘምኑት።</p></div>
+  </div><div class="tbl-wrap"><table><thead><tr><th>Birr per year · ብር በዓመት</th><th class="r">Year 1 · ዓመት 1</th><th class="r">Year 2 · ዓመት 2</th><th class="r">Year 3 · ዓመት 3</th></tr></thead><tbody><tr><td>Crude honey processed per month<span class="am" lang="am">በወር የሚቀነባበር ጥሬ ማር</span></td><td class="r">200 kg</td><td class="r">450 kg</td><td class="r">800 kg</td></tr><tr><td>Honey and wax margin (219 birr per kg crude)<span class="am" lang="am">የማርና ሰም ማርጂን (በአንድ ኪግ ጥሬ ማር 219 ብር)</span></td><td class="r">525,600</td><td class="r">1,182,600</td><td class="r">2,102,400</td></tr><tr><td>Hives sold to beekeepers (margin 1,700 each)<span class="am" lang="am">ለንብ አናቢዎች የተሸጡ ቀፎዎች (እያንዳንዱ 1,700 ማርጂን)</span></td><td class="r">—</td><td class="r">255,000<br><small>150 hives</small></td><td class="r">510,000<br><small>300 hives</small></td></tr><tr><td>Wax foundation sheets (margin 500/kg)<span class="am" lang="am">የሰም ዳብ (በኪግ 500 ማርጂን)</span></td><td class="r">—</td><td class="r">—</td><td class="r">200,000<br><small>400 kg</small></td></tr><tr><td>Hive-scale sensors (margin 3,000 each)<span class="am" lang="am">የቀፎ ሚዛን ዳሳሾች (እያንዳንዱ 3,000 ማርጂን)</span></td><td class="r">—</td><td class="r">—</td><td class="r">90,000<br><small>30 units</small></td></tr><tr><td>Fixed costs (rent, staff, power, phone, marketing)<span class="am" lang="am">ቋሚ ወጪዎች (ኪራይ፣ ሠራተኛ፣ መብራት፣ ስልክ፣ ማስታወቂያ)</span></td><td class="r">−264,000<br><small>22,000/month</small></td><td class="r">−456,000<br><small>38,000/month</small></td><td class="r">−720,000<br><small>60,000/month</small></td></tr><tr class="tot"><td>Profit before tax<span class="am" lang="am">ከግብር በፊት ትርፍ</span></td><td class="r">261,600<br><small>≈ $1,615</small></td><td class="r">981,600<br><small>≈ $6,059</small></td><td class="r">2,182,400<br><small>≈ $13,472</small></td></tr></tbody></table></div>
+</section>
+<section class="ch" id="legal">
+  <div class="ch-tag"><span class="yr">PART 7</span><span class="part">Registration and funding · ምዝገባና ፋይናንስ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Make it legal, then fund it carefully</h2>
+<p>Registration and licensing are now done online, and in one recent three-month period Ethiopia delivered over a million registration and licensing services digitally. Use it.</p>
+<p><b>Funding, in this order:</b> your own savings and family; pre-orders and deposits from shops and hotels; supplier credit from beekeepers who trust you; then a loan from a microfinance institution or a bank's youth or small-business window. Ask your woreda small-enterprise office which programmes are open. Borrow only after your first three batches have shown real margins.</p></div>
+    <div class="am" lang="am"><h2>ሕጋዊ ያድርጉት፣ ከዚያ በጥንቃቄ ፋይናንስ ያድርጉት</h2>
+<p>ምዝገባና ፈቃድ አሁን በመስመር ላይ ይሠራሉ፤ በቅርቡ በአንድ የሦስት ወር ጊዜ ውስጥ ኢትዮጵያ ከአንድ ሚሊዮን በላይ የምዝገባና የፈቃድ አገልግሎቶችን በዲጂታል ሰጥታለች። ይጠቀሙበት።</p>
+<p><b>ፋይናንስ፣ በዚህ ቅደም ተከተል፦</b> የራስዎ ቁጠባና ቤተሰብ፤ ከሱቆችና ሆቴሎች ቅድመ ትዕዛዝና ቅድመ ክፍያ፤ ከሚያምኑዎ ንብ አናቢዎች የአቅራቢ ብድር፤ ከዚያ ከአነስተኛ የፋይናንስ ተቋም ወይም ከባንክ የወጣቶች ወይም የአነስተኛ ንግድ ብድር። የትኞቹ ፕሮግራሞች ክፍት እንደሆኑ የወረዳዎን የአነስተኛ ኢንተርፕራይዝ ቢሮ ይጠይቁ። ይበደሩ የመጀመሪያዎቹ ሦስት ምርቶችዎ እውነተኛ ማርጂን ካሳዩ በኋላ ብቻ ነው።</p></div>
+  </div>
+<ol class="steps">
+<li><div class="en"><b>TIN</b><p>Get a taxpayer identification number.</p></div><div class="am" lang="am"><b>TIN</b><p>የግብር ከፋይ መለያ ቁጥር ያውጡ።</p></div></li>
+<li><div class="en"><b>Trade name and registration</b><p>Reserve the name and register on the e-Trade portal (etrade.gov.et).</p></div><div class="am" lang="am"><b>የንግድ ስምና ምዝገባ</b><p>ስሙን ያስይዙና በኢ-ትሬድ ፖርታል (etrade.gov.et) ይመዝገቡ።</p></div></li>
+<li><div class="en"><b>Premises</b><p>A rented or owned room with a lease; clean, washable, screened.</p></div><div class="am" lang="am"><b>የሥራ ቦታ</b><p>በውል የተከራዩት ወይም የራስዎ ክፍል፤ ንጹሕ፣ የሚታጠብ፣ የዝንብ መከላከያ ያለው።</p></div></li>
+<li><div class="en"><b>Certificate of competence</b><p>Food processing needs one from the sector regulator before the licence. Ask the woreda trade office which office inspects you.</p></div><div class="am" lang="am"><b>የብቃት ማረጋገጫ</b><p>የምግብ ማቀነባበር ከፈቃዱ በፊት ከዘርፉ ተቆጣጣሪ ማረጋገጫ ይፈልጋል። የሚመረምርዎን መሥሪያ ቤት የወረዳውን የንግድ ቢሮ ይጠይቁ።</p></div></li>
+<li><div class="en"><b>Business licence</b><p>Issued after the steps above; display it and renew it every year.</p></div><div class="am" lang="am"><b>የንግድ ፈቃድ</b><p>ከላይ ካሉት ደረጃዎች በኋላ ይሰጣል፤ ይለጥፉት፣ በየዓመቱም ያድሱት።</p></div></li>
+<li><div class="en"><b>Records</b><p>Keep every receipt, supplier record and lot number: for tax, for quality and for buyers.</p></div><div class="am" lang="am"><b>መዝገቦች</b><p>እያንዳንዱን ደረሰኝ፣ የአቅራቢ መዝገብና የምርት ቁጥር ያስቀምጡ፦ ለግብር፣ ለጥራትና ለገዢዎች።</p></div></li>
+</ol>
+</section>
+<section class="ch" id="risks">
+  <div class="ch-tag"><span class="yr">PART 8</span><span class="part">Risks · ስጋቶች</span></div>
+  <div class="pair">
+    <div class="en"><h2>What can go wrong, and your answer to each</h2>
+<p>Every business plan should name its risks honestly. These six are the real ones for honey in Ethiopia today.</p></div>
+    <div class="am" lang="am"><h2>ምን ሊበላሽ ይችላል፣ ለእያንዳንዱስ መልስዎ</h2>
+<p>እያንዳንዱ የንግድ ዕቅድ ስጋቶቹን በታማኝነት መጥቀስ አለበት። እነዚህ ስድስቱ ዛሬ በኢትዮጵያ ለማር እውነተኛዎቹ ናቸው።</p></div>
+  </div><div class="tbl-wrap"><table><thead><tr><th>Risk · ስጋት</th><th>What you do · የሚወስዱት እርምጃ</th></tr></thead><tbody><tr><td><b>Adulterated or watered honey</b><span class="am" lang="am">የተበረዘ ወይም ውሃ የተጨመረበት ማር</span></td><td>Buy from known beekeepers, test every delivery, lab-test each season.<span class="am" lang="am">ከሚታወቁ ንብ አናቢዎች ይግዙ፣ እያንዳንዱን ማስረከቢያ ይለኩ፣ በየወቅቱ በላቦራቶሪ ያስመርምሩ።</span></td></tr><tr><td><b>Drought or a poor flowering season</b><span class="am" lang="am">ድርቅ ወይም ደካማ የአበባ ወቅት</span></td><td>Buy from two or three areas with different flowering times; keep 1–2 months of stock.<span class="am" lang="am">የአበባ ጊዜያቸው ከሚለያይ ከሁለት ሦስት አካባቢዎች ይግዙ፤ ለ1–2 ወር ክምችት ይያዙ።</span></td></tr><tr><td><b>Crude honey price jumps (tej makers and smugglers bid it up)</b><span class="am" lang="am">የጥሬ ማር ዋጋ መዝለል (ጠጅ ቤቶችና ኮንትሮባንዲስቶች ዋጋ ሲያስወድዱ)</span></td><td>Season contracts with beekeepers; supply hives on credit repaid in honey; raise prices with a clear quality story.<span class="am" lang="am">ከንብ አናቢዎች ጋር የወቅት ውል፤ በማር የሚከፈል የቀፎ ብድር፤ በግልጽ የጥራት ታሪክ ዋጋ መጨመር።</span></td></tr><tr><td><b>Roads closed by conflict</b><span class="am" lang="am">በግጭት የተዘጉ መንገዶች</span></td><td>Small stock, sell locally first, keep two routes and two regions of supply.<span class="am" lang="am">ትንሽ ክምችት፣ መጀመሪያ በአካባቢው መሸጥ፣ ሁለት መንገዶችና ሁለት የአቅርቦት ክልሎች መያዝ።</span></td></tr><tr><td><b>Fermentation or spoilage</b><span class="am" lang="am">መቦካት ወይም መበላሸት</span></td><td>Water ≤ 20%, sealed food-grade jars, cool dry store.<span class="am" lang="am">ውሃ ≤ 20%፣ የታሸጉ የምግብ ብልቃጦች፣ ቀዝቃዛና ደረቅ መጋዘን።</span></td></tr><tr><td><b>Cash runs out (beekeepers want cash, shops pay late)</b><span class="am" lang="am">ጥሬ ገንዘብ ማለቅ (ንብ አናቢዎች ጥሬ ገንዘብ ሲፈልጉ፣ ሱቆች ዘግይተው ሲከፍሉ)</span></td><td>Small batches, deposits from big buyers, a weekly cash sheet.<span class="am" lang="am">ትንሽ ምርት፣ ከትላልቅ ገዢዎች ቅድመ ክፍያ፣ ሳምንታዊ የጥሬ ገንዘብ ሰነድ።</span></td></tr></tbody></table></div>
+</section>
+<section class="ch" id="plan">
+  <div class="ch-tag"><span class="yr">PART 9</span><span class="part">Milestones · ምዕራፎች</span></div>
+  <div class="pair">
+    <div class="en"><h2>The first 90 days, then three years</h2>
+<p>Start small enough that a mistake costs weeks, not years. Each milestone below is something you can check.</p></div>
+    <div class="am" lang="am"><h2>የመጀመሪያዎቹ 90 ቀናት፣ ከዚያ ሦስት ዓመታት</h2>
+<p>ስህተት ዓመታትን ሳይሆን ሳምንታትን ብቻ እንዲያስከፍል በትንሹ ይጀምሩ። ከታች ያለው እያንዳንዱ ምዕራፍ ሊያረጋግጡት የሚችሉት ነገር ነው።</p></div>
+  </div><div class="timeline"><div class="tl"><div class="when">Days 1–30<small>ቀን 1–30</small></div><div class="en"><ul><li>Visit 10 beekeepers and 10 buyers; agree prices.</li><li>Build the solar wax melter; order the tank and refractometer.</li><li>Process and sell a 20 kg trial batch.</li></ul></div><div class="am" lang="am"><ul><li>10 ንብ አናቢዎችንና 10 ገዢዎችን ይጎብኙ፤ በዋጋ ይስማሙ።</li><li>የፀሐይ ሰም ማቅለጫውን ይገንቡ፤ ታንኩንና ሪፍራክቶሜትሩን ያዝዙ።</li><li>20 ኪግ የሙከራ ምርት አቀነባብረው ይሽጡ።</li></ul></div></div><div class="tl"><div class="when">Days 31–60<small>ቀን 31–60</small></div><div class="en"><ul><li>Register on e-Trade; rent and prepare the room.</li><li>Apply for the certificate of competence.</li><li>Design the label; open Telegram and TikTok pages.</li></ul></div><div class="am" lang="am"><ul><li>በኢ-ትሬድ ይመዝገቡ፤ ክፍሉን ተከራይተው ያዘጋጁ።</li><li>የብቃት ማረጋገጫ ያመልክቱ።</li><li>መለያውን ይንደፉ፤ የቴሌግራምና የቲክቶክ ገጾችን ይክፈቱ።</li></ul></div></div><div class="tl"><div class="when">Days 61–90<small>ቀን 61–90</small></div><div class="en"><ul><li>Licence in hand; first 100 kg batch.</li><li>Five shops and two hotels buying regularly.</li><li>First wax sale to a soap or candle maker.</li></ul></div><div class="am" lang="am"><ul><li>ፈቃድ በእጅ፤ የመጀመሪያው 100 ኪግ ምርት።</li><li>አምስት ሱቆችና ሁለት ሆቴሎች በቋሚነት ይገዛሉ።</li><li>የመጀመሪያ የሰም ሽያጭ ለሳሙና ወይም ለሻማ አምራች።</li></ul></div></div><div class="tl"><div class="when">Month 6<small>ወር 6</small></div><div class="en"><ul><li>Above break-even: 150+ kg a month.</li><li>First lab test report.</li><li>One helper hired.</li></ul></div><div class="am" lang="am"><ul><li>ከመመጣጠኛ ነጥብ በላይ፦ በወር ከ150 ኪግ በላይ።</li><li>የመጀመሪያ የላቦራቶሪ ሪፖርት።</li><li>አንድ ረዳት ተቀጥሯል።</li></ul></div></div><div class="tl"><div class="when">Month 12<small>ወር 12</small></div><div class="en"><ul><li>200–300 kg a month; first hive prototypes tested with 5 beekeepers.</li><li>Products in Addis Ababa shops.</li></ul></div><div class="am" lang="am"><ul><li>በወር 200–300 ኪግ፤ የመጀመሪያ የቀፎ ሞዴሎች ከ5 ንብ አናቢዎች ጋር ተሞክረዋል።</li><li>ምርቶች በአዲስ አበባ ሱቆች።</li></ul></div></div><div class="tl"><div class="when">Year 3<small>ዓመት 3</small></div><div class="en"><ul><li>800 kg a month, 300 hives placed, foundation sheets and sensors.</li><li>Explore organic group certification and an export partner.</li></ul></div><div class="am" lang="am"><ul><li>በወር 800 ኪግ፣ 300 ቀፎዎች ተሰራጭተዋል፣ የሰም ዳብና ዳሳሾች።</li><li>የቡድን ኦርጋኒክ ሰርተፊኬትና የኤክስፖርት አጋር ማሰስ።</li></ul></div></div></div><h3 style="margin-top:28px">Numbers to track every week · በየሳምንቱ የሚከታተሏቸው ቁጥሮች</h3>
+<ul class="check"><li>kg of crude honey bought, and honey yield % · የተገዛ ጥሬ ማር (ኪግ) እና የማር ምርት %</li><li>Water % of every lot · የእያንዳንዱ ምርት የውሃ %</li><li>Margin per kg, actual · ትክክለኛ ማርጂን በኪግ</li><li>Repeat customers · ተመላሽ ደንበኞች</li><li>Active supplier beekeepers · ንቁ አቅራቢ ንብ አናቢዎች</li><li>Cash on hand at the end of the week · በሳምንቱ መጨረሻ ያለ ጥሬ ገንዘብ</li></ul>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="pair">
+    <div class="en"><p>Written on November 13, 2026. Market prices are sourced below; equipment prices and the projections are the author's estimates. This is an educational plan, not financial advice: check prices, rules and security locally before you invest.</p></div>
+    <div class="am" lang="am"><p>ይህ ዕቅድ የተጻፈው ኖቬምበር 13 ቀን 2026 ነው። የገበያ ዋጋዎቹ ምንጮች ከታች አሉ፤ የመሣሪያ ዋጋዎችና ትንበያዎቹ የጸሐፊው ግምቶች ናቸው። ይህ ለትምህርት የተዘጋጀ ዕቅድ እንጂ የፋይናንስ ምክር አይደለም፦ ገንዘብ ከማውጣትዎ በፊት ዋጋዎችን፣ ሕጎችንና ደህንነትን በአካባቢዎ ያረጋግጡ።</p></div>
+  </div>
+  <nav class="series" aria-label="Ethiopia series · የኢትዮጵያ ተከታታይ"><a href="../ethiopia-resources/"><span class="n">1</span>Lesson<span class="e">ትምህርት</span></a><a href="../ethiopia-sites/"><span class="n">2</span>Where to focus<span class="e">የትኩረት ቦታዎች</span></a><a href="../honey-business-plan/" aria-current="page"><span class="n">3</span>Business plan<span class="e">የንግድ ዕቅድ</span></a></nav>
+  <h3 style="margin-top:24px">Sources · ምንጮች</h3>
+  <ul>
+    <li><a href="https://capitalethiopia.com/2025/03/31/honey-boom-faces-market-challenges-despite-high-potential/">Capital Ethiopia: honey under 400 birr/kg at the farm gate, up to 800 in Addis Ababa</a></li>
+    <li><a href="https://sundayworld.co.za/africa/watch-ethiopia-turns-overlooked-beeswax-into-a-growing-source-of-income/">Sunday World: beeswax from 200–300 birr to over 1,500 birr/kg</a></li>
+    <li><a href="https://brandmine.ai/insights/ethiopia-honey-bee-products/">Brandmine: tej market share, no accredited lab, ES 1202/1203/1204 and the 2025 revision</a></li>
+    <li><a href="https://thereportermagazines.com/2877/">The Reporter Magazine: domestic prices above export prices, contraband</a></li>
+    <li><a href="https://addisfortune.news/?p=28631">Addis Fortune: exporters leaving honey, intermediaries and prices</a></li>
+    <li><a href="https://cri-world.com/publications/qed_dp_241.pdf">Cambridge Resources International: modern hives give about 20 kg vs 5–8 kg</a></li>
+    <li><a href="https://shega.co/news/this-ethiopian-innovator-wants-to-save-bees-boost-production-using-3d-printing-data">Shega: a standard modern hive costs about 5,000 birr; colonies 3,000–5,000</a></li>
+    <li><a href="https://www.giz.de/en/downloads/GBN_Sector%20Brief_%C3%84thiopien_HonigBienenwachs_E_Web.pdf">GIZ / GBN: Partnership Ready Ethiopia, honey and beeswax</a></li>
+    <li><a href="https://refugeeinvestments.org/?p=5472">Refugee Investment Network: Beza Mar&#x27;s model with beekeepers</a></li>
+    <li><a href="https://www.infoproff.com/en/open-data/ethiopia/214/business-register-in-ethiopia">Infoproff: e-Trade registration, licence renewal, certificate of competence</a></li>
+    <li><a href="https://allafrica.com/stories/202610270098.html">AllAfrica: over 1 million digital registration and licensing services</a></li>
+    <li><a href="https://www.2merkato.com/articles/starting-a-business/139-business-registration-and-licensing-procedures-in-ethiopia">2merkato: commercial registration requirements for sole proprietors</a></li>
+    <li><a href="https://www.currency.me.uk/convert/usd/etb?amount=1">Currency.me.uk: USD to ETB, Aug–Nov 2026</a></li>
+    <li><a href="https://www.criticalthreats.org/briefs/ethiopia-war-security-review/ethiopia-war-security-review-november-3-2026">Critical Threats: Ethiopia war security review, 3 Nov 2026</a></li>
+  </ul>
+  <div class="author">
+    <p class="name">Mulusew Kassa Bitew</p>
+    <p>Postdoctoral Research Fellow, University of Molise, Italy</p>
+    <p>Department of Plant Science, College of Agriculture and Natural Resources, Debre Markos University, Ethiopia</p>
+    <p class="meta">ORCID <a href="https://orcid.org/0000-0001-6223-0037">0000-0001-6223-0037</a> · GitHub <a href="https://github.com/Muler-21">@Muler-21</a> · <a href="https://muler-21.github.io">muler-21.github.io</a></p>
+    <p class="apps">Other apps: <a href="https://muler-21.github.io/apps/adaptfit/">AdaptFit</a> <a href="https://muler-21.github.io/sebel-hakim/">Sebel Hakim</a> <a href="https://muler-21.github.io/research-integrity-compass/">Research Integrity Compass</a> <a href="https://muler-21.github.io/AMBKidsJoy/">AMBKidsJoy</a></p>
+    <p class="copy">© 2026 Mulusew Kassa Bitew. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll(".seg button");
+  function setLang(l) {
+    document.body.setAttribute("data-lang", l);
+    document.documentElement.setAttribute("lang", l === "am" ? "am" : "en");
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+    try { localStorage.setItem("ts-lang", l); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  try { var saved = localStorage.getItem("ts-lang"); if (saved) setLang(saved); } catch (e) {}
+})();
+</script>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function mk(p, n, a, t) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (t) e.textContent = t; p.appendChild(e); return e; }
+  var g = document.getElementById("flow");
+  if (g) {
+    function line(y, items, cls, title) {
+      mk(g, "text", { x: 10, y: y - 42, "class": "t-copper svg-mono" }, title);
+      items.forEach(function (s, i) {
+        var x = 10 + i * 172, w = 150;
+        mk(g, "rect", { x: x, y: y - 28, width: w, height: 56, rx: 10, "class": cls });
+        mk(g, "text", { x: x + w / 2, y: y - 4, "text-anchor": "middle", "class": "t-ink svg-lbl" }, s[0]);
+        mk(g, "text", { x: x + w / 2, y: y + 16, "text-anchor": "middle", "class": "t-ink svg-lbl-am" }, s[1]);
+        if (i < items.length - 1) mk(g, "path", { d: "M" + (x + w + 4) + " " + (y - 6) + " L" + (x + w + 16) + " " + y + " L" + (x + w + 4) + " " + (y + 6) + " Z", "class": "f-copper" });
+      });
+    }
+    line(80, [["Buy & test", "መግዛትና መለካት"], ["Strain", "ማጣራት"], ["Settle 2–3 days", "ማስቀመጥ 2–3 ቀን"], ["Check water", "ውሃ መለካት"], ["Pack & label", "ማሸግና መለያ"], ["Sell", "መሸጥ"]], "f-copper-soft", "HONEY LINE · የማር መስመር (< 40 °C)");
+    line(210, [["Comb residue", "የእንጀራ ቅሪት"], ["Solar melt", "በፀሐይ ማቅለጥ"], ["Filter", "ማጣራት"], ["Wax block", "የሰም ጡብ"], ["Sell or make", "መሸጥ ወይም መሥራት"]], "f-accent-soft", "WAX LINE · የሰም መስመር (62–90 °C, solar)");
+    mk(g, "path", { d: "M85 108 L85 150", "class": "s-rule", "stroke-width": 3, "stroke-dasharray": "5 4", fill: "none" });
+  }
+  var F = [
+    ["crude", "Crude honey price (birr/kg)", "የጥሬ ማር ዋጋ (ብር/ኪግ)"],
+    ["kg", "Crude honey per month (kg)", "በወር የሚቀነባበር ጥሬ ማር (ኪግ)"],
+    ["hy", "Honey yield (%)", "የማር ምርት (%)"],
+    ["wy", "Wax yield (%)", "የሰም ምርት (%)"],
+    ["hp", "Honey selling price (birr/kg)", "የማር መሸጫ ዋጋ (ብር/ኪግ)"],
+    ["wp", "Wax selling price (birr/kg)", "የሰም መሸጫ ዋጋ (ብር/ኪግ)"],
+    ["pack", "Jars, labels, transport, selling (birr per kg honey)", "ብልቃጥ፣ መለያ፣ ትራንስፖርት፣ ሽያጭ (በኪግ ማር)"],
+    ["fixed", "Fixed costs per month (birr)", "ወርሃዊ ቋሚ ወጪ (ብር)"],
+    ["cap", "Start-up capital (birr)", "መነሻ ካፒታል (ብር)"]
+  ];
+  var SC = {
+    std: {"crude": 420, "kg": 300, "hy": 75, "wy": 7, "hp": 850, "wp": 1200, "pack": 110, "fixed": 22000, "cap": 294800},
+    lean: {"crude": 420, "kg": 150, "hy": 75, "wy": 7, "hp": 850, "wp": 1200, "pack": 110, "fixed": 14000, "cap": 106700},
+    bad: {"crude": 504, "kg": 300, "hy": 70, "wy": 6, "hp": 850, "wp": 1200, "pack": 110, "fixed": 22000, "cap": 294800}
+  };
+  var box = document.getElementById("cin"), ins = {};
+  F.forEach(function (f) {
+    var l = document.createElement("label");
+    l.innerHTML = '<span>' + f[1] + '</span><span class="am" lang="am">' + f[2] + '</span><input type="number" min="0" step="any" inputmode="decimal">';
+    var i = l.querySelector("input"); i.addEventListener("input", run); ins[f[0]] = i; box.appendChild(l);
+  });
+  function fmt(n) { return Math.round(n).toLocaleString("en-US"); }
+  function v(k) { var x = parseFloat(ins[k].value); return isNaN(x) ? 0 : x; }
+  function run() {
+    var rev = v("hy") / 100 * v("hp") + v("wy") / 100 * v("wp");
+    var c = rev - (v("crude") + v("hy") / 100 * v("pack"));
+    var p = c * v("kg") - v("fixed");
+    document.getElementById("o-rev").textContent = fmt(rev * v("kg")) + " birr";
+    document.getElementById("o-c").textContent = fmt(c) + " birr/kg";
+    document.getElementById("o-p").textContent = fmt(p) + " birr";
+    document.getElementById("pbox").className = "out " + (p >= 0 ? "good" : "bad");
+    document.getElementById("o-be").textContent = c > 0 ? fmt(v("fixed") / c) + " kg/month" : "never: margin ≤ 0";
+    document.getElementById("o-pb").textContent = p > 0 ? (v("cap") / p).toFixed(1) + " months" : "not while losing money";
+  }
+  function load(s) { var d = SC[s]; for (var k in d) ins[k].value = d[k]; run(); }
+  document.querySelectorAll("#scen button").forEach(function (b) {
+    b.addEventListener("click", function () { document.querySelectorAll("#scen button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); load(b.dataset.s); });
+  });
+  load("std");
+})();
+</script>
+<script data-goatcounter="https://ambkidsjoy.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
