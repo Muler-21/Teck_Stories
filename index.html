@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech Stories</title>
+<meta name="description" content="Technology and science stories in English and Amharic by Mulusew Kassa Bitew.">
+<meta name="author" content="Mulusew Kassa Bitew">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tech Stories · የቴክ ታሪኮች">
+<meta property="og:description" content="Technology and science stories in English and Amharic.">
+<meta property="og:url" content="https://muler-21.github.io/Teck_Stories/">
+<meta property="og:image" content="https://muler-21.github.io/Teck_Stories/nvidia-story/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Literata:opsz,wght@7..72,400;7..72,600&family=Noto+Sans+Ethiopic:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a simple bilingual story index; one card per story, newest first. */
+:root {
+  --paper: #f3f4f7; --panel: #ffffff; --ink: #141a2a; --muted: #586177; --rule: #d8dce5;
+  --accent: #2b4fd8; --gold: #b8740f;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Literata", Georgia, serif;
+  --ethi: "Noto Sans Ethiopic", "Nyala", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #0d111d; --panel: #141a2a; --ink: #e7eaf2; --muted: #9aa3b8; --rule: #273047; --accent: #8098ff; --gold: #e3a640; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+header { padding: 48px 0 26px; border-bottom: 1px solid var(--rule); }
+.kicker { font: 500 13px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
+h1 { font: 800 clamp(36px, 7vw, 64px)/1.02 var(--display); margin: 0; letter-spacing: -0.02em; }
+h1 span { display: block; font-family: var(--ethi); font-weight: 700; font-size: .55em; color: var(--accent); margin-top: 8px; letter-spacing: 0; }
+.dek { color: var(--muted); max-width: 60ch; margin: 14px 0 0; }
+.dek.am { font-family: var(--ethi); }
+main { padding: 30px 0; display: grid; gap: 18px; }
+.card { display: grid; grid-template-columns: 1fr; text-decoration: none; color: inherit; background: var(--panel); border: 1px solid var(--rule); border-radius: 16px; overflow: hidden; }
+@media (min-width: 720px) { .card { grid-template-columns: 1.1fr 1fr; } }
+.card img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 1200 / 630; }
+.card .txt { padding: 22px; display: grid; gap: 8px; align-content: center; }
+.card .date { font: 500 13px var(--mono); color: var(--gold); }
+.card h2 { font: 800 26px/1.15 var(--display); margin: 0; text-wrap: balance; }
+.card h3 { font: 700 18px/1.5 var(--ethi); margin: 0; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: 16px; }
+.card .go { font: 600 15px var(--display); color: var(--accent); }
+.card:hover { border-color: var(--accent); }
+.author { margin: 10px 0 50px; padding: 20px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); font-size: 15.5px; }
+.author .name { font: 800 20px var(--display); margin: 0 0 4px; }
+.author p { margin: 0 0 6px; }
+.author .meta, .author .copy { color: var(--muted); }
+.author .apps a { margin-right: 10px; }
+.author .copy { font-size: 14px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="kicker">English · አማርኛ</p>
+    <h1>Tech Stories<span>የቴክ ታሪኮች</span></h1>
+    <p class="dek">Stories about technology and science, explained simply, in English and Amharic.</p>
+    <p class="dek am" lang="am">ስለ ቴክኖሎጂ እና ሳይንስ በቀላሉ የተብራሩ ታሪኮች፣ በእንግሊዝኛ እና በአማርኛ።</p>
+  </div>
+</header>
+<main class="wrap">
+  <a class="card" href="nvidia-story/">
+    <img src="nvidia-story/og.png" alt="Cover: From a Diner Booth to the Heart of AI, the Nvidia story">
+    <div class="txt">
+      <span class="date">13 Nov 2026 · Chips, AI, Nvidia</span>
+      <h2>From a Diner Booth to the Heart of AI</h2>
+      <h3 lang="am">ከምግብ ቤት ጠረጴዛ እስከ ሰው ሰራሽ አስተውሎት ልብ</h3>
+      <p>How computer chips work, how Jensen Huang built Nvidia, and how his story reached November 2026.</p>
+      <span class="go">Read the story →</span>
+    </div>
+  </a>
+</main>
+<footer class="wrap">
+  <div class="author">
+    <p class="name">Mulusew Kassa Bitew</p>
+    <p>Postdoctoral Research Fellow, University of Molise, Italy</p>
+    <p>Department of Plant Science, College of Agriculture and Natural Resources, Debre Markos University, Ethiopia</p>
+    <p class="meta">ORCID <a href="https://orcid.org/0000-0001-6223-0037">0000-0001-6223-0037</a> · GitHub <a href="https://github.com/Muler-21">@Muler-21</a> · <a href="https://muler-21.github.io">muler-21.github.io</a></p>
+    <p class="apps">Other apps: <a href="https://muler-21.github.io/apps/adaptfit/">AdaptFit</a> <a href="https://muler-21.github.io/sebel-hakim/">Sebel Hakim</a> <a href="https://muler-21.github.io/research-integrity-compass/">Research Integrity Compass</a> <a href="https://muler-21.github.io/AMBKidsJoy/">AMBKidsJoy</a></p>
+    <p class="copy">© 2026 Mulusew Kassa Bitew. All rights reserved.</p>
+  </div>
+</footer>
+<script data-goatcounter="https://ambkidsjoy.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

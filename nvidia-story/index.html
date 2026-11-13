@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Nvidia Story</title>
+<meta name="description" content="How computer chips work, how Jensen Huang built Nvidia from a Denny's booth, and how his story reached November 2026. In English and Amharic.">
+<meta name="author" content="Mulusew Kassa Bitew">
+<link rel="canonical" href="https://muler-21.github.io/Teck_Stories/nvidia-story/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tech Stories · የቴክ ታሪኮች">
+<meta property="og:title" content="From a Diner Booth to the Heart of AI: The Nvidia Story">
+<meta property="og:description" content="How chips work, how Jensen Huang built Nvidia, and how his story reached November 2026. In English and Amharic · በእንግሊዝኛ እና በአማርኛ">
+<meta property="og:url" content="https://muler-21.github.io/Teck_Stories/nvidia-story/">
+<meta property="og:image" content="https://muler-21.github.io/Teck_Stories/nvidia-story/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="From a Diner Booth to the Heart of AI: The Nvidia Story">
+<meta name="twitter:description" content="How chips work, how Jensen Huang built Nvidia, and how his story reached November 2026. English + Amharic.">
+<meta name="twitter:image" content="https://muler-21.github.io/Teck_Stories/nvidia-story/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Noto+Serif+Ethiopic:wght@400;600;700&family=Noto+Sans+Ethiopic:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a long-read story set like a chip's floor plan; each chapter is a "block" with a year tag, English and Amharic side by side on wide screens, stacked on phones. */
+:root {
+  --paper: #f3f4f7;
+  --panel: #ffffff;
+  --ink: #141a2a;
+  --muted: #586177;
+  --rule: #d8dce5;
+  --accent: #2b4fd8;
+  --gold: #b8740f;
+  --gold-soft: #f6ead6;
+  --accent-soft: #e5eafc;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --ethi: "Noto Serif Ethiopic", "Nyala", "Abyssinica SIL", serif;
+  --ethi-sans: "Noto Sans Ethiopic", "Nyala", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d111d; --panel: #141a2a; --ink: #e7eaf2; --muted: #9aa3b8; --rule: #273047;
+    --accent: #8098ff; --gold: #e3a640; --gold-soft: #2b2416; --accent-soft: #1b2340;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d111d; --panel: #141a2a; --ink: #e7eaf2; --muted: #9aa3b8; --rule: #273047;
+  --accent: #8098ff; --gold: #e3a640; --gold-soft: #2b2416; --accent-soft: #1b2340;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 18px; line-height: 1.65;
+}
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- header ---------- */
+header.hero { padding: 40px 0 28px; border-bottom: 1px solid var(--rule); }
+.hero-grid { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+@media (min-width: 860px) { .hero-grid { grid-template-columns: 1.5fr 1fr; } }
+.kicker { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin: 0 0 14px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(34px, 6vw, 60px); line-height: 1.03; margin: 0 0 10px; text-wrap: balance; letter-spacing: -0.02em; }
+h1 .am-title { display: block; font-family: var(--ethi-sans); font-weight: 700; font-size: .62em; line-height: 1.35; letter-spacing: 0; color: var(--accent); margin-top: 10px; }
+.dek { color: var(--muted); max-width: 62ch; margin: 14px 0 0; }
+.dek.am { font-family: var(--ethi); line-height: 1.9; }
+.hero-art svg { width: 100%; height: auto; display: block; }
+
+/* language toggle */
+.toolbar { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+.toolbar .wrap { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; padding-top: 10px; padding-bottom: 10px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: var(--panel); }
+.seg button { font: 600 14px/1 var(--display); color: var(--muted); background: none; border: 0; padding: 9px 14px; border-radius: 999px; cursor: pointer; }
+.seg button .e { font-family: var(--ethi-sans); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+nav.chapters { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+nav.chapters::-webkit-scrollbar { display: none; }
+nav.chapters a { font: 500 13px/1 var(--mono); color: var(--muted); text-decoration: none; padding: 8px 10px; border-radius: 6px; white-space: nowrap; }
+nav.chapters a:hover { background: var(--accent-soft); color: var(--ink); }
+
+/* ---------- chapters ---------- */
+main { padding: 8px 0 40px; }
+section.ch { padding: 44px 0 36px; border-bottom: 1px solid var(--rule); scroll-margin-top: 70px; }
+.ch-tag { display: flex; gap: 12px; align-items: baseline; margin-bottom: 18px; flex-wrap: wrap; }
+.ch-tag .yr { font: 700 15px/1 var(--mono); color: var(--paper); background: var(--gold); padding: 6px 9px; border-radius: 4px; }
+.ch-tag .part { font: 500 13px/1 var(--mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.pair { display: grid; grid-template-columns: 1fr; gap: 26px; }
+@media (min-width: 900px) {
+  body[data-lang="both"] .pair { grid-template-columns: 1fr 1fr; gap: 44px; }
+}
+body[data-lang="en"] .am, body[data-lang="am"] .en { display: none !important; }
+body[data-lang="en"] .pair > .en, body[data-lang="am"] .pair > .am { max-width: 68ch; }
+h2 { font-family: var(--display); font-weight: 800; font-size: clamp(26px, 3.4vw, 36px); line-height: 1.12; margin: 0 0 14px; text-wrap: balance; letter-spacing: -0.01em; }
+.am h2 { font-family: var(--ethi-sans); font-weight: 700; font-size: clamp(23px, 3vw, 31px); line-height: 1.4; letter-spacing: 0; }
+.pair p { margin: 0 0 14px; }
+.am { font-family: var(--ethi); line-height: 1.95; font-size: 18.5px; }
+@media (max-width: 899px) {
+  body[data-lang="both"] .pair > .am { background: var(--accent-soft); border-radius: 12px; padding: 18px 18px 6px; }
+}
+.motto { font-family: var(--display); font-weight: 600; font-size: 21px; line-height: 1.35; border-left: 4px solid var(--gold); padding: 6px 0 6px 16px; margin: 18px 0; }
+.am .motto { font-family: var(--ethi-sans); font-size: 19px; line-height: 1.7; }
+
+figure { margin: 28px 0 0; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
+figure .scroll { overflow-x: auto; }
+figure svg { display: block; width: 100%; min-width: 560px; height: auto; }
+figcaption { display: grid; gap: 4px; margin-top: 10px; font-size: 15px; color: var(--muted); }
+figcaption .am { font-size: 15.5px; line-height: 1.7; }
+body[data-lang="en"] figcaption .am, body[data-lang="am"] figcaption .en { display: none; }
+
+/* svg text styling */
+.t-ink { fill: var(--ink); } .t-muted { fill: var(--muted); } .t-gold { fill: var(--gold); } .t-accent { fill: var(--accent); }
+.s-rule { stroke: var(--rule); } .f-panel { fill: var(--panel); } .f-gold { fill: var(--gold); } .f-gold-soft { fill: var(--gold-soft); }
+.f-accent { fill: var(--accent); } .f-accent-soft { fill: var(--accent-soft); } .s-ink { stroke: var(--ink); } .s-gold { stroke: var(--gold); } .s-accent { stroke: var(--accent); }
+.svg-lbl { font: 600 15px var(--display); }
+.svg-lbl-am { font: 600 14px var(--ethi-sans); }
+.svg-mono { font: 500 13px var(--mono); }
+
+/* timeline */
+.tl { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 0; }
+.tl li { display: grid; grid-template-columns: 74px 1fr; gap: 16px; padding: 14px 0; border-top: 1px dashed var(--rule); }
+.tl li:first-child { border-top: 0; }
+.tl .d { font: 700 15px/1.5 var(--mono); color: var(--gold); }
+.tl li.last .d { color: var(--accent); }
+.tl p { margin: 0; }
+.note { font-size: 16px; color: var(--muted); border: 1px solid var(--rule); border-radius: 10px; padding: 12px 14px; margin-top: 16px; background: var(--panel); }
+.am .note { font-size: 16.5px; }
+
+.lessons { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 12px; counter-reset: l; }
+.lessons li { counter-increment: l; display: grid; grid-template-columns: 34px 1fr; gap: 10px; }
+.lessons li::before { content: counter(l); font: 700 15px/30px var(--mono); text-align: center; width: 30px; height: 30px; border-radius: 6px; background: var(--ink); color: var(--paper); }
+.lessons b { font-family: var(--display); }
+.am .lessons b { font-family: var(--ethi-sans); }
+
+footer { padding: 30px 0 60px; color: var(--muted); font-size: 15px; }
+footer h3 { font: 700 14px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin: 0 0 10px; }
+footer ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+footer .am { font-size: 15.5px; }
+.home-link { font: 600 14px var(--display); text-decoration: none; display: inline-block; margin-bottom: 18px; }
+.author { margin-top: 30px; padding: 20px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); color: var(--ink); font-size: 15.5px; line-height: 1.6; }
+.author .name { font: 800 20px var(--display); margin: 0 0 4px; }
+.author p { margin: 0 0 6px; }
+.author .meta { color: var(--muted); }
+.author .apps a { margin-right: 10px; }
+.author .copy { color: var(--muted); font-size: 14px; margin-top: 10px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body data-lang="both">
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <a class="home-link" href="../">← Tech Stories · የቴክ ታሪኮች</a>
+      <p class="kicker">A story in English and Amharic · በእንግሊዝኛ እና በአማርኛ</p>
+      <h1>From a Diner Booth to the Heart of AI
+        <span class="am-title" lang="am">ከምግብ ቤት ጠረጴዛ እስከ ሰው ሰራሽ አስተውሎት ልብ</span>
+      </h1>
+      <p class="dek en">How computer chips work, how Jensen Huang built Nvidia from almost nothing, and how his story reached November 2026.</p>
+      <p class="dek am" lang="am">ቺፖች እንዴት እንደሚሰሩ፣ ጄንሰን ሁዋንግ ኢንቪዲያን (Nvidia) ከምንም ማለት ይቻላል እንዴት እንደገነባ፣ እና ታሪኩ እስከ ኖቬምበር 2026 (ኅዳር 2019 ዓ.ም.) እንዴት እንደደረሰ።</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 360 260">
+        <g class="s-rule" stroke-width="3" fill="none" stroke-linecap="round">
+          <path d="M20 60 H110"/><path d="M20 100 H110"/><path d="M20 140 H110"/><path d="M20 180 H110"/>
+          <path d="M250 60 H340"/><path d="M250 100 H340"/><path d="M250 140 H340"/><path d="M250 180 H340"/>
+          <path d="M140 10 V40"/><path d="M180 10 V40"/><path d="M220 10 V40"/>
+          <path d="M140 200 V250"/><path d="M180 200 V250"/><path d="M220 200 V250"/>
+        </g>
+        <g class="f-gold"><circle cx="20" cy="60" r="5"/><circle cx="20" cy="100" r="5"/><circle cx="20" cy="140" r="5"/><circle cx="20" cy="180" r="5"/>
+          <circle cx="340" cy="60" r="5"/><circle cx="340" cy="100" r="5"/><circle cx="340" cy="140" r="5"/><circle cx="340" cy="180" r="5"/>
+          <circle cx="140" cy="10" r="5"/><circle cx="180" cy="10" r="5"/><circle cx="220" cy="10" r="5"/>
+          <circle cx="140" cy="250" r="5"/><circle cx="180" cy="250" r="5"/><circle cx="220" cy="250" r="5"/></g>
+        <rect x="110" y="40" width="140" height="160" rx="12" class="f-panel s-ink" stroke-width="3"/>
+        <g class="f-accent-soft">
+          <rect x="124" y="54" width="52" height="40" rx="4"/><rect x="184" y="54" width="52" height="40" rx="4"/>
+        </g>
+        <g class="f-accent">
+          <rect x="124" y="104" width="14" height="10" rx="2"/><rect x="142" y="104" width="14" height="10" rx="2"/><rect x="160" y="104" width="14" height="10" rx="2"/><rect x="178" y="104" width="14" height="10" rx="2"/><rect x="196" y="104" width="14" height="10" rx="2"/><rect x="214" y="104" width="14" height="10" rx="2"/>
+          <rect x="124" y="118" width="14" height="10" rx="2"/><rect x="142" y="118" width="14" height="10" rx="2"/><rect x="160" y="118" width="14" height="10" rx="2"/><rect x="178" y="118" width="14" height="10" rx="2"/><rect x="196" y="118" width="14" height="10" rx="2"/><rect x="214" y="118" width="14" height="10" rx="2"/>
+          <rect x="124" y="132" width="14" height="10" rx="2"/><rect x="142" y="132" width="14" height="10" rx="2"/><rect x="160" y="132" width="14" height="10" rx="2"/><rect x="178" y="132" width="14" height="10" rx="2"/><rect x="196" y="132" width="14" height="10" rx="2"/><rect x="214" y="132" width="14" height="10" rx="2"/>
+        </g>
+        <text x="180" y="180" text-anchor="middle" class="t-muted svg-mono">1993 → 2026</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap">
+    <div class="seg" role="group" aria-label="Language">
+      <button type="button" id="lang-both" data-lang="both" aria-pressed="true">Both · <span class="e">ሁለቱም</span></button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">English</button>
+      <button type="button" id="lang-am" data-lang="am" aria-pressed="false"><span class="e">አማርኛ</span></button>
+    </div>
+    <nav class="chapters" aria-label="Chapters">
+      <a href="#chips">Chips</a><a href="#gpu">GPU</a><a href="#boy">1963</a><a href="#dennys">1993</a><a href="#thirty-days">1996</a><a href="#geforce">1999</a><a href="#cuda">2006</a><a href="#alexnet">2012</a><a href="#trillions">2023</a><a href="#peak">2026</a><a href="#fall">Nov 2026</a><a href="#next">Next</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="ch" id="intro" style="padding-top:34px">
+  <div class="pair">
+    <div class="en">
+      <p>Every photo on your phone, every video game and every answer from an AI chatbot depends on a piece of silicon smaller than a postage stamp. This is the story of how those chips work, and of Jensen Huang, a former dishwasher who built the company that designs the most important ones. It ends this week, with his resignation.</p>
+    </div>
+    <div class="am" lang="am">
+      <p>በስልክዎ ላይ ያለ እያንዳንዱ ፎቶ፣ እያንዳንዱ የቪዲዮ ጨዋታ እና ከሰው ሰራሽ አስተውሎት (AI) የሚገኝ እያንዳንዱ መልስ ከቴምብር ባነሰ የሲሊከን ቁራጭ ላይ የተመሰረተ ነው። ይህ ታሪክ እነዚህ ቺፖች እንዴት እንደሚሰሩ፣ እና በጣም አስፈላጊዎቹን ቺፖች የሚነድፈውን ኩባንያ ስለገነባው፣ በልጅነቱ ሳህን አጣቢ ስለነበረው ጄንሰን ሁዋንግ ነው። ታሪኩ በዚህ ሳምንት በሥራ መልቀቁ ይደመደማል። (ቀኖቹ በአውሮፓውያን አቆጣጠር ናቸው።)</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="chips">
+  <div class="ch-tag"><span class="yr">PART 1</span><span class="part">How a chip works · ቺፕ እንዴት ይሰራል</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>From sand to switches</h2>
+      <p>A computer chip begins as sand. Ordinary sand is full of silicon, which factories purify, grow into a large crystal and slice into thin, mirror-smooth discs called wafers.</p>
+      <p>On each wafer, machines print billions of transistors. A transistor is a tiny switch. When it lets electricity through, it means 1. When it blocks it, it means 0. Every letter, number, colour and sound inside a computer is a long pattern of these ones and zeros.</p>
+      <p>The patterns are printed with light, one layer at a time, in a process called lithography. The parts are so small that more than a thousand transistors could sit side by side across the width of a human hair. Nvidia designs its chips but does not build them: factories such as TSMC in Taiwan make them. Nvidia's Blackwell AI chip holds 208 billion transistors.</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>ከአሸዋ እስከ ማብሪያ ማጥፊያ</h2>
+      <p>የኮምፒውተር ቺፕ ጉዞው የሚጀምረው ከአሸዋ ነው። ተራ አሸዋ በሲሊከን የበለፀገ ነው። ፋብሪካዎች ሲሊከኑን አጣርተው ትልቅ ክሪስታል ያሳድጉታል፤ ከዚያም እንደ መስታወት የለሰለሱ ቀጭን ዲስኮች አድርገው ይቆርጡታል። እነዚህ ዲስኮች «ዌፈር» (wafer) ይባላሉ።</p>
+      <p>በእያንዳንዱ ዌፈር ላይ ማሽኖች በቢሊዮን የሚቆጠሩ ትራንዚስተሮችን ያትማሉ። ትራንዚስተር በጣም ትንሽ ማብሪያ ማጥፊያ ነው። ኤሌክትሪክ ሲያሳልፍ 1 ማለት ነው፤ ሲከለክል ደግሞ 0 ማለት ነው። በኮምፒውተር ውስጥ ያለ እያንዳንዱ ፊደል፣ ቁጥር፣ ቀለም እና ድምፅ የእነዚህ 1 እና 0 ረጅም ቅደም ተከተል ነው።</p>
+      <p>እነዚህ ንድፎች በብርሃን አማካኝነት፣ አንድ ንብርብር በአንድ ጊዜ፣ «ሊቶግራፊ» በሚባል ሂደት ይታተማሉ። ክፍሎቹ በጣም ትንሽ ከመሆናቸው የተነሳ ከአንድ ሺህ በላይ ትራንዚስተሮች በአንድ የሰው ፀጉር ውፍረት ላይ ጎን ለጎን ሊቀመጡ ይችላሉ። ኢንቪዲያ ቺፖቹን ይነድፋል እንጂ ራሱ አያመርትም፤ እንደ ታይዋኑ TSMC ያሉ ፋብሪካዎች ያመርቱለታል። የኢንቪዲያ «ብላክዌል» (Blackwell) የተባለው የAI ቺፕ 208 ቢሊዮን ትራንዚስተሮችን ይዟል።</p>
+    </div>
+  </div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 1040 250" role="img" aria-labelledby="f1t">
+      <title id="f1t">Five steps: sand, silicon crystal, wafer, chip, and a transistor switch that is on for 1 and off for 0.</title>
+      <g fill="none" class="s-rule" stroke-width="3" stroke-linecap="round"><path d="M175 95 H215"/><path d="M380 95 H420"/><path d="M585 95 H625"/><path d="M790 95 H830"/></g>
+      <g class="f-gold"><path d="M210 88 l10 7 -10 7z"/><path d="M415 88 l10 7 -10 7z"/><path d="M620 88 l10 7 -10 7z"/><path d="M825 88 l10 7 -10 7z"/></g>
+      <!-- sand -->
+      <g class="f-gold">
+        <path d="M30 140 Q95 40 160 140 Z" opacity=".85"/>
+      </g>
+      <g class="f-panel"><circle cx="70" cy="120" r="3"/><circle cx="95" cy="100" r="3"/><circle cx="118" cy="125" r="3"/><circle cx="90" cy="130" r="2.5"/></g>
+      <!-- crystal ingot -->
+      <rect x="245" y="45" width="110" height="100" rx="50" class="f-accent-soft s-accent" stroke-width="3"/>
+      <ellipse cx="300" cy="95" rx="22" ry="44" class="s-accent" fill="none" stroke-width="2" opacity=".6"/>
+      <!-- wafer -->
+      <circle cx="502" cy="95" r="55" class="f-panel s-ink" stroke-width="3"/>
+      <g class="s-rule" stroke-width="1.5"><path d="M455 75 H549 M449 95 H555 M455 115 H549 M482 42 V148 M502 40 V150 M522 42 V148"/></g>
+      <!-- chip -->
+      <g class="s-ink" stroke-width="3"><path d="M670 60 v-14 M690 60 v-14 M710 60 v-14 M730 60 v-14 M670 130 v14 M690 130 v14 M710 130 v14 M730 130 v14"/></g>
+      <rect x="655" y="60" width="90" height="70" rx="8" class="f-accent"/>
+      <rect x="675" y="76" width="50" height="38" rx="4" class="f-gold"/>
+      <!-- transistor switch -->
+      <rect x="860" y="55" width="70" height="40" rx="20" class="f-accent"/><circle cx="910" cy="75" r="15" class="f-panel"/>
+      <rect x="860" y="105" width="70" height="40" rx="20" class="f-accent-soft s-rule" stroke-width="2"/><circle cx="880" cy="125" r="15" class="f-panel s-rule" stroke-width="2"/>
+      <text x="945" y="82" class="t-accent svg-lbl">= 1</text>
+      <text x="945" y="132" class="t-muted svg-lbl">= 0</text>
+      <!-- labels -->
+      <g text-anchor="middle">
+        <text x="95" y="185" class="t-ink svg-lbl en">Sand</text>
+        <text x="300" y="185" class="t-ink svg-lbl en">Silicon crystal</text>
+        <text x="502" y="185" class="t-ink svg-lbl en">Wafer</text>
+        <text x="700" y="185" class="t-ink svg-lbl en">Chip</text>
+        <text x="925" y="185" class="t-ink svg-lbl en">Transistor: on / off</text>
+        <text x="95" y="212" class="t-muted svg-lbl-am am">አሸዋ</text>
+        <text x="300" y="212" class="t-muted svg-lbl-am am">የሲሊከን ክሪስታል</text>
+        <text x="502" y="212" class="t-muted svg-lbl-am am">ዌፈር</text>
+        <text x="700" y="212" class="t-muted svg-lbl-am am">ቺፕ</text>
+        <text x="925" y="212" class="t-muted svg-lbl-am am">ትራንዚስተር፦ በርቷል / ጠፍቷል</text>
+      </g>
+    </svg>
+    </div>
+    <figcaption><span class="en">From sand to a working chip. Each transistor is a switch: on means 1, off means 0.</span><span class="am" lang="am">ከአሸዋ እስከ የሚሰራ ቺፕ። እያንዳንዱ ትራንዚስተር ማብሪያ ማጥፊያ ነው፦ ሲበራ 1፣ ሲጠፋ 0 ማለት ነው።</span></figcaption>
+  </figure>
+</section>
+
+<section class="ch" id="gpu">
+  <div class="ch-tag"><span class="yr">PART 1</span><span class="part">CPU vs GPU · ሲፒዩ እና ጂፒዩ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>A few professors, or a whole classroom?</h2>
+      <p>Most computers have a CPU, the central processor. It has a few powerful cores that solve complicated problems one after another, like a handful of brilliant professors.</p>
+      <p>A GPU, or graphics processing unit, works differently. It has thousands of small, simple cores that all work at the same moment, like a huge classroom where every student solves one small sum. A screen has millions of pixels, and each one needs its colour worked out many times a second. That job suits the classroom perfectly.</p>
+      <p>Teaching an AI model turns out to need the same thing: mountains of simple multiplications done side by side. That is why a chip built for video games became the engine of artificial intelligence.</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>ጥቂት ፕሮፌሰሮች ወይስ ሙሉ ክፍል ተማሪዎች?</h2>
+      <p>አብዛኞቹ ኮምፒውተሮች ሲፒዩ (CPU) ወይም ማዕከላዊ ፕሮሰሰር አላቸው። ሲፒዩ ውስብስብ ችግሮችን አንዱን ከሌላው በኋላ የሚፈቱ ጥቂት ጠንካራ «ኮሮች» አሉት፤ ልክ እንደ ጥቂት ጎበዝ ፕሮፌሰሮች።</p>
+      <p>ጂፒዩ (GPU) ወይም የግራፊክስ ፕሮሰሰር በተለየ መንገድ ይሰራል። በአንድ ጊዜ አብረው የሚሰሩ በሺዎች የሚቆጠሩ ትናንሽና ቀላል ኮሮች አሉት፤ ልክ እያንዳንዱ ተማሪ አንድ ትንሽ ሂሳብ እንደሚሰራበት ትልቅ ክፍል። የኮምፒውተር ስክሪን በሚሊዮኖች የሚቆጠሩ ነጥቦች (ፒክሰሎች) አሉት፤ የእያንዳንዳቸው ቀለም በሰከንድ ብዙ ጊዜ መሰላት አለበት። ይህ ሥራ ለ«ሙሉ ክፍሉ ተማሪዎች» በትክክል ይስማማል።</p>
+      <p>ለካ የAI ሞዴልን ማሰልጠንም ተመሳሳይ ነገር ይፈልጋል፦ ጎን ለጎን የሚሰሩ እጅግ ብዙ ቀላል የማባዛት ስሌቶች። ለቪዲዮ ጨዋታዎች የተሰራ ቺፕ የሰው ሰራሽ አስተውሎት ሞተር የሆነው ለዚህ ነው።</p>
+    </div>
+  </div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 1040 300" role="img" aria-labelledby="f2t" id="cpu-gpu">
+      <title id="f2t">A CPU drawn with four large cores next to a GPU drawn with hundreds of small cores.</title>
+      <rect x="40" y="30" width="300" height="200" rx="14" class="f-panel s-ink" stroke-width="3"/>
+      <g class="f-gold">
+        <rect x="62" y="52" width="122" height="72" rx="8"/><rect x="196" y="52" width="122" height="72" rx="8"/>
+        <rect x="62" y="136" width="122" height="72" rx="8"/><rect x="196" y="136" width="122" height="72" rx="8"/>
+      </g>
+      <rect x="400" y="30" width="600" height="200" rx="14" class="f-panel s-ink" stroke-width="3"/>
+      <g id="gpu-cores" class="f-accent"></g>
+      <g text-anchor="middle">
+        <text x="190" y="262" class="t-ink svg-lbl en">CPU: a few strong cores</text>
+        <text x="700" y="262" class="t-ink svg-lbl en">GPU: thousands of small cores working at once</text>
+        <text x="190" y="288" class="t-muted svg-lbl-am am">ሲፒዩ፦ ጥቂት ጠንካራ ኮሮች</text>
+        <text x="700" y="288" class="t-muted svg-lbl-am am">ጂፒዩ፦ በአንድ ጊዜ የሚሰሩ በሺዎች የሚቆጠሩ ትናንሽ ኮሮች</text>
+      </g>
+    </svg>
+    </div>
+    <figcaption><span class="en">Drawing not to scale. In 2012 a gaming GPU like the GTX 580 had 512 cores, while a typical CPU had 4 to 8.</span><span class="am" lang="am">ስዕሉ በትክክለኛ መጠን አይደለም። በ2012 እንደ GTX 580 ያለ የጨዋታ ጂፒዩ 512 ኮሮች ሲኖሩት፣ የተለመደ ሲፒዩ ከ4 እስከ 8 ኮሮች ብቻ ነበሩት።</span></figcaption>
+  </figure>
+</section>
+
+<section class="ch" id="boy">
+  <div class="ch-tag"><span class="yr">1963–1992</span><span class="part">Part 2 · The founder · መሥራቹ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>The boy who kept moving</h2>
+      <p>Jensen Huang was born in Taiwan on February 17, 1963. When he was five, his family moved to Thailand. As a young boy he was sent to the United States, and his parents later followed. The family settled in Oregon, where he skipped two grades and finished high school early.</p>
+      <p>At 15 he took a job at a Denny's restaurant, washing dishes and clearing tables. He later said the work helped him overcome his shyness and taught him the value of hard work.</p>
+      <p>He earned an electrical engineering degree from Oregon State University in 1984, designed microprocessors at AMD, and then joined LSI Logic. There he was assigned to work with two engineers from Sun Microsystems, Chris Malachowsky and Curtis Priem. Studying on evenings and weekends, he completed a master's degree at Stanford in 1992.</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>ብዙ የተጓዘው ልጅ</h2>
+      <p>ጄንሰን ሁዋንግ ፌብሩዋሪ 17 ቀን 1963 በታይዋን ተወለደ። አምስት ዓመት ሲሆነው ቤተሰቡ ወደ ታይላንድ ተዛወረ። ገና ትንሽ ልጅ እያለ ወደ አሜሪካ ተላከ፤ ወላጆቹም በኋላ ተከተሉት። ቤተሰቡ በኦሬገን ግዛት ተገናኝቶ ኖረ፤ እዚያም ሁለት ክፍሎችን ዘልሎ የሁለተኛ ደረጃ ትምህርቱን ቀደም ብሎ አጠናቀቀ።</p>
+      <p>በ15 ዓመቱ «ዴኒስ» (Denny's) በሚባል ምግብ ቤት ሳህን በማጠብና ጠረጴዛ በማጽዳት ሥራ ጀመረ። በኋላ ላይ ይህ ሥራ ዓይናፋርነቱን እንዲያሸንፍ እንደረዳውና የትጋትን ዋጋ እንዳስተማረው ተናግሯል።</p>
+      <p>በ1984 ከኦሬገን ስቴት ዩኒቨርሲቲ በኤሌክትሪካል ምህንድስና ተመረቀ፤ በAMD ኩባንያ ማይክሮፕሮሰሰሮችን ነደፈ፤ ከዚያም LSI Logic የተባለውን ኩባንያ ተቀላቀለ። እዚያም ከ«ሰን ማይክሮሲስተምስ» (Sun Microsystems) ከመጡ ሁለት መሐንዲሶች፣ ክሪስ ማላኮውስኪ እና ከርቲስ ፕሪም ጋር እንዲሰራ ተመደበ። ማታ ማታና ቅዳሜና እሁድ እያጠና በ1992 ከስታንፎርድ ዩኒቨርሲቲ የማስተርስ ዲግሪውን አገኘ።</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="dennys">
+  <div class="ch-tag"><span class="yr">1993</span><span class="part">The founding · ምሥረታው</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>A booth at Denny's</h2>
+      <p>In 1993 the three engineers began meeting at a Denny's in East San Jose, California. They would order bottomless coffee and work for hours on one idea: a chip that would make video game graphics faster and more realistic.</p>
+      <p>Jensen was 30, married and a father of two. He was the youngest of the three, but his partners asked him to run the company from the first day. Nvidia was incorporated on April 5, 1993. Its name comes from <i>invidia</i>, the Latin word for envy.</p>
+      <p>Looking back, Jensen has said the young company faced a market problem, a technology problem and an ecosystem problem, with "approximately 0% chance of success."</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>በዴኒስ ምግብ ቤት ያለች ጠረጴዛ</h2>
+      <p>በ1993 ሦስቱ መሐንዲሶች በካሊፎርኒያ፣ ምሥራቅ ሳን ሆዜ በሚገኝ የዴኒስ ምግብ ቤት መገናኘት ጀመሩ። የማያልቅ ቡና አዝዘው ለሰዓታት በአንድ ሐሳብ ላይ ይሰሩ ነበር፦ የቪዲዮ ጨዋታ ምስሎችን ፈጣንና ይበልጥ እውነተኛ የሚያደርግ ቺፕ።</p>
+      <p>ጄንሰን የ30 ዓመት ወጣት፣ ባለትዳርና የሁለት ልጆች አባት ነበር። ከሦስቱ ትንሹ ቢሆንም፣ አጋሮቹ ከመጀመሪያው ቀን አንስቶ ኩባንያውን እንዲመራ ጠየቁት። ኢንቪዲያ ኤፕሪል 5 ቀን 1993 በይፋ ተመዘገበ። ስሙ «ቅናት» የሚል ትርጉም ካለው <i>invidia</i> ከሚባለው የላቲን ቃል የመጣ ነው።</p>
+      <p>ጄንሰን ወደ ኋላ መለስ ብሎ ሲያስታውስ፣ ወጣቱ ኩባንያ የገበያ፣ የቴክኖሎጂ እና የሥነ-ምህዳር ፈተናዎች ስለነበሩበት የመሳካት ዕድሉ «ወደ ዜሮ የተጠጋ» እንደነበር ተናግሯል።</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="thirty-days">
+  <div class="ch-tag"><span class="yr">1995–1997</span><span class="part">Near failure · ከውድቀት አፋፍ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>Thirty days from the end</h2>
+      <p>Nvidia's first chip, the NV1, came out in 1995. It drew 3D shapes using curves, while the rest of the industry, led by Microsoft's DirectX, settled on triangles. Game makers ignored it, and the chip failed.</p>
+      <p>Money ran low, and Nvidia laid off about half of its roughly 100 employees. Jensen flew to Japan to tell Sega, its most important partner, the truth: Nvidia had built the wrong thing. Sega still put $5 million into the company. That money bought just enough time.</p>
+      <p>The team bet everything on a new chip, the RIVA 128. When it launched in August 1997, Nvidia had only one month of payroll left. It sold about a million units in four months and saved the company. Ever since, Nvidia's unofficial motto has been:</p>
+      <p class="motto">"Our company is thirty days from going out of business."</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>ከመዘጋት 30 ቀናት ቀርቶት</h2>
+      <p>የኢንቪዲያ የመጀመሪያው ቺፕ NV1 በ1995 ወጣ። ይህ ቺፕ ባለ 3D ቅርጾችን በኩርባዎች ይስል ነበር፤ የተቀረው ኢንዱስትሪ ግን፣ በማይክሮሶፍት DirectX መሪነት፣ ሦስት ማዕዘኖችን መረጠ። የጨዋታ ሰሪዎች ቺፑን ችላ አሉት፤ ቺፑም ከሸፈ።</p>
+      <p>ገንዘብ እያለቀ ሄደ፤ ኢንቪዲያ ከ100 ገደማ ሠራተኞቹ ግማሽ ያህሉን ለማሰናበት ተገደደ። ጄንሰን ወደ ጃፓን በረረ፤ ዋነኛ አጋሩ ለነበረው «ሴጋ» (Sega) እውነቱን ነገረው፦ ኢንቪዲያ የተሳሳተ ነገር ነበር የሰራው። ሴጋ ይህንን ሰምቶም 5 ሚሊዮን ዶላር በኩባንያው ላይ አዋለ። ያ ገንዘብ ለመትረፍ የሚበቃ ጊዜ ገዛ።</p>
+      <p>ቡድኑ ሁሉንም ነገር RIVA 128 በተባለ አዲስ ቺፕ ላይ አስያዘ። ቺፑ ኦገስት 1997 ሲወጣ ኢንቪዲያ የቀረው የአንድ ወር ደመወዝ ብቻ ነበር። በአራት ወራት ውስጥ አንድ ሚሊዮን ገደማ ተሸጦ ኩባንያውን አዳነው። ከዚያ ጊዜ ጀምሮ የኢንቪዲያ ኢ-መደበኛ መሪ ቃል ይህ ሆኗል፦</p>
+      <p class="motto">«ኩባንያችን ከመዘጋት 30 ቀናት ብቻ ይርቃል።»</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="geforce">
+  <div class="ch-tag"><span class="yr">1999</span><span class="part">The first GPU · የመጀመሪያው ጂፒዩ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>Giving the GPU its name</h2>
+      <p>Nvidia sold its shares to the public for the first time in January 1999. Later that year it launched the GeForce 256 and called it the world's first GPU. The chip took over drawing work that the CPU used to do, and gamers loved it.</p>
+      <p>For the next decade, Nvidia was known mainly as a company that made graphics cards for gamers.</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>«ጂፒዩ» የሚለው ስም ሲወለድ</h2>
+      <p>ኢንቪዲያ አክሲዮኖቹን ለመጀመሪያ ጊዜ ለሕዝብ የሸጠው በጃንዋሪ 1999 ነው። በዚያው ዓመት «ጂፎርስ 256» (GeForce 256) የተባለውን ቺፕ አውጥቶ «የዓለም የመጀመሪያው ጂፒዩ» ብሎ ሰየመው። ቺፑ ቀደም ሲል ሲፒዩ ይሰራው የነበረውን የምስል ሥራ ተረከበ፤ ተጫዋቾችም በጣም ወደዱት።</p>
+      <p>በቀጣዮቹ አሥር ዓመታት ኢንቪዲያ በዋናነት ለቪዲዮ ጨዋታ ተጫዋቾች የግራፊክስ ካርዶችን የሚሰራ ኩባንያ ተብሎ ይታወቅ ነበር።</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="cuda">
+  <div class="ch-tag"><span class="yr">2006</span><span class="part">The long bet · ረጅሙ ውርርድ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>The bet nobody understood</h2>
+      <p>In November 2006 Nvidia shipped a chip called the G80, with 681 million transistors, and with it a software platform called CUDA. CUDA let scientists and programmers use the GPU's many cores for any kind of maths, not just graphics.</p>
+      <p>Building it cost a great deal of money for years, and few people outside the company could see why it mattered. Jensen kept investing anyway.</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>ማንም ያልተረዳው ውርርድ</h2>
+      <p>ኖቬምበር 2006 ኢንቪዲያ 681 ሚሊዮን ትራንዚስተሮች ያሉትን G80 የተባለ ቺፕ አወጣ፤ ከእሱም ጋር «ኩዳ» (CUDA) የሚባል የሶፍትዌር መድረክ አስተዋወቀ። ኩዳ ሳይንቲስቶችና ፕሮግራመሮች የጂፒዩን ብዙ ኮሮች ለምስል ብቻ ሳይሆን ለማንኛውም ዓይነት ሂሳብ እንዲጠቀሙ አስቻለ።</p>
+      <p>ይህንን መገንባት ለዓመታት ብዙ ገንዘብ ጠየቀ፤ ከኩባንያው ውጭ ጠቀሜታውን የተረዱት ጥቂት ሰዎች ብቻ ነበሩ። ጄንሰን ግን ኢንቨስት ማድረጉን አላቆመም።</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="alexnet">
+  <div class="ch-tag"><span class="yr">2012</span><span class="part">AI arrives · AI ሲመጣ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>The big bang of AI</h2>
+      <p>In 2012 Alex Krizhevsky, a graduate student at the University of Toronto working with Ilya Sutskever and Geoffrey Hinton, trained a neural network called AlexNet on two Nvidia GTX 580 gaming cards at his parents' house. Each card cost about $500. Training took about six days.</p>
+      <p>AlexNet won the ImageNet image-recognition contest by a wide margin. Almost overnight, AI researchers everywhere switched to GPUs, and CUDA made Nvidia's the natural choice. Jensen later called AlexNet "the big bang of AI."</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>የAI «ታላቁ ፍንዳታ»</h2>
+      <p>በ2012 በቶሮንቶ ዩኒቨርሲቲ የድህረ ምረቃ ተማሪ የነበረው አሌክስ ክሪዘቭስኪ፣ ከኢሊያ ሱትስኬቨር እና ጄፍሪ ሂንተን ጋር በመሆን፣ «አሌክስኔት» (AlexNet) የተባለ የነርቭ መረብ (neural network) በወላጆቹ ቤት ውስጥ በሁለት የኢንቪዲያ GTX 580 የጨዋታ ካርዶች አሰለጠነ። እያንዳንዱ ካርድ 500 ዶላር ገደማ ያወጣ ነበር። ስልጠናው ስድስት ቀን ገደማ ፈጅቷል።</p>
+      <p>አሌክስኔት «ኢሜጅኔት» (ImageNet) በተባለው የምስል ማወቂያ ውድድር በከፍተኛ ልዩነት አሸነፈ። በአንድ ጀምበር ማለት ይቻላል፣ በዓለም ዙሪያ ያሉ የAI ተመራማሪዎች ወደ ጂፒዩ ተሸጋገሩ፤ ኩዳ ደግሞ የኢንቪዲያን ቺፖች ተፈጥሯዊ ምርጫ አደረጋቸው። ጄንሰን በኋላ አሌክስኔትን «የAI ታላቁ ፍንዳታ» ብሎ ጠርቶታል።</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="trillions">
+  <div class="ch-tag"><span class="yr">2022–2025</span><span class="part">The boom · ዕድገቱ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>The trillion-dollar years</h2>
+      <p>Before ChatGPT appeared in late 2022, Nvidia was worth about $400 billion. Then every big technology company raced to build AI, and almost all of them needed Nvidia's chips.</p>
+      <p>Nvidia passed $1 trillion in June 2023. On October 29, 2025, it became the first company in history worth $5 trillion, more than the yearly economic output of every country except the United States and China.</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>የትሪሊዮን ዶላር ዓመታት</h2>
+      <p>ቻትጂፒቲ (ChatGPT) በ2022 መጨረሻ ከመምጣቱ በፊት የኢንቪዲያ ዋጋ 400 ቢሊዮን ዶላር ገደማ ነበር። ከዚያ በኋላ ሁሉም ትላልቅ የቴክኖሎጂ ኩባንያዎች AI ለመገንባት ተሽቀዳደሙ፤ ሁሉም ማለት ይቻላል የኢንቪዲያን ቺፖች ፈለጉ።</p>
+      <p>ኢንቪዲያ በጁን 2023 የ1 ትሪሊዮን ዶላር ዋጋን አለፈ። ኦክቶበር 29 ቀን 2025 ደግሞ በታሪክ 5 ትሪሊዮን ዶላር ዋጋ ያለው የመጀመሪያው ኩባንያ ሆነ። ይህ ዋጋ ከአሜሪካና ከቻይና በስተቀር ከማንኛውም ሀገር ዓመታዊ ኢኮኖሚ (GDP) ይበልጣል።</p>
+    </div>
+  </div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 1040 330" role="img" aria-labelledby="f3t" id="mcap">
+      <title id="f3t">Bar chart of Nvidia's market value: about 0.4 trillion dollars in late 2022, 1 trillion in June 2023, 2 trillion in February 2024, 3 trillion in June 2024, 4 trillion in July 2025 and 5 trillion in October 2025.</title>
+    </svg>
+    </div>
+    <figcaption><span class="en">Nvidia's stock-market value at each milestone, in trillions of US dollars. Bars start at zero.</span><span class="am" lang="am">የኢንቪዲያ የአክሲዮን ገበያ ዋጋ በእያንዳንዱ ምዕራፍ (በትሪሊዮን የአሜሪካ ዶላር)። አሞሌዎቹ ከዜሮ ይጀምራሉ።</span></figcaption>
+  </figure>
+</section>
+
+<section class="ch" id="peak">
+  <div class="ch-tag"><span class="yr">2026</span><span class="part">The peak · ጫፉ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>2026: the top of the mountain</h2>
+      <p>In the fiscal year that ended in January 2026, Nvidia's revenue reached $215.9 billion, up 65% in one year. Most of it came from chips for data centres, the giant buildings where AI runs.</p>
+      <p>In March 2026, Jensen told Nvidia's GTC conference that he expected at least $1 trillion in orders for its Blackwell and new Vera Rubin systems through 2027. Vera Rubin was due to ship in the second half of the year. Nvidia's shares reached a record close of $239.24 on October 6, 2026.</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>2026፦ የተራራው ጫፍ</h2>
+      <p>በጃንዋሪ 2026 በተጠናቀቀው የበጀት ዓመት የኢንቪዲያ ገቢ 215.9 ቢሊዮን ዶላር ደረሰ፤ ይህም በአንድ ዓመት የ65% ጭማሪ ነው። አብዛኛው ገቢ የመጣው AI ለሚሰራባቸው ግዙፍ ሕንፃዎች፣ ማለትም ለ«ዳታ ሴንተሮች» ከሚሸጡ ቺፖች ነው።</p>
+      <p>በማርች 2026 ጄንሰን በኢንቪዲያ GTC ጉባኤ ላይ፣ እስከ 2027 ድረስ ለብላክዌል እና ለአዲሱ «ቬራ ሩቢን» (Vera Rubin) ሲስተሞች ቢያንስ 1 ትሪሊዮን ዶላር ትዕዛዝ እንደሚጠብቅ ተናገረ። ቬራ ሩቢን በዓመቱ ሁለተኛ አጋማሽ እንዲወጣ ታቅዶ ነበር። የኢንቪዲያ አክሲዮን ኦክቶበር 6 ቀን 2026 በ239.24 ዶላር የምንጊዜም ከፍተኛ የመዝጊያ ዋጋውን አስመዘገበ።</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="fall">
+  <div class="ch-tag"><span class="yr">NOV 2026</span><span class="part">The fall · ውድቀቱ</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>One week in November</h2>
+      <p>Then, in a single week, the story changed.</p>
+      <ol class="tl">
+        <li><span class="d">Nov 8</span><p>Nvidia's board opens an independent investigation after news reports that Jensen was the target of a foreign intelligence effort. Jensen admits being unfaithful to his wife and apologises to his family and employees.</p></li>
+        <li><span class="d">Nov 10</span><p>The independent directors hire former acting U.S. Attorney Joon H. Kim to lead the investigation.</p></li>
+        <li><span class="d">Nov 11</span><p>New reports about his personal life appear. The Wall Street Journal reports that the board is preparing to remove him.</p></li>
+        <li class="last"><span class="d">Nov 12</span><p>After 33 years, Jensen resigns as president, CEO and board member. Finance chief Colette Kress becomes interim CEO, and Harvey C. Jones becomes the board's first chair. The shares close down 4.34%.</p></li>
+      </ol>
+      <p class="note">News reports say one of the relationships involved a woman suspected of spying for China. These are allegations, and the board's investigation has not published any findings. U.S. lawmakers want Jensen to testify before Congress.</p>
+    </div>
+    <div class="am" lang="am">
+      <h2>በኖቬምበር ወር የነበረው አንድ ሳምንት</h2>
+      <p>ከዚያም በአንድ ሳምንት ውስጥ ታሪኩ ተቀየረ።</p>
+      <ol class="tl">
+        <li><span class="d">ኖቬ 8</span><p>የኢንቪዲያ ቦርድ ጄንሰን የውጭ የስለላ ጥረት ዒላማ እንደነበር የሚገልጹ ዘገባዎችን ተከትሎ ገለልተኛ ምርመራ ጀመረ። ጄንሰን ለባለቤቱ ታማኝ እንዳልነበረ አምኖ ቤተሰቡንና ሠራተኞቹን ይቅርታ ጠየቀ።</p></li>
+        <li><span class="d">ኖቬ 10</span><p>ገለልተኛ የቦርድ አባላት ምርመራውን እንዲመሩ የቀድሞውን ተጠባባቂ የአሜሪካ ዐቃቤ ሕግ ጁን ኤች. ኪምን ቀጠሩ።</p></li>
+        <li><span class="d">ኖቬ 11</span><p>ስለ ግል ሕይወቱ አዳዲስ ዘገባዎች ወጡ። ዎል ስትሪት ጆርናል ቦርዱ ከሥልጣን ሊያነሳው እየተዘጋጀ መሆኑን ዘገበ።</p></li>
+        <li class="last"><span class="d">ኖቬ 12</span><p>ከ33 ዓመታት በኋላ ጄንሰን ከፕሬዚዳንትነት፣ ከዋና ሥራ አስፈጻሚነት (CEO) እና ከቦርድ አባልነት ለቀቀ። የፋይናንስ ኃላፊዋ ኮሌት ክሬስ ጊዜያዊ ዋና ሥራ አስፈጻሚ ሆኑ፤ ሃርቪ ሲ. ጆንስ ደግሞ የቦርዱ የመጀመሪያው ሰብሳቢ ሆኑ። አክሲዮኑ በዕለቱ በ4.34% ቀንሶ ተዘጋ።</p></li>
+      </ol>
+      <p class="note">ዘገባዎች እንደሚሉት ከግንኙነቶቹ አንዱ ለቻይና በመሰለል ከተጠረጠረች ሴት ጋር ነበር። እነዚህ ገና ያልተረጋገጡ ክሶች ናቸው፤ የቦርዱ ምርመራም እስካሁን ምንም ውጤት ይፋ አላደረገም። የአሜሪካ ሕግ አውጪዎች ጄንሰን በኮንግረስ ፊት ቃሉን እንዲሰጥ ይፈልጋሉ።</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch" id="next">
+  <div class="ch-tag"><span class="yr">NEXT</span><span class="part">What the story teaches · ታሪኩ የሚያስተምረው</span></div>
+  <div class="pair">
+    <div class="en">
+      <h2>What comes next</h2>
+      <p>On November 17, 2026, Nvidia reports its quarterly results for the first time without its founder in charge, while the board searches for a permanent CEO. The chips, the factories and the world's demand for AI are all still there.</p>
+      <ol class="lessons">
+        <li><span><b>Big things are built from tiny switches.</b> A chip is billions of simple on-off decisions working together.</span></li>
+        <li><span><b>Admit a mistake early.</b> Telling Sega the truth in 1996 kept Nvidia alive.</span></li>
+        <li><span><b>Bet before others can see it.</b> CUDA looked like a waste of money for six years, until AlexNet.</span></li>
+        <li><span><b>A company is bigger than one person.</b> Nvidia's engineers, customers and chips remain, and the board now has to show the company can run without its founder.</span></li>
+      </ol>
+    </div>
+    <div class="am" lang="am">
+      <h2>ቀጥሎ ምን ይመጣል?</h2>
+      <p>ኖቬምበር 17 ቀን 2026 ኢንቪዲያ መሥራቹ በሌለበት ለመጀመሪያ ጊዜ የሩብ ዓመት ውጤቱን ያቀርባል፤ ቦርዱም ቋሚ ዋና ሥራ አስፈጻሚ እየፈለገ ነው። ቺፖቹ፣ ፋብሪካዎቹ እና ዓለም ለAI ያላት ፍላጎት ግን አሁንም አሉ።</p>
+      <ol class="lessons">
+        <li><span><b>ትላልቅ ነገሮች ከትናንሽ ማብሪያ ማጥፊያዎች ይገነባሉ።</b> ቺፕ ማለት በቢሊዮን የሚቆጠሩ ቀላል የ«አብራ-አጥፋ» ውሳኔዎች በአንድነት ሲሰሩ ነው።</span></li>
+        <li><span><b>ስህተትን በጊዜ አምኖ መቀበል።</b> በ1996 ለሴጋ እውነቱን መናገሩ ኢንቪዲያን በሕይወት አቆየው።</span></li>
+        <li><span><b>ሌሎች ከማየታቸው በፊት መወራረድ።</b> ኩዳ እስከ አሌክስኔት ድረስ ለስድስት ዓመታት እንደ ገንዘብ ብክነት ይታይ ነበር።</span></li>
+        <li><span><b>ኩባንያ ከአንድ ሰው ይበልጣል።</b> የኢንቪዲያ መሐንዲሶች፣ ደንበኞች እና ቺፖች አሁንም አሉ፤ ቦርዱ አሁን ኩባንያው ያለ መሥራቹ መሥራት እንደሚችል ማሳየት አለበት።</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <div class="pair">
+    <div class="en"><p>Written on November 13, 2026. Events after that date are not included.</p></div>
+    <div class="am" lang="am"><p>ይህ ታሪክ የተጻፈው ኖቬምበር 13 ቀን 2026 ነው። ከዚያ ቀን በኋላ የተከሰቱ ነገሮች አልተካተቱም።</p></div>
+  </div>
+  <h3>Sources · ምንጮች</h3>
+  <ul>
+    <li><a href="https://nvidianews.nvidia.com/news/latest">NVIDIA Newsroom: CEO transition and board statements, Nov 2026</a></li>
+    <li><a href="https://www.technology.org/2026/11/13/jensen-huang-resigns-nvidia-ceo-colette-kress-interim/">Technology.org: Jensen Huang resigns as Nvidia CEO after 33 years</a></li>
+    <li><a href="https://www.cnn.com/2026/11/11/business/live-news/nvidia-jensen-huang-investigation-fallout">CNN: live updates on the Nvidia leadership crisis</a></li>
+    <li><a href="https://mynews13.com/fl/orlando/ap-top-news/2026/11/09/nvidias-investigation-into-ceo-huangs-affair-puts-a-spotlight-on-chip-billionaires-personal-life">Associated Press: a look at Jensen Huang's life</a></li>
+    <li><a href="https://quartr.com/insights/edge/the-story-of-jensen-huang-and-nvidia">Quartr: The story of Jensen Huang and Nvidia</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/RIVA_128">Wikipedia: RIVA 128 and Nvidia's near-bankruptcy</a></li>
+    <li><a href="https://www.artiverse.ca/how-segas-5-million-saved-nvidia-and-changed-tech-history/">Artiverse: How Sega's $5 million saved Nvidia</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/AlexNet">Wikipedia: AlexNet</a></li>
+    <li><a href="https://fortune.com/2025/10/29/nvidia-first-5-trillion-company-ceo-jensen-huang-500-billion-revenue-blackwell-rubin-gpus-china/">Fortune: Nvidia becomes the first $5 trillion company</a></li>
+    <li><a href="https://www.investmentnews.com/equities/nvidias-blowout-year-extends-ai-rally-deepening-mega-cap-concentration-risk/265443">InvestmentNews: Nvidia fiscal 2026 results</a></li>
+    <li><a href="https://www.cnbc.com/2026/03/16/nvidia-gtc-2026-ceo-jensen-huang-keynote-blackwell-vera-rubin.html">CNBC: GTC 2026 and the $1 trillion forecast</a></li>
+    <li><a href="https://stocktitan.net/articles/stock-market-today-live-november-12-2026">StockTitan: Nvidia shares, Nov 12, 2026</a></li>
+  </ul>
+  <div class="author">
+    <p class="name">Mulusew Kassa Bitew</p>
+    <p>Postdoctoral Research Fellow, University of Molise, Italy</p>
+    <p>Department of Plant Science, College of Agriculture and Natural Resources, Debre Markos University, Ethiopia</p>
+    <p class="meta">ORCID <a href="https://orcid.org/0000-0001-6223-0037">0000-0001-6223-0037</a> · GitHub <a href="https://github.com/Muler-21">@Muler-21</a> · <a href="https://muler-21.github.io">muler-21.github.io</a></p>
+    <p class="apps">Other apps: <a href="https://muler-21.github.io/apps/adaptfit/">AdaptFit</a> <a href="https://muler-21.github.io/sebel-hakim/">Sebel Hakim</a> <a href="https://muler-21.github.io/research-integrity-compass/">Research Integrity Compass</a> <a href="https://muler-21.github.io/AMBKidsJoy/">AMBKidsJoy</a></p>
+    <p class="copy">© 2026 Mulusew Kassa Bitew. All rights reserved.</p>
+  </div>
+</footer>
+<script data-goatcounter="https://ambkidsjoy.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+(function () {
+  // GPU core grid
+  var g = document.getElementById("gpu-cores");
+  if (g) {
+    var ns = "http://www.w3.org/2000/svg", cols = 36, rows = 11, x0 = 418, y0 = 48, w = 13, h = 12, gx = 3.2, gy = 3.4;
+    for (var r = 0; r < rows; r++) for (var c = 0; c < cols; c++) {
+      var rect = document.createElementNS(ns, "rect");
+      rect.setAttribute("x", (x0 + c * (w + gx)).toFixed(1));
+      rect.setAttribute("y", (y0 + r * (h + gy)).toFixed(1));
+      rect.setAttribute("width", w); rect.setAttribute("height", h); rect.setAttribute("rx", 2);
+      g.appendChild(rect);
+    }
+  }
+  // Market value chart (one linear scale, 0-5 trillion)
+  var svg = document.getElementById("mcap");
+  if (svg) {
+    var ns2 = "http://www.w3.org/2000/svg";
+    var data = [["Late 2022", 0.4, "~$0.4T"], ["Jun 2023", 1, "$1T"], ["Feb 2024", 2, "$2T"], ["Jun 2024", 3, "$3T"], ["Jul 2025", 4, "$4T"], ["Oct 2025", 5, "$5T"]];
+    var L = 90, R = 1010, T = 24, B = 260, maxV = 5, plotH = B - T;
+    function el(name, attrs, text) { var e = document.createElementNS(ns2, name); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text) e.textContent = text; svg.appendChild(e); return e; }
+    for (var v = 0; v <= 5; v++) {
+      var y = B - v / maxV * plotH;
+      el("line", { x1: L, x2: R, y1: y, y2: y, "class": "s-rule", "stroke-width": v === 0 ? 2 : 1 });
+      el("text", { x: L - 12, y: y + 5, "text-anchor": "end", "class": "t-muted svg-mono" }, "$" + v + "T");
+    }
+    var slot = (R - L) / data.length, bw = slot * 0.56;
+    data.forEach(function (d, i) {
+      var cx = L + slot * i + slot / 2, bh = d[1] / maxV * plotH, last = i === data.length - 1;
+      el("rect", { x: cx - bw / 2, y: B - bh, width: bw, height: bh, rx: 6, "class": last ? "f-gold" : "f-accent" });
+      el("text", { x: cx, y: B - bh - 10, "text-anchor": "middle", "class": (last ? "t-gold" : "t-ink") + " svg-lbl" }, d[2]);
+      el("text", { x: cx, y: B + 26, "text-anchor": "middle", "class": "t-muted svg-mono" }, d[0]);
+    });
+    el("text", { x: L + slot / 2, y: B + 50, "text-anchor": "middle", "class": "t-muted svg-mono" }, "before ChatGPT");
+    el("text", { x: L + slot * 5.5, y: B + 50, "text-anchor": "middle", "class": "t-gold svg-mono" }, "first $5T company");
+  }
+  // Language toggle
+  var btns = document.querySelectorAll(".seg button");
+  function setLang(l) {
+    document.body.setAttribute("data-lang", l);
+    document.documentElement.setAttribute("lang", l === "am" ? "am" : "en");
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+    try { localStorage.setItem("nv-story-lang", l); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  try { var saved = localStorage.getItem("nv-story-lang"); if (saved) setLang(saved); } catch (e) {}
+})();
+</script>
+</body>
+</html>

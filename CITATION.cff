@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you share or use these stories, please cite them as below."
+title: "Tech Stories (የቴክ ታሪኮች): technology and science stories in English and Amharic"
+type: software
+authors:
+  - family-names: Bitew
+    given-names: Mulusew Kassa
+    orcid: "https://orcid.org/0000-0001-6223-0037"
+    affiliation: "Postdoctoral Research Fellow, University of Molise, Italy; Department of Plant Science, College of Agriculture and Natural Resources, Debre Markos University, Ethiopia"
+date-released: 2026-11-13
+url: "https://muler-21.github.io/Teck_Stories/"
+repository-code: "https://github.com/Muler-21/Teck_Stories"
+keywords:
+  - technology
+  - artificial intelligence
+  - semiconductors
+  - Nvidia
+  - Amharic
+  - science communication
