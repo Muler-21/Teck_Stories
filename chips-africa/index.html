@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Selam and the Chip</title>
-<meta name="description" content="A story-lesson in English and Amharic: follow Selam from a dry field to her first device, and learn how chips are made, what Africa holds, and a practical entrepreneurial way to solve problems.">
+<title>Build From What We Have</title>
+<meta name="description" content="A science-based lesson in English and Amharic: real African inventors, how semiconductors and chips work, Africa's minerals, hands-on builds from scrap, and a practical entrepreneurial method.">
 <meta name="author" content="Mulusew Kassa Bitew">
 <link rel="canonical" href="https://muler-21.github.io/Teck_Stories/chips-africa/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Tech Stories · የቴክ ታሪኮች">
-<meta property="og:title" content="Selam and the Chip: from African rocks to young founders">
-<meta property="og:description" content="A story-lesson on chips, Africa's minerals and a practical entrepreneurial mindset. English + Amharic · በእንግሊዝኛ እና በአማርኛ">
+<meta property="og:title" content="Build From What We Have: chips, Africa and the young inventor's path">
+<meta property="og:description" content="Real African inventors, real science, hands-on builds from scrap, and a practical way to solve problems. English + Amharic · በእንግሊዝኛ እና በአማርኛ">
 <meta property="og:url" content="https://muler-21.github.io/Teck_Stories/chips-africa/">
 <meta property="og:image" content="https://muler-21.github.io/Teck_Stories/chips-africa/og.png">
 <meta property="og:image:width" content="1200">
@@ -171,22 +171,29 @@ footer ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
 .author .copy { font-size: 14px; margin-top: 10px; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 
-.story { font-style: italic; border-left: 4px solid var(--accent); padding: 4px 0 4px 16px; margin: 0 0 16px; }
-.am .story { font-style: normal; }
-.story-lbl, .tool-lbl, .mission-lbl { font: 700 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; display: block; margin-bottom: 6px; }
-.story-lbl { color: var(--accent); }
-.am .story-lbl, .am .tool-lbl, .am .mission-lbl { font-family: var(--ethi-sans); letter-spacing: 0; font-size: 13px; }
+.real { border-left: 4px solid var(--accent); padding: 4px 0 4px 16px; margin: 0 0 16px; }
+.lbl { font: 700 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+.am .lbl { font-family: var(--ethi-sans); letter-spacing: 0; font-size: 13px; }
+.real .lbl { color: var(--accent); }
+.sci { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+.sci .lbl { color: var(--ink); }
+.formula { font: 600 16px/1.6 var(--mono); background: var(--paper); border-radius: 8px; padding: 8px 12px; margin: 8px 0; overflow-x: auto; white-space: nowrap; }
 .tool { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
-.tool-lbl { color: var(--accent); }
+.tool .lbl { color: var(--accent); }
 .mission { background: var(--copper-soft); border: 1px dashed var(--copper); border-radius: 12px; padding: 14px 16px; margin: 16px 0 0; }
-.mission-lbl { color: var(--copper); }
-.tool p, .mission p { margin: 0; }
-.tool ul, .mission ul, .mission ol { margin: 6px 0 0; }
-.note-fic { font-size: 15px; color: var(--muted); margin-top: 18px; }
+.mission .lbl { color: var(--copper); }
+.safety { background: #fff4f2; border: 1px solid #d9472b; border-radius: 12px; padding: 14px 16px; margin: 16px 0; color: #5a1a0c; }
+.safety .lbl { color: #b8321a; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .safety { background: #3a1a14; color: #f6d6cf; border-color: #e0705a; } }
+:root[data-theme="dark"] .safety { background: #3a1a14; color: #f6d6cf; border-color: #e0705a; }
+.tool p, .mission p, .sci p, .safety p { margin: 0 0 6px; }
+.tool ul, .mission ul, .sci ul, .safety ul, .mission ol { margin: 6px 0 0; }
+.parts { overflow-x: auto; margin-top: 22px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); }
+.parts table { min-width: 640px; }
 .canvas { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; margin-top: 22px; }
-.box { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; min-height: 130px; }
+.box { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; min-height: 120px; }
 .box .n { font: 700 13px var(--mono); color: var(--copper); }
-.box b { display: block; font: 700 16px/1.3 var(--display); margin: 4px 0 4px; }
+.box b { display: block; font: 700 16px/1.3 var(--display); margin: 4px 0; }
 .box .am { display: block; font: 600 15px/1.6 var(--ethi-sans); color: var(--accent); }
 .box small { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 6px; }
 .box small.am { font-family: var(--ethi); font-weight: 400; color: var(--muted); }
@@ -196,6 +203,7 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
 .week .w { font: 800 18px var(--display); color: var(--copper); }
 .week p { margin: 6px 0 0; font-size: 15.5px; line-height: 1.55; }
 .week p.am { font-size: 15.5px; line-height: 1.75; }
+.s-ink { stroke: var(--ink); } .s-copper { stroke: var(--copper); } .s-accent { stroke: var(--accent); } .f-ink { fill: var(--ink); } .f-paper { fill: var(--paper); }
 </style>
 </head>
 <body data-lang="both">
@@ -203,19 +211,17 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
 <header class="hero">
   <div class="wrap">
     <a class="home-link" href="../">← Tech Stories · የቴክ ታሪኮች</a>
-    <p class="kicker">Story-lesson · የታሪክ ትምህርት · English + አማርኛ</p>
-    <h1>Selam and the Chip
-      <span class="am-title" lang="am">ሰላምና ቺፑ</span>
+    <p class="kicker">Lesson · ትምህርት · English + አማርኛ</p>
+    <h1>Build From What We Have
+      <span class="am-title" lang="am">ባለን ነገር እንገንባ</span>
     </h1>
-    <p class="dek en">From African rocks to young founders. Follow Selam, 16, from a dry field to her first device. In each episode you learn how chips work, what Africa holds, and one practical tool for turning problems into solutions.</p>
-    <p class="dek am" lang="am">ከአፍሪካ ዐለቶች እስከ ወጣት መሥራቾች። የ16 ዓመቷን ሰላም ከደረቀው ማሳ እስከ የመጀመሪያ መሣሪያዋ ይከተሉ። በእያንዳንዱ ክፍል ቺፖች እንዴት እንደሚሰሩ፣ አፍሪካ ምን እንዳላት፣ እና ችግሮችን ወደ መፍትሔ የሚቀይር አንድ ተግባራዊ መሣሪያ ይማራሉ።</p>
+    <p class="dek en">Chips, Africa and the young inventor's path. Real African inventors who started with scrap, the real science inside every chip, two builds you can make from old electronics, and a practical method for turning problems into products.</p>
+    <p class="dek am" lang="am">ቺፕ፣ አፍሪካና የወጣት ፈጣሪዎች መንገድ። ከቁርጥራጭ ዕቃዎች የጀመሩ እውነተኛ አፍሪካውያን ፈጣሪዎች፣ በእያንዳንዱ ቺፕ ውስጥ ያለው እውነተኛ ሳይንስ፣ ከአሮጌ ኤሌክትሮኒክስ ሊሠሩ የሚችሉ ሁለት ግንባታዎች፣ እና ችግሮችን ወደ ምርት የሚቀይር ተግባራዊ ዘዴ።</p>
     <div class="stats">
       <div class="stat"><b>~30%</b><span class="en">of the world's known critical-mineral reserves are in Africa</span><span class="am" lang="am">ከዓለም የታወቁ ወሳኝ ማዕድናት ክምችት 30% ገደማ በአፍሪካ ይገኛል</span></div>
       <div class="stat"><b>&lt;1%</b><span class="en">of the world's semiconductor industry is in Africa</span><span class="am" lang="am">ከዓለም የሴሚኮንዳክተር ኢንዱስትሪ ከ1% ያነሰው ብቻ በአፍሪካ ነው</span></div>
-      <div class="stat"><b>8</b><span class="en">episodes, each with a story, the facts, a tool and a mission</span><span class="am" lang="am">ክፍሎች፤ እያንዳንዳቸው ታሪክ፣ እውነታዎች፣ መሣሪያና ተልዕኮ አላቸው</span></div>
+      <div class="stat"><b>14</b><span class="en">William Kamkwamba's age when he lit his home with a scrap windmill</span><span class="am" lang="am">ዊልያም ካምክዋምባ ቤቱን በቁርጥራጭ የነፋስ ወፍጮ ሲያበራ የነበረው ዕድሜ</span></div>
     </div>
-    <p class="note-fic en">Selam and her family are imaginary. Every fact and number around them is real and listed in the sources.</p>
-    <p class="note-fic am" lang="am">ሰላምና ቤተሰቧ ምናባዊ ገጸ-ባሕርያት ናቸው። በዙሪያቸው ያሉ እውነታዎችና ቁጥሮች ግን እውነተኛ ናቸው፤ በምንጮቹ ውስጥ ተዘርዝረዋል።</p>
   </div>
 </header>
 
@@ -226,32 +232,48 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
       <button type="button" id="lang-en" data-lang="en" aria-pressed="false">English</button>
       <button type="button" id="lang-am" data-lang="am" aria-pressed="false"><span class="e">አማርኛ</span></button>
     </div>
-    <nav class="chapters" aria-label="Episodes">
-      <a href="#ep1">1 Problem</a><a href="#ep2">2 Resources</a><a href="#ep3">3 Loops</a><a href="#ep4">4 Value</a><a href="#ep5">5 Partners</a><a href="#ep6">6 MVP</a><a href="#ep7">7 Path</a><a href="#ep8">8 Canvas</a>
+    <nav class="chapters" aria-label="Modules">
+      <a href="#m1">1 Problem</a><a href="#m2">2 Science</a><a href="#m3">3 Materials</a><a href="#m4">4 Build</a><a href="#m5">5 Factory</a><a href="#m6">6 Value</a><a href="#m7">7 Builders</a><a href="#m8">8 Path</a>
     </nav>
   </div>
 </div>
 
 <main class="wrap">
 
-<section class="ch" id="ep1">
-  <div class="ch-tag"><span class="yr">EPISODE 1</span><span class="part">The problem · ችግሩ</span></div>
+<section class="ch" id="m1">
+  <div class="ch-tag"><span class="yr">MODULE 1</span><span class="part">Start with a problem · ከችግር ይጀምሩ</span></div>
   <div class="pair">
-    <div class="en"><h2>The dry field</h2><p class="story"><span class="story-lbl">Story</span>Selam is 16 and lives near Debre Markos. Every dry season she watches her uncle Abebe guess when to water his vegetables. Some weeks he waters too little and the seedlings die. Other weeks he pumps too much and pays for fuel he did not need. One evening she asks: “What if the soil could tell us when it is thirsty?”</p><p>That question is where every business starts. Entrepreneurs do not begin with a product. They begin with a <b>problem</b> that hurts someone, happens often, and costs money or time.</p><p>Hidden inside Selam's question is a <b>chip</b>: a tiny brain that can read a sensor, make a decision and send a message. To use chips well, and one day to make them, she first needs to understand what they are.</p></div>
-    <div class="am" lang="am"><h2>የደረቀው ማሳ</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም የ16 ዓመት ልጅ ስትሆን የምትኖረው በደብረ ማርቆስ አቅራቢያ ነው። በየበጋው አጎቷ አበበ አትክልቶቹን መቼ ውሃ ማጠጣት እንዳለበት ሲገምት ታያለች። አንዳንድ ሳምንት በጣም ትንሽ ያጠጣል፤ ችግኞቹ ይሞታሉ። በሌላ ሳምንት ከልክ በላይ ውሃ ይስባል፤ ላላስፈለገው ነዳጅ ይከፍላል። አንድ ምሽት ሰላም ጠየቀች፦ «አፈሩ ራሱ ሲጠማው ቢነግረንስ?»</p><p>እያንዳንዱ ንግድ የሚጀምረው ከዚህ ዓይነቱ ጥያቄ ነው። ሥራ ፈጣሪዎች በምርት አይጀምሩም፤ የሚጀምሩት አንድን ሰው በሚጎዳ፣ በተደጋጋሚ በሚከሰት እና ገንዘብ ወይም ጊዜ በሚያባክን <b>ችግር</b> ነው።</p><p>በሰላም ጥያቄ ውስጥ <b>ቺፕ</b> ተደብቋል፦ ዳሳሽን አንብቦ ውሳኔ የሚሰጥና መልእክት የሚልክ ትንሽ አእምሮ። ቺፖችን በአግባቡ ለመጠቀም፣ አንድ ቀንም ለመሥራት፣ መጀመሪያ ምን እንደሆኑ መረዳት አለባት።</p></div>
+    <div class="en"><h2>Start with a real problem</h2><div class="real"><span class="lbl">True story</span><p>In 2001–2002, a severe drought and famine hit Malawi. William Kamkwamba, 14, had to leave school because his family could not pay the fees. He kept learning in a small village library, where he found a textbook called <i>Using Energy</i> with a picture of a wind turbine. From a bicycle dynamo, a tractor fan, blue-gum poles and other scrap, he built a windmill that lit four bulbs in his home, with homemade switches and a circuit breaker made from nails. A later windmill pumped water to irrigate crops.</p></div><p>William did not start with money, a lab or a degree. He started with a problem his family felt every day (darkness and hunger), a library book and the scrap around him. That is the first rule of building: <b>a real problem plus what you have.</b></p><div class="sci"><span class="lbl">The science</span><p>A bicycle dynamo is a small generator. When a magnet spins near a coil of copper wire, the changing magnetic field pushes electrons along the wire. This is <b>electromagnetic induction</b>, discovered by Michael Faraday in 1831. Wind turns the blades, the blades turn the magnet, and motion becomes electricity.</p></div></div>
+    <div class="am" lang="am"><h2>በእውነተኛ ችግር ይጀምሩ</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በ2001–2002 ከባድ ድርቅና ረሃብ ማላዊን መታ። የ14 ዓመቱ ዊልያም ካምክዋምባ ቤተሰቡ የትምህርት ቤት ክፍያ መክፈል ስላልቻለ ትምህርቱን ለማቋረጥ ተገደደ። በመንደሩ ትንሽ ቤተ መጻሕፍት መማሩን ቀጠለ፤ እዚያም የነፋስ ተርባይን ስዕል ያለበት <i>Using Energy</i> (ኃይልን መጠቀም) የተባለ መጽሐፍ አገኘ። ከብስክሌት ዳይናሞ፣ ከትራክተር ማራገቢያ፣ ከባሕር ዛፍ ምሰሶዎችና ከሌሎች ቁርጥራጭ ብረቶች የነፋስ ወፍጮ ሠራ፤ ወፍጮውም በቤቱ አራት አምፖሎችን አበራ። ማብሪያ ማጥፊያዎቹን ራሱ ሠራ፤ የወረዳ መቆጣጠሪያውንም ከሚስማር አዘጋጀ። በኋላ የሠራው ሌላ ወፍጮ ሰብል ለማጠጣት ውሃ ሳበ።</p></div><p>ዊልያም በገንዘብ፣ በላቦራቶሪ ወይም በዲግሪ አልጀመረም። የጀመረው ቤተሰቡ በየቀኑ በሚሰማው ችግር (ጨለማና ረሃብ)፣ በአንድ የቤተ መጻሕፍት መጽሐፍና በዙሪያው ባለው ቁርጥራጭ ነገር ነው። የመገንባት የመጀመሪያው ሕግ ይህ ነው፦ <b>እውነተኛ ችግር እና ያለዎት ነገር።</b></p><div class="sci"><span class="lbl">ሳይንሱ</span><p>የብስክሌት ዳይናሞ ትንሽ ጀነሬተር ነው። ማግኔት በመዳብ ሽቦ ጥቅል አጠገብ ሲሽከረከር፣ የሚለዋወጠው መግነጢሳዊ መስክ ኤሌክትሮኖችን በሽቦው ውስጥ ይገፋል። ይህ በ1831 በማይክል ፋራዴይ የተገኘው <b>ኤሌክትሮማግኔቲክ ኢንዳክሽን</b> ነው። ነፋስ ክንፎቹን ያሽከረክራል፣ ክንፎቹ ማግኔቱን ያሽከረክራሉ፣ እንቅስቃሴም ኤሌክትሪክ ይሆናል።</p></div></div>
   </div>
   
   <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Write a problem statement.</b> Answer four questions: Who has the problem? How often does it happen? What does it cost them? How do they solve it today?</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>List three problems in your village, school or city. Answer the four questions for each. Choose the one that hurts the most people, most often.</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>የችግር መግለጫ ይጻፉ።</b> አራት ጥያቄዎችን ይመልሱ፦ ችግሩ ያለበት ማነው? ምን ያህል ጊዜ ይከሰታል? ምን ያሳጣቸዋል? ዛሬ እንዴት ይፈቱታል?</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>በመንደርዎ፣ በትምህርት ቤትዎ ወይም በከተማዎ ያሉ ሦስት ችግሮችን ይዘርዝሩ። ለእያንዳንዳቸው አራቱን ጥያቄዎች ይመልሱ። ብዙ ሰዎችን በተደጋጋሚ የሚጎዳውን ይምረጡ።</p></div></div>
+    <div class="en"><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Write a problem statement.</b> Answer four questions: Who has the problem? How often? What does it cost them in money, time or health? How do they cope today?</p></div><div class="mission"><span class="lbl">Your mission</span><p>List three problems in your village, school or city. Answer the four questions for each, then choose the one that hurts the most people most often.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>የችግር መግለጫ ይጻፉ።</b> አራት ጥያቄዎችን ይመልሱ፦ ችግሩ ያለበት ማነው? ምን ያህል ጊዜ ይከሰታል? በገንዘብ፣ በጊዜ ወይም በጤና ምን ያሳጣቸዋል? ዛሬ እንዴት ይቋቋሙታል?</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>በመንደርዎ፣ በትምህርት ቤትዎ ወይም በከተማዎ ያሉ ሦስት ችግሮችን ይዘርዝሩ። ለእያንዳንዳቸው አራቱን ጥያቄዎች ይመልሱ፤ ከዚያም ብዙ ሰዎችን በተደጋጋሚ የሚጎዳውን ይምረጡ።</p></div></div>
   </div>
 </section>
 
-<section class="ch" id="ep2">
-  <div class="ch-tag"><span class="yr">EPISODE 2</span><span class="part">Resources · ሀብቶች</span></div>
+<section class="ch" id="m2">
+  <div class="ch-tag"><span class="yr">MODULE 2</span><span class="part">The science of a chip · የቺፕ ሳይንስ</span></div>
   <div class="pair">
-    <div class="en"><h2>What is inside the box?</h2><p class="story"><span class="story-lbl">Story</span>Selam asks her cousin, who repairs phones in the market, for a broken phone. Together they open it. Under a metal cover sits a black square smaller than her fingernail: the chip. “Where does all this come from?” she asks. Her cousin smiles: “Much of it from our own continent.”</p><p>The heart of a chip is <b>silicon</b>, made from ordinary quartz sand. Silicon is a <i>semiconductor</i>: it conducts electricity only when we want it to, which is exactly what a switch needs. Around it, engineers add small amounts of other elements for wiring, switching and joining. Many of them are mined in Africa.</p></div>
-    <div class="am" lang="am"><h2>በሳጥኑ ውስጥ ምን አለ?</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም በገበያ ውስጥ ስልክ የሚጠግነውን የአጎቷን ልጅ የተበላሸ ስልክ ጠየቀችው። አብረው ከፈቱት። በብረት ሽፋን ስር ከጥፍሯ የሚያንስ ጥቁር ካሬ ተቀምጧል፦ ቺፑ። «ይህ ሁሉ ከየት ነው የሚመጣው?» ብላ ጠየቀች። የአጎቷ ልጅ ፈገግ አለ፦ «ብዙው ከራሳችን አህጉር ነው።»</p><p>የቺፕ ልብ ከተራ የኳርትዝ አሸዋ የሚሰራው <b>ሲሊከን</b> ነው። ሲሊከን <i>ሴሚኮንዳክተር</i> ነው፤ ኤሌክትሪክ የሚያስተላልፈው እኛ ስንፈልግ ብቻ ነው፤ ማብሪያ ማጥፊያ የሚያስፈልገው ይህንኑ ነው። መሐንዲሶች በዙሪያው ለሽቦ፣ ለማብሪያና ለማጣበቂያ የሌሎች ንጥረ ነገሮችን ትንሽ መጠን ይጨምራሉ። ብዙዎቹ በአፍሪካ ይመረታሉ።</p></div>
+    <div class="en"><h2>How a semiconductor works</h2><div class="real"><span class="lbl">True story</span><p>Kelvin Doe grew up in Freetown, Sierra Leone, where the power came on only rarely. From about age 10 he searched scrap heaps for parts. When he realised all his money went on batteries, he built his own from acid, baking soda and metal. He built a sound mixer from scrap transistors, then a generator and an FM transmitter, and ran a community radio station as “DJ Focus”. In 2012, at 15, he became the youngest person invited to MIT's Visiting Practitioner programme.</p></div><p>Kelvin learned by taking things apart and testing them. To go further, from using parts to understanding them, you need the science inside every chip:</p><div class="sci"><span class="lbl">The science</span><ul><li><b>Silicon</b> has 4 outer electrons. In a pure crystal, each one is locked in a bond with a neighbour, so pure silicon conducts electricity poorly.</li><li><b>Doping:</b> replace one atom in about a million with <b>phosphorus</b> (5 outer electrons) and a spare electron is free to move: <i>n-type</i>. Use <b>boron</b> (3) instead and you leave a gap, a <i>hole</i>, that also moves: <i>p-type</i>.</li><li><b>p-n junction:</b> join p and n and current flows easily in one direction only. That is a <b>diode</b>. An <b>LED</b> is a diode that gives out light when electrons fall into holes.</li><li><b>Transistor:</b> a small voltage on its control pin opens or closes a path for a bigger current. It is a switch with no moving parts. A modern chip holds billions of them.</li></ul></div></div>
+    <div class="am" lang="am"><h2>ሴሚኮንዳክተር እንዴት ይሰራል</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>ኬልቪን ዶ ያደገው መብራት አልፎ አልፎ ብቻ በሚመጣባት በሴራሊዮን ፍሪታውን ከተማ ነው። ከ10 ዓመቱ ገደማ ጀምሮ ከቆሻሻ ክምሮች ዕቃዎችን ይፈልግ ነበር። ገንዘቡ ሁሉ ባትሪ ለመግዛት እንደሚያልቅ ሲረዳ ከአሲድ፣ ከቤኪንግ ሶዳና ከብረት የራሱን ባትሪ ሠራ። ከተጣሉ ትራንዚስተሮች የድምፅ ማቀላቀያ፣ ከዚያም ጀነሬተርና የFM ማሰራጫ ሠራ፤ «ዲጄ ፎከስ» በሚል ስም የማኅበረሰብ ሬዲዮ ጣቢያ አቋቋመ። በ2012፣ በ15 ዓመቱ፣ ወደ MIT የ«ቪዚቲንግ ፕራክቲሽነር» ፕሮግራም የተጋበዘ ትንሹ ሰው ሆነ።</p></div><p>ኬልቪን የተማረው ነገሮችን በመፍታትና በመሞከር ነው። ዕቃዎችን ከመጠቀም ወደ መረዳት ለመሸጋገር፣ በእያንዳንዱ ቺፕ ውስጥ ያለውን ሳይንስ ማወቅ ያስፈልጋል፦</p><div class="sci"><span class="lbl">ሳይንሱ</span><ul><li><b>ሲሊከን</b> 4 የውጪ ኤሌክትሮኖች አሉት። በንጹሕ ክሪስታል ውስጥ እያንዳንዱ ከጎረቤቱ ጋር በትስስር ስለተያዘ ንጹሕ ሲሊከን ኤሌክትሪክን በደንብ አያስተላልፍም።</li><li><b>ዶፒንግ፦</b> ከአንድ ሚሊዮን አተሞች አንዱን በ<b>ፎስፈረስ</b> (5 የውጪ ኤሌክትሮኖች) ሲተኩ ነፃ የሚንቀሳቀስ ትርፍ ኤሌክትሮን ይኖራል፦ <i>n-ዓይነት</i>። በምትኩ <b>ቦሮን</b> (3) ሲጠቀሙ የሚንቀሳቀስ ክፍተት ወይም <i>ቀዳዳ</i> ይቀራል፦ <i>p-ዓይነት</i>።</li><li><b>p-n መጋጠሚያ፦</b> p እና n ሲገናኙ ኤሌክትሪክ በቀላሉ የሚፈሰው በአንድ አቅጣጫ ብቻ ነው። ይህ <b>ዳዮድ</b> ነው። <b>ኤልኢዲ</b> ኤሌክትሮኖች ቀዳዳዎችን ሲሞሉ ብርሃን የሚሰጥ ዳዮድ ነው።</li><li><b>ትራንዚስተር፦</b> በመቆጣጠሪያ እግሩ ላይ ያለች ትንሽ ቮልቴጅ ለትልቅ ኤሌክትሪክ መንገዱን ትከፍታለች ወይም ትዘጋለች። ተንቀሳቃሽ ክፍል የሌለው ማብሪያ ማጥፊያ ነው። ዘመናዊ ቺፕ በቢሊዮን የሚቆጠሩ ትራንዚስተሮች ይዟል።</li></ul></div></div>
+  </div>
+  <figure><div class="scroll"><svg viewBox="0 0 1040 300" role="img" aria-labelledby="dope-t">
+<title id="dope-t">Three panels: pure silicon atoms; n-type silicon with a phosphorus atom giving an extra electron; p-type silicon with a boron atom leaving a hole. Below, a p-n junction diode lets current flow one way.</title>
+<g id="dope"></g></svg></div>
+<figcaption><span class="en">Silicon (4 outer electrons). Add phosphorus (5) and you get a spare electron: n-type. Add boron (3) and you get a missing electron, a "hole": p-type. Put p next to n and current flows only one way.</span><span class="am" lang="am">ሲሊከን (4 የውጪ ኤሌክትሮኖች)። ፎስፈረስ (5) ሲጨመር ትርፍ ኤሌክትሮን ይኖራል፦ n-ዓይነት። ቦሮን (3) ሲጨመር የጎደለ ኤሌክትሮን ወይም «ቀዳዳ» ይኖራል፦ p-ዓይነት። p እና n ጎን ለጎን ሲቀመጡ ኤሌክትሪክ የሚፈሰው በአንድ አቅጣጫ ብቻ ነው።</span></figcaption></figure>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><h3>Build 1: a fruit battery that proves the diode</h3><p>You need: 3 lemons (or potatoes), 3 galvanised (zinc-coated) nails, 3 pieces of copper wire or copper coins, 4 short wires, and 1 red LED from an old toy or charger.</p><ol><li>Push one nail and one copper piece into each lemon, about 2 cm apart, not touching.</li><li>Connect them in a chain: copper of lemon 1 to zinc of lemon 2, copper of lemon 2 to zinc of lemon 3.</li><li>Touch the LED's long leg to the free copper end and its short leg to the free zinc end. In a dark room it glows faintly.</li><li>Now turn the LED around. It stays dark. You have just seen a p-n junction allow current one way only.</li></ol><div class="sci"><span class="lbl">The science</span><p>Zinc gives up electrons more easily than copper. The lemon juice (an acid) lets ions move between them, so electrons flow through the wire from zinc to copper. Each lemon gives about 0.9 volts. A red LED needs about 1.8–2 volts, so three lemons in series are just enough.</p><p class="formula">3 × 0.9 V ≈ 2.7 V &gt; 1.8 V (red LED)</p></div><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Experiment and write it down.</b> Kelvin learned by trial and error. Scientists add one habit: they record every test. Keep a notebook with the date, what you changed, what you expected and what happened.</p></div><div class="mission"><span class="lbl">Your mission</span><p>Do the lemon battery. Try 1, 2 and 3 lemons and write down when the LED lights. Try potatoes and salt water too. Which works best? Why do you think so?</p></div></div>
+    <div class="am" lang="am"><h3>ግንባታ 1፦ ዳዮዱን የሚያረጋግጥ የፍራፍሬ ባትሪ</h3><p>የሚያስፈልግዎ፦ 3 ሎሚ (ወይም ድንች)፣ በዚንክ የተለበጡ 3 ሚስማሮች፣ 3 የመዳብ ሽቦ ቁርጥራጭ ወይም የመዳብ ሳንቲሞች፣ 4 አጭር ሽቦዎች፣ እና ከአሮጌ መጫወቻ ወይም ቻርጀር የተገኘ 1 ቀይ ኤልኢዲ።</p><ol><li>በእያንዳንዱ ሎሚ ውስጥ አንድ ሚስማርና አንድ የመዳብ ቁራጭ፣ 2 ሴ.ሜ ገደማ ተራርቀው እንዳይነካኩ፣ ይክተቱ።</li><li>በሰንሰለት ያገናኟቸው፦ የሎሚ 1 መዳብ ከሎሚ 2 ዚንክ፣ የሎሚ 2 መዳብ ከሎሚ 3 ዚንክ ጋር።</li><li>የኤልኢዲውን ረጅም እግር ከነፃው የመዳብ ጫፍ፣ አጭሩን እግር ከነፃው የዚንክ ጫፍ ጋር ያገናኙ። በጨለማ ክፍል ውስጥ በደካማ ሁኔታ ያበራል።</li><li>አሁን ኤልኢዲውን ይገልብጡት። አያበራም። p-n መጋጠሚያ ኤሌክትሪክን በአንድ አቅጣጫ ብቻ እንደሚያሳልፍ አሁን አዩ።</li></ol><div class="sci"><span class="lbl">ሳይንሱ</span><p>ዚንክ ከመዳብ ይልቅ ኤሌክትሮኖችን በቀላሉ ይሰጣል። የሎሚው ጭማቂ (አሲድ) ion-ዎች በመካከላቸው እንዲንቀሳቀሱ ያስችላል፤ ስለዚህ ኤሌክትሮኖች በሽቦው በኩል ከዚንክ ወደ መዳብ ይፈሳሉ። እያንዳንዱ ሎሚ 0.9 ቮልት ገደማ ይሰጣል። ቀይ ኤልኢዲ 1.8–2 ቮልት ገደማ ይፈልጋል፤ ስለዚህ በተከታታይ የተገናኙ ሦስት ሎሚዎች በቂ ናቸው።</p><p class="formula">3 × 0.9 V ≈ 2.7 V &gt; 1.8 V (ቀይ LED)</p></div><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>ይሞክሩ፤ ይጻፉትም።</b> ኬልቪን የተማረው በሙከራና በስህተት ነው። ሳይንቲስቶች አንድ ልማድ ይጨምራሉ፦ እያንዳንዱን ሙከራ ይመዘግባሉ። ቀኑን፣ የቀየሩትን፣ የጠበቁትንና የሆነውን የሚጽፉበት ማስታወሻ ደብተር ይያዙ።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>የሎሚ ባትሪውን ይሥሩ። 1፣ 2 እና 3 ሎሚዎችን ሞክረው ኤልኢዲው መቼ እንደሚበራ ይጻፉ። ድንችና የጨው ውሃም ይሞክሩ። የትኛው ይበልጥ ይሰራል? ለምን ይመስልዎታል?</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="m3">
+  <div class="ch-tag"><span class="yr">MODULE 3</span><span class="part">What chips are made of · ቺፕ ከምን ይሰራል</span></div>
+  <div class="pair">
+    <div class="en"><h2>The materials, and the treasure in waste</h2><div class="real"><span class="lbl">True story</span><p>Near Lubumbashi in DR Congo stands Big Hill, about 10 million tonnes of slag left by a century of mining. In 2024, Gécamines' subsidiary STL began recovering germanium from it at a new local plant, with technical support from the Belgian company Umicore, and exported the first concentrates processed inside the country. What others had thrown away became a chip material.</p></div><p>The heart of a chip is silicon from quartz sand. Around it are small amounts of other elements for wiring, switching, joining and cleaning. Many are mined in Africa:</p></div>
+    <div class="am" lang="am"><h2>ማዕድናቱ፣ እና በቆሻሻ ውስጥ ያለው ሀብት</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በኮንጎ ዲ.ሪ. ሉቡምባሺ አቅራቢያ «ቢግ ሂል» ይገኛል፤ ይህም የመቶ ዓመት የማዕድን ሥራ የተወው 10 ሚሊዮን ቶን ገደማ ቅሪት ነው። በ2024 የጌካሚን ንዑስ ኩባንያ STL ከቤልጂየሙ Umicore በተገኘ ቴክኒካዊ ድጋፍ በአዲስ የአገር ውስጥ ፋብሪካ ጀርማኒየም ማውጣት ጀመረ፤ በአገር ውስጥ የተቀነባበረውን የመጀመሪያ ክምችትም ወደ ውጭ ላከ። ሌሎች የጣሉት ነገር የቺፕ ጥሬ ዕቃ ሆነ።</p></div><p>የቺፕ ልብ ከኳርትዝ አሸዋ የሚገኘው ሲሊከን ነው። በዙሪያው ለሽቦ፣ ለማብሪያ፣ ለማጣበቂያና ለማጽጃ የሚውሉ የሌሎች ንጥረ ነገሮች ትንሽ መጠን አለ። ብዙዎቹ በአፍሪካ ይመረታሉ፦</p></div>
   </div>
   <div class="tbl-wrap">
     <table>
@@ -271,16 +293,41 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
     </table>
   </div>
   <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Start with what you have.</b> Successful founders look around before they ask for money: their skills, friends, tools, local materials, even waste. A pile of broken phones holds gold, copper and palladium. A century-old pile of mining waste in Congo turned out to hold germanium.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Make a list of everything you already have: skills, people you know, tools, materials, places, and “waste” that others throw away.</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>ባለዎት ነገር ይጀምሩ።</b> ስኬታማ መሥራቾች ገንዘብ ከመጠየቃቸው በፊት ዙሪያቸውን ያያሉ፦ ክህሎታቸውን፣ ጓደኞቻቸውን፣ መሣሪያዎቻቸውን፣ የአካባቢ ቁሳቁሶችን፣ ቆሻሻን ሳይቀር። የተበላሹ ስልኮች ክምር ወርቅ፣ መዳብና ፓላዲየም ይዟል። በኮንጎ የመቶ ዓመት የማዕድን ቆሻሻ ክምር ጀርማኒየም ይዞ ተገኝቷል።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>ያለዎትን ሁሉ ይዘርዝሩ፦ ክህሎቶች፣ የሚያውቋቸው ሰዎች፣ መሣሪያዎች፣ ቁሳቁሶች፣ ቦታዎች፣ እና ሌሎች የሚጥሉት «ቆሻሻ»።</p></div></div>
+    <div class="en"><h3>Your own mine: old electronics</h3><p>Every broken radio, phone charger, toy or computer is a box of free parts: transistors, resistors, LEDs, capacitors, motors, magnets, switches, wire and small speakers. Read the codes printed on transistors (for example BC547, 2N2222 or C1815) and look them up online to learn what they do.</p><div class="safety"><span class="lbl">Safety first</span><ul><li>Never burn cables or circuit boards to get copper. The smoke is toxic.</li><li>Never open microwave ovens, old tube TVs or power supplies that were plugged in recently. They hold charges that can kill.</li><li>Do not puncture, bend or heat lithium batteries. Swollen batteries can catch fire.</li><li>Old solder contains lead: work with air flowing and wash your hands after.</li><li>Only work with batteries (up to 12 volts), never with the 220-volt mains.</li></ul></div><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Start with what you have.</b> Before asking for money, list your skills, people, tools, materials and the “waste” around you. William had scrap and a library; Kelvin had scrap heaps; Congo had a slag hill.</p></div><div class="mission"><span class="lbl">Your mission</span><p>Collect three broken devices. Take them apart safely and sort the parts into labelled bags: transistors, resistors, LEDs, capacitors, wires. You now own a starter parts kit.</p></div></div>
+    <div class="am" lang="am"><h3>የራስዎ ማዕድን፦ አሮጌ ኤሌክትሮኒክስ</h3><p>እያንዳንዱ የተበላሸ ሬዲዮ፣ የስልክ ቻርጀር፣ መጫወቻ ወይም ኮምፒውተር የነፃ ዕቃዎች ሳጥን ነው፦ ትራንዚስተሮች፣ ሬዚስተሮች፣ ኤልኢዲዎች፣ ካፓሲተሮች፣ ሞተሮች፣ ማግኔቶች፣ ማብሪያዎች፣ ሽቦና ትናንሽ ስፒከሮች። በትራንዚስተሮች ላይ የተጻፉትን ኮዶች (ለምሳሌ BC547፣ 2N2222 ወይም C1815) አንብበው ምን እንደሚሰሩ በኢንተርኔት ይፈልጉ።</p><div class="safety"><span class="lbl">መጀመሪያ ደህንነት</span><ul><li>መዳብ ለማግኘት ገመዶችን ወይም የወረዳ ሰሌዳዎችን በፍጹም አያቃጥሉ። ጭሱ መርዛማ ነው።</li><li>ማይክሮዌቭ ምድጃዎችን፣ አሮጌ የቱቦ ቴሌቪዥኖችን ወይም በቅርቡ ከሶኬት የተነቀሉ የኃይል አቅራቢዎችን በፍጹም አይክፈቱ። ሊገድል የሚችል ኃይል ይይዛሉ።</li><li>የሊቲየም ባትሪዎችን አይውጉ፣ አያጥፉ ወይም አያሙቁ። ያበጡ ባትሪዎች እሳት ሊያስነሱ ይችላሉ።</li><li>አሮጌ ሶልደር እርሳስ ይዟል፦ አየር በሚዘዋወርበት ቦታ ይሥሩ፤ ከዚያም እጅዎን ይታጠቡ።</li><li>የሚሰሩት በባትሪ (እስከ 12 ቮልት) ብቻ ይሁን፤ በ220 ቮልት የቤት ኤሌክትሪክ በፍጹም አይሁን።</li></ul></div><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>ባለዎት ነገር ይጀምሩ።</b> ገንዘብ ከመጠየቅዎ በፊት ክህሎቶችዎን፣ ሰዎችን፣ መሣሪያዎችን፣ ቁሳቁሶችንና በዙሪያዎ ያለውን «ቆሻሻ» ይዘርዝሩ። ዊልያም ቁርጥራጭ ብረትና ቤተ መጻሕፍት ነበረው፤ ኬልቪን የቆሻሻ ክምሮች ነበሩት፤ ኮንጎ የማዕድን ቅሪት ኮረብታ ነበራት።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>ሦስት የተበላሹ መሣሪያዎችን ይሰብስቡ። በጥንቃቄ ፈትተው ዕቃዎቹን ስም በተጻፈባቸው ከረጢቶች ይለዩ፦ ትራንዚስተሮች፣ ሬዚስተሮች፣ ኤልኢዲዎች፣ ካፓሲተሮች፣ ሽቦዎች። አሁን የራስዎ የመነሻ ዕቃዎች ስብስብ አለዎት።</p></div></div>
   </div>
 </section>
 
-<section class="ch" id="ep3">
-  <div class="ch-tag"><span class="yr">EPISODE 3</span><span class="part">Iteration · ደጋግሞ ማሻሻል</span></div>
+<section class="ch" id="m4">
+  <div class="ch-tag"><span class="yr">MODULE 4</span><span class="part">Build a real sensor · እውነተኛ ዳሳሽ ይገንቡ</span></div>
   <div class="pair">
-    <div class="en"><h2>The 1,000-step journey</h2><p class="story"><span class="story-lbl">Story</span>In physics class, Selam's teacher shows a video from a chip factory. Selam cannot believe it: one chip takes three to four months and hundreds of steps, and the same small loop is repeated again and again, layer after layer.</p><p>A leading-edge chip passes through 500 to 1,000 process steps and 80 to 120 layers, in cleanrooms where one speck of dust can ruin it. The hardest step, printing the patterns, needs an extreme-ultraviolet (EUV) machine. Only one company in the world, ASML in the Netherlands, builds them. One costs about $200 million, and the newest High-NA version about $380 million.</p></div>
-    <div class="am" lang="am"><h2>የ1,000 ደረጃዎች ጉዞ</h2><p class="story"><span class="story-lbl">ታሪክ</span>በፊዚክስ ክፍለ ጊዜ መምህሯ ከቺፕ ፋብሪካ የተቀረጸ ቪዲዮ አሳዩ። ሰላም ማመን አቃታት፦ አንድ ቺፕ ከሦስት እስከ አራት ወራትና በመቶዎች የሚቆጠሩ ደረጃዎች ይወስዳል፤ ያው ትንሽ ዑደት በንብርብር ላይ ንብርብር ደጋግሞ ይከናወናል።</p><p>አንድ ከፍተኛ ደረጃ ያለው ቺፕ ከ500 እስከ 1,000 የሂደት ደረጃዎችንና ከ80 እስከ 120 ንብርብሮችን ያልፋል፤ ይህም አንዲት የአቧራ ቅንጣት ልታበላሸው በምትችልባቸው እጅግ ንጹሕ ክፍሎች ውስጥ ነው። በጣም ከባዱ ደረጃ፣ ንድፎቹን ማተም፣ «EUV» የሚባል ማሽን ይፈልጋል። እነዚህን የሚሰራው በዓለም አንድ ኩባንያ ብቻ ነው፤ የኔዘርላንድሱ ASML። አንዱ 200 ሚሊዮን ዶላር ገደማ፣ አዲሱ «High-NA» ደግሞ 380 ሚሊዮን ዶላር ገደማ ያወጣል።</p></div>
+    <div class="en"><h2>Build a dry-soil alarm from scrap</h2><div class="real"><span class="lbl">True story</span><p>Brian Gitta, a computer science student at Makerere University in Uganda, kept missing lectures because of malaria, and once it took four blood tests to diagnose him. With his team he built Matibabu, a device that shines a red light through a finger and sends a result to a phone, with no blood needed. In 2018, at 24, he won the Royal Academy of Engineering's Africa Prize for Engineering Innovation (£25,000). His team was honest that the fifth prototype was about 80% accurate, and kept improving it.</p></div><p>Brian turned a personal pain into a sensor. You can start the same way with farming. The circuit below tells a farmer when the soil is dry. It uses one transistor and no microcontroller, and every part can come from scrap.</p><div class="sci"><span class="lbl">The science</span><p>Water in soil carries dissolved salts (ions), so <b>wet soil conducts electricity and dry soil almost does not</b>. R1 and the soil form a voltage divider at the transistor's base. A silicon transistor switches on when its base is above about 0.6 V.</p><p class="formula">V<sub>base</sub> = 4.5 V × R<sub>soil</sub> ÷ (R1 + R<sub>soil</sub>)</p><p>Wet soil, say 5 kΩ: 4.5 × 5 ÷ 52 ≈ 0.43 V → transistor off → LED off.<br>Dry soil, say 500 kΩ: the divider would give 4.5 × 500 ÷ 547 ≈ 4.1 V, far above 0.6 V, so current flows into the base, the transistor turns on (its base then settles near 0.7 V) and the LED lights.</p><p>The LED resistor follows Ohm's law (V = I × R): (4.5 V − 2 V) ÷ 220 Ω ≈ 11 mA, a safe current for a red LED.</p></div></div>
+    <div class="am" lang="am"><h2>ከቁርጥራጭ ዕቃዎች የደረቅ አፈር ማንቂያ ይገንቡ</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በኡጋንዳ ማኬሬሬ ዩኒቨርሲቲ የኮምፒውተር ሳይንስ ተማሪ የነበረው ብራያን ጊታ በወባ ምክንያት ትምህርት ያመልጠው ነበር፤ አንድ ጊዜም በሽታውን ለማወቅ አራት የደም ምርመራዎች አስፈልገው። ከቡድኑ ጋር «ማቲባቡ» የተባለ መሣሪያ ሠራ፤ መሣሪያው በጣት ውስጥ ቀይ ብርሃን አሳልፎ ውጤቱን ወደ ስልክ ይልካል፤ ደም አያስፈልገውም። በ2018፣ በ24 ዓመቱ፣ የሮያል አካዳሚ ኦፍ ኢንጂነሪንግ የአፍሪካ የምህንድስና ፈጠራ ሽልማትን (25,000 ፓውንድ) አሸነፈ። ቡድኑ አምስተኛው ናሙና 80% ገደማ ትክክለኛ እንደነበር በግልጽ ተናግሮ ማሻሻሉን ቀጠለ።</p></div><p>ብራያን የግል ሕመሙን ወደ ዳሳሽ ቀየረ። እርስዎም በግብርና በዚሁ መንገድ መጀመር ይችላሉ። ከታች ያለው ወረዳ አፈሩ ሲደርቅ ለገበሬው ይነግራል። አንድ ትራንዚስተር ብቻ ይጠቀማል፤ ማይክሮኮንትሮለር አያስፈልገውም፤ ሁሉም ዕቃዎች ከቁርጥራጭ ሊገኙ ይችላሉ።</p><div class="sci"><span class="lbl">ሳይንሱ</span><p>በአፈር ውስጥ ያለ ውሃ የሟሟ ጨዎችን (ion-ዎች) ይይዛል፤ ስለዚህ <b>እርጥብ አፈር ኤሌክትሪክ ያስተላልፋል፤ ደረቅ አፈር ግን በጣም ጥቂት ነው</b>። R1 እና አፈሩ በትራንዚስተሩ ቤዝ ላይ የቮልቴጅ መከፋፈያ ይፈጥራሉ። የሲሊከን ትራንዚስተር የሚበራው ቤዙ ከ0.6 ቮልት ገደማ በላይ ሲሆን ነው።</p><p class="formula">V<sub>base</sub> = 4.5 V × R<sub>soil</sub> ÷ (R1 + R<sub>soil</sub>)</p><p>እርጥብ አፈር፣ ለምሳሌ 5 kΩ፦ 4.5 × 5 ÷ 52 ≈ 0.43 V → ትራንዚስተሩ ይጠፋል → ኤልኢዲ ይጠፋል።<br>ደረቅ አፈር፣ ለምሳሌ 500 kΩ፦ መከፋፈያው 4.5 × 500 ÷ 547 ≈ 4.1 V ይሰጥ ነበር፤ ይህ ከ0.6 V እጅግ ይበልጣል፤ ስለዚህ ኤሌክትሪክ ወደ ቤዙ ይፈሳል፣ ትራንዚስተሩ ይበራል (ቤዙም 0.7 V አካባቢ ይረጋጋል)፣ ኤልኢዲውም ያበራል።</p><p>የኤልኢዲው ሬዚስተር የኦም ሕግን (V = I × R) ይከተላል፦ (4.5 V − 2 V) ÷ 220 Ω ≈ 11 mA፤ ለቀይ ኤልኢዲ ደህንነቱ የተጠበቀ መጠን ነው።</p></div></div>
+  </div>
+  <figure><div class="scroll"><svg viewBox="0 0 1040 380" role="img" aria-labelledby="sch-t">
+<title id="sch-t">Circuit: a 4.5 volt battery. From plus, resistor R1 of 47 kilo-ohms goes to the transistor base. Two nails in the soil connect the base to minus. From plus, a 220 ohm resistor and a red LED go to the transistor collector. The emitter goes to minus. Dry soil: the LED lights. Wet soil: the LED goes off.</title>
+<g id="schem"></g></svg></div>
+<figcaption><span class="en">The dry-soil alarm. Dry soil = LED on ("water me"). Wet soil = LED off. NPN transistor pins: C collector, B base, E emitter (check the datasheet for your transistor's pin order).</span><span class="am" lang="am">የደረቅ አፈር ማንቂያ። ደረቅ አፈር = ኤልኢዲ ይበራል («አጠጡኝ»)። እርጥብ አፈር = ኤልኢዲ ይጠፋል። የNPN ትራንዚስተር እግሮች፦ C ኮሌክተር፣ B ቤዝ፣ E ኤሚተር (የትራንዚስተርዎን የእግር ቅደም ተከተል ከመረጃ ሉሁ ያረጋግጡ)።</span></figcaption></figure><div class="parts"><table>
+<thead><tr><th>Part · ዕቃ</th><th>Value · መጠን</th><th>Where to find it · የት ይገኛል</th></tr></thead><tbody>
+<tr><td class="el">NPN transistor<small>ትራንዚስተር</small></td><td>BC547, 2N2222, C1815 or similar</td><td>Old radios, chargers, toys<span class="am" lang="am">አሮጌ ሬዲዮ፣ ቻርጀር፣ መጫወቻ</span></td></tr>
+<tr><td class="el">R1<small>ሬዚስተር</small></td><td>47 kΩ (yellow-violet-orange)</td><td>Any old circuit board<span class="am" lang="am">ማንኛውም አሮጌ የወረዳ ሰሌዳ</span></td></tr>
+<tr><td class="el">R2<small>ሬዚስተር</small></td><td>220 Ω (red-red-brown)</td><td>Any old circuit board<span class="am" lang="am">ማንኛውም አሮጌ የወረዳ ሰሌዳ</span></td></tr>
+<tr><td class="el">LED<small>ኤልኢዲ</small></td><td>Red, 3 or 5 mm</td><td>Toys, charger indicator lights<span class="am" lang="am">መጫወቻ፣ የቻርጀር ጠቋሚ መብራት</span></td></tr>
+<tr><td class="el">Battery<small>ባትሪ</small></td><td>3 × AA in series = 4.5 V</td><td>Shop, or an old battery holder<span class="am" lang="am">ሱቅ፣ ወይም አሮጌ የባትሪ ማስቀመጫ</span></td></tr>
+<tr><td class="el">Probes<small>መለኪያዎች</small></td><td>2 galvanised or stainless nails, 5 cm apart</td><td>Hardware shop, home<span class="am" lang="am">የብረታ ብረት ሱቅ፣ ቤት</span></td></tr>
+<tr><td class="el">Push button<small>መጫኛ ቁልፍ</small></td><td>Optional, in series with battery</td><td>Old radio or remote control<span class="am" lang="am">አሮጌ ሬዲዮ ወይም ሪሞት</span></td></tr>
+</tbody></table></div>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><h3>Build 2: step by step</h3><ol><li>Identify the transistor's pins (C, B, E) from its code and datasheet.</li><li>Connect E to the battery's minus (−).</li><li>Connect R1 (47 kΩ) from plus (+) to B.</li><li>Connect one nail wire to B and the other nail wire to minus (−).</li><li>Connect R2 (220 Ω) from plus (+) to the LED's long leg, and the LED's short leg to C.</li><li>Push both nails 5 cm deep into soil, about 5 cm apart. Test in a cup of dry soil, then add water.</li></ol><p><b>Tuning:</b> if the LED stays on even in wet soil, use a larger R1 (100 kΩ). If it never lights in dry soil, use a smaller R1 (22 kΩ). Soils differ, so testing is part of the science.</p><div class="sci"><span class="lbl">The science</span><p><b>Why the nails rust:</b> direct current through wet soil causes <i>electrolysis</i>, which corrodes the probes. Add the push button so power flows only when you check. Galvanised or stainless nails last longer.</p></div><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Build the smallest version, measure, improve.</b> This alarm is a minimum viable product (MVP): the simplest thing that solves the problem well enough to learn from. Like Brian's team, measure how well it works and be honest about the numbers.</p></div><div class="mission"><span class="lbl">Your mission</span><p>Build the alarm. Measure soil resistance with a multimeter (borrow one) in dry, damp and wet soil and record it. Then test the alarm for one week in a real garden or field and write down every problem you see.</p></div></div>
+    <div class="am" lang="am"><h3>ግንባታ 2፦ ደረጃ በደረጃ</h3><ol><li>የትራንዚስተሩን እግሮች (C፣ B፣ E) ከኮዱና ከመረጃ ሉሁ ይለዩ።</li><li>E ን ከባትሪው ኔጌቲቭ (−) ጋር ያገናኙ።</li><li>R1 ን (47 kΩ) ከፖዘቲቭ (+) ወደ B ያገናኙ።</li><li>የአንዱን ሚስማር ሽቦ ከB ጋር፣ የሌላውን ሚስማር ሽቦ ከኔጌቲቭ (−) ጋር ያገናኙ።</li><li>R2 ን (220 Ω) ከፖዘቲቭ (+) ወደ ኤልኢዲው ረጅም እግር፣ የኤልኢዲውን አጭር እግር ደግሞ ወደ C ያገናኙ።</li><li>ሁለቱንም ሚስማሮች 5 ሴ.ሜ ተራርቀው 5 ሴ.ሜ ጥልቀት ወደ አፈር ይክተቱ። በደረቅ አፈር በተሞላ ኩባያ ይሞክሩ፤ ከዚያም ውሃ ይጨምሩ።</li></ol><p><b>ማስተካከያ፦</b> ኤልኢዲው በእርጥብ አፈርም ቢሆን ከበራ ትልቅ R1 (100 kΩ) ይጠቀሙ። በደረቅ አፈር በፍጹም ካላበራ ትንሽ R1 (22 kΩ) ይጠቀሙ። አፈሮች ይለያያሉ፤ ስለዚህ መሞከር የሳይንሱ አካል ነው።</p><div class="sci"><span class="lbl">ሳይንሱ</span><p><b>ሚስማሮቹ ለምን ይዝጋሉ፦</b> በእርጥብ አፈር ውስጥ የሚያልፍ ቀጥተኛ ኤሌክትሪክ (DC) <i>ኤሌክትሮሊሲስ</i> ያስከትላል፤ ይህም መለኪያዎቹን ያበላሻል። ኃይል የሚፈሰው ሲፈትሹ ብቻ እንዲሆን መጫኛ ቁልፉን ይጨምሩ። በዚንክ የተለበጡ ወይም የማይዝጉ ሚስማሮች ረጅም ጊዜ ይቆያሉ።</p></div><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>ትንሹን ስሪት ይገንቡ፣ ይለኩ፣ ያሻሽሉ።</b> ይህ ማንቂያ አነስተኛ አዋጭ ምርት (MVP) ነው፦ ለመማር የሚያስችል፣ ችግሩን በበቂ ሁኔታ የሚፈታ ቀላሉ ነገር። እንደ ብራያን ቡድን ምን ያህል በደንብ እንደሚሰራ ይለኩ፤ ስለ ቁጥሮቹም ታማኝ ይሁኑ።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>ማንቂያውን ይገንቡ። በደረቅ፣ በትንሽ እርጥብና በእርጥብ አፈር ውስጥ የአፈሩን ተቃውሞ በመልቲሜትር (ተውሰው) ለክተው ይመዝግቡ። ከዚያም ማንቂያውን በእውነተኛ ጓሮ ወይም ማሳ ውስጥ ለአንድ ሳምንት ሞክረው ያዩትን እያንዳንዱን ችግር ይጻፉ።</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="m5">
+  <div class="ch-tag"><span class="yr">MODULE 5</span><span class="part">How chips are made · ቺፕ እንዴት ይመረታል</span></div>
+  <div class="pair">
+    <div class="en"><h2>From sand to chip in eight steps</h2><p>Your alarm uses one transistor. A factory puts billions on a chip smaller than a fingernail. A leading-edge chip passes through 500 to 1,000 process steps and 80 to 120 layers, over three to four months, in cleanrooms where one speck of dust can ruin it. The pattern-printing step needs an extreme-ultraviolet (EUV) machine that only ASML in the Netherlands builds: about $200 million each, and about $380 million for the newest High-NA version.</p><div class="sci"><span class="lbl">The science</span><p><b>The chemistry of pure silicon:</b></p><p class="formula">SiO₂ + 2C → Si + 2CO   (electric furnace, ~2,000 °C, ~98–99% pure)</p><p class="formula">Si + 3HCl → SiHCl₃ + H₂   (make a liquid that can be distilled)</p><p class="formula">SiHCl₃ + H₂ → Si + 3HCl   (on hot rods, ~1,100 °C: 99.9999999%+)</p><p>Then a single crystal is pulled slowly from molten silicon (the Czochralski method) and sliced into wafers.</p></div></div>
+    <div class="am" lang="am"><h2>ከአሸዋ እስከ ቺፕ በስምንት ደረጃዎች</h2><p>የእርስዎ ማንቂያ አንድ ትራንዚስተር ይጠቀማል። ፋብሪካ ደግሞ ከጣት ጥፍር ባነሰ ቺፕ ላይ ቢሊዮኖችን ያስቀምጣል። አንድ ከፍተኛ ደረጃ ያለው ቺፕ ከ500 እስከ 1,000 የሂደት ደረጃዎችንና ከ80 እስከ 120 ንብርብሮችን በሦስት እስከ አራት ወራት ውስጥ ያልፋል፤ ይህም አንዲት የአቧራ ቅንጣት ልታበላሸው በምትችልባቸው እጅግ ንጹሕ ክፍሎች ውስጥ ነው። ንድፍ የማተሙ ደረጃ የኔዘርላንድሱ ASML ብቻ የሚሰራውን «EUV» ማሽን ይፈልጋል፤ አንዱ 200 ሚሊዮን ዶላር ገደማ፣ አዲሱ «High-NA» ደግሞ 380 ሚሊዮን ዶላር ገደማ ያወጣል።</p><div class="sci"><span class="lbl">ሳይንሱ</span><p><b>የንጹሕ ሲሊከን ኬሚስትሪ፦</b></p><p class="formula">SiO₂ + 2C → Si + 2CO   (የኤሌክትሪክ ምድጃ፣ ~2,000 °C፣ ~98–99% ንጹሕ)</p><p class="formula">Si + 3HCl → SiHCl₃ + H₂   (ሊጣራ የሚችል ፈሳሽ መሥራት)</p><p class="formula">SiHCl₃ + H₂ → Si + 3HCl   (በሞቃት ዘንጎች ላይ፣ ~1,100 °C፦ 99.9999999%+)</p><p>ከዚያም ከቀለጠ ሲሊከን አንድ ክሪስታል በዝግታ ይጎተታል (የቾክራልስኪ ዘዴ)፤ ወደ ዌፈሮችም ይቆረጣል።</p></div></div>
   </div>
   <ol class="steps">
     <li><div class="en"><b>Quartz → silicon</b><p>Quartz and carbon are heated in an electric furnace to about 2,000 °C, giving silicon that is about 98–99% pure.</p></div><div class="am" lang="am"><b>ኳርትዝ → ሲሊከን</b><p>ኳርትዝና ካርቦን በኤሌክትሪክ ምድጃ ውስጥ በ2,000 °C ገደማ ይሞቃሉ፤ 98–99% ንጹሕ ሲሊከን ይገኛል።</p></div></li>
@@ -293,16 +340,16 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
     <li><div class="en"><b>Package and test again</b><p>Each die is sealed in a protective package with metal legs or balls, tested once more, then shipped.</p></div><div class="am" lang="am"><b>ማሸግና እንደገና መፈተሽ</b><p>እያንዳንዱ ቺፕ የብረት እግሮች ባሉት መከላከያ ውስጥ ታሽጎ፣ አንድ ጊዜ ተጨማሪ ተፈትሾ ይላካል።</p></div></li>
   </ol>
   <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Build in loops.</b> A chip is built layer by layer, and every layer is checked before the next. A business grows the same way: build a small version, test it, learn, improve, and repeat. Engineers call this iteration; entrepreneurs call it build, measure, learn.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Plan your first loop: what is the smallest thing you can build in one week to test your idea? How will you know if it worked?</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>በዑደት ይገንቡ።</b> ቺፕ በንብርብር ይገነባል፤ እያንዳንዱ ንብርብር ከቀጣዩ በፊት ይፈተሻል። ንግድም በዚሁ መንገድ ያድጋል፦ ትንሽ ስሪት ይገንቡ፣ ይፈትሹ፣ ይማሩ፣ ያሻሽሉ፣ ይድገሙ። መሐንዲሶች ይህን «ደጋግሞ ማሻሻል»፣ ሥራ ፈጣሪዎች ደግሞ «መገንባት፣ መለካት፣ መማር» ይሉታል።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>የመጀመሪያ ዑደትዎን ያቅዱ፦ ሐሳብዎን ለመፈተሽ በአንድ ሳምንት ውስጥ ሊገነቡት የሚችሉት ትንሹ ነገር ምንድን ነው? መሳካቱን እንዴት ያውቃሉ?</p></div></div>
+    <div class="en"><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Build in loops.</b> A chip is built layer by layer, and every layer is checked before the next. Your project grows the same way: build, test, learn, improve, repeat. Each loop should be small and fast.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>በዑደት ይገንቡ።</b> ቺፕ በንብርብር ይገነባል፤ እያንዳንዱ ንብርብር ከቀጣዩ በፊት ይፈተሻል። የእርስዎ ፕሮጀክትም በዚሁ መንገድ ያድጋል፦ ይገንቡ፣ ይፈትሹ፣ ይማሩ፣ ያሻሽሉ፣ ይድገሙ። እያንዳንዱ ዑደት ትንሽና ፈጣን ይሁን።</p></div></div>
   </div>
 </section>
 
-<section class="ch" id="ep4">
-  <div class="ch-tag"><span class="yr">EPISODE 4</span><span class="part">Adding value · እሴት መጨመር</span></div>
+<section class="ch" id="m6">
+  <div class="ch-tag"><span class="yr">MODULE 6</span><span class="part">Add value at home · እሴትን በአገር ውስጥ ይጨምሩ</span></div>
   <div class="pair">
-    <div class="en"><h2>Who gets paid?</h2><p class="story"><span class="story-lbl">Story</span>Selam's grandfather grows coffee. He sells the raw beans for a small price, yet in Addis Ababa the same coffee, roasted, packed and branded, sells for far more. “Same beans,” he says, “but someone else adds the value.” Selam realises minerals work exactly the same way.</p><p>The further a material travels up the chain, the more it is worth. Raw ore is the cheapest step; refined, ultra-pure metal is worth far more; a finished chip far more again. That is why Africa supplies a large share of the minerals while earning a tiny share of the industry.</p><p class="callout">DR Congo mines 73% of the world's cobalt, but China produces 79% of the world's refined cobalt. Much of the value is captured at refining.</p></div>
-    <div class="am" lang="am"><h2>ማን ይከፈለዋል?</h2><p class="story"><span class="story-lbl">ታሪክ</span>የሰላም አያት ቡና ያመርታሉ። ጥሬ ፍሬውን በትንሽ ዋጋ ይሸጣሉ፤ በአዲስ አበባ ግን ያው ቡና ተቆልቶ፣ ታሽጎና ስም ተሰጥቶት በብዙ እጥፍ ይሸጣል። «ያው ፍሬ ነው፤ እሴቱን የሚጨምረው ግን ሌላ ሰው ነው» ይላሉ። ሰላም ማዕድናትም በትክክል እንደዚሁ እንደሚሰሩ ተገነዘበች።</p><p>አንድ ማዕድን በሰንሰለቱ ወደ ላይ በወጣ ቁጥር ዋጋው ይጨምራል። ጥሬ ማዕድን በጣም ርካሹ ደረጃ ነው፤ የተጣራ እጅግ ንጹሕ ብረት ብዙ እጥፍ ዋጋ አለው፤ የተጠናቀቀ ቺፕ ደግሞ ከዚያም በላይ። አፍሪካ ትልቅ የማዕድን ድርሻ እያቀረበች ከኢንዱስትሪው ትንሽ ድርሻ የምታገኘው ለዚህ ነው።</p><p class="callout">ኮንጎ ዲ.ሪ. ከዓለም ኮባልት 73% ታመርታለች፤ ቻይና ግን ከዓለም የተጣራ ኮባልት 79% ታመርታለች። ብዙው እሴት የሚያዘው በማጣራቱ ደረጃ ነው።</p></div>
+    <div class="en"><h2>Who earns the money, and how to climb</h2><div class="real"><span class="lbl">True story</span><p>During a hospital internship in Yaoundé in 2010, engineer Arthur Zang saw how hard it was for Cameroonians to get heart tests: the country had only a few dozen cardiologists for more than 20 million people. He built the Cardiopad, a touch-screen medical tablet that records an electrocardiogram in a village clinic and sends it by mobile network to a distant cardiologist. It won the 2014 Rolex Award for Enterprise and the 2016 Africa Prize. At first its electronic parts were made in China and assembled in Cameroon; Zang said he hoped to manufacture it in Cameroon.</p></div><p>Arthur designed in Africa and assembled in Africa, then aimed to climb to manufacturing. That is the staircase every African product can climb. The further a material travels up the chain, the more it is worth: raw ore is cheapest, refined metal is worth far more, a finished chip far more again.</p><p class="callout">DR Congo mines 73% of the world's cobalt, but China produces 79% of the world's refined cobalt. Much of the value is captured at refining. Ethiopia now allows lithium and tantalum exports only by companies that add value inside the country.</p></div>
+    <div class="am" lang="am"><h2>ገንዘቡን የሚያገኘው ማነው? እንዴትስ ወደ ላይ መውጣት ይቻላል?</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በ2010 በያውንዴ ሆስፒታል ተለማማጅ ሳለ መሐንዲስ አርተር ዛንግ ካሜሩናውያን የልብ ምርመራ ለማግኘት ምን ያህል እንደሚቸገሩ አየ፤ አገሪቱ ከ20 ሚሊዮን በላይ ሕዝብ ላይ ጥቂት ደርዘን የልብ ሐኪሞች ብቻ ነበሯት። «ካርዲዮፓድ» የተባለ በመንካት የሚሰራ የሕክምና ታብሌት ሠራ፤ በገጠር ክሊኒክ የልብ ምት ምርመራ (ECG) መዝግቦ በሞባይል ኔትወርክ ርቆ ወዳለ የልብ ሐኪም ይልካል። የ2014 የሮሌክስ የሥራ ፈጠራ ሽልማትንና የ2016 የአፍሪካ ሽልማትን አሸነፈ። መጀመሪያ ላይ የኤሌክትሮኒክ ክፍሎቹ በቻይና ተመርተው በካሜሩን ይገጣጠሙ ነበር፤ ዛንግ በካሜሩን ለማምረት ተስፋ እንዳለው ተናግሯል።</p></div><p>አርተር በአፍሪካ ነደፈ፣ በአፍሪካ ገጣጠመ፣ ከዚያም ወደ ማምረት ለመውጣት አለመ። እያንዳንዱ የአፍሪካ ምርት ሊወጣው የሚችለው ደረጃ ይህ ነው። አንድ ማዕድን በሰንሰለቱ ወደ ላይ በወጣ ቁጥር ዋጋው ይጨምራል፦ ጥሬ ማዕድን በጣም ርካሽ ነው፤ የተጣራ ብረት ብዙ እጥፍ ዋጋ አለው፤ የተጠናቀቀ ቺፕ ደግሞ ከዚያም በላይ።</p><p class="callout">ኮንጎ ዲ.ሪ. ከዓለም ኮባልት 73% ታመርታለች፤ ቻይና ግን ከዓለም የተጣራ ኮባልት 79% ታመርታለች። ብዙው እሴት የሚያዘው በማጣራቱ ደረጃ ነው። ኢትዮጵያ አሁን የሊቲየምና የታንታለም ኤክስፖርትን የምትፈቅደው በአገር ውስጥ እሴት ለሚጨምሩ ኩባንያዎች ብቻ ነው።</p></div>
   </div>
   <figure>
     <div class="scroll">
@@ -322,16 +369,16 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
     <figcaption><span class="en">Share of world mine output, 2025 (USGS estimates). The bars show what Africa digs up, not what it refines.</span><span class="am" lang="am">ከዓለም የማዕድን ምርት ያለው ድርሻ፣ 2025 (የUSGS ግምት)። አሞሌዎቹ አፍሪካ የምትቆፍረውን እንጂ የምታጣራውን አያሳዩም።</span></figcaption>
   </figure>
   <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Find where value is added, then climb.</b> Ask: what happens to this product after it leaves my hands? Who processes, designs, packs or brands it? Every step up is a business opportunity. Ethiopia now follows this idea for lithium and tantalum: only companies that add value inside the country may export them.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Draw the value staircase for one local product: coffee, honey, teff, leather or a mineral. Circle one step that you, or a group of friends, could do.</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>እሴት የሚጨመርበትን ይፈልጉ፤ ከዚያም ይውጡ።</b> ይጠይቁ፦ ይህ ምርት ከእጄ ከወጣ በኋላ ምን ይደርስበታል? ማን ያቀነባብረዋል፣ ይነድፈዋል፣ ያሽገዋል ወይም ስም ይሰጠዋል? እያንዳንዱ ወደ ላይ ያለ ደረጃ የንግድ ዕድል ነው። ኢትዮጵያ ለሊቲየምና ለታንታለም ይህንኑ ሐሳብ ትከተላለች፦ ኤክስፖርት ማድረግ የሚችሉት በአገር ውስጥ እሴት የሚጨምሩ ኩባንያዎች ብቻ ናቸው።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>ለአንድ የአካባቢ ምርት የእሴት ደረጃውን ይሳሉ፦ ቡና፣ ማር፣ ጤፍ፣ ቆዳ ወይም ማዕድን። እርስዎ ወይም የጓደኞች ቡድን ሊሰሩት የሚችሉትን አንድ ደረጃ ያክብቡ።</p></div></div>
+    <div class="en"><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Find where value is added, then climb.</b> Ask: what happens to this product after it leaves my hands? Who processes, designs, assembles, packs or brands it? Every step up is a business.</p></div><div class="mission"><span class="lbl">Your mission</span><p>Draw the value staircase for one local product: coffee, honey, teff, leather or a mineral. Circle one step that you, or a group of friends, could do this year.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>እሴት የሚጨመርበትን ይፈልጉ፤ ከዚያም ይውጡ።</b> ይጠይቁ፦ ይህ ምርት ከእጄ ከወጣ በኋላ ምን ይደርስበታል? ማን ያቀነባብረዋል፣ ይነድፈዋል፣ ይገጣጥመዋል፣ ያሽገዋል ወይም ስም ይሰጠዋል? እያንዳንዱ ወደ ላይ ያለ ደረጃ ንግድ ነው።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>ለአንድ የአካባቢ ምርት የእሴት ደረጃውን ይሳሉ፦ ቡና፣ ማር፣ ጤፍ፣ ቆዳ ወይም ማዕድን። እርስዎ ወይም የጓደኞች ቡድን በዚህ ዓመት ሊሰሩት የሚችሉትን አንድ ደረጃ ያክብቡ።</p></div></div>
   </div>
 </section>
 
-<section class="ch" id="ep5">
-  <div class="ch-tag"><span class="yr">EPISODE 5</span><span class="part">Role models · አርአያዎች</span></div>
+<section class="ch" id="m7">
+  <div class="ch-tag"><span class="yr">MODULE 7</span><span class="part">Africans already building · እየገነቡ ያሉ አፍሪካውያን</span></div>
   <div class="pair">
-    <div class="en"><h2>Africans already building</h2><p class="story"><span class="story-lbl">Story</span>Selam searches online and is surprised: Africans are already inside the chip industry, from Casablanca to Nyeri.</p><p>Africa still holds less than 1% of the global semiconductor industry, but it is not starting from zero. In April 2026, the first Africa Semiconductor Investors Forum in Nairobi named the most realistic entry points: chip design, assembly, testing and packaging, mineral processing, skills and regional hubs.</p></div>
-    <div class="am" lang="am"><h2>እየገነቡ ያሉ አፍሪካውያን</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም በኢንተርኔት ፈለገች፤ ተገረመችም፦ ከካዛብላንካ እስከ ኒየሪ አፍሪካውያን ቀድሞውኑ በቺፕ ኢንዱስትሪ ውስጥ ናቸው።</p><p>አፍሪካ አሁንም ከዓለም የሴሚኮንዳክተር ኢንዱስትሪ ከ1% ያነሰ ድርሻ አላት፤ ሆኖም ከዜሮ አትጀምርም። በኤፕሪል 2026 በናይሮቢ የተካሄደው የመጀመሪያው የአፍሪካ ሴሚኮንዳክተር ኢንቨስተሮች ፎረም ተጨባጭ የመግቢያ በሮችን ለይቷል፦ የቺፕ ንድፍ፣ መገጣጠም፣ መፈተሽና ማሸግ፣ የማዕድን ማቀነባበር፣ ክህሎትና ክልላዊ ማዕከላት።</p></div>
+    <div class="en"><h2>The industry is already starting here</h2><div class="real"><span class="lbl">True story</span><p>Anthony Githinji worked in the US semiconductor industry from 1997, then returned to Kenya and founded Semiconductor Technologies Limited (STL) at Dedan Kimathi University of Technology in Nyeri. When COVID-19 stopped foreign experts from coming, the company built its factory with local talent, and it trains students as interns.</p></div><div class="real"><span class="lbl">True story</span><p>Ethiopians are on the same path. In 2021, Pazion Cherinet (Orbit Health, a digital health platform) became the first Ethiopian shortlisted for the Africa Prize for Engineering Innovation. In 2023, mechanical engineer Fikru Gebre Dinkumbab was shortlisted for a multi-purpose earth-brick machine. In 2024, the Prize went to Kenya's Esther Kimani for an early-warning system that detects crop pests and diseases, with £50,000.</p></div><p>Africa still holds less than 1% of the global semiconductor industry, but it is not starting from zero. In April 2026 the first Africa Semiconductor Investors Forum in Nairobi named the realistic entry points: chip design, assembly, testing and packaging, mineral processing, skills and regional hubs.</p></div>
+    <div class="am" lang="am"><h2>ኢንዱስትሪው እዚህ መጀመሩ አይቀርም፤ ጀምሯልም</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>አንቶኒ ጊቲንጂ ከ1997 ጀምሮ በአሜሪካ የሴሚኮንዳክተር ኢንዱስትሪ ሠርቷል፤ ከዚያም ወደ ኬንያ ተመልሶ በኒየሪ በሚገኘው ዴዳን ኪማቲ የቴክኖሎጂ ዩኒቨርሲቲ «ሴሚኮንዳክተር ቴክኖሎጂስ ሊሚትድ» (STL)ን መሠረተ። ኮቪድ-19 የውጭ ባለሙያዎች እንዳይመጡ ሲያግድ ኩባንያው ፋብሪካውን በአገር ውስጥ ባለሙያዎች ገነባ፤ ተማሪዎችንም በተለማማጅነት ያሰለጥናል።</p></div><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>ኢትዮጵያውያንም በዚሁ መንገድ ላይ ናቸው። በ2021 ፓዚዮን ቸሪነት (Orbit Health፣ የዲጂታል ጤና መድረክ) ለአፍሪካ የምህንድስና ፈጠራ ሽልማት በዕጩነት የተመረጠ የመጀመሪያው ኢትዮጵያዊ ሆነ። በ2023 የሜካኒካል መሐንዲሱ ፍቅሩ ገብሬ ዲንኩምባብ ለሁለገብ የአፈር ጡብ ማሽኑ በዕጩነት ተመረጠ። በ2024 ሽልማቱ የሰብል ተባዮችንና በሽታዎችን አስቀድሞ ለሚለይ ሥርዓት ለኬንያዊቷ ኤስተር ኪማኒ በ50,000 ፓውንድ ተሰጠ።</p></div><p>አፍሪካ አሁንም ከዓለም የሴሚኮንዳክተር ኢንዱስትሪ ከ1% ያነሰ ድርሻ አላት፤ ሆኖም ከዜሮ አትጀምርም። በኤፕሪል 2026 በናይሮቢ የተካሄደው የመጀመሪያው የአፍሪካ ሴሚኮንዳክተር ኢንቨስተሮች ፎረም ተጨባጭ የመግቢያ በሮችን ለይቷል፦ የቺፕ ንድፍ፣ መገጣጠም፣ መፈተሽና ማሸግ፣ የማዕድን ማቀነባበር፣ ክህሎትና ክልላዊ ማዕከላት።</p></div>
   </div>
   <div class="cards">
     <div class="card"><div class="cn">DR Congo<span class="am" lang="am">ኮንጎ ዲ.ሪ.</span></div><div class="chips"><span class="chip">Cobalt 73%</span><span class="chip">Tantalum 52%</span><span class="chip">Copper 14%</span><span class="chip">Germanium</span></div><p class="en">In 2024 it exported its first germanium concentrates processed inside the country, recovered from a century-old pile of mining waste at Big Hill.</p><p class="am" lang="am">በ2024 በአገር ውስጥ የተቀነባበረ የመጀመሪያውን የጀርማኒየም ክምችት ወደ ውጭ ላከች፤ ከመቶ ዓመት የቆየ «ቢግ ሂል» የተባለ የማዕድን ቆሻሻ ክምር የወጣ ነው።</p></div>
@@ -343,43 +390,16 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
     <div class="card et"><div class="cn">Ethiopia<span class="am" lang="am">ኢትዮጵያ</span></div><div class="chips"><span class="chip">Tantalum</span><span class="chip">Lithium</span><span class="chip">Gold</span><span class="chip">Quartz</span></div><p class="en">The Kenticha deposit in Guji, Oromia, holds tantalum and lithium. For decades it exported raw concentrate, mainly to China. Ethiopia now reserves lithium and tantalum exports for companies that add value inside the country.</p><p class="am" lang="am">በኦሮሚያ፣ ጉጂ ዞን የሚገኘው የቀንጢቻ ክምችት ታንታለምና ሊቲየም ይዟል። ለአሥርት ዓመታት ጥሬ ክምችት በዋናነት ወደ ቻይና ተልኳል። አሁን ኢትዮጵያ የሊቲየምና የታንታለም ኤክስፖርትን በአገር ውስጥ እሴት ለሚጨምሩ ኩባንያዎች ብቻ ፈቅዳለች።</p></div>
   </div>
   <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Partner up.</b> None of these started alone. Congo's state miner partnered with Umicore for germanium know-how. Kenya's STL works inside a university. Nigeria built its chip-design framework with ChipMango. Find partners who have what you lack, and offer them what they lack.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Name three people or organisations who could help your idea: a teacher, a repair shop, a university lab, a farmers' cooperative. Write what you can offer each of them in return.</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>አጋር ይፈልጉ።</b> ከእነዚህ አንዳቸውም ብቻቸውን አልጀመሩም። የኮንጎ መንግሥታዊ ማዕድን ኩባንያ ለጀርማኒየም ዕውቀት ከUmicore ጋር ተባበረ። የኬንያው STL በዩኒቨርሲቲ ውስጥ ይሰራል። ናይጄሪያ የቺፕ ንድፍ ማዕቀፏን ከChipMango ጋር ገነባች። የጎደለዎት ያላቸውን አጋሮች ይፈልጉ፤ የጎደላቸውንም ይስጧቸው።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>ሐሳብዎን ሊረዱ የሚችሉ ሦስት ሰዎችን ወይም ድርጅቶችን ይጥቀሱ፦ መምህር፣ የጥገና ሱቅ፣ የዩኒቨርሲቲ ላቦራቶሪ፣ የገበሬዎች ማኅበር። ለእያንዳንዳቸው በምላሹ ምን ሊያቀርቡ እንደሚችሉ ይጻፉ።</p></div></div>
+    <div class="en"><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Partner up, and enter competitions.</b> None of these builders worked alone: STL works inside a university, Congo's miner partnered with Umicore, Brian built Matibabu with a team. Prizes such as the Africa Prize give money, training and mentors. Find partners who have what you lack, and offer them what they lack.</p></div><div class="mission"><span class="lbl">Your mission</span><p>Name three people or organisations who could help your idea: a teacher, a repair shop, a university lab, a farmers' cooperative. Write what you can offer each in return. Then find one competition or hackathon you could enter within a year.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>አጋር ይፈልጉ፤ በውድድሮችም ይሳተፉ።</b> ከእነዚህ ገንቢዎች አንዳቸውም ብቻቸውን አልሠሩም፦ STL በዩኒቨርሲቲ ውስጥ ይሰራል፤ የኮንጎው ማዕድን ኩባንያ ከUmicore ጋር ተባበረ፤ ብራያን ማቲባቡን ከቡድን ጋር ገነባ። እንደ አፍሪካ ሽልማት ያሉ ውድድሮች ገንዘብ፣ ሥልጠናና አማካሪዎች ይሰጣሉ። የጎደለዎት ያላቸውን አጋሮች ይፈልጉ፤ የጎደላቸውንም ይስጧቸው።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>ሐሳብዎን ሊረዱ የሚችሉ ሦስት ሰዎችን ወይም ድርጅቶችን ይጥቀሱ፦ መምህር፣ የጥገና ሱቅ፣ የዩኒቨርሲቲ ላቦራቶሪ፣ የገበሬዎች ማኅበር። ለእያንዳንዳቸው በምላሹ ምን እንደሚያቀርቡ ይጻፉ። ከዚያም በአንድ ዓመት ውስጥ ሊሳተፉበት የሚችሉትን አንድ ውድድር ወይም «ሃካቶን» ይፈልጉ።</p></div></div>
   </div>
 </section>
 
-<section class="ch" id="ep6">
-  <div class="ch-tag"><span class="yr">EPISODE 6</span><span class="part">First product · የመጀመሪያው ምርት</span></div>
+<section class="ch" id="m8">
+  <div class="ch-tag"><span class="yr">MODULE 8</span><span class="part">Your path · የእርስዎ መንገድ</span></div>
   <div class="pair">
-    <div class="en"><h2>Selam's first device</h2><p class="story"><span class="story-lbl">Story</span>With a small ESP32 board, a moisture probe and a buzzer, Selam builds an alarm that beeps when the soil is dry. She tests it in her uncle's field for two weeks. It works, but the probe rusts, and her uncle cannot hear the buzzer from the house. So she changes the probe and makes the device send a text message to his phone. Then she shows it to five neighbouring farmers and asks what they would pay.</p><p>This is a <b>minimum viable product</b> (MVP): the simplest version that solves the problem well enough to learn from real users. Selam did not need a chip factory. She used existing chips and focused on the farmer's need. The same thinking, at a bigger scale, opens six opportunities for Africa:</p><ol>
-<li><b>Refine at home.</b> Turning ore into pure metal inside Africa keeps more of the value. Congo's germanium plant shows it can start.</li>
-<li><b>Mine the waste.</b> Old tailings and slag hold germanium, gallium and cobalt that past miners threw away.</li>
-<li><b>Design chips.</b> Design needs computers, internet and trained minds, not a billion-dollar factory. It is the fastest door for young engineers.</li>
-<li><b>Assemble, test and package.</b> Morocco shows this works on the continent.</li>
-<li><b>Recycle electronics.</b> Old phones and computers contain gold, copper, palladium and tantalum. Done safely, it is “urban mining”.</li>
-<li><b>Build devices for African problems.</b> Farm sensors, livestock trackers, solar controllers, medical devices and mobile money all need chips.</li>
-</ol></div>
-    <div class="am" lang="am"><h2>የሰላም የመጀመሪያ መሣሪያ</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም በትንሽ የESP32 ሰሌዳ፣ በእርጥበት መለኪያና በ«ባዘር» አፈሩ ሲደርቅ የሚጮኽ ማንቂያ ሠራች። በአጎቷ ማሳ ለሁለት ሳምንት ሞከረችው። ይሰራል፤ ግን መለኪያው ዛገ፣ አጎቷም ከቤት ሆነው ድምፁን መስማት አልቻሉም። ስለዚህ መለኪያውን ቀየረች፤ መሣሪያውም ወደ ስልካቸው የጽሑፍ መልእክት እንዲልክ አደረገች። ከዚያም ለአምስት ጎረቤት ገበሬዎች አሳይታ ምን ያህል እንደሚከፍሉ ጠየቀቻቸው።</p><p>ይህ <b>አነስተኛ አዋጭ ምርት</b> (MVP) ይባላል፦ ከእውነተኛ ተጠቃሚዎች ለመማር የሚያስችል፣ ችግሩን በበቂ ሁኔታ የሚፈታ ቀላሉ ስሪት። ሰላም የቺፕ ፋብሪካ አላስፈለጋትም። ያሉትን ቺፖች ተጠቅማ በገበሬው ፍላጎት ላይ አተኮረች። ይኸው አስተሳሰብ በትልቅ ደረጃ ለአፍሪካ ስድስት ዕድሎችን ይከፍታል፦</p><ol>
-<li><b>በአገር ውስጥ ማጣራት።</b> ማዕድንን በአፍሪካ ውስጥ ወደ ንጹሕ ብረት መቀየር ብዙውን እሴት ያስቀራል። የኮንጎ የጀርማኒየም ፋብሪካ ይህ ሊጀመር እንደሚችል ያሳያል።</li>
-<li><b>ቆሻሻውን ማዕድን ማድረግ።</b> የድሮ የማዕድን ተረፈ ምርቶች የቀደሙት አምራቾች የጣሉትን ጀርማኒየም፣ ጋሊየምና ኮባልት ይይዛሉ።</li>
-<li><b>ቺፕ መንደፍ።</b> ንድፍ የቢሊዮን ዶላር ፋብሪካ ሳይሆን ኮምፒውተር፣ ኢንተርኔትና የሰለጠነ አእምሮ ይፈልጋል። ለወጣት መሐንዲሶች ፈጣኑ በር ነው።</li>
-<li><b>መገጣጠም፣ መፈተሽና ማሸግ።</b> ሞሮኮ ይህ በአህጉሩ ላይ እንደሚሰራ ታሳያለች።</li>
-<li><b>ኤሌክትሮኒክስን መልሶ መጠቀም።</b> አሮጌ ስልኮችና ኮምፒውተሮች ወርቅ፣ መዳብ፣ ፓላዲየምና ታንታለም ይዘዋል። በጥንቃቄ ሲሰራ «የከተማ ማዕድን ማውጣት» ነው።</li>
-<li><b>ለአፍሪካ ችግሮች መሣሪያ መሥራት።</b> የእርሻ ዳሳሾች፣ የእንስሳት መከታተያዎች፣ የፀሐይ ኃይል ተቆጣጣሪዎች፣ የሕክምና መሣሪያዎችና የሞባይል ገንዘብ ሁሉም ቺፕ ይፈልጋሉ።</li>
-</ol></div>
-  </div>
-  
-  <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Listen to customers and count the costs.</b> Ask people about their problem, not your product. Write down the cost of every part. Your price must cover parts, your time and a margin. If the user cannot pay, look for another payer: a cooperative, an NGO, a seed company or the local government.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Talk to five possible customers this month. Ask: How do you handle this problem today? What does it cost you? What would a good solution be worth to you?</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>ደንበኞችን ያዳምጡ፤ ወጪዎችን ይቁጠሩ።</b> ሰዎችን ስለ ምርትዎ ሳይሆን ስለ ችግራቸው ይጠይቁ። የእያንዳንዱን ዕቃ ዋጋ ይጻፉ። ዋጋዎ የዕቃዎችን፣ የጊዜዎንና ትርፍን መሸፈን አለበት። ተጠቃሚው መክፈል ካልቻለ ሌላ ከፋይ ይፈልጉ፦ ማኅበር፣ መንግሥታዊ ያልሆነ ድርጅት፣ የዘር ኩባንያ ወይም የአካባቢ አስተዳደር።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>በዚህ ወር ከአምስት ሊሆኑ ከሚችሉ ደንበኞች ጋር ይነጋገሩ። ይጠይቁ፦ ዛሬ ይህንን ችግር እንዴት ይይዙታል? ምን ያስወጣዎታል? ጥሩ መፍትሔ ምን ያህል ዋጋ አለው ለእርስዎ?</p></div></div>
-  </div>
-</section>
-
-<section class="ch" id="ep7">
-  <div class="ch-tag"><span class="yr">EPISODE 7</span><span class="part">Your path · የእርስዎ መንገድ</span></div>
-  <div class="pair">
-    <div class="en"><h2>Your ladder</h2><p class="story"><span class="story-lbl">Story</span>Selam is 16. The engineers and founders who will lead Africa's chip industry in 2040 are her age today, and maybe yours.</p><p>You do not need a factory to start. You need curiosity, a phone or computer, and a little money for parts. Pick the rung that matches your age and climb one step at a time.</p></div>
-    <div class="am" lang="am"><h2>የእርስዎ መሰላል</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም የ16 ዓመት ልጅ ናት። በ2040 የአፍሪካን የቺፕ ኢንዱስትሪ የሚመሩት መሐንዲሶችና መሥራቾች ዛሬ የእሷ ዕድሜ ላይ ናቸው፤ ምናልባትም የእርስዎ።</p><p>ለመጀመር ፋብሪካ አያስፈልግም። የሚያስፈልገው ጉጉት፣ ስልክ ወይም ኮምፒውተር፣ እና ለዕቃዎች ትንሽ ገንዘብ ነው። ከዕድሜዎ ጋር የሚሄደውን ደረጃ መርጠው አንድ በአንድ ይውጡ።</p></div>
+    <div class="en"><h2>Your ladder, your plan, your canvas</h2><p>William, Kelvin, Brian and Arthur all started young, with little, from a problem they could see. The engineers and founders who will lead Africa's chip industry in 2040 are young people today. Pick the rung that fits your age and climb one step at a time.</p></div>
+    <div class="am" lang="am"><h2>የእርስዎ መሰላል፣ ዕቅድና ሸራ</h2><p>ዊልያም፣ ኬልቪን፣ ብራያንና አርተር ሁሉም በወጣትነታቸው፣ በጥቂት ነገር፣ ከሚያዩት ችግር ጀመሩ። በ2040 የአፍሪካን የቺፕ ኢንዱስትሪ የሚመሩት መሐንዲሶችና መሥራቾች ዛሬ ወጣቶች ናቸው። ከዕድሜዎ ጋር የሚሄደውን ደረጃ መርጠው አንድ በአንድ ይውጡ።</p></div>
   </div>
   <div class="ladder">
     <div class="rung"><div class="age">Ages 10–14<small>ዕድሜ 10–14 · Curiosity</small></div>
@@ -396,37 +416,26 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
       <div class="am" lang="am"><ul><li>ከአገርዎ ሆነው ለዓለም ኩባንያዎች የቺፕ ንድፍ ወይም የማረጋገጫ አገልግሎት ይስጡ።</li><li>ወርቅና መዳብ የሚያወጣ ደህንነቱ የተጠበቀ የኤሌክትሮኒክ ቆሻሻ መልሶ መጠቀሚያ ሥራ ይጀምሩ።</li><li>በመጀመሪያ ያሉትን ቺፖች በመጠቀም ለግብርና፣ ለጤና ወይም ለኃይል የዳሳሽ ምርቶችን ይገንቡ።</li><li>በማዕድን ማጣራት ዘርፍ ይሥሩ፤ ማቀነባበሪያዎች በማዕድኖቹ አጠገብ እንዲገነቡ ይግፉ።</li></ul></div></div>
   </div>
   <h3 style="margin-top:28px">A 30-day plan · የ30 ቀን ዕቅድ</h3><div class="weeks">
-<div class="week"><div class="w">Week 1 · ሳምንት 1</div><p class="en">Choose one problem. Talk to five people who have it.</p><p class="am" lang="am">አንድ ችግር ይምረጡ። ችግሩ ካለባቸው አምስት ሰዎች ጋር ይነጋገሩ።</p></div>
-<div class="week"><div class="w">Week 2 · ሳምንት 2</div><p class="en">Learn: one free course or simulator. List the parts you need and their prices.</p><p class="am" lang="am">ይማሩ፦ አንድ ነፃ ኮርስ ወይም ሲሙሌተር። የሚያስፈልጉዎትን ዕቃዎችና ዋጋቸውን ይዘርዝሩ።</p></div>
-<div class="week"><div class="w">Week 3 · ሳምንት 3</div><p class="en">Build the smallest version that could work. Do not aim for perfect.</p><p class="am" lang="am">ሊሰራ የሚችለውን ትንሹን ስሪት ይገንቡ። ፍጹም ለማድረግ አይሞክሩ።</p></div>
-<div class="week"><div class="w">Week 4 · ሳምንት 4</div><p class="en">Test it with two real users. Write down what you learned and share it online.</p><p class="am" lang="am">ከሁለት እውነተኛ ተጠቃሚዎች ጋር ይፈትሹት። የተማሩትን ጽፈው በኢንተርኔት ያጋሩ።</p></div>
-</div>
-  <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Small steps, every week.</b> Big companies were once small experiments. What matters is not how fast you start but that you keep climbing.</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>በየሳምንቱ ትንሽ እርምጃ።</b> ትላልቅ ኩባንያዎች በአንድ ወቅት ትናንሽ ሙከራዎች ነበሩ። ዋናው ምን ያህል በፍጥነት መጀመርዎ ሳይሆን መውጣትዎን አለማቆምዎ ነው።</p></div></div>
-  </div>
-</section>
-
-<section class="ch" id="ep8">
-  <div class="ch-tag"><span class="yr">EPISODE 8</span><span class="part">Your canvas · የእርስዎ ሸራ</span></div>
-  <div class="pair">
-    <div class="en"><h2>The problem-solving canvas</h2><p class="story"><span class="story-lbl">Story</span>Selam keeps one page in her notebook for every idea. She calls it her canvas. Here it is, ready for your first idea.</p><p>Copy these eight boxes onto one page. Fill them in for the problem you chose in Episode 1, and update them after every test.</p></div>
-    <div class="am" lang="am"><h2>የችግር መፍቻ ሸራ</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም ለእያንዳንዱ ሐሳብ በማስታወሻ ደብተሯ አንድ ገጽ ትይዛለች። «ሸራዬ» ትለዋለች። ለመጀመሪያ ሐሳብዎ ዝግጁ ሆኖ እነሆ።</p><p>እነዚህን ስምንት ሳጥኖች በአንድ ገጽ ላይ ይቅዱ። በክፍል 1 ለመረጡት ችግር ይሙሏቸው፤ ከእያንዳንዱ ሙከራ በኋላም ያሻሽሏቸው።</p></div>
-  </div>
-  <div class="canvas"><div class="box"><span class="n">1</span><b class="en">The problem</b><span class="am" lang="am">ችግሩ</span><small class="en">What hurts, in one sentence?</small><small class="am" lang="am">ምን ይጎዳል? በአንድ ዓረፍተ ነገር።</small></div><div class="box"><span class="n">2</span><b class="en">Who has it</b><span class="am" lang="am">ችግሩ ያለበት ማነው</span><small class="en">Who suffers, how many, how often?</small><small class="am" lang="am">ማን ይሰቃያል? ስንት ናቸው? በምን ያህል ድግግሞሽ?</small></div><div class="box"><span class="n">3</span><b class="en">Root cause</b><span class="am" lang="am">መሠረታዊ ምክንያት</span><small class="en">Ask “why?” five times.</small><small class="am" lang="am">«ለምን?» የሚለውን አምስት ጊዜ ይጠይቁ።</small></div><div class="box"><span class="n">4</span><b class="en">What I already have</b><span class="am" lang="am">ቀድሞ ያለኝ</span><small class="en">Skills, people, tools, materials.</small><small class="am" lang="am">ክህሎት፣ ሰዎች፣ መሣሪያ፣ ቁሳቁስ።</small></div><div class="box"><span class="n">5</span><b class="en">Smallest test</b><span class="am" lang="am">ትንሹ ሙከራ</span><small class="en">What can I build or try in one week?</small><small class="am" lang="am">በአንድ ሳምንት ምን መገንባት ወይም መሞከር እችላለሁ?</small></div><div class="box"><span class="n">6</span><b class="en">Who can help</b><span class="am" lang="am">ማን ሊረዳ ይችላል</span><small class="en">Partners, mentors, suppliers.</small><small class="am" lang="am">አጋሮች፣ አማካሪዎች፣ አቅራቢዎች።</small></div><div class="box"><span class="n">7</span><b class="en">Who pays, and why</b><span class="am" lang="am">ማን ይከፍላል? ለምን?</span><small class="en">User, cooperative, NGO, company?</small><small class="am" lang="am">ተጠቃሚ፣ ማኅበር፣ ድርጅት፣ ኩባንያ?</small></div><div class="box"><span class="n">8</span><b class="en">What I learned</b><span class="am" lang="am">የተማርኩት</span><small class="en">After each test, write it down.</small><small class="am" lang="am">ከእያንዳንዱ ሙከራ በኋላ ይጻፉት።</small></div></div>
+<div class="week"><div class="w">Week 1 · ሳምንት 1</div><p class="en">Choose one problem. Talk to five people who have it. Do the lemon battery.</p><p class="am" lang="am">አንድ ችግር ይምረጡ። ችግሩ ካለባቸው አምስት ሰዎች ጋር ይነጋገሩ። የሎሚ ባትሪውን ይሥሩ።</p></div>
+<div class="week"><div class="w">Week 2 · ሳምንት 2</div><p class="en">Strip three old devices safely. Sort your parts. Identify your transistors.</p><p class="am" lang="am">ሦስት አሮጌ መሣሪያዎችን በጥንቃቄ ይፍቱ። ዕቃዎችዎን ይለዩ። ትራንዚስተሮችዎን ይለዩ።</p></div>
+<div class="week"><div class="w">Week 3 · ሳምንት 3</div><p class="en">Build the dry-soil alarm. Measure dry and wet soil. Tune R1.</p><p class="am" lang="am">የደረቅ አፈር ማንቂያውን ይገንቡ። ደረቅና እርጥብ አፈርን ይለኩ። R1 ን ያስተካክሉ።</p></div>
+<div class="week"><div class="w">Week 4 · ሳምንት 4</div><p class="en">Test it with two real farmers or gardeners. Write what you learned and share it online.</p><p class="am" lang="am">ከሁለት እውነተኛ ገበሬዎች ወይም አትክልተኞች ጋር ይፈትሹት። የተማሩትን ጽፈው በኢንተርኔት ያጋሩ።</p></div>
+</div><h3 style="margin-top:28px">The problem-solving canvas · የችግር መፍቻ ሸራ</h3><div class="canvas"><div class="box"><span class="n">1</span><b class="en">The problem</b><span class="am" lang="am">ችግሩ</span><small class="en">What hurts, in one sentence?</small><small class="am" lang="am">ምን ይጎዳል? በአንድ ዓረፍተ ነገር።</small></div><div class="box"><span class="n">2</span><b class="en">Who has it</b><span class="am" lang="am">ችግሩ ያለበት ማነው</span><small class="en">Who suffers, how many, how often?</small><small class="am" lang="am">ማን ይሰቃያል? ስንት ናቸው? በምን ያህል ድግግሞሽ?</small></div><div class="box"><span class="n">3</span><b class="en">Root cause</b><span class="am" lang="am">መሠረታዊ ምክንያት</span><small class="en">Ask “why?” five times.</small><small class="am" lang="am">«ለምን?» የሚለውን አምስት ጊዜ ይጠይቁ።</small></div><div class="box"><span class="n">4</span><b class="en">What I already have</b><span class="am" lang="am">ቀድሞ ያለኝ</span><small class="en">Skills, people, tools, scrap, materials.</small><small class="am" lang="am">ክህሎት፣ ሰዎች፣ መሣሪያ፣ ቁርጥራጭ፣ ቁሳቁስ።</small></div><div class="box"><span class="n">5</span><b class="en">The science</b><span class="am" lang="am">ሳይንሱ</span><small class="en">Which law or principle makes my solution work?</small><small class="am" lang="am">መፍትሔዬን እንዲሰራ የሚያደርገው የትኛው ሕግ ወይም መርህ ነው?</small></div><div class="box"><span class="n">6</span><b class="en">Smallest test</b><span class="am" lang="am">ትንሹ ሙከራ</span><small class="en">What can I build and measure in one week?</small><small class="am" lang="am">በአንድ ሳምንት ምን መገንባትና መለካት እችላለሁ?</small></div><div class="box"><span class="n">7</span><b class="en">Who can help · who pays</b><span class="am" lang="am">ማን ይረዳል · ማን ይከፍላል</span><small class="en">Partners, mentors; user, cooperative, NGO, company?</small><small class="am" lang="am">አጋሮች፣ አማካሪዎች፤ ተጠቃሚ፣ ማኅበር፣ ድርጅት፣ ኩባንያ?</small></div><div class="box"><span class="n">8</span><b class="en">Results and lessons</b><span class="am" lang="am">ውጤትና ትምህርት</span><small class="en">Numbers from each test, and what I will change.</small><small class="am" lang="am">ከእያንዳንዱ ሙከራ የተገኙ ቁጥሮች፣ እና የምቀይረው።</small></div></div>
   <div class="pair" style="margin-top:22px">
     <div class="en"><h3>Check yourself</h3>
-<details><summary>1. Where does an entrepreneur start: with a product or a problem?</summary><p>With a problem that hurts someone, happens often and costs money or time.</p></details>
-<details><summary>2. Which ordinary material is a chip's wafer made from?</summary><p>Quartz sand, turned into ultra-pure silicon.</p></details>
-<details><summary>3. Why does Africa earn little even though it mines a lot?</summary><p>Most refining, design and manufacturing, where value is added, happens outside Africa.</p></details>
-<details><summary>4. What is an MVP?</summary><p>A minimum viable product: the simplest version that solves the problem well enough to learn from real users.</p></details>
-<details><summary>5. Name one mineral found at Ethiopia's Kenticha deposit.</summary><p>Tantalum (lithium is there too).</p></details></div>
+<details><summary>1. What did William Kamkwamba use to learn how to build his windmill?</summary><p>A textbook called <i>Using Energy</i> from a small village library.</p></details>
+<details><summary>2. Why does a red LED need about three lemons?</summary><p>Each lemon gives about 0.9 V; a red LED needs about 1.8–2 V.</p></details>
+<details><summary>3. What does boron do when added to silicon?</summary><p>It leaves a missing electron (a hole), making p-type silicon.</p></details>
+<details><summary>4. In the dry-soil alarm, why does wet soil turn the LED off?</summary><p>Wet soil conducts, pulling the transistor's base below about 0.6 V, so it switches off.</p></details>
+<details><summary>5. Why should you never burn cables to get copper?</summary><p>The smoke is toxic.</p></details>
+<details><summary>6. Name one mineral found at Ethiopia's Kenticha deposit.</summary><p>Tantalum (lithium is there too).</p></details></div>
     <div class="am" lang="am"><h3>ራስዎን ይፈትሹ</h3>
-<details><summary>1. ሥራ ፈጣሪ የሚጀምረው ከምርት ነው ወይስ ከችግር?</summary><p>አንድን ሰው ከሚጎዳ፣ በተደጋጋሚ ከሚከሰትና ገንዘብ ወይም ጊዜ ከሚያባክን ችግር።</p></details>
-<details><summary>2. የቺፕ ዌፈር ከየትኛው ተራ ቁሳቁስ ይሰራል?</summary><p>ከኳርትዝ አሸዋ፤ ወደ እጅግ ንጹሕ ሲሊከን ይቀየራል።</p></details>
-<details><summary>3. አፍሪካ ብዙ እያመረተች ለምን ትንሽ ታገኛለች?</summary><p>እሴት የሚጨመርባቸው ማጣራት፣ ንድፍና ማምረት በአብዛኛው ከአፍሪካ ውጭ ስለሚከናወኑ ነው።</p></details>
-<details><summary>4. MVP ምንድን ነው?</summary><p>አነስተኛ አዋጭ ምርት፦ ከእውነተኛ ተጠቃሚዎች ለመማር የሚያስችል፣ ችግሩን በበቂ ሁኔታ የሚፈታ ቀላሉ ስሪት።</p></details>
-<details><summary>5. በኢትዮጵያ ቀንጢቻ ክምችት የሚገኝ አንድ ማዕድን ይጥቀሱ።</summary><p>ታንታለም (ሊቲየምም አለ)።</p></details></div>
+<details><summary>1. ዊልያም ካምክዋምባ የነፋስ ወፍጮውን አሠራር የተማረው በምን ነበር?</summary><p>ከመንደሩ ትንሽ ቤተ መጻሕፍት በተገኘ <i>Using Energy</i> በተባለ መጽሐፍ።</p></details>
+<details><summary>2. ቀይ ኤልኢዲ ለምን ሦስት ሎሚ ገደማ ይፈልጋል?</summary><p>እያንዳንዱ ሎሚ 0.9 V ገደማ ይሰጣል፤ ቀይ ኤልኢዲ ደግሞ 1.8–2 V ገደማ ይፈልጋል።</p></details>
+<details><summary>3. ቦሮን በሲሊከን ላይ ሲጨመር ምን ያደርጋል?</summary><p>የጎደለ ኤሌክትሮን (ቀዳዳ) ይተዋል፤ p-ዓይነት ሲሊከን ይፈጥራል።</p></details>
+<details><summary>4. በደረቅ አፈር ማንቂያው ውስጥ እርጥብ አፈር ኤልኢዲውን ለምን ያጠፋል?</summary><p>እርጥብ አፈር ኤሌክትሪክ ስለሚያስተላልፍ የትራንዚስተሩን ቤዝ ከ0.6 V በታች ያወርዳል፤ ትራንዚስተሩም ይጠፋል።</p></details>
+<details><summary>5. መዳብ ለማግኘት ገመዶችን ለምን በፍጹም ማቃጠል የለብዎትም?</summary><p>ጭሱ መርዛማ ስለሆነ።</p></details>
+<details><summary>6. በኢትዮጵያ ቀንጢቻ ክምችት የሚገኝ አንድ ማዕድን ይጥቀሱ።</summary><p>ታንታለም (ሊቲየምም አለ)።</p></details></div>
   </div>
 </section>
 
@@ -434,11 +443,26 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
 
 <footer class="wrap">
   <div class="pair">
-    <div class="en"><p>Written on November 13, 2026. Selam is an imaginary character; mineral shares are USGS estimates for 2025 and change every year.</p></div>
-    <div class="am" lang="am"><p>ይህ ትምህርት የተጻፈው ኖቬምበር 13 ቀን 2026 ነው። ሰላም ምናባዊ ገጸ-ባሕርይ ናት፤ የማዕድን ድርሻዎቹ የUSGS የ2025 ግምቶች ሲሆኑ በየዓመቱ ይለዋወጣሉ።</p></div>
+    <div class="en"><p>Written on November 13, 2026. Every person and event in this lesson is real and sourced below. Mineral shares are USGS estimates for 2025 and change every year.</p></div>
+    <div class="am" lang="am"><p>ይህ ትምህርት የተጻፈው ኖቬምበር 13 ቀን 2026 ነው። በዚህ ትምህርት ውስጥ ያሉ ሰዎችና ክስተቶች ሁሉ እውነተኛ ሲሆኑ ምንጮቻቸው ከታች ተዘርዝረዋል። የማዕድን ድርሻዎቹ የUSGS የ2025 ግምቶች ሲሆኑ በየዓመቱ ይለዋወጣሉ።</p></div>
   </div>
   <h3>Sources · ምንጮች</h3>
   <ul>
+    <li><a href="https://www.engineeringforchange.org/?p=4627">Engineering for Change: William Kamkwamba's windmill</a></li>
+    <li><a href="https://openlibrary.org/books/OL25202365M">Open Library: The Boy Who Harnessed the Wind</a></li>
+    <li><a href="https://alum.mit.edu/node/1292">MIT: From Sierra Leone, Focus comes to MIT (Kelvin Doe)</a></li>
+    <li><a href="https://theworld.org/stories/2013/08/15/dj-focus-becomes-youngest-visiting-practitioner-mit">The World: DJ Focus becomes youngest visiting practitioner at MIT</a></li>
+    <li><a href="https://www.africanews.com/amp/2018/06/14/ugandan-wins-africa-prize-for-developing-bloodless-malaria-test/">Africanews: Brian Gitta wins the Africa Prize for Matibabu</a></li>
+    <li><a href="https://www.ksl.com/article/46348599">AP via KSL: Matibabu prototype accuracy</a></li>
+    <li><a href="https://www.wipo.int/pressroom/en/news/2014/news_0016.html">WIPO: Cardiopad, reaching the hearts of rural communities</a></li>
+    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4221323">PMC: The Cardio Pad (Arthur Zang)</a></li>
+    <li><a href="https://www.howwemadeitinafrica.com/how-cameroons-rolex-award-winner-created-africas-first-medical-tablet/">How We Made It In Africa: Cameroon's medical tablet</a></li>
+    <li><a href="https://eng.addisstandard.com/?p=18708">Addis Standard: Pazion Cherinet, first Ethiopian shortlisted for the Africa Prize</a></li>
+    <li><a href="https://addisstandard.com/?p=30724">Addis Standard: Fikru Gebre Dinkumbab shortlisted, 2023</a></li>
+    <li><a href="https://capitalethiopia.com/2024/07/12/esther-kimani-2022-youth-adapt-winner-awarded-2024-africa-prize-for-engineering-innovation/">Capital Ethiopia: Esther Kimani wins the 2024 Africa Prize</a></li>
+    <li><a href="https://www.umicore.com/en/media/newsroom/umicore-and-stl-sign-partnership-related-to-germanium-recycling/">Umicore: germanium from Big Hill's mining waste</a></li>
+    <li><a href="https://www.diy.org/challenges/make-a-moisture-sensor">DIY.org: how a two-probe moisture sensor uses soil conductivity</a></li>
+    <li><a href="https://circuitdigest.com/electronic-circuits/soil-moisture-sensor-circuit-diagram">Circuit Digest: transistor soil moisture detector</a></li>
     <li><a href="https://www.riotimesonline.com/africa-critical-minerals-who-holds-what-2026/">Rio Times: Africa's critical minerals, who holds what (USGS 2026 data)</a></li>
     <li><a href="https://www.cobaltinstitute.org/wp-content/uploads/2026/05/Cobalt-Market-Report-2025.pdf">Cobalt Institute: Cobalt Market Report 2025</a></li>
     <li><a href="https://www.iisd.org/system/files/2026-06/country-profile-democratic-republic-congo_0.pdf">IISD: DR Congo country profile (Bisie tin mine)</a></li>
@@ -514,6 +538,87 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
   }
   btns.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
   try { var saved = localStorage.getItem("ts-lang"); if (saved) setLang(saved); } catch (e) {}
+})();
+</script>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function mk(p, n, a, t) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (t) e.textContent = t; p.appendChild(e); return e; }
+  var d = document.getElementById("dope");
+  if (d) {
+    var panels = [["Pure silicon", "ንጹሕ ሲሊከን", null], ["n-type: + phosphorus", "n-ዓይነት፦ + ፎስፈረስ", "P"], ["p-type: + boron", "p-ዓይነት፦ + ቦሮን", "B"]];
+    panels.forEach(function (pn, k) {
+      var ox = 40 + k * 340, oy = 30;
+      for (var r = 0; r < 3; r++) for (var c = 0; c < 3; c++) {
+        var x = ox + 50 + c * 80, y = oy + 30 + r * 60;
+        if (c < 2) mk(d, "line", { x1: x, y1: y, x2: x + 80, y2: y, "class": "s-rule", "stroke-width": 3 });
+        if (r < 2) mk(d, "line", { x1: x, y1: y, x2: x, y2: y + 60, "class": "s-rule", "stroke-width": 3 });
+      }
+      for (var r2 = 0; r2 < 3; r2++) for (var c2 = 0; c2 < 3; c2++) {
+        var cx = ox + 50 + c2 * 80, cy = oy + 30 + r2 * 60, special = pn[2] && r2 === 1 && c2 === 1;
+        mk(d, "circle", { cx: cx, cy: cy, r: 18, "class": special ? (pn[2] === "P" ? "f-accent" : "f-copper") : "f-accent-soft" });
+        mk(d, "text", { x: cx, y: cy + 5, "text-anchor": "middle", "class": (special ? "t-ink" : "t-ink") + " svg-lbl" }, special ? pn[2] : "Si");
+      }
+      if (pn[2] === "P") { mk(d, "circle", { cx: ox + 160, cy: oy + 70, r: 7, "class": "f-ink" }); mk(d, "text", { x: ox + 175, y: oy + 66, "class": "t-accent svg-mono" }, "free e⁻"); }
+      if (pn[2] === "B") { mk(d, "circle", { cx: ox + 160, cy: oy + 70, r: 7, "class": "f-paper s-copper", "stroke-width": 2.5, fill: "none" }); mk(d, "text", { x: ox + 175, y: oy + 66, "class": "t-copper svg-mono" }, "hole"); }
+      mk(d, "text", { x: ox + 130, y: oy + 200, "text-anchor": "middle", "class": "t-ink svg-lbl" }, pn[0]);
+      mk(d, "text", { x: ox + 130, y: oy + 224, "text-anchor": "middle", "class": "t-muted svg-lbl-am" }, pn[1]);
+    });
+    mk(d, "text", { x: 520, y: 290, "text-anchor": "middle", "class": "t-muted svg-mono" }, "p | n  →  diode: current flows one way · ዳዮድ፦ በአንድ አቅጣጫ ብቻ");
+  }
+  var s = document.getElementById("schem");
+  if (s) {
+    function L(x1, y1, x2, y2, cls) { mk(s, "line", { x1: x1, y1: y1, x2: x2, y2: y2, "class": cls || "s-ink", "stroke-width": 3, "stroke-linecap": "round" }); }
+    function T(x, y, t, cls, anchor) { mk(s, "text", { x: x, y: y, "text-anchor": anchor || "middle", "class": cls || "t-ink svg-lbl" }, t); }
+    function R(x, y, vertical, label, sub) {
+      if (vertical) { mk(s, "rect", { x: x - 12, y: y, width: 24, height: 60, rx: 4, "class": "f-copper-soft s-copper", "stroke-width": 3 }); T(x + 22, y + 28, label, "t-ink svg-lbl", "start"); T(x + 22, y + 48, sub, "t-muted svg-mono", "start"); }
+    }
+    var top = 50, bot = 330;
+    // rails
+    L(120, top, 900, top); L(120, bot, 900, bot);
+    T(120, top - 14, "+ 4.5 V (3 × AA)", "t-copper svg-lbl", "start"); T(120, bot + 30, "− 0 V", "t-ink svg-lbl", "start");
+    // battery symbol on left
+    L(120, top, 120, 160); L(120, 220, 120, bot);
+    L(95, 160, 145, 160); L(108, 175, 132, 175); L(95, 190, 145, 190); L(108, 205, 132, 205); L(120, 205, 120, 220);
+    T(58, 186, "Battery", "t-muted svg-mono", "middle"); T(58, 204, "ባትሪ", "t-muted svg-lbl-am", "middle");
+    // R1 from top to base node (x=400)
+    L(400, top, 400, 90); R(400, 90, true, "R1", "47 kΩ"); L(400, 150, 400, 200);
+    mk(s, "circle", { cx: 400, cy: 200, r: 5, "class": "f-ink" });
+    // probes: base node -> nail 1 (in soil) ... soil ... nail 2 -> ground
+    L(400, 200, 255, 200); L(255, 200, 255, 232);
+    mk(s, "rect", { x: 235, y: 240, width: 150, height: 40, rx: 6, "class": "f-copper", opacity: 0.3 });
+    L(255, 232, 255, 278, "s-ink"); L(365, 232, 365, 278, "s-ink");
+    L(365, 232, 365, 222); L(365, 278, 365, bot);
+    T(310, 265, "soil", "t-ink svg-mono");
+    T(300, 302, "2 nails in soil", "t-muted svg-mono"); T(300, 320, "2 ሚስማሮች በአፈር", "t-muted svg-lbl-am");
+    // base wire to transistor
+    L(400, 200, 560, 200);
+    // NPN transistor at (600,200)
+    mk(s, "circle", { cx: 600, cy: 200, r: 42, fill: "none", "class": "s-ink", "stroke-width": 2.5 });
+    L(578, 170, 578, 230); L(560, 200, 578, 200);
+    L(578, 185, 620, 160); L(578, 215, 620, 240);
+    mk(s, "path", { d: "M612 232 L620 240 L608 242 Z", "class": "f-ink" });
+    T(548, 190, "B", "t-accent svg-big"); T(632, 152, "C", "t-accent svg-big", "start"); T(632, 258, "E", "t-accent svg-big", "start");
+    T(600, 280, "NPN (BC547)", "t-muted svg-mono");
+    // collector up to LED and R2
+    L(620, 160, 620, 140); L(620, 140, 760, 140); L(760, 140, 760, 130);
+    // LED (triangle pointing down = current from + down to collector)
+    mk(s, "path", { d: "M745 110 L775 110 L760 130 Z", "class": "f-copper" }); L(745, 130, 775, 130);
+    L(778, 112, 792, 100, "s-copper"); L(784, 120, 798, 108, "s-copper");
+    T(810, 125, "LED", "t-ink svg-lbl", "start");
+    L(760, 110, 760, 100);
+    // R2 between top rail and LED
+    mk(s, "rect", { x: 748, y: 58, width: 24, height: 42, rx: 4, "class": "f-copper-soft s-copper", "stroke-width": 3 });
+    T(790, 82, "R2 220 Ω", "t-ink svg-lbl", "start"); L(760, top, 760, 58);
+    // emitter to ground
+    L(620, 240, 620, bot);
+    // labels for states
+    T(900, 200, "Dry soil → LED ON", "t-copper svg-lbl", "end");
+    T(900, 222, "ደረቅ አፈር → ኤልኢዲ ይበራል", "t-copper svg-lbl-am", "end");
+    T(900, 252, "Wet soil → LED OFF", "t-accent svg-lbl", "end");
+    T(900, 274, "እርጥብ አፈር → ኤልኢዲ ይጠፋል", "t-accent svg-lbl-am", "end");
+  }
 })();
 </script>
 <script data-goatcounter="https://ambkidsjoy.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
