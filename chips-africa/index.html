@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selam and the Chip</title>
+<meta name="description" content="A story-lesson in English and Amharic: follow Selam from a dry field to her first device, and learn how chips are made, what Africa holds, and a practical entrepreneurial way to solve problems.">
+<meta name="author" content="Mulusew Kassa Bitew">
+<link rel="canonical" href="https://muler-21.github.io/Teck_Stories/chips-africa/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tech Stories · የቴክ ታሪኮች">
+<meta property="og:title" content="Selam and the Chip: from African rocks to young founders">
+<meta property="og:description" content="A story-lesson on chips, Africa's minerals and a practical entrepreneurial mindset. English + Amharic · በእንግሊዝኛ እና በአማርኛ">
+<meta property="og:url" content="https://muler-21.github.io/Teck_Stories/chips-africa/">
+<meta property="og:image" content="https://muler-21.github.io/Teck_Stories/chips-africa/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://muler-21.github.io/Teck_Stories/chips-africa/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Noto+Serif+Ethiopic:wght@400;600;700&family=Noto+Sans+Ethiopic:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a lesson that climbs from rock to chip to career; each part is a block with English and Amharic side by side on wide screens, stacked on phones. Accent: copper (the metal inside every chip) on a cool slate ground. */
+:root {
+  --paper: #f2f4f6;
+  --panel: #ffffff;
+  --ink: #131a24;
+  --muted: #56606f;
+  --rule: #d6dbe2;
+  --accent: #0f7a6c;
+  --accent-soft: #e0f1ee;
+  --copper: #b5602b;
+  --copper-soft: #f7e7dc;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --ethi: "Noto Serif Ethiopic", "Nyala", "Abyssinica SIL", serif;
+  --ethi-sans: "Noto Sans Ethiopic", "Nyala", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1318; --panel: #151c24; --ink: #e6eaef; --muted: #9aa5b3; --rule: #27313d;
+    --accent: #4cc3b0; --accent-soft: #15302d; --copper: #e08a52; --copper-soft: #33231a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1318; --panel: #151c24; --ink: #e6eaef; --muted: #9aa5b3; --rule: #27313d;
+  --accent: #4cc3b0; --accent-soft: #15302d; --copper: #e08a52; --copper-soft: #33231a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.65; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+header.hero { padding: 36px 0 28px; border-bottom: 1px solid var(--rule); }
+.home-link { font: 600 14px var(--display); text-decoration: none; display: inline-block; margin-bottom: 16px; }
+.kicker { font: 500 13px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--copper); margin: 0 0 12px; }
+h1 { font: 800 clamp(34px, 6vw, 60px)/1.03 var(--display); margin: 0; letter-spacing: -0.02em; text-wrap: balance; max-width: 18ch; }
+h1 .am-title { display: block; font: 700 .58em/1.4 var(--ethi-sans); color: var(--accent); margin-top: 10px; letter-spacing: 0; max-width: none; }
+.dek { color: var(--muted); max-width: 64ch; margin: 14px 0 0; }
+.dek.am { font-family: var(--ethi); line-height: 1.9; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 24px; }
+.stat { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px 16px; }
+.stat b { display: block; font: 800 34px/1.1 var(--display); color: var(--copper); font-variant-numeric: tabular-nums; }
+.stat span { display: block; font-size: 15px; color: var(--muted); line-height: 1.45; }
+.stat span.am { font-family: var(--ethi); margin-top: 4px; }
+
+.toolbar { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+.toolbar .wrap { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; padding-top: 10px; padding-bottom: 10px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: var(--panel); }
+.seg button { font: 600 14px/1 var(--display); color: var(--muted); background: none; border: 0; padding: 9px 14px; border-radius: 999px; cursor: pointer; }
+.seg button .e { font-family: var(--ethi-sans); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+nav.chapters { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+nav.chapters::-webkit-scrollbar { display: none; }
+nav.chapters a { font: 500 13px/1 var(--mono); color: var(--muted); text-decoration: none; padding: 8px 9px; border-radius: 6px; white-space: nowrap; }
+nav.chapters a:hover { background: var(--accent-soft); color: var(--ink); }
+
+main { padding: 8px 0 30px; }
+section.ch { padding: 44px 0 36px; border-bottom: 1px solid var(--rule); scroll-margin-top: 70px; }
+.ch-tag { display: flex; gap: 12px; align-items: baseline; margin-bottom: 18px; flex-wrap: wrap; }
+.ch-tag .yr { font: 700 14px/1 var(--mono); color: var(--paper); background: var(--copper); padding: 6px 9px; border-radius: 4px; }
+.ch-tag .part { font: 500 13px/1 var(--mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.pair { display: grid; grid-template-columns: 1fr; gap: 26px; }
+@media (min-width: 900px) { body[data-lang="both"] .pair { grid-template-columns: 1fr 1fr; gap: 44px; } }
+body[data-lang="en"] .am, body[data-lang="am"] .en { display: none !important; }
+body[data-lang="en"] .pair > .en, body[data-lang="am"] .pair > .am { max-width: 70ch; }
+h2 { font: 800 clamp(26px, 3.4vw, 36px)/1.12 var(--display); margin: 0 0 14px; text-wrap: balance; letter-spacing: -0.01em; }
+.am h2 { font: 700 clamp(23px, 3vw, 31px)/1.4 var(--ethi-sans); letter-spacing: 0; }
+h3 { font: 700 19px/1.3 var(--display); margin: 22px 0 8px; }
+.am h3 { font: 700 18px/1.5 var(--ethi-sans); }
+.pair p { margin: 0 0 14px; }
+.pair ul, .pair ol { margin: 0 0 14px; padding-left: 22px; }
+.pair li { margin-bottom: 6px; }
+.am { font-family: var(--ethi); line-height: 1.95; font-size: 18.5px; }
+@media (max-width: 899px) { body[data-lang="both"] .pair > .am { background: var(--accent-soft); border-radius: 12px; padding: 18px 18px 6px; } }
+.callout { border-left: 4px solid var(--copper); background: var(--copper-soft); padding: 12px 16px; border-radius: 0 10px 10px 0; margin: 16px 0; }
+
+figure { margin: 28px 0 0; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
+figure .scroll { overflow-x: auto; }
+figure svg { display: block; width: 100%; min-width: 600px; height: auto; }
+figcaption { display: grid; gap: 4px; margin-top: 10px; font-size: 15px; color: var(--muted); }
+figcaption .am { font-size: 15.5px; line-height: 1.7; }
+body[data-lang="en"] figcaption .am, body[data-lang="am"] figcaption .en { display: none; }
+.t-ink { fill: var(--ink); } .t-muted { fill: var(--muted); } .t-copper { fill: var(--copper); } .t-accent { fill: var(--accent); }
+.s-rule { stroke: var(--rule); } .f-panel { fill: var(--panel); } .f-copper { fill: var(--copper); } .f-accent { fill: var(--accent); } .f-accent-soft { fill: var(--accent-soft); } .f-copper-soft { fill: var(--copper-soft); } .f-rule { fill: var(--rule); }
+.svg-lbl { font: 600 15px var(--display); } .svg-lbl-am { font: 600 14px var(--ethi-sans); } .svg-mono { font: 500 13px var(--mono); } .svg-big { font: 800 18px var(--display); }
+
+/* materials table */
+.tbl-wrap { overflow-x: auto; margin-top: 26px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 15.5px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 700 13px var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--paper); }
+td .am { display: block; font-size: 15px; line-height: 1.7; color: var(--muted); margin-top: 3px; }
+td.el { font: 800 17px var(--display); white-space: nowrap; }
+td.el small { display: block; font: 500 12px var(--mono); color: var(--copper); }
+tr:last-child td { border-bottom: 0; }
+
+/* process steps */
+.steps { list-style: none; padding: 0; margin: 26px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; counter-reset: s; }
+.steps li { counter-increment: s; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; position: relative; }
+.steps li::before { content: counter(s); font: 700 14px/28px var(--mono); text-align: center; width: 28px; height: 28px; border-radius: 6px; background: var(--copper); color: var(--paper); display: block; margin-bottom: 10px; }
+.steps li.loop { border-color: var(--accent); background: var(--accent-soft); }
+.steps b { font: 700 17px/1.3 var(--display); display: block; }
+.steps .am b { font: 700 16px/1.5 var(--ethi-sans); }
+.steps p { margin: 6px 0 0; font-size: 15.5px; line-height: 1.55; }
+.steps .am { font-size: 15.5px; line-height: 1.75; margin-top: 8px; }
+body[data-lang="both"] .steps .am { border-top: 1px dashed var(--rule); padding-top: 8px; }
+
+/* country cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 26px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; display: grid; gap: 6px; align-content: start; }
+.card .cn { font: 800 19px var(--display); }
+.card .cn .am { font: 700 16px var(--ethi-sans); color: var(--accent); margin-left: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 600 12px/1 var(--mono); padding: 5px 8px; border-radius: 999px; background: var(--copper-soft); color: var(--copper); }
+.chip.ind { background: var(--accent-soft); color: var(--accent); }
+.card p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+.card p.am { font-size: 15.5px; line-height: 1.75; }
+.card.et { border: 2px solid var(--copper); }
+
+/* youth ladder */
+.ladder { display: grid; gap: 12px; margin-top: 26px; }
+.rung { display: grid; grid-template-columns: 1fr; gap: 10px; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 18px; }
+@media (min-width: 900px) { body[data-lang="both"] .rung { grid-template-columns: 170px 1fr 1fr; gap: 26px; } body[data-lang="en"] .rung, body[data-lang="am"] .rung { grid-template-columns: 170px 1fr; gap: 26px; } }
+.rung .age { font: 800 20px/1.2 var(--display); color: var(--copper); }
+.rung .age small { display: block; font: 500 13px var(--mono); color: var(--muted); margin-top: 4px; }
+.rung ul { margin: 0; padding-left: 20px; font-size: 16px; }
+.rung li { margin-bottom: 5px; }
+.rung .am ul { font-size: 16px; line-height: 1.8; }
+
+details { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 16px; margin-top: 10px; }
+summary { cursor: pointer; font: 600 17px var(--display); }
+details .am summary, summary .am { font-family: var(--ethi-sans); }
+details p { margin: 10px 0 0; }
+
+footer { padding: 30px 0 60px; color: var(--muted); font-size: 15px; }
+footer h3 { font: 700 14px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin: 0 0 10px; }
+footer ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.author { margin-top: 30px; padding: 20px; border: 1px solid var(--rule); border-radius: 14px; background: var(--panel); color: var(--ink); font-size: 15.5px; line-height: 1.6; }
+.author .name { font: 800 20px var(--display); margin: 0 0 4px; }
+.author p { margin: 0 0 6px; }
+.author .meta, .author .copy { color: var(--muted); }
+.author .apps a { margin-right: 10px; }
+.author .copy { font-size: 14px; margin-top: 10px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+.story { font-style: italic; border-left: 4px solid var(--accent); padding: 4px 0 4px 16px; margin: 0 0 16px; }
+.am .story { font-style: normal; }
+.story-lbl, .tool-lbl, .mission-lbl { font: 700 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+.story-lbl { color: var(--accent); }
+.am .story-lbl, .am .tool-lbl, .am .mission-lbl { font-family: var(--ethi-sans); letter-spacing: 0; font-size: 13px; }
+.tool { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+.tool-lbl { color: var(--accent); }
+.mission { background: var(--copper-soft); border: 1px dashed var(--copper); border-radius: 12px; padding: 14px 16px; margin: 16px 0 0; }
+.mission-lbl { color: var(--copper); }
+.tool p, .mission p { margin: 0; }
+.tool ul, .mission ul, .mission ol { margin: 6px 0 0; }
+.note-fic { font-size: 15px; color: var(--muted); margin-top: 18px; }
+.canvas { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; margin-top: 22px; }
+.box { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; min-height: 130px; }
+.box .n { font: 700 13px var(--mono); color: var(--copper); }
+.box b { display: block; font: 700 16px/1.3 var(--display); margin: 4px 0 4px; }
+.box .am { display: block; font: 600 15px/1.6 var(--ethi-sans); color: var(--accent); }
+.box small { display: block; color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 6px; }
+.box small.am { font-family: var(--ethi); font-weight: 400; color: var(--muted); }
+body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
+.weeks { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 18px; }
+.week { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; }
+.week .w { font: 800 18px var(--display); color: var(--copper); }
+.week p { margin: 6px 0 0; font-size: 15.5px; line-height: 1.55; }
+.week p.am { font-size: 15.5px; line-height: 1.75; }
+</style>
+</head>
+<body data-lang="both">
+
+<header class="hero">
+  <div class="wrap">
+    <a class="home-link" href="../">← Tech Stories · የቴክ ታሪኮች</a>
+    <p class="kicker">Story-lesson · የታሪክ ትምህርት · English + አማርኛ</p>
+    <h1>Selam and the Chip
+      <span class="am-title" lang="am">ሰላምና ቺፑ</span>
+    </h1>
+    <p class="dek en">From African rocks to young founders. Follow Selam, 16, from a dry field to her first device. In each episode you learn how chips work, what Africa holds, and one practical tool for turning problems into solutions.</p>
+    <p class="dek am" lang="am">ከአፍሪካ ዐለቶች እስከ ወጣት መሥራቾች። የ16 ዓመቷን ሰላም ከደረቀው ማሳ እስከ የመጀመሪያ መሣሪያዋ ይከተሉ። በእያንዳንዱ ክፍል ቺፖች እንዴት እንደሚሰሩ፣ አፍሪካ ምን እንዳላት፣ እና ችግሮችን ወደ መፍትሔ የሚቀይር አንድ ተግባራዊ መሣሪያ ይማራሉ።</p>
+    <div class="stats">
+      <div class="stat"><b>~30%</b><span class="en">of the world's known critical-mineral reserves are in Africa</span><span class="am" lang="am">ከዓለም የታወቁ ወሳኝ ማዕድናት ክምችት 30% ገደማ በአፍሪካ ይገኛል</span></div>
+      <div class="stat"><b>&lt;1%</b><span class="en">of the world's semiconductor industry is in Africa</span><span class="am" lang="am">ከዓለም የሴሚኮንዳክተር ኢንዱስትሪ ከ1% ያነሰው ብቻ በአፍሪካ ነው</span></div>
+      <div class="stat"><b>8</b><span class="en">episodes, each with a story, the facts, a tool and a mission</span><span class="am" lang="am">ክፍሎች፤ እያንዳንዳቸው ታሪክ፣ እውነታዎች፣ መሣሪያና ተልዕኮ አላቸው</span></div>
+    </div>
+    <p class="note-fic en">Selam and her family are imaginary. Every fact and number around them is real and listed in the sources.</p>
+    <p class="note-fic am" lang="am">ሰላምና ቤተሰቧ ምናባዊ ገጸ-ባሕርያት ናቸው። በዙሪያቸው ያሉ እውነታዎችና ቁጥሮች ግን እውነተኛ ናቸው፤ በምንጮቹ ውስጥ ተዘርዝረዋል።</p>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap">
+    <div class="seg" role="group" aria-label="Language">
+      <button type="button" id="lang-both" data-lang="both" aria-pressed="true">Both · <span class="e">ሁለቱም</span></button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">English</button>
+      <button type="button" id="lang-am" data-lang="am" aria-pressed="false"><span class="e">አማርኛ</span></button>
+    </div>
+    <nav class="chapters" aria-label="Episodes">
+      <a href="#ep1">1 Problem</a><a href="#ep2">2 Resources</a><a href="#ep3">3 Loops</a><a href="#ep4">4 Value</a><a href="#ep5">5 Partners</a><a href="#ep6">6 MVP</a><a href="#ep7">7 Path</a><a href="#ep8">8 Canvas</a>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section class="ch" id="ep1">
+  <div class="ch-tag"><span class="yr">EPISODE 1</span><span class="part">The problem · ችግሩ</span></div>
+  <div class="pair">
+    <div class="en"><h2>The dry field</h2><p class="story"><span class="story-lbl">Story</span>Selam is 16 and lives near Debre Markos. Every dry season she watches her uncle Abebe guess when to water his vegetables. Some weeks he waters too little and the seedlings die. Other weeks he pumps too much and pays for fuel he did not need. One evening she asks: “What if the soil could tell us when it is thirsty?”</p><p>That question is where every business starts. Entrepreneurs do not begin with a product. They begin with a <b>problem</b> that hurts someone, happens often, and costs money or time.</p><p>Hidden inside Selam's question is a <b>chip</b>: a tiny brain that can read a sensor, make a decision and send a message. To use chips well, and one day to make them, she first needs to understand what they are.</p></div>
+    <div class="am" lang="am"><h2>የደረቀው ማሳ</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም የ16 ዓመት ልጅ ስትሆን የምትኖረው በደብረ ማርቆስ አቅራቢያ ነው። በየበጋው አጎቷ አበበ አትክልቶቹን መቼ ውሃ ማጠጣት እንዳለበት ሲገምት ታያለች። አንዳንድ ሳምንት በጣም ትንሽ ያጠጣል፤ ችግኞቹ ይሞታሉ። በሌላ ሳምንት ከልክ በላይ ውሃ ይስባል፤ ላላስፈለገው ነዳጅ ይከፍላል። አንድ ምሽት ሰላም ጠየቀች፦ «አፈሩ ራሱ ሲጠማው ቢነግረንስ?»</p><p>እያንዳንዱ ንግድ የሚጀምረው ከዚህ ዓይነቱ ጥያቄ ነው። ሥራ ፈጣሪዎች በምርት አይጀምሩም፤ የሚጀምሩት አንድን ሰው በሚጎዳ፣ በተደጋጋሚ በሚከሰት እና ገንዘብ ወይም ጊዜ በሚያባክን <b>ችግር</b> ነው።</p><p>በሰላም ጥያቄ ውስጥ <b>ቺፕ</b> ተደብቋል፦ ዳሳሽን አንብቦ ውሳኔ የሚሰጥና መልእክት የሚልክ ትንሽ አእምሮ። ቺፖችን በአግባቡ ለመጠቀም፣ አንድ ቀንም ለመሥራት፣ መጀመሪያ ምን እንደሆኑ መረዳት አለባት።</p></div>
+  </div>
+  
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Write a problem statement.</b> Answer four questions: Who has the problem? How often does it happen? What does it cost them? How do they solve it today?</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>List three problems in your village, school or city. Answer the four questions for each. Choose the one that hurts the most people, most often.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>የችግር መግለጫ ይጻፉ።</b> አራት ጥያቄዎችን ይመልሱ፦ ችግሩ ያለበት ማነው? ምን ያህል ጊዜ ይከሰታል? ምን ያሳጣቸዋል? ዛሬ እንዴት ይፈቱታል?</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>በመንደርዎ፣ በትምህርት ቤትዎ ወይም በከተማዎ ያሉ ሦስት ችግሮችን ይዘርዝሩ። ለእያንዳንዳቸው አራቱን ጥያቄዎች ይመልሱ። ብዙ ሰዎችን በተደጋጋሚ የሚጎዳውን ይምረጡ።</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="ep2">
+  <div class="ch-tag"><span class="yr">EPISODE 2</span><span class="part">Resources · ሀብቶች</span></div>
+  <div class="pair">
+    <div class="en"><h2>What is inside the box?</h2><p class="story"><span class="story-lbl">Story</span>Selam asks her cousin, who repairs phones in the market, for a broken phone. Together they open it. Under a metal cover sits a black square smaller than her fingernail: the chip. “Where does all this come from?” she asks. Her cousin smiles: “Much of it from our own continent.”</p><p>The heart of a chip is <b>silicon</b>, made from ordinary quartz sand. Silicon is a <i>semiconductor</i>: it conducts electricity only when we want it to, which is exactly what a switch needs. Around it, engineers add small amounts of other elements for wiring, switching and joining. Many of them are mined in Africa.</p></div>
+    <div class="am" lang="am"><h2>በሳጥኑ ውስጥ ምን አለ?</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም በገበያ ውስጥ ስልክ የሚጠግነውን የአጎቷን ልጅ የተበላሸ ስልክ ጠየቀችው። አብረው ከፈቱት። በብረት ሽፋን ስር ከጥፍሯ የሚያንስ ጥቁር ካሬ ተቀምጧል፦ ቺፑ። «ይህ ሁሉ ከየት ነው የሚመጣው?» ብላ ጠየቀች። የአጎቷ ልጅ ፈገግ አለ፦ «ብዙው ከራሳችን አህጉር ነው።»</p><p>የቺፕ ልብ ከተራ የኳርትዝ አሸዋ የሚሰራው <b>ሲሊከን</b> ነው። ሲሊከን <i>ሴሚኮንዳክተር</i> ነው፤ ኤሌክትሪክ የሚያስተላልፈው እኛ ስንፈልግ ብቻ ነው፤ ማብሪያ ማጥፊያ የሚያስፈልገው ይህንኑ ነው። መሐንዲሶች በዙሪያው ለሽቦ፣ ለማብሪያና ለማጣበቂያ የሌሎች ንጥረ ነገሮችን ትንሽ መጠን ይጨምራሉ። ብዙዎቹ በአፍሪካ ይመረታሉ።</p></div>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Material · ማዕድን</th><th>Job in electronics · በኤሌክትሮኒክስ ውስጥ ያለው ሥራ</th><th>Africa's place · የአፍሪካ ድርሻ</th></tr></thead>
+      <tbody>
+        <tr><td class="el">Silicon<small>Si · ሲሊከን</small></td><td>The wafer: the base on which every transistor is built. Made from quartz.<span class="am" lang="am">ዌፈሩ፦ እያንዳንዱ ትራንዚስተር የሚገነባበት መሠረት። ከኳርትዝ ይሰራል።</span></td><td>Quartz is common across Africa, including at Ethiopia's Kenticha area. The hard part is purifying it.<span class="am" lang="am">ኳርትዝ በመላው አፍሪካ፣ የኢትዮጵያ ቀንጢቻ አካባቢን ጨምሮ፣ ይገኛል። ከባዱ ሥራ ማጣራቱ ነው።</span></td></tr>
+        <tr><td class="el">Copper<small>Cu · መዳብ</small></td><td>Microscopic wiring inside the chip and on circuit boards.<span class="am" lang="am">በቺፑ ውስጥና በሰሌዳዎች ላይ ያሉ እጅግ ጥቃቅን ሽቦዎች።</span></td><td>DR Congo is the world's 2nd-largest producer (14%); Zambia 4%.<span class="am" lang="am">ኮንጎ ዲ.ሪ. በዓለም 2ኛዋ አምራች (14%)፤ ዛምቢያ 4%።</span></td></tr>
+        <tr><td class="el">Tantalum<small>Ta · ታንታለም</small></td><td>Tiny, reliable capacitors that sit next to chips in phones and computers.<span class="am" lang="am">በስልኮችና በኮምፒውተሮች ውስጥ ከቺፖች አጠገብ የሚቀመጡ ትናንሽና አስተማማኝ «ካፓሲተሮች»።</span></td><td>DR Congo 52%, Africa about 85% of world output. Ethiopia has reserves at Kenticha.<span class="am" lang="am">ኮንጎ ዲ.ሪ. 52%፣ አፍሪካ በአጠቃላይ 85% ገደማ። ኢትዮጵያ በቀንጢቻ ክምችት አላት።</span></td></tr>
+        <tr><td class="el">Cobalt<small>Co · ኮባልት</small></td><td>Used in very fine contacts and wiring layers of modern chips, and in device batteries.<span class="am" lang="am">በዘመናዊ ቺፖች ጥቃቅን መገናኛዎችና የሽቦ ንብርብሮች፣ እንዲሁም በባትሪዎች ውስጥ።</span></td><td>DR Congo 73% of mined cobalt, but China makes 79% of refined cobalt.<span class="am" lang="am">ኮንጎ ዲ.ሪ. ከተመረተው ኮባልት 73%፤ ቻይና ግን የተጣራውን ኮባልት 79% ታመርታለች።</span></td></tr>
+        <tr><td class="el">Tin<small>Sn · ቆርቆሮ</small></td><td>Solder that joins chips to boards. Also used as the light source inside the newest chip-printing machines.<span class="am" lang="am">ቺፖችን ከሰሌዳ ጋር የሚያጣብቅ «ሶልደር»። በአዳዲሶቹ የቺፕ ማተሚያ ማሽኖች ውስጥ ለብርሃን ምንጭነትም ያገለግላል።</span></td><td>DR Congo's Bisie mine alone produced 6.4% of world tin in 2025.<span class="am" lang="am">በ2025 የኮንጎ ቢሲዬ ማዕድን ብቻውን ከዓለም ቆርቆሮ 6.4% አምርቷል።</span></td></tr>
+        <tr><td class="el">Germanium<small>Ge · ጀርማኒየም</small></td><td>Fast transistors, fibre-optic cables, infrared sensors and solar cells.<span class="am" lang="am">ፈጣን ትራንዚስተሮች፣ የፋይበር ኦፕቲክ ገመዶች፣ የኢንፍራሬድ ዳሳሾችና የፀሐይ ሴሎች።</span></td><td>DR Congo now recovers it from old mining waste at Big Hill, Lubumbashi.<span class="am" lang="am">ኮንጎ ዲ.ሪ. አሁን በሉቡምባሺ «ቢግ ሂል» ከሚገኝ የድሮ የማዕድን ቆሻሻ ታወጣዋለች።</span></td></tr>
+        <tr><td class="el">Gallium<small>Ga · ጋሊየም</small></td><td>LEDs, 5G radios and power chips (gallium nitride and gallium arsenide).<span class="am" lang="am">ኤልኢዲ መብራቶች፣ የ5G ሬዲዮዎችና የኃይል ቺፖች።</span></td><td>A by-product of turning bauxite into alumina. Guinea mines 34% of world bauxite, yet China makes about 98% of gallium.<span class="am" lang="am">ባውክሳይትን ወደ አሉሚና ሲቀይሩ የሚገኝ ተረፈ ምርት። ጊኒ ከዓለም ባውክሳይት 34% ታመርታለች፤ ጋሊየምን ግን 98% ገደማ የምታመርተው ቻይና ናት።</span></td></tr>
+        <tr><td class="el">Platinum group<small>Pt, Pd · ፕላቲኒየም</small></td><td>Palladium and platinum appear in some capacitors, contacts and sensors.<span class="am" lang="am">ፓላዲየምና ፕላቲኒየም በአንዳንድ ካፓሲተሮች፣ መገናኛዎችና ዳሳሾች ውስጥ ይገኛሉ።</span></td><td>South Africa 71% of world platinum, 37% of palladium.<span class="am" lang="am">ደቡብ አፍሪካ ከዓለም ፕላቲኒየም 71%፣ ከፓላዲየም 37%።</span></td></tr>
+        <tr><td class="el">Gold<small>Au · ወርቅ</small></td><td>Thin bonding wires and contacts that never rust.<span class="am" lang="am">የማይዝጉ ቀጭን ማገናኛ ሽቦዎችና መገናኛዎች።</span></td><td>Mined in Ghana, Mali, South Africa, Ethiopia and many others.<span class="am" lang="am">በጋና፣ ማሊ፣ ደቡብ አፍሪካ፣ ኢትዮጵያና በሌሎች ብዙ አገሮች ይመረታል።</span></td></tr>
+        <tr><td class="el">Process chemicals<small>B, P, H₂SO₄ · ኬሚካሎች</small></td><td>Boron and phosphorus as dopants; ultra-pure acids, gases and water to clean every layer.<span class="am" lang="am">ቦሮንና ፎስፈረስ እንደ ዶፓንት፤ እያንዳንዱን ንብርብር ለማጽዳት እጅግ ንጹሕ አሲዶች፣ ጋዞችና ውሃ።</span></td><td>Morocco's OCP is among the world's largest producers of sulphuric and phosphoric acid.<span class="am" lang="am">የሞሮኮው OCP ከዓለም ትላልቅ የሰልፈሪክና የፎስፈሪክ አሲድ አምራቾች አንዱ ነው።</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Start with what you have.</b> Successful founders look around before they ask for money: their skills, friends, tools, local materials, even waste. A pile of broken phones holds gold, copper and palladium. A century-old pile of mining waste in Congo turned out to hold germanium.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Make a list of everything you already have: skills, people you know, tools, materials, places, and “waste” that others throw away.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>ባለዎት ነገር ይጀምሩ።</b> ስኬታማ መሥራቾች ገንዘብ ከመጠየቃቸው በፊት ዙሪያቸውን ያያሉ፦ ክህሎታቸውን፣ ጓደኞቻቸውን፣ መሣሪያዎቻቸውን፣ የአካባቢ ቁሳቁሶችን፣ ቆሻሻን ሳይቀር። የተበላሹ ስልኮች ክምር ወርቅ፣ መዳብና ፓላዲየም ይዟል። በኮንጎ የመቶ ዓመት የማዕድን ቆሻሻ ክምር ጀርማኒየም ይዞ ተገኝቷል።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>ያለዎትን ሁሉ ይዘርዝሩ፦ ክህሎቶች፣ የሚያውቋቸው ሰዎች፣ መሣሪያዎች፣ ቁሳቁሶች፣ ቦታዎች፣ እና ሌሎች የሚጥሉት «ቆሻሻ»።</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="ep3">
+  <div class="ch-tag"><span class="yr">EPISODE 3</span><span class="part">Iteration · ደጋግሞ ማሻሻል</span></div>
+  <div class="pair">
+    <div class="en"><h2>The 1,000-step journey</h2><p class="story"><span class="story-lbl">Story</span>In physics class, Selam's teacher shows a video from a chip factory. Selam cannot believe it: one chip takes three to four months and hundreds of steps, and the same small loop is repeated again and again, layer after layer.</p><p>A leading-edge chip passes through 500 to 1,000 process steps and 80 to 120 layers, in cleanrooms where one speck of dust can ruin it. The hardest step, printing the patterns, needs an extreme-ultraviolet (EUV) machine. Only one company in the world, ASML in the Netherlands, builds them. One costs about $200 million, and the newest High-NA version about $380 million.</p></div>
+    <div class="am" lang="am"><h2>የ1,000 ደረጃዎች ጉዞ</h2><p class="story"><span class="story-lbl">ታሪክ</span>በፊዚክስ ክፍለ ጊዜ መምህሯ ከቺፕ ፋብሪካ የተቀረጸ ቪዲዮ አሳዩ። ሰላም ማመን አቃታት፦ አንድ ቺፕ ከሦስት እስከ አራት ወራትና በመቶዎች የሚቆጠሩ ደረጃዎች ይወስዳል፤ ያው ትንሽ ዑደት በንብርብር ላይ ንብርብር ደጋግሞ ይከናወናል።</p><p>አንድ ከፍተኛ ደረጃ ያለው ቺፕ ከ500 እስከ 1,000 የሂደት ደረጃዎችንና ከ80 እስከ 120 ንብርብሮችን ያልፋል፤ ይህም አንዲት የአቧራ ቅንጣት ልታበላሸው በምትችልባቸው እጅግ ንጹሕ ክፍሎች ውስጥ ነው። በጣም ከባዱ ደረጃ፣ ንድፎቹን ማተም፣ «EUV» የሚባል ማሽን ይፈልጋል። እነዚህን የሚሰራው በዓለም አንድ ኩባንያ ብቻ ነው፤ የኔዘርላንድሱ ASML። አንዱ 200 ሚሊዮን ዶላር ገደማ፣ አዲሱ «High-NA» ደግሞ 380 ሚሊዮን ዶላር ገደማ ያወጣል።</p></div>
+  </div>
+  <ol class="steps">
+    <li><div class="en"><b>Quartz → silicon</b><p>Quartz and carbon are heated in an electric furnace to about 2,000 °C, giving silicon that is about 98–99% pure.</p></div><div class="am" lang="am"><b>ኳርትዝ → ሲሊከን</b><p>ኳርትዝና ካርቦን በኤሌክትሪክ ምድጃ ውስጥ በ2,000 °C ገደማ ይሞቃሉ፤ 98–99% ንጹሕ ሲሊከን ይገኛል።</p></div></li>
+    <li><div class="en"><b>Purify</b><p>Chemistry raises purity to 99.9999999% or better ("nine nines"): fewer than one foreign atom in a billion.</p></div><div class="am" lang="am"><b>ማጣራት</b><p>በኬሚካል ሂደት ንጽሕናው 99.9999999% ወይም ከዚያ በላይ ይደርሳል፤ ከአንድ ቢሊዮን አተሞች አንድ እንኳ ባዕድ አይኖርም።</p></div></li>
+    <li><div class="en"><b>Grow a crystal</b><p>A seed is slowly pulled from molten silicon to grow one perfect crystal, an "ingot" up to 2 metres long.</p></div><div class="am" lang="am"><b>ክሪስታል ማሳደግ</b><p>ከቀለጠ ሲሊከን ውስጥ ዘር በዝግታ እየተጎተተ እስከ 2 ሜትር የሚረዝም አንድ ፍጹም ክሪስታል ይበቅላል።</p></div></li>
+    <li><div class="en"><b>Slice into wafers</b><p>The ingot is cut into discs less than 1 mm thick and polished like a mirror.</p></div><div class="am" lang="am"><b>ወደ ዌፈር መቁረጥ</b><p>ክሪስታሉ ከ1 ሚሊሜትር ባነሰ ውፍረት ተቆርጦ እንደ መስታወት ይለሰልሳል።</p></div></li>
+    <li class="loop"><div class="en"><b>The layer loop (repeat!)</b><p>Deposit a thin film → coat with light-sensitive resist → print the pattern with light → etch away what is not needed → add dopants. Repeat for every layer.</p></div><div class="am" lang="am"><b>የንብርብር ዑደት (ይደገማል!)</b><p>ቀጭን ሽፋን ማስቀመጥ → ለብርሃን ስሱ በሆነ ቅባት መሸፈን → ንድፉን በብርሃን ማተም → የማያስፈልገውን መፋቅ → ዶፓንት መጨመር። ለእያንዳንዱ ንብርብር ይደገማል።</p></div></li>
+    <li><div class="en"><b>Add the wiring</b><p>Layers of copper wires, thinner than a virus, connect billions of transistors.</p></div><div class="am" lang="am"><b>ሽቦዎችን መዘርጋት</b><p>ከቫይረስ የቀጠኑ የመዳብ ሽቦ ንብርብሮች ቢሊዮኖችን ትራንዚስተሮች ያገናኛሉ።</p></div></li>
+    <li><div class="en"><b>Test and cut</b><p>Each chip on the wafer is tested by machine, then the wafer is cut into individual chips ("dies").</p></div><div class="am" lang="am"><b>መፈተሽና መቁረጥ</b><p>በዌፈሩ ላይ ያለ እያንዳንዱ ቺፕ በማሽን ይፈተሻል፤ ከዚያም ዌፈሩ ወደ ተናጠል ቺፖች ይቆረጣል።</p></div></li>
+    <li><div class="en"><b>Package and test again</b><p>Each die is sealed in a protective package with metal legs or balls, tested once more, then shipped.</p></div><div class="am" lang="am"><b>ማሸግና እንደገና መፈተሽ</b><p>እያንዳንዱ ቺፕ የብረት እግሮች ባሉት መከላከያ ውስጥ ታሽጎ፣ አንድ ጊዜ ተጨማሪ ተፈትሾ ይላካል።</p></div></li>
+  </ol>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Build in loops.</b> A chip is built layer by layer, and every layer is checked before the next. A business grows the same way: build a small version, test it, learn, improve, and repeat. Engineers call this iteration; entrepreneurs call it build, measure, learn.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Plan your first loop: what is the smallest thing you can build in one week to test your idea? How will you know if it worked?</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>በዑደት ይገንቡ።</b> ቺፕ በንብርብር ይገነባል፤ እያንዳንዱ ንብርብር ከቀጣዩ በፊት ይፈተሻል። ንግድም በዚሁ መንገድ ያድጋል፦ ትንሽ ስሪት ይገንቡ፣ ይፈትሹ፣ ይማሩ፣ ያሻሽሉ፣ ይድገሙ። መሐንዲሶች ይህን «ደጋግሞ ማሻሻል»፣ ሥራ ፈጣሪዎች ደግሞ «መገንባት፣ መለካት፣ መማር» ይሉታል።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>የመጀመሪያ ዑደትዎን ያቅዱ፦ ሐሳብዎን ለመፈተሽ በአንድ ሳምንት ውስጥ ሊገነቡት የሚችሉት ትንሹ ነገር ምንድን ነው? መሳካቱን እንዴት ያውቃሉ?</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="ep4">
+  <div class="ch-tag"><span class="yr">EPISODE 4</span><span class="part">Adding value · እሴት መጨመር</span></div>
+  <div class="pair">
+    <div class="en"><h2>Who gets paid?</h2><p class="story"><span class="story-lbl">Story</span>Selam's grandfather grows coffee. He sells the raw beans for a small price, yet in Addis Ababa the same coffee, roasted, packed and branded, sells for far more. “Same beans,” he says, “but someone else adds the value.” Selam realises minerals work exactly the same way.</p><p>The further a material travels up the chain, the more it is worth. Raw ore is the cheapest step; refined, ultra-pure metal is worth far more; a finished chip far more again. That is why Africa supplies a large share of the minerals while earning a tiny share of the industry.</p><p class="callout">DR Congo mines 73% of the world's cobalt, but China produces 79% of the world's refined cobalt. Much of the value is captured at refining.</p></div>
+    <div class="am" lang="am"><h2>ማን ይከፈለዋል?</h2><p class="story"><span class="story-lbl">ታሪክ</span>የሰላም አያት ቡና ያመርታሉ። ጥሬ ፍሬውን በትንሽ ዋጋ ይሸጣሉ፤ በአዲስ አበባ ግን ያው ቡና ተቆልቶ፣ ታሽጎና ስም ተሰጥቶት በብዙ እጥፍ ይሸጣል። «ያው ፍሬ ነው፤ እሴቱን የሚጨምረው ግን ሌላ ሰው ነው» ይላሉ። ሰላም ማዕድናትም በትክክል እንደዚሁ እንደሚሰሩ ተገነዘበች።</p><p>አንድ ማዕድን በሰንሰለቱ ወደ ላይ በወጣ ቁጥር ዋጋው ይጨምራል። ጥሬ ማዕድን በጣም ርካሹ ደረጃ ነው፤ የተጣራ እጅግ ንጹሕ ብረት ብዙ እጥፍ ዋጋ አለው፤ የተጠናቀቀ ቺፕ ደግሞ ከዚያም በላይ። አፍሪካ ትልቅ የማዕድን ድርሻ እያቀረበች ከኢንዱስትሪው ትንሽ ድርሻ የምታገኘው ለዚህ ነው።</p><p class="callout">ኮንጎ ዲ.ሪ. ከዓለም ኮባልት 73% ታመርታለች፤ ቻይና ግን ከዓለም የተጣራ ኮባልት 79% ታመርታለች። ብዙው እሴት የሚያዘው በማጣራቱ ደረጃ ነው።</p></div>
+  </div>
+  <figure>
+    <div class="scroll">
+    <svg viewBox="0 0 1040 330" role="img" aria-labelledby="ladder-t">
+      <title id="ladder-t">A staircase of six steps from raw ore to finished product. Value rises with each step. Africa today sits mostly on the first step.</title>
+      <g id="ladder"></g>
+    </svg>
+    </div>
+    <figcaption><span class="en">The value staircase (illustration, not to scale). Africa today stands mostly on the first step; the opportunity is to climb.</span><span class="am" lang="am">የእሴት ደረጃ (ምሳሌያዊ ስዕል)። አፍሪካ ዛሬ በአብዛኛው በመጀመሪያው ደረጃ ላይ ናት፤ ዕድሉ ወደ ላይ መውጣት ነው።</span></figcaption>
+  </figure>
+<figure>
+    <div class="scroll">
+    <svg viewBox="0 0 1040 300" role="img" aria-labelledby="share-t" id="share-chart">
+      <title id="share-t">Bar chart of African countries' share of world mine output in 2025: DR Congo cobalt 73 percent, South Africa platinum 71 percent, DR Congo tantalum 52 percent, Guinea bauxite 34 percent, DR Congo copper 14 percent.</title>
+    </svg>
+    </div>
+    <figcaption><span class="en">Share of world mine output, 2025 (USGS estimates). The bars show what Africa digs up, not what it refines.</span><span class="am" lang="am">ከዓለም የማዕድን ምርት ያለው ድርሻ፣ 2025 (የUSGS ግምት)። አሞሌዎቹ አፍሪካ የምትቆፍረውን እንጂ የምታጣራውን አያሳዩም።</span></figcaption>
+  </figure>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Find where value is added, then climb.</b> Ask: what happens to this product after it leaves my hands? Who processes, designs, packs or brands it? Every step up is a business opportunity. Ethiopia now follows this idea for lithium and tantalum: only companies that add value inside the country may export them.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Draw the value staircase for one local product: coffee, honey, teff, leather or a mineral. Circle one step that you, or a group of friends, could do.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>እሴት የሚጨመርበትን ይፈልጉ፤ ከዚያም ይውጡ።</b> ይጠይቁ፦ ይህ ምርት ከእጄ ከወጣ በኋላ ምን ይደርስበታል? ማን ያቀነባብረዋል፣ ይነድፈዋል፣ ያሽገዋል ወይም ስም ይሰጠዋል? እያንዳንዱ ወደ ላይ ያለ ደረጃ የንግድ ዕድል ነው። ኢትዮጵያ ለሊቲየምና ለታንታለም ይህንኑ ሐሳብ ትከተላለች፦ ኤክስፖርት ማድረግ የሚችሉት በአገር ውስጥ እሴት የሚጨምሩ ኩባንያዎች ብቻ ናቸው።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>ለአንድ የአካባቢ ምርት የእሴት ደረጃውን ይሳሉ፦ ቡና፣ ማር፣ ጤፍ፣ ቆዳ ወይም ማዕድን። እርስዎ ወይም የጓደኞች ቡድን ሊሰሩት የሚችሉትን አንድ ደረጃ ያክብቡ።</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="ep5">
+  <div class="ch-tag"><span class="yr">EPISODE 5</span><span class="part">Role models · አርአያዎች</span></div>
+  <div class="pair">
+    <div class="en"><h2>Africans already building</h2><p class="story"><span class="story-lbl">Story</span>Selam searches online and is surprised: Africans are already inside the chip industry, from Casablanca to Nyeri.</p><p>Africa still holds less than 1% of the global semiconductor industry, but it is not starting from zero. In April 2026, the first Africa Semiconductor Investors Forum in Nairobi named the most realistic entry points: chip design, assembly, testing and packaging, mineral processing, skills and regional hubs.</p></div>
+    <div class="am" lang="am"><h2>እየገነቡ ያሉ አፍሪካውያን</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም በኢንተርኔት ፈለገች፤ ተገረመችም፦ ከካዛብላንካ እስከ ኒየሪ አፍሪካውያን ቀድሞውኑ በቺፕ ኢንዱስትሪ ውስጥ ናቸው።</p><p>አፍሪካ አሁንም ከዓለም የሴሚኮንዳክተር ኢንዱስትሪ ከ1% ያነሰ ድርሻ አላት፤ ሆኖም ከዜሮ አትጀምርም። በኤፕሪል 2026 በናይሮቢ የተካሄደው የመጀመሪያው የአፍሪካ ሴሚኮንዳክተር ኢንቨስተሮች ፎረም ተጨባጭ የመግቢያ በሮችን ለይቷል፦ የቺፕ ንድፍ፣ መገጣጠም፣ መፈተሽና ማሸግ፣ የማዕድን ማቀነባበር፣ ክህሎትና ክልላዊ ማዕከላት።</p></div>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="cn">DR Congo<span class="am" lang="am">ኮንጎ ዲ.ሪ.</span></div><div class="chips"><span class="chip">Cobalt 73%</span><span class="chip">Tantalum 52%</span><span class="chip">Copper 14%</span><span class="chip">Germanium</span></div><p class="en">In 2024 it exported its first germanium concentrates processed inside the country, recovered from a century-old pile of mining waste at Big Hill.</p><p class="am" lang="am">በ2024 በአገር ውስጥ የተቀነባበረ የመጀመሪያውን የጀርማኒየም ክምችት ወደ ውጭ ላከች፤ ከመቶ ዓመት የቆየ «ቢግ ሂል» የተባለ የማዕድን ቆሻሻ ክምር የወጣ ነው።</p></div>
+    <div class="card"><div class="cn">Morocco<span class="am" lang="am">ሞሮኮ</span></div><div class="chips"><span class="chip ind">Assembly &amp; test</span><span class="chip">Acids</span></div><p class="en">STMicroelectronics has run a chip assembly and test plant at Bouskoura, near Casablanca, for decades.</p><p class="am" lang="am">STMicroelectronics በካዛብላንካ አቅራቢያ ቡስኩራ ውስጥ ለአሥርት ዓመታት የቺፕ መገጣጠሚያና መፈተሻ ፋብሪካ ሲያንቀሳቅስ ቆይቷል።</p></div>
+    <div class="card"><div class="cn">Egypt<span class="am" lang="am">ግብፅ</span></div><div class="chips"><span class="chip ind">Chip design</span></div><p class="en">More than 86 companies work in electronic design and embedded systems. Since May 2026, chip design exports get national incentives.</p><p class="am" lang="am">ከ86 በላይ ኩባንያዎች በኤሌክትሮኒክ ንድፍና «ኢምቤድድ» ሲስተሞች ይሰራሉ። ከሜይ 2026 ጀምሮ የቺፕ ንድፍ ኤክስፖርት ብሔራዊ ማበረታቻ ያገኛል።</p></div>
+    <div class="card"><div class="cn">Kenya<span class="am" lang="am">ኬንያ</span></div><div class="chips"><span class="chip ind">Pilot chip-making</span></div><p class="en">Semiconductor Technologies Limited (STL) makes chips at Dedan Kimathi University of Technology in Nyeri and trains students there.</p><p class="am" lang="am">ሴሚኮንዳክተር ቴክኖሎጂስ ሊሚትድ (STL) በኒየሪ በሚገኘው ዴዳን ኪማቲ የቴክኖሎጂ ዩኒቨርሲቲ ውስጥ ቺፖችን ያመርታል፤ ተማሪዎችንም ያሰለጥናል።</p></div>
+    <div class="card"><div class="cn">Nigeria &amp; Rwanda<span class="am" lang="am">ናይጄሪያና ሩዋንዳ</span></div><div class="chips"><span class="chip">Tantalum</span><span class="chip ind">Design skills</span></div><p class="en">Both produce tantalum and are building chip-design skills. Nigeria has a national framework prepared with the training company ChipMango.</p><p class="am" lang="am">ሁለቱም ታንታለም ያመርታሉ፤ የቺፕ ንድፍ ክህሎትም እየገነቡ ነው። ናይጄሪያ ከChipMango የሥልጠና ኩባንያ ጋር ያዘጋጀችው ብሔራዊ ማዕቀፍ አላት።</p></div>
+    <div class="card"><div class="cn">South Africa · Guinea<span class="am" lang="am">ደቡብ አፍሪካ · ጊኒ</span></div><div class="chips"><span class="chip">Platinum 71%</span><span class="chip">Bauxite 34%</span></div><p class="en">South Africa leads in research and prototyping. Guinea's bauxite could supply gallium if it were refined into alumina locally.</p><p class="am" lang="am">ደቡብ አፍሪካ በምርምርና በናሙና ሥራ ትመራለች። የጊኒ ባውክሳይት በአገር ውስጥ ወደ አሉሚና ቢጣራ የጋሊየም ምንጭ ሊሆን ይችላል።</p></div>
+    <div class="card et"><div class="cn">Ethiopia<span class="am" lang="am">ኢትዮጵያ</span></div><div class="chips"><span class="chip">Tantalum</span><span class="chip">Lithium</span><span class="chip">Gold</span><span class="chip">Quartz</span></div><p class="en">The Kenticha deposit in Guji, Oromia, holds tantalum and lithium. For decades it exported raw concentrate, mainly to China. Ethiopia now reserves lithium and tantalum exports for companies that add value inside the country.</p><p class="am" lang="am">በኦሮሚያ፣ ጉጂ ዞን የሚገኘው የቀንጢቻ ክምችት ታንታለምና ሊቲየም ይዟል። ለአሥርት ዓመታት ጥሬ ክምችት በዋናነት ወደ ቻይና ተልኳል። አሁን ኢትዮጵያ የሊቲየምና የታንታለም ኤክስፖርትን በአገር ውስጥ እሴት ለሚጨምሩ ኩባንያዎች ብቻ ፈቅዳለች።</p></div>
+  </div>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Partner up.</b> None of these started alone. Congo's state miner partnered with Umicore for germanium know-how. Kenya's STL works inside a university. Nigeria built its chip-design framework with ChipMango. Find partners who have what you lack, and offer them what they lack.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Name three people or organisations who could help your idea: a teacher, a repair shop, a university lab, a farmers' cooperative. Write what you can offer each of them in return.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>አጋር ይፈልጉ።</b> ከእነዚህ አንዳቸውም ብቻቸውን አልጀመሩም። የኮንጎ መንግሥታዊ ማዕድን ኩባንያ ለጀርማኒየም ዕውቀት ከUmicore ጋር ተባበረ። የኬንያው STL በዩኒቨርሲቲ ውስጥ ይሰራል። ናይጄሪያ የቺፕ ንድፍ ማዕቀፏን ከChipMango ጋር ገነባች። የጎደለዎት ያላቸውን አጋሮች ይፈልጉ፤ የጎደላቸውንም ይስጧቸው።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>ሐሳብዎን ሊረዱ የሚችሉ ሦስት ሰዎችን ወይም ድርጅቶችን ይጥቀሱ፦ መምህር፣ የጥገና ሱቅ፣ የዩኒቨርሲቲ ላቦራቶሪ፣ የገበሬዎች ማኅበር። ለእያንዳንዳቸው በምላሹ ምን ሊያቀርቡ እንደሚችሉ ይጻፉ።</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="ep6">
+  <div class="ch-tag"><span class="yr">EPISODE 6</span><span class="part">First product · የመጀመሪያው ምርት</span></div>
+  <div class="pair">
+    <div class="en"><h2>Selam's first device</h2><p class="story"><span class="story-lbl">Story</span>With a small ESP32 board, a moisture probe and a buzzer, Selam builds an alarm that beeps when the soil is dry. She tests it in her uncle's field for two weeks. It works, but the probe rusts, and her uncle cannot hear the buzzer from the house. So she changes the probe and makes the device send a text message to his phone. Then she shows it to five neighbouring farmers and asks what they would pay.</p><p>This is a <b>minimum viable product</b> (MVP): the simplest version that solves the problem well enough to learn from real users. Selam did not need a chip factory. She used existing chips and focused on the farmer's need. The same thinking, at a bigger scale, opens six opportunities for Africa:</p><ol>
+<li><b>Refine at home.</b> Turning ore into pure metal inside Africa keeps more of the value. Congo's germanium plant shows it can start.</li>
+<li><b>Mine the waste.</b> Old tailings and slag hold germanium, gallium and cobalt that past miners threw away.</li>
+<li><b>Design chips.</b> Design needs computers, internet and trained minds, not a billion-dollar factory. It is the fastest door for young engineers.</li>
+<li><b>Assemble, test and package.</b> Morocco shows this works on the continent.</li>
+<li><b>Recycle electronics.</b> Old phones and computers contain gold, copper, palladium and tantalum. Done safely, it is “urban mining”.</li>
+<li><b>Build devices for African problems.</b> Farm sensors, livestock trackers, solar controllers, medical devices and mobile money all need chips.</li>
+</ol></div>
+    <div class="am" lang="am"><h2>የሰላም የመጀመሪያ መሣሪያ</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም በትንሽ የESP32 ሰሌዳ፣ በእርጥበት መለኪያና በ«ባዘር» አፈሩ ሲደርቅ የሚጮኽ ማንቂያ ሠራች። በአጎቷ ማሳ ለሁለት ሳምንት ሞከረችው። ይሰራል፤ ግን መለኪያው ዛገ፣ አጎቷም ከቤት ሆነው ድምፁን መስማት አልቻሉም። ስለዚህ መለኪያውን ቀየረች፤ መሣሪያውም ወደ ስልካቸው የጽሑፍ መልእክት እንዲልክ አደረገች። ከዚያም ለአምስት ጎረቤት ገበሬዎች አሳይታ ምን ያህል እንደሚከፍሉ ጠየቀቻቸው።</p><p>ይህ <b>አነስተኛ አዋጭ ምርት</b> (MVP) ይባላል፦ ከእውነተኛ ተጠቃሚዎች ለመማር የሚያስችል፣ ችግሩን በበቂ ሁኔታ የሚፈታ ቀላሉ ስሪት። ሰላም የቺፕ ፋብሪካ አላስፈለጋትም። ያሉትን ቺፖች ተጠቅማ በገበሬው ፍላጎት ላይ አተኮረች። ይኸው አስተሳሰብ በትልቅ ደረጃ ለአፍሪካ ስድስት ዕድሎችን ይከፍታል፦</p><ol>
+<li><b>በአገር ውስጥ ማጣራት።</b> ማዕድንን በአፍሪካ ውስጥ ወደ ንጹሕ ብረት መቀየር ብዙውን እሴት ያስቀራል። የኮንጎ የጀርማኒየም ፋብሪካ ይህ ሊጀመር እንደሚችል ያሳያል።</li>
+<li><b>ቆሻሻውን ማዕድን ማድረግ።</b> የድሮ የማዕድን ተረፈ ምርቶች የቀደሙት አምራቾች የጣሉትን ጀርማኒየም፣ ጋሊየምና ኮባልት ይይዛሉ።</li>
+<li><b>ቺፕ መንደፍ።</b> ንድፍ የቢሊዮን ዶላር ፋብሪካ ሳይሆን ኮምፒውተር፣ ኢንተርኔትና የሰለጠነ አእምሮ ይፈልጋል። ለወጣት መሐንዲሶች ፈጣኑ በር ነው።</li>
+<li><b>መገጣጠም፣ መፈተሽና ማሸግ።</b> ሞሮኮ ይህ በአህጉሩ ላይ እንደሚሰራ ታሳያለች።</li>
+<li><b>ኤሌክትሮኒክስን መልሶ መጠቀም።</b> አሮጌ ስልኮችና ኮምፒውተሮች ወርቅ፣ መዳብ፣ ፓላዲየምና ታንታለም ይዘዋል። በጥንቃቄ ሲሰራ «የከተማ ማዕድን ማውጣት» ነው።</li>
+<li><b>ለአፍሪካ ችግሮች መሣሪያ መሥራት።</b> የእርሻ ዳሳሾች፣ የእንስሳት መከታተያዎች፣ የፀሐይ ኃይል ተቆጣጣሪዎች፣ የሕክምና መሣሪያዎችና የሞባይል ገንዘብ ሁሉም ቺፕ ይፈልጋሉ።</li>
+</ol></div>
+  </div>
+  
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Listen to customers and count the costs.</b> Ask people about their problem, not your product. Write down the cost of every part. Your price must cover parts, your time and a margin. If the user cannot pay, look for another payer: a cooperative, an NGO, a seed company or the local government.</p></div><div class="mission"><span class="mission-lbl">Your mission</span><p>Talk to five possible customers this month. Ask: How do you handle this problem today? What does it cost you? What would a good solution be worth to you?</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>ደንበኞችን ያዳምጡ፤ ወጪዎችን ይቁጠሩ።</b> ሰዎችን ስለ ምርትዎ ሳይሆን ስለ ችግራቸው ይጠይቁ። የእያንዳንዱን ዕቃ ዋጋ ይጻፉ። ዋጋዎ የዕቃዎችን፣ የጊዜዎንና ትርፍን መሸፈን አለበት። ተጠቃሚው መክፈል ካልቻለ ሌላ ከፋይ ይፈልጉ፦ ማኅበር፣ መንግሥታዊ ያልሆነ ድርጅት፣ የዘር ኩባንያ ወይም የአካባቢ አስተዳደር።</p></div><div class="mission"><span class="mission-lbl">የእርስዎ ተልዕኮ</span><p>በዚህ ወር ከአምስት ሊሆኑ ከሚችሉ ደንበኞች ጋር ይነጋገሩ። ይጠይቁ፦ ዛሬ ይህንን ችግር እንዴት ይይዙታል? ምን ያስወጣዎታል? ጥሩ መፍትሔ ምን ያህል ዋጋ አለው ለእርስዎ?</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="ep7">
+  <div class="ch-tag"><span class="yr">EPISODE 7</span><span class="part">Your path · የእርስዎ መንገድ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Your ladder</h2><p class="story"><span class="story-lbl">Story</span>Selam is 16. The engineers and founders who will lead Africa's chip industry in 2040 are her age today, and maybe yours.</p><p>You do not need a factory to start. You need curiosity, a phone or computer, and a little money for parts. Pick the rung that matches your age and climb one step at a time.</p></div>
+    <div class="am" lang="am"><h2>የእርስዎ መሰላል</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም የ16 ዓመት ልጅ ናት። በ2040 የአፍሪካን የቺፕ ኢንዱስትሪ የሚመሩት መሐንዲሶችና መሥራቾች ዛሬ የእሷ ዕድሜ ላይ ናቸው፤ ምናልባትም የእርስዎ።</p><p>ለመጀመር ፋብሪካ አያስፈልግም። የሚያስፈልገው ጉጉት፣ ስልክ ወይም ኮምፒውተር፣ እና ለዕቃዎች ትንሽ ገንዘብ ነው። ከዕድሜዎ ጋር የሚሄደውን ደረጃ መርጠው አንድ በአንድ ይውጡ።</p></div>
+  </div>
+  <div class="ladder">
+    <div class="rung"><div class="age">Ages 10–14<small>ዕድሜ 10–14 · Curiosity</small></div>
+      <div class="en"><ul><li>Learn binary (0 and 1) and simple logic: AND, OR, NOT.</li><li>Build circuits for free in the PhET "Circuit Construction Kit" simulator.</li><li>With a battery, an LED and a transistor, make a light you switch with a touch.</li><li>Take apart an old radio or phone charger (unplugged!) and name the parts.</li></ul></div>
+      <div class="am" lang="am"><ul><li>ባይናሪ (0 እና 1) እና ቀላል ሎጂክ ይማሩ፦ AND፣ OR፣ NOT።</li><li>በነፃው የPhET «Circuit Construction Kit» ሲሙሌተር ወረዳዎችን ይገንቡ።</li><li>በባትሪ፣ በኤልኢዲና በትራንዚስተር በመንካት የሚበራ መብራት ይስሩ።</li><li>አሮጌ ሬዲዮ ወይም የስልክ ቻርጀር (ከሶኬት ተነቅሎ!) ፈትተው ክፍሎቹን ይሰይሙ።</li></ul></div></div>
+    <div class="rung"><div class="age">Ages 15–18<small>ዕድሜ 15–18 · Building</small></div>
+      <div class="en"><ul><li>Learn Python or C with free online courses.</li><li>Buy a small board such as an Arduino, ESP32 or Raspberry Pi Pico and build a soil-moisture sensor for a farm or garden.</li><li>Design logic circuits in the free simulators Logisim-evolution or Digital.</li><li>Do the free "Nand2Tetris" course: build a whole computer from one simple gate.</li></ul></div>
+      <div class="am" lang="am"><ul><li>በነፃ የኦንላይን ኮርሶች Python ወይም C ይማሩ።</li><li>እንደ Arduino፣ ESP32 ወይም Raspberry Pi Pico ያለ ትንሽ ሰሌዳ ገዝተው ለእርሻ ወይም ለጓሮ የአፈር እርጥበት ዳሳሽ ይስሩ።</li><li>በነፃዎቹ Logisim-evolution ወይም Digital ሲሙሌተሮች የሎጂክ ወረዳዎችን ይንደፉ።</li><li>ነፃውን «Nand2Tetris» ኮርስ ይውሰዱ፦ ከአንድ ቀላል በር ሙሉ ኮምፒውተር ይገንቡ።</li></ul></div></div>
+    <div class="rung"><div class="age">University<small>ዩኒቨርሲቲ · Specialising</small></div>
+      <div class="en"><ul><li>Study electrical, computer, chemical or materials engineering, physics, chemistry, or mining and metallurgy.</li><li>Learn a hardware language (Verilog) and practise on a low-cost FPGA board.</li><li>Get a real chip made: Tiny Tapeout uses free, open-source tools and puts many small designs on one shared chip.</li><li>Join an IEEE student branch, and look for chip-design training programmes such as ChipMango's.</li></ul></div>
+      <div class="am" lang="am"><ul><li>ኤሌክትሪካል፣ ኮምፒውተር፣ ኬሚካል ወይም የቁሳቁስ ምህንድስና፣ ፊዚክስ፣ ኬሚስትሪ፣ ወይም ማዕድንና ብረት ማቅለጥ ያጥኑ።</li><li>የሃርድዌር ቋንቋ (Verilog) ተምረው በርካሽ የFPGA ሰሌዳ ይለማመዱ።</li><li>እውነተኛ ቺፕ ያሰሩ፦ Tiny Tapeout ነፃና ክፍት የሆኑ መሣሪያዎችን ተጠቅሞ ብዙ ትናንሽ ንድፎችን በአንድ የጋራ ቺፕ ላይ ያስቀምጣል።</li><li>የIEEE የተማሪዎች ቅርንጫፍን ይቀላቀሉ፤ እንደ ChipMango ያሉ የቺፕ ንድፍ ሥልጠናዎችን ይፈልጉ።</li></ul></div></div>
+    <div class="rung"><div class="age">Graduates &amp; founders<small>ተመራቂዎችና ሥራ ፈጣሪዎች · Creating</small></div>
+      <div class="en"><ul><li>Offer chip-design or verification services to global companies from home.</li><li>Start a safe e-waste recycling business that recovers gold and copper.</li><li>Build sensor products for agriculture, health or energy, using existing chips first.</li><li>Work in mineral refining and push for processing plants near the mines.</li></ul></div>
+      <div class="am" lang="am"><ul><li>ከአገርዎ ሆነው ለዓለም ኩባንያዎች የቺፕ ንድፍ ወይም የማረጋገጫ አገልግሎት ይስጡ።</li><li>ወርቅና መዳብ የሚያወጣ ደህንነቱ የተጠበቀ የኤሌክትሮኒክ ቆሻሻ መልሶ መጠቀሚያ ሥራ ይጀምሩ።</li><li>በመጀመሪያ ያሉትን ቺፖች በመጠቀም ለግብርና፣ ለጤና ወይም ለኃይል የዳሳሽ ምርቶችን ይገንቡ።</li><li>በማዕድን ማጣራት ዘርፍ ይሥሩ፤ ማቀነባበሪያዎች በማዕድኖቹ አጠገብ እንዲገነቡ ይግፉ።</li></ul></div></div>
+  </div>
+  <h3 style="margin-top:28px">A 30-day plan · የ30 ቀን ዕቅድ</h3><div class="weeks">
+<div class="week"><div class="w">Week 1 · ሳምንት 1</div><p class="en">Choose one problem. Talk to five people who have it.</p><p class="am" lang="am">አንድ ችግር ይምረጡ። ችግሩ ካለባቸው አምስት ሰዎች ጋር ይነጋገሩ።</p></div>
+<div class="week"><div class="w">Week 2 · ሳምንት 2</div><p class="en">Learn: one free course or simulator. List the parts you need and their prices.</p><p class="am" lang="am">ይማሩ፦ አንድ ነፃ ኮርስ ወይም ሲሙሌተር። የሚያስፈልጉዎትን ዕቃዎችና ዋጋቸውን ይዘርዝሩ።</p></div>
+<div class="week"><div class="w">Week 3 · ሳምንት 3</div><p class="en">Build the smallest version that could work. Do not aim for perfect.</p><p class="am" lang="am">ሊሰራ የሚችለውን ትንሹን ስሪት ይገንቡ። ፍጹም ለማድረግ አይሞክሩ።</p></div>
+<div class="week"><div class="w">Week 4 · ሳምንት 4</div><p class="en">Test it with two real users. Write down what you learned and share it online.</p><p class="am" lang="am">ከሁለት እውነተኛ ተጠቃሚዎች ጋር ይፈትሹት። የተማሩትን ጽፈው በኢንተርኔት ያጋሩ።</p></div>
+</div>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><div class="tool"><span class="tool-lbl">Entrepreneur's tool</span><p><b>Small steps, every week.</b> Big companies were once small experiments. What matters is not how fast you start but that you keep climbing.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="tool-lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>በየሳምንቱ ትንሽ እርምጃ።</b> ትላልቅ ኩባንያዎች በአንድ ወቅት ትናንሽ ሙከራዎች ነበሩ። ዋናው ምን ያህል በፍጥነት መጀመርዎ ሳይሆን መውጣትዎን አለማቆምዎ ነው።</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="ep8">
+  <div class="ch-tag"><span class="yr">EPISODE 8</span><span class="part">Your canvas · የእርስዎ ሸራ</span></div>
+  <div class="pair">
+    <div class="en"><h2>The problem-solving canvas</h2><p class="story"><span class="story-lbl">Story</span>Selam keeps one page in her notebook for every idea. She calls it her canvas. Here it is, ready for your first idea.</p><p>Copy these eight boxes onto one page. Fill them in for the problem you chose in Episode 1, and update them after every test.</p></div>
+    <div class="am" lang="am"><h2>የችግር መፍቻ ሸራ</h2><p class="story"><span class="story-lbl">ታሪክ</span>ሰላም ለእያንዳንዱ ሐሳብ በማስታወሻ ደብተሯ አንድ ገጽ ትይዛለች። «ሸራዬ» ትለዋለች። ለመጀመሪያ ሐሳብዎ ዝግጁ ሆኖ እነሆ።</p><p>እነዚህን ስምንት ሳጥኖች በአንድ ገጽ ላይ ይቅዱ። በክፍል 1 ለመረጡት ችግር ይሙሏቸው፤ ከእያንዳንዱ ሙከራ በኋላም ያሻሽሏቸው።</p></div>
+  </div>
+  <div class="canvas"><div class="box"><span class="n">1</span><b class="en">The problem</b><span class="am" lang="am">ችግሩ</span><small class="en">What hurts, in one sentence?</small><small class="am" lang="am">ምን ይጎዳል? በአንድ ዓረፍተ ነገር።</small></div><div class="box"><span class="n">2</span><b class="en">Who has it</b><span class="am" lang="am">ችግሩ ያለበት ማነው</span><small class="en">Who suffers, how many, how often?</small><small class="am" lang="am">ማን ይሰቃያል? ስንት ናቸው? በምን ያህል ድግግሞሽ?</small></div><div class="box"><span class="n">3</span><b class="en">Root cause</b><span class="am" lang="am">መሠረታዊ ምክንያት</span><small class="en">Ask “why?” five times.</small><small class="am" lang="am">«ለምን?» የሚለውን አምስት ጊዜ ይጠይቁ።</small></div><div class="box"><span class="n">4</span><b class="en">What I already have</b><span class="am" lang="am">ቀድሞ ያለኝ</span><small class="en">Skills, people, tools, materials.</small><small class="am" lang="am">ክህሎት፣ ሰዎች፣ መሣሪያ፣ ቁሳቁስ።</small></div><div class="box"><span class="n">5</span><b class="en">Smallest test</b><span class="am" lang="am">ትንሹ ሙከራ</span><small class="en">What can I build or try in one week?</small><small class="am" lang="am">በአንድ ሳምንት ምን መገንባት ወይም መሞከር እችላለሁ?</small></div><div class="box"><span class="n">6</span><b class="en">Who can help</b><span class="am" lang="am">ማን ሊረዳ ይችላል</span><small class="en">Partners, mentors, suppliers.</small><small class="am" lang="am">አጋሮች፣ አማካሪዎች፣ አቅራቢዎች።</small></div><div class="box"><span class="n">7</span><b class="en">Who pays, and why</b><span class="am" lang="am">ማን ይከፍላል? ለምን?</span><small class="en">User, cooperative, NGO, company?</small><small class="am" lang="am">ተጠቃሚ፣ ማኅበር፣ ድርጅት፣ ኩባንያ?</small></div><div class="box"><span class="n">8</span><b class="en">What I learned</b><span class="am" lang="am">የተማርኩት</span><small class="en">After each test, write it down.</small><small class="am" lang="am">ከእያንዳንዱ ሙከራ በኋላ ይጻፉት።</small></div></div>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><h3>Check yourself</h3>
+<details><summary>1. Where does an entrepreneur start: with a product or a problem?</summary><p>With a problem that hurts someone, happens often and costs money or time.</p></details>
+<details><summary>2. Which ordinary material is a chip's wafer made from?</summary><p>Quartz sand, turned into ultra-pure silicon.</p></details>
+<details><summary>3. Why does Africa earn little even though it mines a lot?</summary><p>Most refining, design and manufacturing, where value is added, happens outside Africa.</p></details>
+<details><summary>4. What is an MVP?</summary><p>A minimum viable product: the simplest version that solves the problem well enough to learn from real users.</p></details>
+<details><summary>5. Name one mineral found at Ethiopia's Kenticha deposit.</summary><p>Tantalum (lithium is there too).</p></details></div>
+    <div class="am" lang="am"><h3>ራስዎን ይፈትሹ</h3>
+<details><summary>1. ሥራ ፈጣሪ የሚጀምረው ከምርት ነው ወይስ ከችግር?</summary><p>አንድን ሰው ከሚጎዳ፣ በተደጋጋሚ ከሚከሰትና ገንዘብ ወይም ጊዜ ከሚያባክን ችግር።</p></details>
+<details><summary>2. የቺፕ ዌፈር ከየትኛው ተራ ቁሳቁስ ይሰራል?</summary><p>ከኳርትዝ አሸዋ፤ ወደ እጅግ ንጹሕ ሲሊከን ይቀየራል።</p></details>
+<details><summary>3. አፍሪካ ብዙ እያመረተች ለምን ትንሽ ታገኛለች?</summary><p>እሴት የሚጨመርባቸው ማጣራት፣ ንድፍና ማምረት በአብዛኛው ከአፍሪካ ውጭ ስለሚከናወኑ ነው።</p></details>
+<details><summary>4. MVP ምንድን ነው?</summary><p>አነስተኛ አዋጭ ምርት፦ ከእውነተኛ ተጠቃሚዎች ለመማር የሚያስችል፣ ችግሩን በበቂ ሁኔታ የሚፈታ ቀላሉ ስሪት።</p></details>
+<details><summary>5. በኢትዮጵያ ቀንጢቻ ክምችት የሚገኝ አንድ ማዕድን ይጥቀሱ።</summary><p>ታንታለም (ሊቲየምም አለ)።</p></details></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <div class="pair">
+    <div class="en"><p>Written on November 13, 2026. Selam is an imaginary character; mineral shares are USGS estimates for 2025 and change every year.</p></div>
+    <div class="am" lang="am"><p>ይህ ትምህርት የተጻፈው ኖቬምበር 13 ቀን 2026 ነው። ሰላም ምናባዊ ገጸ-ባሕርይ ናት፤ የማዕድን ድርሻዎቹ የUSGS የ2025 ግምቶች ሲሆኑ በየዓመቱ ይለዋወጣሉ።</p></div>
+  </div>
+  <h3>Sources · ምንጮች</h3>
+  <ul>
+    <li><a href="https://www.riotimesonline.com/africa-critical-minerals-who-holds-what-2026/">Rio Times: Africa's critical minerals, who holds what (USGS 2026 data)</a></li>
+    <li><a href="https://www.cobaltinstitute.org/wp-content/uploads/2026/05/Cobalt-Market-Report-2025.pdf">Cobalt Institute: Cobalt Market Report 2025</a></li>
+    <li><a href="https://www.iisd.org/system/files/2026-06/country-profile-democratic-republic-congo_0.pdf">IISD: DR Congo country profile (Bisie tin mine)</a></li>
+    <li><a href="https://www.umicore.com/en/media/newsroom/first-made-in-drc-germanium-concentrates-due-for-export-to-umicore-for-high-tech-applications/">Umicore: first "Made-in-DRC" germanium concentrates</a></li>
+    <li><a href="https://www.worldatlas.com/geography/where-the-world-s-gallium-comes-from.html">WorldAtlas: where the world's gallium comes from</a></li>
+    <li><a href="https://stockhead.com.au/resources/chinas-dominance-of-the-gallium-market-is-near-total-but-theres-opportunity-for-western-disruptors">Stockhead: China's share of the gallium market</a></li>
+    <li><a href="https://semiconductorx.com/semiconductor-manufacturing-steps.php">SemiconductorX: semiconductor manufacturing process flow</a></li>
+    <li><a href="https://www.asml.com/company/stories/2021/semiconductor-manufacturing-process-steps">ASML: six crucial steps in semiconductor manufacturing</a></li>
+    <li><a href="https://kindatechnical.com/computer-architecture/how-semiconductor-fabrication-works-3nm-and-beyond.html">KindaTechnical: EUV machine costs</a></li>
+    <li><a href="https://www.ecofinagency.com/news-industry/0609-58657-semiconductors-mapping-africa-s-capabilities-across-the-value-chain">Ecofin Agency: mapping Africa's semiconductor capabilities</a></li>
+    <li><a href="https://www.ecofinagency.com/news-digital/2109-59094-rwanda-bets-on-chip-design-as-africa-seeks-role-in-semiconductor-boom">Ecofin Agency: Rwanda bets on chip design</a></li>
+    <li><a href="https://aasciences.africa/news/africa-semiconductor-forum-sets-path-from-minerals-to-microchips">African Academy of Sciences: Africa Semiconductor Forum, April 2026</a></li>
+    <li><a href="https://www.digitaleconomy.ke/post/the-fifth-layer-what-will-it-take-for-africa-to-make-its-chips">Digital Economy Kenya: what will it take for Africa to make its own chips?</a></li>
+    <li><a href="https://allafrica.com/stories/202306140105.html">AllAfrica: Semiconductor Technologies Limited, Kenya</a></li>
+    <li><a href="https://theoutlier.co.za/datadesk/app/chart/90270">The Outlier: Africa's critical minerals (tantalum producers and reserves)</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Kenticha_mine">Wikipedia: Kenticha mine</a></li>
+    <li><a href="https://addisfortune.news/dreams-stumble-at-kenticha-mine">Addis Fortune: dreams stumble at Kenticha mine</a></li>
+    <li><a href="https://tinytapeout.com/">Tiny Tapeout</a></li>
+  </ul>
+  <div class="author">
+    <p class="name">Mulusew Kassa Bitew</p>
+    <p>Postdoctoral Research Fellow, University of Molise, Italy</p>
+    <p>Department of Plant Science, College of Agriculture and Natural Resources, Debre Markos University, Ethiopia</p>
+    <p class="meta">ORCID <a href="https://orcid.org/0000-0001-6223-0037">0000-0001-6223-0037</a> · GitHub <a href="https://github.com/Muler-21">@Muler-21</a> · <a href="https://muler-21.github.io">muler-21.github.io</a></p>
+    <p class="apps">Other apps: <a href="https://muler-21.github.io/apps/adaptfit/">AdaptFit</a> <a href="https://muler-21.github.io/sebel-hakim/">Sebel Hakim</a> <a href="https://muler-21.github.io/research-integrity-compass/">Research Integrity Compass</a> <a href="https://muler-21.github.io/AMBKidsJoy/">AMBKidsJoy</a></p>
+    <p class="copy">© 2026 Mulusew Kassa Bitew. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function mk(parent, name, attrs, text) { var e = document.createElementNS(NS, name); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text) e.textContent = text; parent.appendChild(e); return e; }
+  // Value staircase
+  var lad = document.getElementById("ladder");
+  if (lad) {
+    var steps = [["Raw ore", "ጥሬ ማዕድን"], ["Concentrate", "የተከማቸ ማዕድን"], ["Refined metal", "የተጣራ ብረት"], ["Wafers & chemicals", "ዌፈርና ኬሚካል"], ["Chip design & making", "ቺፕ ንድፍና ምርት"], ["Devices & products", "መሣሪያና ምርት"]];
+    var x0 = 30, w = 160, gap = 4, base = 270, stepH = 36;
+    steps.forEach(function (s, i) {
+      var h = stepH * (i + 1) + 20, x = x0 + i * (w + gap);
+      mk(lad, "rect", { x: x, y: base - h, width: w, height: h, rx: 6, "class": i === 0 ? "f-copper" : "f-accent", opacity: (0.45 + i * 0.11).toFixed(2) });
+      mk(lad, "text", { x: x + w / 2, y: base - h + 22, "text-anchor": "middle", "class": "t-ink svg-lbl" }, s[0]);
+      mk(lad, "text", { x: x + w / 2, y: base - h + 42, "text-anchor": "middle", "class": "t-ink svg-lbl-am" }, s[1]);
+    });
+    mk(lad, "line", { x1: 30, x2: 1010, y1: base, y2: base, "class": "s-rule", "stroke-width": 2 });
+    mk(lad, "text", { x: 110, y: base + 26, "text-anchor": "middle", "class": "t-copper svg-mono" }, "Africa today · አፍሪካ ዛሬ");
+    mk(lad, "text", { x: 1010, y: 24, "text-anchor": "end", "class": "t-muted svg-mono" }, "value grows → · እሴቱ ያድጋል →");
+  }
+  // Share of world mine output (one scale, 0–100%)
+  var sc = document.getElementById("share-chart");
+  if (sc) {
+    var data = [["DR Congo · cobalt", 73], ["South Africa · platinum", 71], ["DR Congo · tantalum", 52], ["Guinea · bauxite (gallium source)", 34], ["DR Congo · copper", 14]];
+    var L = 300, R = 980, T = 20, rowH = 48, bh = 28;
+    [0, 25, 50, 75, 100].forEach(function (v) {
+      var x = L + (R - L) * v / 100;
+      mk(sc, "line", { x1: x, x2: x, y1: T, y2: T + rowH * data.length, "class": "s-rule", "stroke-width": v === 0 ? 2 : 1 });
+      mk(sc, "text", { x: x, y: T + rowH * data.length + 22, "text-anchor": "middle", "class": "t-muted svg-mono" }, v + "%");
+    });
+    data.forEach(function (d, i) {
+      var y = T + i * rowH + (rowH - bh) / 2, wv = (R - L) * d[1] / 100;
+      mk(sc, "text", { x: L - 14, y: y + bh / 2 + 5, "text-anchor": "end", "class": "t-ink svg-lbl" }, d[0]);
+      mk(sc, "rect", { x: L, y: y, width: wv, height: bh, rx: 5, "class": "f-copper" });
+      mk(sc, "text", { x: L + wv + 10, y: y + bh / 2 + 6, "class": "t-copper svg-big" }, d[1] + "%");
+    });
+  }
+  // Language toggle
+  var btns = document.querySelectorAll(".seg button");
+  function setLang(l) {
+    document.body.setAttribute("data-lang", l);
+    document.documentElement.setAttribute("lang", l === "am" ? "am" : "en");
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+    try { localStorage.setItem("ts-lang", l); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  try { var saved = localStorage.getItem("ts-lang"); if (saved) setLang(saved); } catch (e) {}
+})();
+</script>
+<script data-goatcounter="https://ambkidsjoy.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -8,6 +8,7 @@ Stories about technology and science, explained simply, in English and Amharic.
 
 | Date | Story | Link |
 |---|---|---|
+| 13 Nov 2026 | Selam and the Chip: a story-lesson on how chips are made, Africa's minerals and opportunities, and a practical entrepreneurial way to solve problems (8 episodes) | [Read](https://muler-21.github.io/Teck_Stories/chips-africa/) |
 | 13 Nov 2026 | From a Diner Booth to the Heart of AI: how chips work, how Jensen Huang built Nvidia, and how his story reached November 2026 | [Read](https://muler-21.github.io/Teck_Stories/nvidia-story/) |
 
 ## Structure
@@ -17,6 +18,9 @@ index.html              Home page listing all stories
 nvidia-story/
   index.html            The Nvidia story (English + Amharic, sources at the end)
   og.png                1200×630 cover image used for social media previews
+chips-africa/
+  index.html            Selam and the Chip: story-lesson (English + Amharic, sources at the end)
+  og.png                1200×630 cover image
 CITATION.cff            How to cite this work
 ```
 
