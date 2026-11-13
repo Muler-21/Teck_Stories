@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Build From What We Have</title>
-<meta name="description" content="A science-based lesson in English and Amharic: real African inventors, how semiconductors and chips work, Africa's minerals, hands-on builds from scrap, and a practical entrepreneurial method.">
+<title>From Sand to Computer</title>
+<meta name="description" content="Step by step, in English and Amharic: how a chip is built from sand, how chips become circuit boards and complete computers, Africa's role, and how young Africans can start building from what they have.">
 <meta name="author" content="Mulusew Kassa Bitew">
 <link rel="canonical" href="https://muler-21.github.io/Teck_Stories/chips-africa/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Tech Stories · የቴክ ታሪኮች">
-<meta property="og:title" content="Build From What We Have: chips, Africa and the young inventor's path">
-<meta property="og:description" content="Real African inventors, real science, hands-on builds from scrap, and a practical way to solve problems. English + Amharic · በእንግሊዝኛ እና በአማርኛ">
+<meta property="og:title" content="From Sand to Computer: how a chip is built, step by step">
+<meta property="og:description" content="How a chip is built from sand, how chips become a computer, and how young Africans can build from what they have. English + Amharic · በእንግሊዝኛ እና በአማርኛ">
 <meta property="og:url" content="https://muler-21.github.io/Teck_Stories/chips-africa/">
 <meta property="og:image" content="https://muler-21.github.io/Teck_Stories/chips-africa/og.png">
 <meta property="og:image:width" content="1200">
@@ -204,6 +204,17 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
 .week p { margin: 6px 0 0; font-size: 15.5px; line-height: 1.55; }
 .week p.am { font-size: 15.5px; line-height: 1.75; }
 .s-ink { stroke: var(--ink); } .s-copper { stroke: var(--copper); } .s-accent { stroke: var(--accent); } .f-ink { fill: var(--ink); } .f-paper { fill: var(--paper); }
+
+.journey { margin-top: 26px; background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; }
+.journey .scroll { overflow-x: auto; }
+.journey svg { display: block; width: 100%; min-width: 760px; height: auto; }
+.substeps { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; counter-reset: ss; }
+.substeps li { counter-increment: ss; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; }
+.substeps li::before { content: counter(ss, lower-alpha); font: 700 14px/28px var(--mono); text-align: center; width: 28px; height: 28px; border-radius: 6px; background: var(--accent); color: var(--paper); }
+.substeps b { font-family: var(--display); }
+.am .substeps b { font-family: var(--ethi-sans); }
+.truth { border-collapse: collapse; margin: 8px 0; font: 600 15px var(--mono); min-width: 0; width: auto; }
+.truth th, .truth td { border: 1px solid var(--rule); padding: 4px 12px; text-align: center; }
 </style>
 </head>
 <body data-lang="both">
@@ -212,15 +223,16 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
   <div class="wrap">
     <a class="home-link" href="../">← Tech Stories · የቴክ ታሪኮች</a>
     <p class="kicker">Lesson · ትምህርት · English + አማርኛ</p>
-    <h1>Build From What We Have
-      <span class="am-title" lang="am">ባለን ነገር እንገንባ</span>
+    <h1>From Sand to Computer
+      <span class="am-title" lang="am">ከአሸዋ እስከ ኮምፒውተር</span>
     </h1>
-    <p class="dek en">Chips, Africa and the young inventor's path. Real African inventors who started with scrap, the real science inside every chip, two builds you can make from old electronics, and a practical method for turning problems into products.</p>
-    <p class="dek am" lang="am">ቺፕ፣ አፍሪካና የወጣት ፈጣሪዎች መንገድ። ከቁርጥራጭ ዕቃዎች የጀመሩ እውነተኛ አፍሪካውያን ፈጣሪዎች፣ በእያንዳንዱ ቺፕ ውስጥ ያለው እውነተኛ ሳይንስ፣ ከአሮጌ ኤሌክትሮኒክስ ሊሠሩ የሚችሉ ሁለት ግንባታዎች፣ እና ችግሮችን ወደ ምርት የሚቀይር ተግባራዊ ዘዴ።</p>
+    <p class="dek en">How a chip is built, step by step, and how chips become circuit boards and complete computers. Then: the science you can test at home, real African inventors who started with scrap, and how young Africans can build from what they have.</p>
+    <p class="dek am" lang="am">ቺፕ ደረጃ በደረጃ እንዴት እንደሚሠራ፣ ቺፖችም እንዴት የወረዳ ሰሌዳና ሙሉ ኮምፒውተር እንደሚሆኑ። ከዚያም፦ በቤት ሊሞክሩት የሚችሉት ሳይንስ፣ ከቁርጥራጭ ዕቃዎች የጀመሩ እውነተኛ አፍሪካውያን ፈጣሪዎች፣ እና ወጣት አፍሪካውያን ባላቸው ነገር እንዴት መገንባት እንደሚችሉ።</p>
+    <div class="journey"><div class="scroll"><svg viewBox="0 0 1060 190" role="img" aria-labelledby="jt"><title id="jt">The journey: sand, pure silicon, wafer, chip built in layers, packaged chip, circuit board, computer.</title><g id="journey"></g></svg></div></div>
     <div class="stats">
-      <div class="stat"><b>~30%</b><span class="en">of the world's known critical-mineral reserves are in Africa</span><span class="am" lang="am">ከዓለም የታወቁ ወሳኝ ማዕድናት ክምችት 30% ገደማ በአፍሪካ ይገኛል</span></div>
-      <div class="stat"><b>&lt;1%</b><span class="en">of the world's semiconductor industry is in Africa</span><span class="am" lang="am">ከዓለም የሴሚኮንዳክተር ኢንዱስትሪ ከ1% ያነሰው ብቻ በአፍሪካ ነው</span></div>
-      <div class="stat"><b>14</b><span class="en">William Kamkwamba's age when he lit his home with a scrap windmill</span><span class="am" lang="am">ዊልያም ካምክዋምባ ቤቱን በቁርጥራጭ የነፋስ ወፍጮ ሲያበራ የነበረው ዕድሜ</span></div>
+      <div class="stat"><b>500–1,000</b><span class="en">process steps to build one modern chip</span><span class="am" lang="am">አንድ ዘመናዊ ቺፕ ለመገንባት የሚያስፈልጉ የሂደት ደረጃዎች</span></div>
+      <div class="stat"><b>3–4 months</b><span class="en">from bare wafer to finished chip</span><span class="am" lang="am">ከባዶ ዌፈር እስከ ተጠናቀቀ ቺፕ (ከ3–4 ወራት)</span></div>
+      <div class="stat"><b>16 billion</b><span class="en">transistors in one phone chip (Apple A16)</span><span class="am" lang="am">በአንድ የስልክ ቺፕ ውስጥ ያሉ ትራንዚስተሮች (Apple A16)</span></div>
     </div>
   </div>
 </header>
@@ -232,29 +244,16 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
       <button type="button" id="lang-en" data-lang="en" aria-pressed="false">English</button>
       <button type="button" id="lang-am" data-lang="am" aria-pressed="false"><span class="e">አማርኛ</span></button>
     </div>
-    <nav class="chapters" aria-label="Modules">
-      <a href="#m1">1 Problem</a><a href="#m2">2 Science</a><a href="#m3">3 Materials</a><a href="#m4">4 Build</a><a href="#m5">5 Factory</a><a href="#m6">6 Value</a><a href="#m7">7 Builders</a><a href="#m8">8 Path</a>
+    <nav class="chapters" aria-label="Parts">
+      <a href="#what">Switch</a><a href="#stage1">1 Wafer</a><a href="#stage2">2 Layers</a><a href="#stage3">3 Package</a><a href="#stage4">4 Board</a><a href="#stage5">5 Computer</a><a href="#m1">Build</a><a href="#m4">Sensor</a><a href="#m6">Africa</a><a href="#m8">Path</a>
     </nav>
   </div>
 </div>
 
 <main class="wrap">
 
-<section class="ch" id="m1">
-  <div class="ch-tag"><span class="yr">MODULE 1</span><span class="part">Start with a problem · ከችግር ይጀምሩ</span></div>
-  <div class="pair">
-    <div class="en"><h2>Start with a real problem</h2><div class="real"><span class="lbl">True story</span><p>In 2001–2002, a severe drought and famine hit Malawi. William Kamkwamba, 14, had to leave school because his family could not pay the fees. He kept learning in a small village library, where he found a textbook called <i>Using Energy</i> with a picture of a wind turbine. From a bicycle dynamo, a tractor fan, blue-gum poles and other scrap, he built a windmill that lit four bulbs in his home, with homemade switches and a circuit breaker made from nails. A later windmill pumped water to irrigate crops.</p></div><p>William did not start with money, a lab or a degree. He started with a problem his family felt every day (darkness and hunger), a library book and the scrap around him. That is the first rule of building: <b>a real problem plus what you have.</b></p><div class="sci"><span class="lbl">The science</span><p>A bicycle dynamo is a small generator. When a magnet spins near a coil of copper wire, the changing magnetic field pushes electrons along the wire. This is <b>electromagnetic induction</b>, discovered by Michael Faraday in 1831. Wind turns the blades, the blades turn the magnet, and motion becomes electricity.</p></div></div>
-    <div class="am" lang="am"><h2>በእውነተኛ ችግር ይጀምሩ</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በ2001–2002 ከባድ ድርቅና ረሃብ ማላዊን መታ። የ14 ዓመቱ ዊልያም ካምክዋምባ ቤተሰቡ የትምህርት ቤት ክፍያ መክፈል ስላልቻለ ትምህርቱን ለማቋረጥ ተገደደ። በመንደሩ ትንሽ ቤተ መጻሕፍት መማሩን ቀጠለ፤ እዚያም የነፋስ ተርባይን ስዕል ያለበት <i>Using Energy</i> (ኃይልን መጠቀም) የተባለ መጽሐፍ አገኘ። ከብስክሌት ዳይናሞ፣ ከትራክተር ማራገቢያ፣ ከባሕር ዛፍ ምሰሶዎችና ከሌሎች ቁርጥራጭ ብረቶች የነፋስ ወፍጮ ሠራ፤ ወፍጮውም በቤቱ አራት አምፖሎችን አበራ። ማብሪያ ማጥፊያዎቹን ራሱ ሠራ፤ የወረዳ መቆጣጠሪያውንም ከሚስማር አዘጋጀ። በኋላ የሠራው ሌላ ወፍጮ ሰብል ለማጠጣት ውሃ ሳበ።</p></div><p>ዊልያም በገንዘብ፣ በላቦራቶሪ ወይም በዲግሪ አልጀመረም። የጀመረው ቤተሰቡ በየቀኑ በሚሰማው ችግር (ጨለማና ረሃብ)፣ በአንድ የቤተ መጻሕፍት መጽሐፍና በዙሪያው ባለው ቁርጥራጭ ነገር ነው። የመገንባት የመጀመሪያው ሕግ ይህ ነው፦ <b>እውነተኛ ችግር እና ያለዎት ነገር።</b></p><div class="sci"><span class="lbl">ሳይንሱ</span><p>የብስክሌት ዳይናሞ ትንሽ ጀነሬተር ነው። ማግኔት በመዳብ ሽቦ ጥቅል አጠገብ ሲሽከረከር፣ የሚለዋወጠው መግነጢሳዊ መስክ ኤሌክትሮኖችን በሽቦው ውስጥ ይገፋል። ይህ በ1831 በማይክል ፋራዴይ የተገኘው <b>ኤሌክትሮማግኔቲክ ኢንዳክሽን</b> ነው። ነፋስ ክንፎቹን ያሽከረክራል፣ ክንፎቹ ማግኔቱን ያሽከረክራሉ፣ እንቅስቃሴም ኤሌክትሪክ ይሆናል።</p></div></div>
-  </div>
-  
-  <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Write a problem statement.</b> Answer four questions: Who has the problem? How often? What does it cost them in money, time or health? How do they cope today?</p></div><div class="mission"><span class="lbl">Your mission</span><p>List three problems in your village, school or city. Answer the four questions for each, then choose the one that hurts the most people most often.</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>የችግር መግለጫ ይጻፉ።</b> አራት ጥያቄዎችን ይመልሱ፦ ችግሩ ያለበት ማነው? ምን ያህል ጊዜ ይከሰታል? በገንዘብ፣ በጊዜ ወይም በጤና ምን ያሳጣቸዋል? ዛሬ እንዴት ይቋቋሙታል?</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>በመንደርዎ፣ በትምህርት ቤትዎ ወይም በከተማዎ ያሉ ሦስት ችግሮችን ይዘርዝሩ። ለእያንዳንዳቸው አራቱን ጥያቄዎች ይመልሱ፤ ከዚያም ብዙ ሰዎችን በተደጋጋሚ የሚጎዳውን ይምረጡ።</p></div></div>
-  </div>
-</section>
-
-<section class="ch" id="m2">
-  <div class="ch-tag"><span class="yr">MODULE 2</span><span class="part">The science of a chip · የቺፕ ሳይንስ</span></div>
+<section class="ch" id="what">
+  <div class="ch-tag"><span class="yr">PART 1</span><span class="part">The science of a chip · የቺፕ ሳይንስ</span></div>
   <div class="pair">
     <div class="en"><h2>How a semiconductor works</h2><div class="real"><span class="lbl">True story</span><p>Kelvin Doe grew up in Freetown, Sierra Leone, where the power came on only rarely. From about age 10 he searched scrap heaps for parts. When he realised all his money went on batteries, he built his own from acid, baking soda and metal. He built a sound mixer from scrap transistors, then a generator and an FM transmitter, and ran a community radio station as “DJ Focus”. In 2012, at 15, he became the youngest person invited to MIT's Visiting Practitioner programme.</p></div><p>Kelvin learned by taking things apart and testing them. To go further, from using parts to understanding them, you need the science inside every chip:</p><div class="sci"><span class="lbl">The science</span><ul><li><b>Silicon</b> has 4 outer electrons. In a pure crystal, each one is locked in a bond with a neighbour, so pure silicon conducts electricity poorly.</li><li><b>Doping:</b> replace one atom in about a million with <b>phosphorus</b> (5 outer electrons) and a spare electron is free to move: <i>n-type</i>. Use <b>boron</b> (3) instead and you leave a gap, a <i>hole</i>, that also moves: <i>p-type</i>.</li><li><b>p-n junction:</b> join p and n and current flows easily in one direction only. That is a <b>diode</b>. An <b>LED</b> is a diode that gives out light when electrons fall into holes.</li><li><b>Transistor:</b> a small voltage on its control pin opens or closes a path for a bigger current. It is a switch with no moving parts. A modern chip holds billions of them.</li></ul></div></div>
     <div class="am" lang="am"><h2>ሴሚኮንዳክተር እንዴት ይሰራል</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>ኬልቪን ዶ ያደገው መብራት አልፎ አልፎ ብቻ በሚመጣባት በሴራሊዮን ፍሪታውን ከተማ ነው። ከ10 ዓመቱ ገደማ ጀምሮ ከቆሻሻ ክምሮች ዕቃዎችን ይፈልግ ነበር። ገንዘቡ ሁሉ ባትሪ ለመግዛት እንደሚያልቅ ሲረዳ ከአሲድ፣ ከቤኪንግ ሶዳና ከብረት የራሱን ባትሪ ሠራ። ከተጣሉ ትራንዚስተሮች የድምፅ ማቀላቀያ፣ ከዚያም ጀነሬተርና የFM ማሰራጫ ሠራ፤ «ዲጄ ፎከስ» በሚል ስም የማኅበረሰብ ሬዲዮ ጣቢያ አቋቋመ። በ2012፣ በ15 ዓመቱ፣ ወደ MIT የ«ቪዚቲንግ ፕራክቲሽነር» ፕሮግራም የተጋበዘ ትንሹ ሰው ሆነ።</p></div><p>ኬልቪን የተማረው ነገሮችን በመፍታትና በመሞከር ነው። ዕቃዎችን ከመጠቀም ወደ መረዳት ለመሸጋገር፣ በእያንዳንዱ ቺፕ ውስጥ ያለውን ሳይንስ ማወቅ ያስፈልጋል፦</p><div class="sci"><span class="lbl">ሳይንሱ</span><ul><li><b>ሲሊከን</b> 4 የውጪ ኤሌክትሮኖች አሉት። በንጹሕ ክሪስታል ውስጥ እያንዳንዱ ከጎረቤቱ ጋር በትስስር ስለተያዘ ንጹሕ ሲሊከን ኤሌክትሪክን በደንብ አያስተላልፍም።</li><li><b>ዶፒንግ፦</b> ከአንድ ሚሊዮን አተሞች አንዱን በ<b>ፎስፈረስ</b> (5 የውጪ ኤሌክትሮኖች) ሲተኩ ነፃ የሚንቀሳቀስ ትርፍ ኤሌክትሮን ይኖራል፦ <i>n-ዓይነት</i>። በምትኩ <b>ቦሮን</b> (3) ሲጠቀሙ የሚንቀሳቀስ ክፍተት ወይም <i>ቀዳዳ</i> ይቀራል፦ <i>p-ዓይነት</i>።</li><li><b>p-n መጋጠሚያ፦</b> p እና n ሲገናኙ ኤሌክትሪክ በቀላሉ የሚፈሰው በአንድ አቅጣጫ ብቻ ነው። ይህ <b>ዳዮድ</b> ነው። <b>ኤልኢዲ</b> ኤሌክትሮኖች ቀዳዳዎችን ሲሞሉ ብርሃን የሚሰጥ ዳዮድ ነው።</li><li><b>ትራንዚስተር፦</b> በመቆጣጠሪያ እግሩ ላይ ያለች ትንሽ ቮልቴጅ ለትልቅ ኤሌክትሪክ መንገዱን ትከፍታለች ወይም ትዘጋለች። ተንቀሳቃሽ ክፍል የሌለው ማብሪያ ማጥፊያ ነው። ዘመናዊ ቺፕ በቢሊዮን የሚቆጠሩ ትራንዚስተሮች ይዟል።</li></ul></div></div>
@@ -269,8 +268,95 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
   </div>
 </section>
 
+<section class="ch" id="stage1">
+  <div class="ch-tag"><span class="yr">STAGE 1</span><span class="part">Sand → wafer · አሸዋ → ዌፈር</span></div>
+  <div class="pair">
+    <div class="en"><h2>Stage 1: From sand to a perfect wafer</h2><p>Every chip starts as <b>quartz</b>, silicon dioxide (SiO₂), the most common mineral in sand and rock. Turning it into a wafer takes five steps:</p><ol class="substeps"><li><span><b>Mine and select quartz.</b> High-purity quartz rock is chosen and washed.</span></li><li><span><b>Reduce it in a furnace.</b> Quartz and carbon (coal, charcoal, wood chips) are heated in an electric arc furnace to about 2,000 °C. The carbon pulls the oxygen away, leaving silicon that is about 98–99% pure.</span></li><li><span><b>Purify it.</b> The silicon reacts with hydrogen chloride to make a liquid, trichlorosilane, that can be distilled like alcohol. The clean liquid then deposits silicon onto hot rods at about 1,100 °C. The result is 99.9999999% pure or better: fewer than one foreign atom in a billion.</span></li><li><span><b>Grow one perfect crystal.</b> The pure silicon is melted (it melts at 1,414 °C) in a quartz crucible. A small seed crystal is dipped in, turned and pulled up very slowly. The atoms line up behind it and form one single crystal, an ingot up to 300 mm wide and about 2 m long. This is the Czochralski method. A tiny amount of boron or phosphorus is added to the melt.</span></li><li><span><b>Slice and polish.</b> Diamond-coated wire cuts the ingot into wafers less than 1 mm thick (a 300 mm wafer is about 0.78 mm). They are ground, polished to a mirror and cleaned.</span></li></ol><div class="sci"><span class="lbl">The science</span><p class="formula">SiO₂ + 2C → Si + 2CO   (~2,000 °C)</p><p class="formula">Si + 3HCl → SiHCl₃ + H₂</p><p class="formula">SiHCl₃ + H₂ → Si + 3HCl   (~1,100 °C)</p></div></div>
+    <div class="am" lang="am"><h2>ደረጃ 1፦ ከአሸዋ እስከ ፍጹም ዌፈር</h2><p>እያንዳንዱ ቺፕ የሚጀምረው ከ<b>ኳርትዝ</b> ማለትም ከሲሊከን ዳይኦክሳይድ (SiO₂) ነው፤ ይህ በአሸዋና በዐለት ውስጥ በብዛት የሚገኝ ማዕድን ነው። ወደ ዌፈር ለመቀየር አምስት ደረጃዎች ያስፈልጋሉ፦</p><ol class="substeps"><li><span><b>ኳርትዝ ማውጣትና መምረጥ።</b> ከፍተኛ ንጽሕና ያለው የኳርትዝ ዐለት ተመርጦ ይታጠባል።</span></li><li><span><b>በምድጃ ውስጥ መቀነስ።</b> ኳርትዝና ካርቦን (የድንጋይ ከሰል፣ ከሰል፣ የእንጨት ቁርጥራጭ) በኤሌክትሪክ ምድጃ ውስጥ በ2,000 °C ገደማ ይሞቃሉ። ካርቦኑ ኦክስጅኑን ይወስዳል፤ 98–99% ገደማ ንጹሕ ሲሊከን ይቀራል።</span></li><li><span><b>ማጣራት።</b> ሲሊከኑ ከሃይድሮጅን ክሎራይድ ጋር ተገናኝቶ «ትራይክሎሮሲሌን» የሚባል ፈሳሽ ይሆናል፤ ይህ ፈሳሽ እንደ አልኮል ሊጣራ (ሊቀዳ) ይችላል። ንጹሑ ፈሳሽ በ1,100 °C ገደማ በሚሞቁ ዘንጎች ላይ ሲሊከን ያስቀምጣል። ውጤቱ 99.9999999% ወይም ከዚያ በላይ ንጹሕ ነው፤ ከአንድ ቢሊዮን አተሞች አንድ እንኳ ባዕድ የለም።</span></li><li><span><b>አንድ ፍጹም ክሪስታል ማሳደግ።</b> ንጹሑ ሲሊከን በኳርትዝ ማሰሮ ውስጥ ይቀልጣል (የሚቀልጠው በ1,414 °C ነው)። ትንሽ የዘር ክሪስታል ተነክሮ እየተሽከረከረ በጣም በዝግታ ይጎተታል። አተሞቹ ከኋላው ተሰልፈው እስከ 300 ሚ.ሜ ስፋትና 2 ሜትር ገደማ ርዝመት ያለው አንድ ክሪስታል ይሠራሉ። ይህ የቾክራልስኪ ዘዴ ነው። በቀለጠው ሲሊከን ላይ በጣም ትንሽ ቦሮን ወይም ፎስፈረስ ይጨመራል።</span></li><li><span><b>መቁረጥና ማለስለስ።</b> በአልማዝ የተለበጠ ሽቦ ክሪስታሉን ከ1 ሚ.ሜ ባነሰ ውፍረት ወደ ዌፈሮች ይቆርጣል (የ300 ሚ.ሜ ዌፈር 0.78 ሚ.ሜ ገደማ ነው)። ዌፈሮቹ ተፈጭተው እንደ መስታወት ይለሰልሳሉ፤ ይጸዳሉም።</span></li></ol><div class="sci"><span class="lbl">ሳይንሱ</span><p class="formula">SiO₂ + 2C → Si + 2CO   (~2,000 °C)</p><p class="formula">Si + 3HCl → SiHCl₃ + H₂</p><p class="formula">SiHCl₃ + H₂ → Si + 3HCl   (~1,100 °C)</p></div></div>
+  </div>
+  <h3 style="margin-top:26px">The whole factory journey at a glance · የፋብሪካው ጉዞ በአጭሩ</h3><ol class="steps">
+    <li><div class="en"><b>Quartz → silicon</b><p>Quartz and carbon are heated in an electric furnace to about 2,000 °C, giving silicon that is about 98–99% pure.</p></div><div class="am" lang="am"><b>ኳርትዝ → ሲሊከን</b><p>ኳርትዝና ካርቦን በኤሌክትሪክ ምድጃ ውስጥ በ2,000 °C ገደማ ይሞቃሉ፤ 98–99% ንጹሕ ሲሊከን ይገኛል።</p></div></li>
+    <li><div class="en"><b>Purify</b><p>Chemistry raises purity to 99.9999999% or better ("nine nines"): fewer than one foreign atom in a billion.</p></div><div class="am" lang="am"><b>ማጣራት</b><p>በኬሚካል ሂደት ንጽሕናው 99.9999999% ወይም ከዚያ በላይ ይደርሳል፤ ከአንድ ቢሊዮን አተሞች አንድ እንኳ ባዕድ አይኖርም።</p></div></li>
+    <li><div class="en"><b>Grow a crystal</b><p>A seed is slowly pulled from molten silicon to grow one perfect crystal, an "ingot" up to 2 metres long.</p></div><div class="am" lang="am"><b>ክሪስታል ማሳደግ</b><p>ከቀለጠ ሲሊከን ውስጥ ዘር በዝግታ እየተጎተተ እስከ 2 ሜትር የሚረዝም አንድ ፍጹም ክሪስታል ይበቅላል።</p></div></li>
+    <li><div class="en"><b>Slice into wafers</b><p>The ingot is cut into discs less than 1 mm thick and polished like a mirror.</p></div><div class="am" lang="am"><b>ወደ ዌፈር መቁረጥ</b><p>ክሪስታሉ ከ1 ሚሊሜትር ባነሰ ውፍረት ተቆርጦ እንደ መስታወት ይለሰልሳል።</p></div></li>
+    <li class="loop"><div class="en"><b>The layer loop (repeat!)</b><p>Deposit a thin film → coat with light-sensitive resist → print the pattern with light → etch away what is not needed → add dopants. Repeat for every layer.</p></div><div class="am" lang="am"><b>የንብርብር ዑደት (ይደገማል!)</b><p>ቀጭን ሽፋን ማስቀመጥ → ለብርሃን ስሱ በሆነ ቅባት መሸፈን → ንድፉን በብርሃን ማተም → የማያስፈልገውን መፋቅ → ዶፓንት መጨመር። ለእያንዳንዱ ንብርብር ይደገማል።</p></div></li>
+    <li><div class="en"><b>Add the wiring</b><p>Layers of copper wires, thinner than a virus, connect billions of transistors.</p></div><div class="am" lang="am"><b>ሽቦዎችን መዘርጋት</b><p>ከቫይረስ የቀጠኑ የመዳብ ሽቦ ንብርብሮች ቢሊዮኖችን ትራንዚስተሮች ያገናኛሉ።</p></div></li>
+    <li><div class="en"><b>Test and cut</b><p>Each chip on the wafer is tested by machine, then the wafer is cut into individual chips ("dies").</p></div><div class="am" lang="am"><b>መፈተሽና መቁረጥ</b><p>በዌፈሩ ላይ ያለ እያንዳንዱ ቺፕ በማሽን ይፈተሻል፤ ከዚያም ዌፈሩ ወደ ተናጠል ቺፖች ይቆረጣል።</p></div></li>
+    <li><div class="en"><b>Package and test again</b><p>Each die is sealed in a protective package with metal legs or balls, tested once more, then shipped.</p></div><div class="am" lang="am"><b>ማሸግና እንደገና መፈተሽ</b><p>እያንዳንዱ ቺፕ የብረት እግሮች ባሉት መከላከያ ውስጥ ታሽጎ፣ አንድ ጊዜ ተጨማሪ ተፈትሾ ይላካል።</p></div></li>
+  </ol>
+</section>
+
+<section class="ch" id="stage2">
+  <div class="ch-tag"><span class="yr">STAGE 2</span><span class="part">Building the chip · ቺፑን መገንባት</span></div>
+  <div class="pair">
+    <div class="en"><h2>Stage 2: Building the chip, layer by layer</h2><p>The wafer now goes into a <b>fab</b>, a factory whose cleanroom air is filtered so that almost no dust remains. Wafers travel between machines in sealed boxes. On each wafer, hundreds of identical chips are built at the same time, one thin layer after another. Every layer goes through the same loop:</p><ol class="substeps"><li><span><b>Clean.</b> Ultra-pure water and acids remove every particle.</span></li><li><span><b>Grow or deposit a film.</b> Heating in oxygen grows a thin insulating layer of SiO₂; other machines deposit metals or insulators, from a few atoms to a few micrometres thick.</span></li><li><span><b>Coat.</b> The wafer spins while a light-sensitive liquid, photoresist, spreads into an even film.</span></li><li><span><b>Expose (lithography).</b> Light shines through a mask carrying the circuit pattern; lenses or mirrors shrink the image onto the wafer. Older layers use deep-ultraviolet light (193 nm); the finest use extreme-ultraviolet light (13.5 nm) made by hitting tiny tin droplets with a laser. Only ASML in the Netherlands builds EUV machines: about $200 million each, and about $380 million for the newest High-NA version.</span></li><li><span><b>Develop.</b> A chemical washes away the exposed resist, leaving the pattern.</span></li><li><span><b>Etch.</b> Plasma or chemicals cut away the film wherever the resist is not protecting it.</span></li><li><span><b>Dope.</b> Ion implantation fires boron, phosphorus or arsenic ions into the silicon to make p-type and n-type regions; heating to about 1,000 °C activates them.</span></li><li><span><b>Strip, clean and inspect.</b> The old resist is removed and machines check the layer before the next pass.</span></li></ol><p>The first passes build the transistors (the <i>front end</i>). The later passes build more than ten levels of copper wiring (the <i>back end</i>): trenches are etched, filled with copper and polished flat by chemical-mechanical polishing (CMP). In total a leading-edge chip passes through 500 to 1,000 process steps and 80 to 120 layers, over three to four months.</p></div>
+    <div class="am" lang="am"><h2>ደረጃ 2፦ ቺፑን በንብርብር መገንባት</h2><p>ዌፈሩ አሁን ወደ <b>«ፋብ»</b> ይገባል፤ ይህ የንጹሕ ክፍሉ አየር አቧራ እስከማይቀር ድረስ የሚጣራበት ፋብሪካ ነው። ዌፈሮች በታሸጉ ሳጥኖች ውስጥ በማሽኖች መካከል ይጓዛሉ። በእያንዳንዱ ዌፈር ላይ በመቶዎች የሚቆጠሩ ተመሳሳይ ቺፖች በአንድ ጊዜ፣ አንዱ ቀጭን ንብርብር ከሌላው በኋላ ይገነባሉ። እያንዳንዱ ንብርብር ያንኑ ዑደት ያልፋል፦</p><ol class="substeps"><li><span><b>ማጽዳት።</b> እጅግ ንጹሕ ውሃና አሲዶች እያንዳንዷን ቅንጣት ያስወግዳሉ።</span></li><li><span><b>ሽፋን ማሳደግ ወይም ማስቀመጥ።</b> በኦክስጅን ውስጥ ማሞቅ ቀጭን የSiO₂ መከላከያ ንብርብር ያሳድጋል፤ ሌሎች ማሽኖች ደግሞ ከጥቂት አተሞች እስከ ጥቂት ማይክሮሜትሮች ውፍረት ያላቸው ብረቶችን ወይም መከላከያዎችን ያስቀምጣሉ።</span></li><li><span><b>መቀባት።</b> ዌፈሩ ሲሽከረከር ለብርሃን ስሱ የሆነ «ፎቶሬዚስት» ፈሳሽ እኩል ሽፋን ሆኖ ይዘረጋል።</span></li><li><span><b>ለብርሃን ማጋለጥ (ሊቶግራፊ)።</b> ብርሃን የወረዳ ንድፍ በያዘ ጭምብል ውስጥ ያልፋል፤ ሌንሶች ወይም መስታወቶች ምስሉን አሳንሰው በዌፈሩ ላይ ያሳርፋሉ። የቆዩ ንብርብሮች ጥልቅ-አልትራቫዮሌት ብርሃን (193 nm) ይጠቀማሉ፤ በጣም ጥቃቅኖቹ ደግሞ ጥቃቅን የቆርቆሮ ጠብታዎችን በሌዘር በመምታት የሚፈጠር እጅግ-አልትራቫዮሌት (EUV፣ 13.5 nm) ብርሃን ይጠቀማሉ። የEUV ማሽኖችን የሚሠራው የኔዘርላንድሱ ASML ብቻ ነው፤ አንዱ 200 ሚሊዮን ዶላር ገደማ፣ አዲሱ «High-NA» ደግሞ 380 ሚሊዮን ዶላር ገደማ ያወጣል።</span></li><li><span><b>ማጠብ (develop)።</b> ኬሚካል ለብርሃን የተጋለጠውን ሬዚስት አጥቦ ንድፉን ያስቀራል።</span></li><li><span><b>መፋቅ (etch)።</b> ፕላዝማ ወይም ኬሚካሎች ሬዚስቱ ያልጠበቀውን ሽፋን ቆርጠው ያስወግዳሉ።</span></li><li><span><b>ዶፒንግ።</b> «አዮን ኢምፕላንቴሽን» የቦሮን፣ የፎስፈረስ ወይም የአርሰኒክ ion-ዎችን ወደ ሲሊከኑ ይተኩሳል፤ p-ዓይነትና n-ዓይነት ቦታዎችን ይፈጥራል፤ በ1,000 °C ገደማ ማሞቅ ያነቃቸዋል።</span></li><li><span><b>ማስወገድ፣ ማጽዳትና መመርመር።</b> የቀረው ሬዚስት ይወገዳል፤ ማሽኖች ንብርብሩን ከቀጣዩ ዙር በፊት ይፈትሻሉ።</span></li></ol><p>የመጀመሪያዎቹ ዙሮች ትራንዚስተሮቹን ይገነባሉ (<i>የፊት ክፍል</i>)። ቀጣዮቹ ዙሮች ከአሥር በላይ የመዳብ ሽቦ ደረጃዎችን ይገነባሉ (<i>የኋላ ክፍል</i>)፦ ቦዮች ተቆፍረው በመዳብ ይሞላሉ፤ ከዚያም በኬሚካላዊ-ሜካኒካዊ ማለስለሻ (CMP) ጠፍጣፋ ይሆናሉ። በአጠቃላይ ከፍተኛ ደረጃ ያለው ቺፕ ከ500 እስከ 1,000 የሂደት ደረጃዎችንና ከ80 እስከ 120 ንብርብሮችን በሦስት እስከ አራት ወራት ውስጥ ያልፋል።</p></div>
+  </div>
+  <figure><div class="scroll"><svg viewBox="0 0 1040 360" role="img" aria-labelledby="loop-t"><title id="loop-t">The layer loop: clean, deposit a film, coat with resist, expose with light, develop, etch, dope, then repeat for the next layer, 80 to 120 times.</title><g id="loop"></g></svg></div>
+<figcaption><span class="en">The layer loop. Each pass builds one layer; a modern chip needs 80–120 passes.</span><span class="am" lang="am">የንብርብር ዑደት። እያንዳንዱ ዙር አንድ ንብርብር ይገነባል፤ ዘመናዊ ቺፕ ከ80–120 ዙሮች ይፈልጋል።</span></figcaption></figure>
+</section>
+
+<section class="ch" id="stage3">
+  <div class="ch-tag"><span class="yr">STAGE 3</span><span class="part">Test, cut, package · መፈተሽ፣ መቁረጥ፣ ማሸግ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Stage 3: Test, cut and package</h2><ol class="substeps"><li><span><b>Wafer test.</b> Fine needles touch every chip on the wafer and run electrical tests. The share of chips that work is called the <i>yield</i>.</span></li><li><span><b>Dicing.</b> A diamond saw or laser cuts the wafer into individual chips, called <i>dies</i>.</span></li><li><span><b>Attach and connect.</b> Each good die is fixed onto a small base (a substrate) and connected to it with thin gold or copper wires, or with tiny solder bumps when the die is flipped upside down (flip-chip).</span></li><li><span><b>Seal.</b> The die is covered in hard plastic (epoxy) or a metal lid. Metal legs or a grid of solder balls underneath will later connect it to a circuit board.</span></li><li><span><b>Final test.</b> Packaged chips are heated, stressed and sorted by speed. Some packages now stack several dies together; this advanced packaging is a bottleneck for AI chips worldwide.</span></li></ol><p class="callout">Africa already does this stage: STMicroelectronics has run a chip assembly and test plant at Bouskoura, near Casablanca in Morocco, for decades.</p></div>
+    <div class="am" lang="am"><h2>ደረጃ 3፦ መፈተሽ፣ መቁረጥና ማሸግ</h2><ol class="substeps"><li><span><b>የዌፈር ምርመራ።</b> ቀጭን መርፌዎች በዌፈሩ ላይ ያለውን እያንዳንዱን ቺፕ ነክተው የኤሌክትሪክ ምርመራዎችን ያካሂዳሉ። የሚሰሩት ቺፖች ድርሻ <i>«ይልድ»</i> (ምርታማነት) ይባላል።</span></li><li><span><b>መቁረጥ።</b> የአልማዝ መጋዝ ወይም ሌዘር ዌፈሩን ወደ ተናጠል ቺፖች ይቆርጣል፤ እነዚህ <i>«ዳይ»</i> ይባላሉ።</span></li><li><span><b>ማጣበቅና ማገናኘት።</b> እያንዳንዱ ጥሩ ዳይ በትንሽ መሠረት ላይ ይጣበቃል፤ በቀጭን የወርቅ ወይም የመዳብ ሽቦዎች፣ ወይም ዳዩ ተገልብጦ በጥቃቅን የሶልደር ነጥቦች ይገናኛል።</span></li><li><span><b>ማሸግ።</b> ዳዩ በጠንካራ ፕላስቲክ (ኢፖክሲ) ወይም በብረት ክዳን ይሸፈናል። ከስሩ ያሉ የብረት እግሮች ወይም የሶልደር ኳሶች በኋላ ከወረዳ ሰሌዳ ጋር ያገናኙታል።</span></li><li><span><b>የመጨረሻ ምርመራ።</b> የታሸጉ ቺፖች ይሞቃሉ፣ ይፈተናሉ፣ በፍጥነታቸውም ይለያሉ። አንዳንድ ማሸጊያዎች አሁን ብዙ ዳዮችን በአንድ ላይ ይደራርባሉ፤ ይህ የላቀ ማሸግ በዓለም ዙሪያ ለAI ቺፖች ማነቆ ሆኗል።</span></li></ol><p class="callout">አፍሪካ ይህንን ደረጃ ቀድሞውኑ ትሠራለች፦ STMicroelectronics በሞሮኮ ካዛብላንካ አቅራቢያ ቡስኩራ ውስጥ ለአሥርት ዓመታት የቺፕ መገጣጠሚያና መፈተሻ ፋብሪካ ሲያንቀሳቅስ ቆይቷል።</p></div>
+  </div>
+  
+</section>
+
+<section class="ch" id="stage4">
+  <div class="ch-tag"><span class="yr">STAGE 4</span><span class="part">Chip → circuit board · ቺፕ → የወረዳ ሰሌዳ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Stage 4: From chips to a circuit board</h2><p>A chip alone does nothing. It must be soldered onto a <b>printed circuit board</b> (PCB) together with other parts.</p><h3>Making the board</h3><ol class="substeps"><li><span><b>Layers.</b> Sheets of fibreglass and epoxy (called FR-4) are covered with thin copper foil.</span></li><li><span><b>Pattern the copper.</b> The same idea as in the fab, at a bigger scale: the copper is coated, exposed to light through a pattern, and etched, leaving copper tracks.</span></li><li><span><b>Stack, drill and plate.</b> Layers are pressed together, holes are drilled and plated with copper to connect the layers.</span></li><li><span><b>Finish.</b> A green solder mask protects the tracks and white printing labels each part.</span></li></ol><h3>Assembling the board</h3><ol class="substeps"><li><span><b>Print solder paste.</b> A metal stencil spreads solder paste onto each pad.</span></li><li><span><b>Place the parts.</b> A pick-and-place machine sets chips, resistors and capacitors onto the paste, thousands per hour.</span></li><li><span><b>Reflow.</b> An oven melts the solder (lead-free solder melts at about 217–220 °C), fixing every part at once.</span></li><li><span><b>Inspect and test.</b> Cameras check each joint, larger parts such as connectors are added, and the board is tested and loaded with its first program (firmware).</span></li></ol><p class="callout">Device assembly is growing in Africa: local plants in Egypt, Nigeria, Ethiopia and Rwanda now assemble devices, and Arthur Zang's Cardiopad was assembled in Cameroon.</p><p>You can do this stage yourself at small scale: design a board with the free program KiCad, and solder parts by hand with a soldering iron.</p></div>
+    <div class="am" lang="am"><h2>ደረጃ 4፦ ከቺፖች እስከ የወረዳ ሰሌዳ</h2><p>ቺፕ ብቻውን ምንም አይሠራም። ከሌሎች ዕቃዎች ጋር በ<b>«የታተመ የወረዳ ሰሌዳ»</b> (PCB) ላይ መበየድ (ሶልደር መደረግ) አለበት።</p><h3>ሰሌዳውን መሥራት</h3><ol class="substeps"><li><span><b>ንብርብሮች።</b> የፋይበርግላስና የኢፖክሲ ሉሆች (FR-4 ይባላሉ) በቀጭን የመዳብ ሽፋን ይለበጣሉ።</span></li><li><span><b>የመዳቡን ንድፍ ማውጣት።</b> በፋቡ ውስጥ ያለው ሐሳብ በትልቅ መጠን፦ መዳቡ ተቀብቶ በንድፍ በኩል ለብርሃን ይጋለጣል፣ ይፋቃልም፤ የመዳብ መስመሮች ይቀራሉ።</span></li><li><span><b>መደራረብ፣ መብሳትና መለበጥ።</b> ንብርብሮቹ ተጭነው ይጣበቃሉ፤ ቀዳዳዎች ተበስተው ንብርብሮቹን ለማገናኘት በመዳብ ይለበጣሉ።</span></li><li><span><b>ማጠናቀቅ።</b> አረንጓዴ «ሶልደር ማስክ» መስመሮቹን ይጠብቃል፤ ነጭ ጽሑፍ እያንዳንዱን ዕቃ ይሰይማል።</span></li></ol><h3>ሰሌዳውን መገጣጠም</h3><ol class="substeps"><li><span><b>የሶልደር ሊጥ ማተም።</b> የብረት ስቴንስል በእያንዳንዱ መገናኛ ላይ የሶልደር ሊጥ ይቀባል።</span></li><li><span><b>ዕቃዎቹን ማስቀመጥ።</b> «ፒክ-ኤንድ-ፕሌስ» ማሽን ቺፖችን፣ ሬዚስተሮችንና ካፓሲተሮችን በሊጡ ላይ በሰዓት በሺዎች ያስቀምጣል።</span></li><li><span><b>በምድጃ ማቅለጥ (reflow)።</b> ምድጃ ሶልደሩን ያቀልጣል (ከእርሳስ ነፃ የሆነ ሶልደር በ217–220 °C ገደማ ይቀልጣል)፤ ሁሉንም ዕቃዎች በአንድ ጊዜ ያጣብቃል።</span></li><li><span><b>መመርመርና መፈተሽ።</b> ካሜራዎች እያንዳንዱን መገጣጠሚያ ይፈትሻሉ፤ እንደ ማገናኛ ያሉ ትላልቅ ዕቃዎች ይጨመራሉ፤ ሰሌዳው ተፈትሾ የመጀመሪያ ፕሮግራሙ (ፈርምዌር) ይጫንበታል።</span></li></ol><p class="callout">የመሣሪያ መገጣጠም በአፍሪካ እያደገ ነው፦ በግብፅ፣ በናይጄሪያ፣ በኢትዮጵያና በሩዋንዳ ያሉ የአገር ውስጥ ፋብሪካዎች አሁን መሣሪያዎችን ይገጣጥማሉ፤ የአርተር ዛንግ ካርዲዮፓድም በካሜሩን ተገጣጥሟል።</p><p>ይህንን ደረጃ በትንሽ መጠን ራስዎ መሥራት ይችላሉ፦ በነፃው KiCad ፕሮግራም ሰሌዳ ይንደፉ፤ ዕቃዎችንም በሶልደሪንግ አይረን በእጅ ይበይዱ።</p></div>
+  </div>
+  
+</section>
+
+<section class="ch" id="stage5">
+  <div class="ch-tag"><span class="yr">STAGE 5</span><span class="part">Board → computer · ሰሌዳ → ኮምፒውተር</span></div>
+  <div class="pair">
+    <div class="en"><h2>Stage 5: From boards to a complete computer</h2><p>A computer is a team of chips and parts, each with one job:</p><ol class="substeps"><li><span><b>Processor (CPU).</b> Runs the instructions of every program. Its clock ticks billions of times a second (GHz).</span></li><li><span><b>Memory (RAM).</b> Holds the data the CPU is working on. Each bit is a tiny charge on a capacitor beside one transistor; it is lost when power is switched off.</span></li><li><span><b>Storage (SSD, flash, hard disk).</b> Keeps files when power is off. Flash memory traps electric charge in its transistors; hard disks store data magnetically.</span></li><li><span><b>Graphics processor (GPU).</b> Thousands of small cores draw the screen and, today, run AI.</span></li><li><span><b>Motherboard.</b> The large circuit board whose copper tracks (buses) connect all the parts.</span></li><li><span><b>Power supply.</b> Turns 220 V alternating current from the wall into 12 V, 5 V and 3.3 V direct current; chips on the board lower it further.</span></li><li><span><b>Input and output.</b> Keyboard, touch screen, camera and sensors bring information in; display, speaker and network send it out.</span></li><li><span><b>Firmware and software.</b> When you press power, firmware (BIOS/UEFI) wakes up, checks the hardware and loads the operating system, which then runs your apps.</span></li></ol><p>In a phone, the CPU, GPU and other blocks are combined on one <b>system-on-chip</b>. Apple's A16 Bionic, for example, holds 16 billion transistors.</p></div>
+    <div class="am" lang="am"><h2>ደረጃ 5፦ ከሰሌዳዎች እስከ ሙሉ ኮምፒውተር</h2><p>ኮምፒውተር እያንዳንዳቸው አንድ ሥራ ያላቸው የቺፖችና የዕቃዎች ቡድን ነው፦</p><ol class="substeps"><li><span><b>ፕሮሰሰር (ሲፒዩ)።</b> የእያንዳንዱን ፕሮግራም መመሪያዎች ይፈጽማል። ሰዓቱ በሰከንድ በቢሊዮን ጊዜ ይመታል (GHz)።</span></li><li><span><b>ማህደረ ትውስታ (RAM)።</b> ሲፒዩው እየሠራበት ያለውን መረጃ ይይዛል። እያንዳንዱ ቢት ከአንድ ትራንዚስተር አጠገብ ባለ ትንሽ ካፓሲተር ላይ ያለ ትንሽ ቻርጅ ነው፤ ኃይል ሲጠፋ ይጠፋል።</span></li><li><span><b>ማከማቻ (SSD፣ ፍላሽ፣ ሃርድ ዲስክ)።</b> ኃይል ሲጠፋም ፋይሎችን ያስቀምጣል። ፍላሽ ማህደረ ትውስታ ኤሌክትሪክ ቻርጅን በትራንዚስተሮቹ ውስጥ ያጠምዳል፤ ሃርድ ዲስኮች መረጃን በማግኔት ያስቀምጣሉ።</span></li><li><span><b>የግራፊክስ ፕሮሰሰር (ጂፒዩ)።</b> በሺዎች የሚቆጠሩ ትናንሽ ኮሮች ስክሪኑን ይስላሉ፤ ዛሬ ደግሞ AI ያንቀሳቅሳሉ።</span></li><li><span><b>ማዘርቦርድ።</b> የመዳብ መስመሮቹ (ባሶች) ሁሉንም ክፍሎች የሚያገናኙበት ትልቁ የወረዳ ሰሌዳ።</span></li><li><span><b>የኃይል አቅራቢ።</b> ከግድግዳ የሚመጣውን 220 V ተለዋጭ ኤሌክትሪክ ወደ 12 V፣ 5 V እና 3.3 V ቀጥተኛ ኤሌክትሪክ ይቀይራል፤ በሰሌዳው ላይ ያሉ ቺፖች ደግሞ የበለጠ ይቀንሱታል።</span></li><li><span><b>ግብዓትና ውጤት።</b> የቁልፍ ሰሌዳ፣ የንክኪ ስክሪን፣ ካሜራና ዳሳሾች መረጃ ያስገባሉ፤ ስክሪን፣ ስፒከርና ኔትወርክ ያስወጣሉ።</span></li><li><span><b>ፈርምዌርና ሶፍትዌር።</b> የማብሪያ ቁልፉን ሲጫኑ ፈርምዌሩ (BIOS/UEFI) ይነቃል፣ ሃርድዌሩን ይፈትሻል፣ ኦፐሬቲንግ ሲስተሙን ይጭናል፤ እሱም መተግበሪያዎችዎን ያስኬዳል።</span></li></ol><p>በስልክ ውስጥ ሲፒዩ፣ ጂፒዩና ሌሎች ክፍሎች በአንድ <b>«ሲስተም-ኦን-ቺፕ»</b> ላይ ይጣመራሉ። ለምሳሌ የአፕል A16 Bionic 16 ቢሊዮን ትራንዚስተሮችን ይዟል።</p></div>
+  </div>
+  <figure><div class="scroll"><svg viewBox="0 0 1040 400" role="img" aria-labelledby="sys-t"><title id="sys-t">Block diagram of a computer: the CPU in the centre connected to memory (RAM), storage, the graphics processor and display, input devices, output and network, all powered by a power supply and timed by a clock, with firmware and an operating system on top.</title><g id="sys"></g></svg></div>
+<figcaption><span class="en">How the parts of a computer connect. In a phone, the CPU, GPU and more sit on one system-on-chip.</span><span class="am" lang="am">የኮምፒውተር ክፍሎች እንዴት እንደሚገናኙ። በስልክ ውስጥ ሲፒዩ፣ ጂፒዩና ሌሎችም በአንድ «ሲስተም-ኦን-ቺፕ» ላይ ይገኛሉ።</span></figcaption></figure>
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><h3>How switches become a thinking machine</h3>
+<ol class="substeps">
+<li><span><b>Transistors make logic gates.</b> Two or four transistors make a gate such as NOT, AND, OR or NAND. A NAND gate gives 0 only when both inputs are 1:</span></li></ol>
+<table class="truth"><tr><th>A</th><th>B</th><th>A NAND B</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>1</td></tr><tr><td>1</td><td>0</td><td>1</td></tr><tr><td>1</td><td>1</td><td>0</td></tr></table>
+<ol class="substeps" start="2" style="counter-reset: ss 1">
+<li><span><b>Gates make an adder.</b> An XOR gate and an AND gate together add two binary digits (1 + 1 = 10 in binary: sum 0, carry 1). Chain them and you can add any numbers.</span></li>
+<li><span><b>Adders make an arithmetic logic unit (ALU)</b> that can add, subtract and compare.</span></li>
+<li><span><b>Add memory and a clock</b> and you have a processor: it fetches an instruction, decodes it, executes it, and repeats, billions of times a second.</span></li></ol><div class="safety"><span class="lbl">Safety first</span><p>You may open an old desktop computer (unplugged) to identify the motherboard, CPU, RAM, storage and power supply. <b>Never open the power supply box itself</b>: its capacitors can hold a dangerous charge.</p></div><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Understand the whole system.</b> Founders who understand every layer, from materials to software, spot opportunities others miss: a cheaper part, a local repair business, a sensor that fills a gap.</p></div><div class="mission"><span class="lbl">Your mission</span><p>Do the free course Nand2Tetris (nand2tetris.org), which builds a whole computer starting from one NAND gate. Or open an old computer and label each part on a photo.</p></div></div>
+    <div class="am" lang="am"><h3>ማብሪያ ማጥፊያዎች እንዴት አሳቢ ማሽን ይሆናሉ</h3>
+<ol class="substeps">
+<li><span><b>ትራንዚስተሮች የሎጂክ በሮችን ይሠራሉ።</b> ሁለት ወይም አራት ትራንዚስተሮች እንደ NOT፣ AND፣ OR ወይም NAND ያለ በር ይሠራሉ። የNAND በር 0 የሚሰጠው ሁለቱም ግብዓቶች 1 ሲሆኑ ብቻ ነው፦</span></li></ol>
+<table class="truth"><tr><th>A</th><th>B</th><th>A NAND B</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>1</td></tr><tr><td>1</td><td>0</td><td>1</td></tr><tr><td>1</td><td>1</td><td>0</td></tr></table>
+<ol class="substeps" start="2" style="counter-reset: ss 1">
+<li><span><b>በሮች መደመሪያ ይሠራሉ።</b> የXOR በርና የAND በር በአንድ ላይ ሁለት የባይናሪ አሃዞችን ይደምራሉ (1 + 1 = 10 በባይናሪ፦ ድምር 0፣ ተሸካሚ 1)። በሰንሰለት ሲያገናኟቸው ማንኛውንም ቁጥር መደመር ይችላሉ።</span></li>
+<li><span><b>መደመሪያዎች የሂሳብና የሎጂክ ክፍል (ALU) ይሠራሉ፤</b> ይህ መደመር፣ መቀነስና ማነጻጸር ይችላል።</span></li>
+<li><span><b>ማህደረ ትውስታና ሰዓት ሲጨመሩ</b> ፕሮሰሰር ይሆናል፦ መመሪያ ያመጣል፣ ይተረጉማል፣ ይፈጽማል፣ ይደግማል፤ በሰከንድ በቢሊዮን ጊዜ።</span></li></ol><div class="safety"><span class="lbl">መጀመሪያ ደህንነት</span><p>አሮጌ የዴስክቶፕ ኮምፒውተር (ከሶኬት ተነቅሎ) ከፍተው ማዘርቦርዱን፣ ሲፒዩውን፣ RAMን፣ ማከማቻውንና የኃይል አቅራቢውን መለየት ይችላሉ። <b>የኃይል አቅራቢውን ሳጥን ራሱን በፍጹም አይክፈቱ</b>፦ ካፓሲተሮቹ አደገኛ ቻርጅ ሊይዙ ይችላሉ።</p></div><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>ሙሉውን ሥርዓት ይረዱ።</b> ከቁሳቁስ እስከ ሶፍትዌር እያንዳንዱን ንብርብር የሚረዱ መሥራቾች ሌሎች የሚያልፏቸውን ዕድሎች ያያሉ፦ ርካሽ ዕቃ፣ የአገር ውስጥ የጥገና ሥራ፣ ክፍተትን የሚሞላ ዳሳሽ።</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>ከአንድ የNAND በር ጀምሮ ሙሉ ኮምፒውተር የሚገነባውን ነፃውን Nand2Tetris ኮርስ (nand2tetris.org) ይውሰዱ። ወይም አሮጌ ኮምፒውተር ከፍተው በፎቶ ላይ እያንዳንዱን ክፍል ይሰይሙ።</p></div></div>
+  </div>
+</section>
+
+<section class="ch" id="m1">
+  <div class="ch-tag"><span class="yr">BUILD · 1</span><span class="part">Start with a problem · ከችግር ይጀምሩ</span></div>
+  <div class="pair">
+    <div class="en"><h2>Start with a real problem</h2><div class="real"><span class="lbl">True story</span><p>In 2001–2002, a severe drought and famine hit Malawi. William Kamkwamba, 14, had to leave school because his family could not pay the fees. He kept learning in a small village library, where he found a textbook called <i>Using Energy</i> with a picture of a wind turbine. From a bicycle dynamo, a tractor fan, blue-gum poles and other scrap, he built a windmill that lit four bulbs in his home, with homemade switches and a circuit breaker made from nails. A later windmill pumped water to irrigate crops.</p></div><p>William did not start with money, a lab or a degree. He started with a problem his family felt every day (darkness and hunger), a library book and the scrap around him. That is the first rule of building: <b>a real problem plus what you have.</b></p><div class="sci"><span class="lbl">The science</span><p>A bicycle dynamo is a small generator. When a magnet spins near a coil of copper wire, the changing magnetic field pushes electrons along the wire. This is <b>electromagnetic induction</b>, discovered by Michael Faraday in 1831. Wind turns the blades, the blades turn the magnet, and motion becomes electricity.</p></div></div>
+    <div class="am" lang="am"><h2>በእውነተኛ ችግር ይጀምሩ</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በ2001–2002 ከባድ ድርቅና ረሃብ ማላዊን መታ። የ14 ዓመቱ ዊልያም ካምክዋምባ ቤተሰቡ የትምህርት ቤት ክፍያ መክፈል ስላልቻለ ትምህርቱን ለማቋረጥ ተገደደ። በመንደሩ ትንሽ ቤተ መጻሕፍት መማሩን ቀጠለ፤ እዚያም የነፋስ ተርባይን ስዕል ያለበት <i>Using Energy</i> (ኃይልን መጠቀም) የተባለ መጽሐፍ አገኘ። ከብስክሌት ዳይናሞ፣ ከትራክተር ማራገቢያ፣ ከባሕር ዛፍ ምሰሶዎችና ከሌሎች ቁርጥራጭ ብረቶች የነፋስ ወፍጮ ሠራ፤ ወፍጮውም በቤቱ አራት አምፖሎችን አበራ። ማብሪያ ማጥፊያዎቹን ራሱ ሠራ፤ የወረዳ መቆጣጠሪያውንም ከሚስማር አዘጋጀ። በኋላ የሠራው ሌላ ወፍጮ ሰብል ለማጠጣት ውሃ ሳበ።</p></div><p>ዊልያም በገንዘብ፣ በላቦራቶሪ ወይም በዲግሪ አልጀመረም። የጀመረው ቤተሰቡ በየቀኑ በሚሰማው ችግር (ጨለማና ረሃብ)፣ በአንድ የቤተ መጻሕፍት መጽሐፍና በዙሪያው ባለው ቁርጥራጭ ነገር ነው። የመገንባት የመጀመሪያው ሕግ ይህ ነው፦ <b>እውነተኛ ችግር እና ያለዎት ነገር።</b></p><div class="sci"><span class="lbl">ሳይንሱ</span><p>የብስክሌት ዳይናሞ ትንሽ ጀነሬተር ነው። ማግኔት በመዳብ ሽቦ ጥቅል አጠገብ ሲሽከረከር፣ የሚለዋወጠው መግነጢሳዊ መስክ ኤሌክትሮኖችን በሽቦው ውስጥ ይገፋል። ይህ በ1831 በማይክል ፋራዴይ የተገኘው <b>ኤሌክትሮማግኔቲክ ኢንዳክሽን</b> ነው። ነፋስ ክንፎቹን ያሽከረክራል፣ ክንፎቹ ማግኔቱን ያሽከረክራሉ፣ እንቅስቃሴም ኤሌክትሪክ ይሆናል።</p></div></div>
+  </div>
+  
+  <div class="pair" style="margin-top:22px">
+    <div class="en"><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Write a problem statement.</b> Answer four questions: Who has the problem? How often? What does it cost them in money, time or health? How do they cope today?</p></div><div class="mission"><span class="lbl">Your mission</span><p>List three problems in your village, school or city. Answer the four questions for each, then choose the one that hurts the most people most often.</p></div></div>
+    <div class="am" lang="am"><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>የችግር መግለጫ ይጻፉ።</b> አራት ጥያቄዎችን ይመልሱ፦ ችግሩ ያለበት ማነው? ምን ያህል ጊዜ ይከሰታል? በገንዘብ፣ በጊዜ ወይም በጤና ምን ያሳጣቸዋል? ዛሬ እንዴት ይቋቋሙታል?</p></div><div class="mission"><span class="lbl">የእርስዎ ተልዕኮ</span><p>በመንደርዎ፣ በትምህርት ቤትዎ ወይም በከተማዎ ያሉ ሦስት ችግሮችን ይዘርዝሩ። ለእያንዳንዳቸው አራቱን ጥያቄዎች ይመልሱ፤ ከዚያም ብዙ ሰዎችን በተደጋጋሚ የሚጎዳውን ይምረጡ።</p></div></div>
+  </div>
+</section>
+
 <section class="ch" id="m3">
-  <div class="ch-tag"><span class="yr">MODULE 3</span><span class="part">What chips are made of · ቺፕ ከምን ይሰራል</span></div>
+  <div class="ch-tag"><span class="yr">BUILD · 2</span><span class="part">What chips are made of · ቺፕ ከምን ይሰራል</span></div>
   <div class="pair">
     <div class="en"><h2>The materials, and the treasure in waste</h2><div class="real"><span class="lbl">True story</span><p>Near Lubumbashi in DR Congo stands Big Hill, about 10 million tonnes of slag left by a century of mining. In 2024, Gécamines' subsidiary STL began recovering germanium from it at a new local plant, with technical support from the Belgian company Umicore, and exported the first concentrates processed inside the country. What others had thrown away became a chip material.</p></div><p>The heart of a chip is silicon from quartz sand. Around it are small amounts of other elements for wiring, switching, joining and cleaning. Many are mined in Africa:</p></div>
     <div class="am" lang="am"><h2>ማዕድናቱ፣ እና በቆሻሻ ውስጥ ያለው ሀብት</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በኮንጎ ዲ.ሪ. ሉቡምባሺ አቅራቢያ «ቢግ ሂል» ይገኛል፤ ይህም የመቶ ዓመት የማዕድን ሥራ የተወው 10 ሚሊዮን ቶን ገደማ ቅሪት ነው። በ2024 የጌካሚን ንዑስ ኩባንያ STL ከቤልጂየሙ Umicore በተገኘ ቴክኒካዊ ድጋፍ በአዲስ የአገር ውስጥ ፋብሪካ ጀርማኒየም ማውጣት ጀመረ፤ በአገር ውስጥ የተቀነባበረውን የመጀመሪያ ክምችትም ወደ ውጭ ላከ። ሌሎች የጣሉት ነገር የቺፕ ጥሬ ዕቃ ሆነ።</p></div><p>የቺፕ ልብ ከኳርትዝ አሸዋ የሚገኘው ሲሊከን ነው። በዙሪያው ለሽቦ፣ ለማብሪያ፣ ለማጣበቂያና ለማጽጃ የሚውሉ የሌሎች ንጥረ ነገሮች ትንሽ መጠን አለ። ብዙዎቹ በአፍሪካ ይመረታሉ፦</p></div>
@@ -299,7 +385,7 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
 </section>
 
 <section class="ch" id="m4">
-  <div class="ch-tag"><span class="yr">MODULE 4</span><span class="part">Build a real sensor · እውነተኛ ዳሳሽ ይገንቡ</span></div>
+  <div class="ch-tag"><span class="yr">BUILD · 3</span><span class="part">Build a real sensor · እውነተኛ ዳሳሽ ይገንቡ</span></div>
   <div class="pair">
     <div class="en"><h2>Build a dry-soil alarm from scrap</h2><div class="real"><span class="lbl">True story</span><p>Brian Gitta, a computer science student at Makerere University in Uganda, kept missing lectures because of malaria, and once it took four blood tests to diagnose him. With his team he built Matibabu, a device that shines a red light through a finger and sends a result to a phone, with no blood needed. In 2018, at 24, he won the Royal Academy of Engineering's Africa Prize for Engineering Innovation (£25,000). His team was honest that the fifth prototype was about 80% accurate, and kept improving it.</p></div><p>Brian turned a personal pain into a sensor. You can start the same way with farming. The circuit below tells a farmer when the soil is dry. It uses one transistor and no microcontroller, and every part can come from scrap.</p><div class="sci"><span class="lbl">The science</span><p>Water in soil carries dissolved salts (ions), so <b>wet soil conducts electricity and dry soil almost does not</b>. R1 and the soil form a voltage divider at the transistor's base. A silicon transistor switches on when its base is above about 0.6 V.</p><p class="formula">V<sub>base</sub> = 4.5 V × R<sub>soil</sub> ÷ (R1 + R<sub>soil</sub>)</p><p>Wet soil, say 5 kΩ: 4.5 × 5 ÷ 52 ≈ 0.43 V → transistor off → LED off.<br>Dry soil, say 500 kΩ: the divider would give 4.5 × 500 ÷ 547 ≈ 4.1 V, far above 0.6 V, so current flows into the base, the transistor turns on (its base then settles near 0.7 V) and the LED lights.</p><p>The LED resistor follows Ohm's law (V = I × R): (4.5 V − 2 V) ÷ 220 Ω ≈ 11 mA, a safe current for a red LED.</p></div></div>
     <div class="am" lang="am"><h2>ከቁርጥራጭ ዕቃዎች የደረቅ አፈር ማንቂያ ይገንቡ</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በኡጋንዳ ማኬሬሬ ዩኒቨርሲቲ የኮምፒውተር ሳይንስ ተማሪ የነበረው ብራያን ጊታ በወባ ምክንያት ትምህርት ያመልጠው ነበር፤ አንድ ጊዜም በሽታውን ለማወቅ አራት የደም ምርመራዎች አስፈልገው። ከቡድኑ ጋር «ማቲባቡ» የተባለ መሣሪያ ሠራ፤ መሣሪያው በጣት ውስጥ ቀይ ብርሃን አሳልፎ ውጤቱን ወደ ስልክ ይልካል፤ ደም አያስፈልገውም። በ2018፣ በ24 ዓመቱ፣ የሮያል አካዳሚ ኦፍ ኢንጂነሪንግ የአፍሪካ የምህንድስና ፈጠራ ሽልማትን (25,000 ፓውንድ) አሸነፈ። ቡድኑ አምስተኛው ናሙና 80% ገደማ ትክክለኛ እንደነበር በግልጽ ተናግሮ ማሻሻሉን ቀጠለ።</p></div><p>ብራያን የግል ሕመሙን ወደ ዳሳሽ ቀየረ። እርስዎም በግብርና በዚሁ መንገድ መጀመር ይችላሉ። ከታች ያለው ወረዳ አፈሩ ሲደርቅ ለገበሬው ይነግራል። አንድ ትራንዚስተር ብቻ ይጠቀማል፤ ማይክሮኮንትሮለር አያስፈልገውም፤ ሁሉም ዕቃዎች ከቁርጥራጭ ሊገኙ ይችላሉ።</p><div class="sci"><span class="lbl">ሳይንሱ</span><p>በአፈር ውስጥ ያለ ውሃ የሟሟ ጨዎችን (ion-ዎች) ይይዛል፤ ስለዚህ <b>እርጥብ አፈር ኤሌክትሪክ ያስተላልፋል፤ ደረቅ አፈር ግን በጣም ጥቂት ነው</b>። R1 እና አፈሩ በትራንዚስተሩ ቤዝ ላይ የቮልቴጅ መከፋፈያ ይፈጥራሉ። የሲሊከን ትራንዚስተር የሚበራው ቤዙ ከ0.6 ቮልት ገደማ በላይ ሲሆን ነው።</p><p class="formula">V<sub>base</sub> = 4.5 V × R<sub>soil</sub> ÷ (R1 + R<sub>soil</sub>)</p><p>እርጥብ አፈር፣ ለምሳሌ 5 kΩ፦ 4.5 × 5 ÷ 52 ≈ 0.43 V → ትራንዚስተሩ ይጠፋል → ኤልኢዲ ይጠፋል።<br>ደረቅ አፈር፣ ለምሳሌ 500 kΩ፦ መከፋፈያው 4.5 × 500 ÷ 547 ≈ 4.1 V ይሰጥ ነበር፤ ይህ ከ0.6 V እጅግ ይበልጣል፤ ስለዚህ ኤሌክትሪክ ወደ ቤዙ ይፈሳል፣ ትራንዚስተሩ ይበራል (ቤዙም 0.7 V አካባቢ ይረጋጋል)፣ ኤልኢዲውም ያበራል።</p><p>የኤልኢዲው ሬዚስተር የኦም ሕግን (V = I × R) ይከተላል፦ (4.5 V − 2 V) ÷ 220 Ω ≈ 11 mA፤ ለቀይ ኤልኢዲ ደህንነቱ የተጠበቀ መጠን ነው።</p></div></div>
@@ -323,30 +409,8 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
   </div>
 </section>
 
-<section class="ch" id="m5">
-  <div class="ch-tag"><span class="yr">MODULE 5</span><span class="part">How chips are made · ቺፕ እንዴት ይመረታል</span></div>
-  <div class="pair">
-    <div class="en"><h2>From sand to chip in eight steps</h2><p>Your alarm uses one transistor. A factory puts billions on a chip smaller than a fingernail. A leading-edge chip passes through 500 to 1,000 process steps and 80 to 120 layers, over three to four months, in cleanrooms where one speck of dust can ruin it. The pattern-printing step needs an extreme-ultraviolet (EUV) machine that only ASML in the Netherlands builds: about $200 million each, and about $380 million for the newest High-NA version.</p><div class="sci"><span class="lbl">The science</span><p><b>The chemistry of pure silicon:</b></p><p class="formula">SiO₂ + 2C → Si + 2CO   (electric furnace, ~2,000 °C, ~98–99% pure)</p><p class="formula">Si + 3HCl → SiHCl₃ + H₂   (make a liquid that can be distilled)</p><p class="formula">SiHCl₃ + H₂ → Si + 3HCl   (on hot rods, ~1,100 °C: 99.9999999%+)</p><p>Then a single crystal is pulled slowly from molten silicon (the Czochralski method) and sliced into wafers.</p></div></div>
-    <div class="am" lang="am"><h2>ከአሸዋ እስከ ቺፕ በስምንት ደረጃዎች</h2><p>የእርስዎ ማንቂያ አንድ ትራንዚስተር ይጠቀማል። ፋብሪካ ደግሞ ከጣት ጥፍር ባነሰ ቺፕ ላይ ቢሊዮኖችን ያስቀምጣል። አንድ ከፍተኛ ደረጃ ያለው ቺፕ ከ500 እስከ 1,000 የሂደት ደረጃዎችንና ከ80 እስከ 120 ንብርብሮችን በሦስት እስከ አራት ወራት ውስጥ ያልፋል፤ ይህም አንዲት የአቧራ ቅንጣት ልታበላሸው በምትችልባቸው እጅግ ንጹሕ ክፍሎች ውስጥ ነው። ንድፍ የማተሙ ደረጃ የኔዘርላንድሱ ASML ብቻ የሚሰራውን «EUV» ማሽን ይፈልጋል፤ አንዱ 200 ሚሊዮን ዶላር ገደማ፣ አዲሱ «High-NA» ደግሞ 380 ሚሊዮን ዶላር ገደማ ያወጣል።</p><div class="sci"><span class="lbl">ሳይንሱ</span><p><b>የንጹሕ ሲሊከን ኬሚስትሪ፦</b></p><p class="formula">SiO₂ + 2C → Si + 2CO   (የኤሌክትሪክ ምድጃ፣ ~2,000 °C፣ ~98–99% ንጹሕ)</p><p class="formula">Si + 3HCl → SiHCl₃ + H₂   (ሊጣራ የሚችል ፈሳሽ መሥራት)</p><p class="formula">SiHCl₃ + H₂ → Si + 3HCl   (በሞቃት ዘንጎች ላይ፣ ~1,100 °C፦ 99.9999999%+)</p><p>ከዚያም ከቀለጠ ሲሊከን አንድ ክሪስታል በዝግታ ይጎተታል (የቾክራልስኪ ዘዴ)፤ ወደ ዌፈሮችም ይቆረጣል።</p></div></div>
-  </div>
-  <ol class="steps">
-    <li><div class="en"><b>Quartz → silicon</b><p>Quartz and carbon are heated in an electric furnace to about 2,000 °C, giving silicon that is about 98–99% pure.</p></div><div class="am" lang="am"><b>ኳርትዝ → ሲሊከን</b><p>ኳርትዝና ካርቦን በኤሌክትሪክ ምድጃ ውስጥ በ2,000 °C ገደማ ይሞቃሉ፤ 98–99% ንጹሕ ሲሊከን ይገኛል።</p></div></li>
-    <li><div class="en"><b>Purify</b><p>Chemistry raises purity to 99.9999999% or better ("nine nines"): fewer than one foreign atom in a billion.</p></div><div class="am" lang="am"><b>ማጣራት</b><p>በኬሚካል ሂደት ንጽሕናው 99.9999999% ወይም ከዚያ በላይ ይደርሳል፤ ከአንድ ቢሊዮን አተሞች አንድ እንኳ ባዕድ አይኖርም።</p></div></li>
-    <li><div class="en"><b>Grow a crystal</b><p>A seed is slowly pulled from molten silicon to grow one perfect crystal, an "ingot" up to 2 metres long.</p></div><div class="am" lang="am"><b>ክሪስታል ማሳደግ</b><p>ከቀለጠ ሲሊከን ውስጥ ዘር በዝግታ እየተጎተተ እስከ 2 ሜትር የሚረዝም አንድ ፍጹም ክሪስታል ይበቅላል።</p></div></li>
-    <li><div class="en"><b>Slice into wafers</b><p>The ingot is cut into discs less than 1 mm thick and polished like a mirror.</p></div><div class="am" lang="am"><b>ወደ ዌፈር መቁረጥ</b><p>ክሪስታሉ ከ1 ሚሊሜትር ባነሰ ውፍረት ተቆርጦ እንደ መስታወት ይለሰልሳል።</p></div></li>
-    <li class="loop"><div class="en"><b>The layer loop (repeat!)</b><p>Deposit a thin film → coat with light-sensitive resist → print the pattern with light → etch away what is not needed → add dopants. Repeat for every layer.</p></div><div class="am" lang="am"><b>የንብርብር ዑደት (ይደገማል!)</b><p>ቀጭን ሽፋን ማስቀመጥ → ለብርሃን ስሱ በሆነ ቅባት መሸፈን → ንድፉን በብርሃን ማተም → የማያስፈልገውን መፋቅ → ዶፓንት መጨመር። ለእያንዳንዱ ንብርብር ይደገማል።</p></div></li>
-    <li><div class="en"><b>Add the wiring</b><p>Layers of copper wires, thinner than a virus, connect billions of transistors.</p></div><div class="am" lang="am"><b>ሽቦዎችን መዘርጋት</b><p>ከቫይረስ የቀጠኑ የመዳብ ሽቦ ንብርብሮች ቢሊዮኖችን ትራንዚስተሮች ያገናኛሉ።</p></div></li>
-    <li><div class="en"><b>Test and cut</b><p>Each chip on the wafer is tested by machine, then the wafer is cut into individual chips ("dies").</p></div><div class="am" lang="am"><b>መፈተሽና መቁረጥ</b><p>በዌፈሩ ላይ ያለ እያንዳንዱ ቺፕ በማሽን ይፈተሻል፤ ከዚያም ዌፈሩ ወደ ተናጠል ቺፖች ይቆረጣል።</p></div></li>
-    <li><div class="en"><b>Package and test again</b><p>Each die is sealed in a protective package with metal legs or balls, tested once more, then shipped.</p></div><div class="am" lang="am"><b>ማሸግና እንደገና መፈተሽ</b><p>እያንዳንዱ ቺፕ የብረት እግሮች ባሉት መከላከያ ውስጥ ታሽጎ፣ አንድ ጊዜ ተጨማሪ ተፈትሾ ይላካል።</p></div></li>
-  </ol>
-  <div class="pair" style="margin-top:22px">
-    <div class="en"><div class="tool"><span class="lbl">Founder&#39;s tool</span><p><b>Build in loops.</b> A chip is built layer by layer, and every layer is checked before the next. Your project grows the same way: build, test, learn, improve, repeat. Each loop should be small and fast.</p></div></div>
-    <div class="am" lang="am"><div class="tool"><span class="lbl">የሥራ ፈጣሪ መሣሪያ</span><p><b>በዑደት ይገንቡ።</b> ቺፕ በንብርብር ይገነባል፤ እያንዳንዱ ንብርብር ከቀጣዩ በፊት ይፈተሻል። የእርስዎ ፕሮጀክትም በዚሁ መንገድ ያድጋል፦ ይገንቡ፣ ይፈትሹ፣ ይማሩ፣ ያሻሽሉ፣ ይድገሙ። እያንዳንዱ ዑደት ትንሽና ፈጣን ይሁን።</p></div></div>
-  </div>
-</section>
-
 <section class="ch" id="m6">
-  <div class="ch-tag"><span class="yr">MODULE 6</span><span class="part">Add value at home · እሴትን በአገር ውስጥ ይጨምሩ</span></div>
+  <div class="ch-tag"><span class="yr">AFRICA · 1</span><span class="part">Add value at home · እሴትን በአገር ውስጥ ይጨምሩ</span></div>
   <div class="pair">
     <div class="en"><h2>Who earns the money, and how to climb</h2><div class="real"><span class="lbl">True story</span><p>During a hospital internship in Yaoundé in 2010, engineer Arthur Zang saw how hard it was for Cameroonians to get heart tests: the country had only a few dozen cardiologists for more than 20 million people. He built the Cardiopad, a touch-screen medical tablet that records an electrocardiogram in a village clinic and sends it by mobile network to a distant cardiologist. It won the 2014 Rolex Award for Enterprise and the 2016 Africa Prize. At first its electronic parts were made in China and assembled in Cameroon; Zang said he hoped to manufacture it in Cameroon.</p></div><p>Arthur designed in Africa and assembled in Africa, then aimed to climb to manufacturing. That is the staircase every African product can climb. The further a material travels up the chain, the more it is worth: raw ore is cheapest, refined metal is worth far more, a finished chip far more again.</p><p class="callout">DR Congo mines 73% of the world's cobalt, but China produces 79% of the world's refined cobalt. Much of the value is captured at refining. Ethiopia now allows lithium and tantalum exports only by companies that add value inside the country.</p></div>
     <div class="am" lang="am"><h2>ገንዘቡን የሚያገኘው ማነው? እንዴትስ ወደ ላይ መውጣት ይቻላል?</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>በ2010 በያውንዴ ሆስፒታል ተለማማጅ ሳለ መሐንዲስ አርተር ዛንግ ካሜሩናውያን የልብ ምርመራ ለማግኘት ምን ያህል እንደሚቸገሩ አየ፤ አገሪቱ ከ20 ሚሊዮን በላይ ሕዝብ ላይ ጥቂት ደርዘን የልብ ሐኪሞች ብቻ ነበሯት። «ካርዲዮፓድ» የተባለ በመንካት የሚሰራ የሕክምና ታብሌት ሠራ፤ በገጠር ክሊኒክ የልብ ምት ምርመራ (ECG) መዝግቦ በሞባይል ኔትወርክ ርቆ ወዳለ የልብ ሐኪም ይልካል። የ2014 የሮሌክስ የሥራ ፈጠራ ሽልማትንና የ2016 የአፍሪካ ሽልማትን አሸነፈ። መጀመሪያ ላይ የኤሌክትሮኒክ ክፍሎቹ በቻይና ተመርተው በካሜሩን ይገጣጠሙ ነበር፤ ዛንግ በካሜሩን ለማምረት ተስፋ እንዳለው ተናግሯል።</p></div><p>አርተር በአፍሪካ ነደፈ፣ በአፍሪካ ገጣጠመ፣ ከዚያም ወደ ማምረት ለመውጣት አለመ። እያንዳንዱ የአፍሪካ ምርት ሊወጣው የሚችለው ደረጃ ይህ ነው። አንድ ማዕድን በሰንሰለቱ ወደ ላይ በወጣ ቁጥር ዋጋው ይጨምራል፦ ጥሬ ማዕድን በጣም ርካሽ ነው፤ የተጣራ ብረት ብዙ እጥፍ ዋጋ አለው፤ የተጠናቀቀ ቺፕ ደግሞ ከዚያም በላይ።</p><p class="callout">ኮንጎ ዲ.ሪ. ከዓለም ኮባልት 73% ታመርታለች፤ ቻይና ግን ከዓለም የተጣራ ኮባልት 79% ታመርታለች። ብዙው እሴት የሚያዘው በማጣራቱ ደረጃ ነው። ኢትዮጵያ አሁን የሊቲየምና የታንታለም ኤክስፖርትን የምትፈቅደው በአገር ውስጥ እሴት ለሚጨምሩ ኩባንያዎች ብቻ ነው።</p></div>
@@ -375,7 +439,7 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
 </section>
 
 <section class="ch" id="m7">
-  <div class="ch-tag"><span class="yr">MODULE 7</span><span class="part">Africans already building · እየገነቡ ያሉ አፍሪካውያን</span></div>
+  <div class="ch-tag"><span class="yr">AFRICA · 2</span><span class="part">Africans already building · እየገነቡ ያሉ አፍሪካውያን</span></div>
   <div class="pair">
     <div class="en"><h2>The industry is already starting here</h2><div class="real"><span class="lbl">True story</span><p>Anthony Githinji worked in the US semiconductor industry from 1997, then returned to Kenya and founded Semiconductor Technologies Limited (STL) at Dedan Kimathi University of Technology in Nyeri. When COVID-19 stopped foreign experts from coming, the company built its factory with local talent, and it trains students as interns.</p></div><div class="real"><span class="lbl">True story</span><p>Ethiopians are on the same path. In 2021, Pazion Cherinet (Orbit Health, a digital health platform) became the first Ethiopian shortlisted for the Africa Prize for Engineering Innovation. In 2023, mechanical engineer Fikru Gebre Dinkumbab was shortlisted for a multi-purpose earth-brick machine. In 2024, the Prize went to Kenya's Esther Kimani for an early-warning system that detects crop pests and diseases, with £50,000.</p></div><p>Africa still holds less than 1% of the global semiconductor industry, but it is not starting from zero. In April 2026 the first Africa Semiconductor Investors Forum in Nairobi named the realistic entry points: chip design, assembly, testing and packaging, mineral processing, skills and regional hubs.</p></div>
     <div class="am" lang="am"><h2>ኢንዱስትሪው እዚህ መጀመሩ አይቀርም፤ ጀምሯልም</h2><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>አንቶኒ ጊቲንጂ ከ1997 ጀምሮ በአሜሪካ የሴሚኮንዳክተር ኢንዱስትሪ ሠርቷል፤ ከዚያም ወደ ኬንያ ተመልሶ በኒየሪ በሚገኘው ዴዳን ኪማቲ የቴክኖሎጂ ዩኒቨርሲቲ «ሴሚኮንዳክተር ቴክኖሎጂስ ሊሚትድ» (STL)ን መሠረተ። ኮቪድ-19 የውጭ ባለሙያዎች እንዳይመጡ ሲያግድ ኩባንያው ፋብሪካውን በአገር ውስጥ ባለሙያዎች ገነባ፤ ተማሪዎችንም በተለማማጅነት ያሰለጥናል።</p></div><div class="real"><span class="lbl">እውነተኛ ታሪክ</span><p>ኢትዮጵያውያንም በዚሁ መንገድ ላይ ናቸው። በ2021 ፓዚዮን ቸሪነት (Orbit Health፣ የዲጂታል ጤና መድረክ) ለአፍሪካ የምህንድስና ፈጠራ ሽልማት በዕጩነት የተመረጠ የመጀመሪያው ኢትዮጵያዊ ሆነ። በ2023 የሜካኒካል መሐንዲሱ ፍቅሩ ገብሬ ዲንኩምባብ ለሁለገብ የአፈር ጡብ ማሽኑ በዕጩነት ተመረጠ። በ2024 ሽልማቱ የሰብል ተባዮችንና በሽታዎችን አስቀድሞ ለሚለይ ሥርዓት ለኬንያዊቷ ኤስተር ኪማኒ በ50,000 ፓውንድ ተሰጠ።</p></div><p>አፍሪካ አሁንም ከዓለም የሴሚኮንዳክተር ኢንዱስትሪ ከ1% ያነሰ ድርሻ አላት፤ ሆኖም ከዜሮ አትጀምርም። በኤፕሪል 2026 በናይሮቢ የተካሄደው የመጀመሪያው የአፍሪካ ሴሚኮንዳክተር ኢንቨስተሮች ፎረም ተጨባጭ የመግቢያ በሮችን ለይቷል፦ የቺፕ ንድፍ፣ መገጣጠም፣ መፈተሽና ማሸግ፣ የማዕድን ማቀነባበር፣ ክህሎትና ክልላዊ ማዕከላት።</p></div>
@@ -396,7 +460,7 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
 </section>
 
 <section class="ch" id="m8">
-  <div class="ch-tag"><span class="yr">MODULE 8</span><span class="part">Your path · የእርስዎ መንገድ</span></div>
+  <div class="ch-tag"><span class="yr">YOUR PATH</span><span class="part">Your path · የእርስዎ መንገድ</span></div>
   <div class="pair">
     <div class="en"><h2>Your ladder, your plan, your canvas</h2><p>William, Kelvin, Brian and Arthur all started young, with little, from a problem they could see. The engineers and founders who will lead Africa's chip industry in 2040 are young people today. Pick the rung that fits your age and climb one step at a time.</p></div>
     <div class="am" lang="am"><h2>የእርስዎ መሰላል፣ ዕቅድና ሸራ</h2><p>ዊልያም፣ ኬልቪን፣ ብራያንና አርተር ሁሉም በወጣትነታቸው፣ በጥቂት ነገር፣ ከሚያዩት ችግር ጀመሩ። በ2040 የአፍሪካን የቺፕ ኢንዱስትሪ የሚመሩት መሐንዲሶችና መሥራቾች ዛሬ ወጣቶች ናቸው። ከዕድሜዎ ጋር የሚሄደውን ደረጃ መርጠው አንድ በአንድ ይውጡ።</p></div>
@@ -428,14 +492,20 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
 <details><summary>3. What does boron do when added to silicon?</summary><p>It leaves a missing electron (a hole), making p-type silicon.</p></details>
 <details><summary>4. In the dry-soil alarm, why does wet soil turn the LED off?</summary><p>Wet soil conducts, pulling the transistor's base below about 0.6 V, so it switches off.</p></details>
 <details><summary>5. Why should you never burn cables to get copper?</summary><p>The smoke is toxic.</p></details>
-<details><summary>6. Name one mineral found at Ethiopia's Kenticha deposit.</summary><p>Tantalum (lithium is there too).</p></details></div>
+<details><summary>6. Name one mineral found at Ethiopia's Kenticha deposit.</summary><p>Tantalum (lithium is there too).</p></details>
+<details><summary>7. In the Czochralski method, how is a single crystal made?</summary><p>A seed crystal is dipped into molten silicon, turned and pulled up slowly so atoms line up behind it.</p></details>
+<details><summary>8. Name the steps of the layer loop.</summary><p>Clean, deposit a film, coat with resist, expose with light, develop, etch, dope, strip and inspect, then repeat.</p></details>
+<details><summary>9. What is the difference between RAM and storage?</summary><p>RAM holds working data and forgets it when power is off; storage keeps files without power.</p></details></div>
     <div class="am" lang="am"><h3>ራስዎን ይፈትሹ</h3>
 <details><summary>1. ዊልያም ካምክዋምባ የነፋስ ወፍጮውን አሠራር የተማረው በምን ነበር?</summary><p>ከመንደሩ ትንሽ ቤተ መጻሕፍት በተገኘ <i>Using Energy</i> በተባለ መጽሐፍ።</p></details>
 <details><summary>2. ቀይ ኤልኢዲ ለምን ሦስት ሎሚ ገደማ ይፈልጋል?</summary><p>እያንዳንዱ ሎሚ 0.9 V ገደማ ይሰጣል፤ ቀይ ኤልኢዲ ደግሞ 1.8–2 V ገደማ ይፈልጋል።</p></details>
 <details><summary>3. ቦሮን በሲሊከን ላይ ሲጨመር ምን ያደርጋል?</summary><p>የጎደለ ኤሌክትሮን (ቀዳዳ) ይተዋል፤ p-ዓይነት ሲሊከን ይፈጥራል።</p></details>
 <details><summary>4. በደረቅ አፈር ማንቂያው ውስጥ እርጥብ አፈር ኤልኢዲውን ለምን ያጠፋል?</summary><p>እርጥብ አፈር ኤሌክትሪክ ስለሚያስተላልፍ የትራንዚስተሩን ቤዝ ከ0.6 V በታች ያወርዳል፤ ትራንዚስተሩም ይጠፋል።</p></details>
 <details><summary>5. መዳብ ለማግኘት ገመዶችን ለምን በፍጹም ማቃጠል የለብዎትም?</summary><p>ጭሱ መርዛማ ስለሆነ።</p></details>
-<details><summary>6. በኢትዮጵያ ቀንጢቻ ክምችት የሚገኝ አንድ ማዕድን ይጥቀሱ።</summary><p>ታንታለም (ሊቲየምም አለ)።</p></details></div>
+<details><summary>6. በኢትዮጵያ ቀንጢቻ ክምችት የሚገኝ አንድ ማዕድን ይጥቀሱ።</summary><p>ታንታለም (ሊቲየምም አለ)።</p></details>
+<details><summary>7. በቾክራልስኪ ዘዴ አንድ ክሪስታል እንዴት ይሠራል?</summary><p>የዘር ክሪስታል በቀለጠ ሲሊከን ውስጥ ተነክሮ እየተሽከረከረ በዝግታ ይጎተታል፤ አተሞች ከኋላው ይሰለፋሉ።</p></details>
+<details><summary>8. የንብርብር ዑደቱን ደረጃዎች ይጥቀሱ።</summary><p>ማጽዳት፣ ሽፋን ማስቀመጥ፣ ሬዚስት መቀባት፣ ለብርሃን ማጋለጥ፣ ማጠብ፣ መፋቅ፣ ዶፒንግ፣ ማስወገድና መመርመር፤ ከዚያም መድገም።</p></details>
+<details><summary>9. በRAM እና በማከማቻ መካከል ያለው ልዩነት ምንድን ነው?</summary><p>RAM የሥራ መረጃን ይይዛል፤ ኃይል ሲጠፋ ይረሳዋል። ማከማቻ ያለ ኃይል ፋይሎችን ያስቀምጣል።</p></details></div>
   </div>
 </section>
 
@@ -448,6 +518,10 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
   </div>
   <h3>Sources · ምንጮች</h3>
   <ul>
+    <li><a href="https://www.asml.com/company/stories/2021/semiconductor-manufacturing-process-steps">ASML: semiconductor manufacturing steps and the A16's 16 billion transistors</a></li>
+    <li><a href="https://www.indexbox.io/store/africa-mobile-chipset-market-analysis-forecast-size-trends-and-insights/">IndexBox: device assembly plants in Egypt, Nigeria, Ethiopia and Rwanda</a></li>
+    <li><a href="https://www.nand2tetris.org/">Nand2Tetris: build a computer from first principles</a></li>
+    <li><a href="https://www.kicad.org/">KiCad: free circuit-board design software</a></li>
     <li><a href="https://www.engineeringforchange.org/?p=4627">Engineering for Change: William Kamkwamba's windmill</a></li>
     <li><a href="https://openlibrary.org/books/OL25202365M">Open Library: The Boy Who Harnessed the Wind</a></li>
     <li><a href="https://alum.mit.edu/node/1292">MIT: From Sierra Leone, Focus comes to MIT (Kelvin Doe)</a></li>
@@ -618,6 +692,57 @@ body[data-lang="en"] .box .am, body[data-lang="am"] .box .en { display: none; }
     T(900, 222, "ደረቅ አፈር → ኤልኢዲ ይበራል", "t-copper svg-lbl-am", "end");
     T(900, 252, "Wet soil → LED OFF", "t-accent svg-lbl", "end");
     T(900, 274, "እርጥብ አፈር → ኤልኢዲ ይጠፋል", "t-accent svg-lbl-am", "end");
+  }
+})();
+</script>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function mk(p, n, a, t) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (t) e.textContent = t; p.appendChild(e); return e; }
+  // Journey strip
+  var j = document.getElementById("journey");
+  if (j) {
+    var st = [["Sand", "አሸዋ"], ["Pure silicon", "ንጹሕ ሲሊከን"], ["Wafer", "ዌፈር"], ["Chip in layers", "በንብርብር ቺፕ"], ["Package", "ማሸግ"], ["Circuit board", "የወረዳ ሰሌዳ"], ["Computer", "ኮምፒውተር"]];
+    st.forEach(function (s, i) {
+      var cx = 75 + i * 151, cy = 70;
+      mk(j, "circle", { cx: cx, cy: cy, r: 44, "class": i < 3 ? "f-copper-soft" : (i < 5 ? "f-accent-soft" : "f-copper-soft") });
+      mk(j, "text", { x: cx, y: cy + 8, "text-anchor": "middle", "class": "t-copper svg-big" }, String(i + 1));
+      if (i < st.length - 1) { mk(j, "line", { x1: cx + 48, y1: cy, x2: cx + 100, y2: cy, "class": "s-rule", "stroke-width": 3 }); mk(j, "path", { d: "M" + (cx + 100) + " " + (cy - 6) + " L" + (cx + 108) + " " + cy + " L" + (cx + 100) + " " + (cy + 6) + " Z", "class": "f-copper" }); }
+      mk(j, "text", { x: cx, y: cy + 72, "text-anchor": "middle", "class": "t-ink svg-lbl" }, s[0]);
+      mk(j, "text", { x: cx, y: cy + 94, "text-anchor": "middle", "class": "t-muted svg-lbl-am" }, s[1]);
+    });
+  }
+  // Layer loop
+  var l = document.getElementById("loop");
+  if (l) {
+    var ls = [["Clean", "ማጽዳት"], ["Deposit film", "ሽፋን"], ["Coat resist", "ሬዚስት"], ["Expose (light)", "ብርሃን"], ["Develop", "ማጠብ"], ["Etch", "መፋቅ"], ["Dope", "ዶፒንግ"], ["Strip & inspect", "መመርመር"]];
+    var cx = 520, cy = 180, R = 135, RX = 330, RY = 125;
+    mk(l, "ellipse", { cx: cx, cy: cy, rx: RX, ry: RY, fill: "none", "class": "s-rule", "stroke-width": 3, "stroke-dasharray": "6 6" });
+    mk(l, "text", { x: cx, y: cy - 6, "text-anchor": "middle", "class": "t-copper svg-big" }, "× 80–120 layers");
+    mk(l, "text", { x: cx, y: cy + 18, "text-anchor": "middle", "class": "t-muted svg-lbl-am" }, "× 80–120 ንብርብሮች");
+    ls.forEach(function (s, i) {
+      var a = -Math.PI / 2 + i * 2 * Math.PI / ls.length, x = cx + RX * Math.cos(a), y = cy + RY * Math.sin(a);
+      mk(l, "rect", { x: x - 72, y: y - 24, width: 144, height: 48, rx: 10, "class": i === 3 ? "f-copper" : "f-accent-soft" });
+      mk(l, "text", { x: x, y: y - 3, "text-anchor": "middle", "class": "t-ink svg-lbl" }, (i + 1) + " " + s[0]);
+      mk(l, "text", { x: x, y: y + 16, "text-anchor": "middle", "class": "t-ink svg-lbl-am" }, s[1]);
+    });
+  }
+  // System block diagram
+  var g = document.getElementById("sys");
+  if (g) {
+    function box(x, y, w, h, en, am, cls) { mk(g, "rect", { x: x, y: y, width: w, height: h, rx: 10, "class": cls || "f-accent-soft" }); mk(g, "text", { x: x + w / 2, y: y + h / 2 - 3, "text-anchor": "middle", "class": "t-ink svg-lbl" }, en); mk(g, "text", { x: x + w / 2, y: y + h / 2 + 17, "text-anchor": "middle", "class": "t-muted svg-lbl-am" }, am); }
+    function ln(x1, y1, x2, y2) { mk(g, "line", { x1: x1, y1: y1, x2: x2, y2: y2, "class": "s-rule", "stroke-width": 4 }); }
+    ln(520, 190, 520, 75); ln(520, 190, 250, 190); ln(520, 190, 790, 190); ln(520, 190, 250, 310); ln(520, 190, 790, 310); ln(520, 190, 520, 330);
+    box(420, 150, 200, 80, "CPU", "ፕሮሰሰር (ሲፒዩ)", "f-copper");
+    box(420, 20, 200, 60, "Memory (RAM)", "ማህደረ ትውስታ");
+    box(120, 160, 180, 60, "Storage", "ማከማቻ");
+    box(740, 160, 200, 60, "GPU + display", "ጂፒዩ + ስክሪን");
+    box(120, 285, 180, 60, "Input", "ግብዓት");
+    box(740, 285, 200, 60, "Output + network", "ውጤት + ኔትወርክ");
+    box(420, 310, 200, 60, "Power supply + clock", "ኃይልና ሰዓት", "f-copper-soft");
+    mk(g, "text", { x: 1010, y: 40, "text-anchor": "end", "class": "t-muted svg-mono" }, "Firmware → OS → apps");
+    mk(g, "text", { x: 1010, y: 62, "text-anchor": "end", "class": "t-muted svg-lbl-am" }, "ፈርምዌር → ኦኤስ → መተግበሪያ");
   }
 })();
 </script>

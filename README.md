@@ -8,7 +8,7 @@ Stories about technology and science, explained simply, in English and Amharic.
 
 | Date | Story | Link |
 |---|---|---|
-| 13 Nov 2026 | Build From What We Have: a science-based lesson with real African inventors, how semiconductors and chips work, Africa's minerals, hands-on builds from scrap, and a practical entrepreneurial method (8 modules) | [Read](https://muler-21.github.io/Teck_Stories/chips-africa/) |
+| 13 Nov 2026 | From Sand to Computer: how a chip is built step by step (wafer, layer loop, packaging), how chips become circuit boards and complete computers, the science, real African inventors, hands-on builds from scrap, and Africa's role | [Read](https://muler-21.github.io/Teck_Stories/chips-africa/) |
 | 13 Nov 2026 | From a Diner Booth to the Heart of AI: how chips work, how Jensen Huang built Nvidia, and how his story reached November 2026 | [Read](https://muler-21.github.io/Teck_Stories/nvidia-story/) |
 
 ## Structure
@@ -19,7 +19,7 @@ nvidia-story/
   index.html            The Nvidia story (English + Amharic, sources at the end)
   og.png                1200×630 cover image used for social media previews
 chips-africa/
-  index.html            Build From What We Have: lesson (English + Amharic, sources at the end)
+  index.html            From Sand to Computer: lesson (English + Amharic, sources at the end)
   og.png                1200×630 cover image
 CITATION.cff            How to cite this work
 ```
