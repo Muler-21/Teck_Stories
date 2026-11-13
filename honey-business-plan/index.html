@@ -522,6 +522,17 @@ tr.tot td { font-weight: 700; border-top: 2px solid var(--ink); }
     <p class="apps">Other apps: <a href="https://muler-21.github.io/apps/adaptfit/">AdaptFit</a> <a href="https://muler-21.github.io/sebel-hakim/">Sebel Hakim</a> <a href="https://muler-21.github.io/research-integrity-compass/">Research Integrity Compass</a> <a href="https://muler-21.github.io/AMBKidsJoy/">AMBKidsJoy</a></p>
     <p class="copy">© 2026 Mulusew Kassa Bitew. All rights reserved.</p>
   </div>
+<p id="gc-views" hidden style="font:500 13px 'JetBrains Mono',monospace;color:#56606f;text-align:center;margin:18px 0 0"></p>
+<script>
+(function () {
+  var el = document.getElementById("gc-views");
+  if (!el || !window.fetch) return;
+  fetch("https://ambkidsjoy.goatcounter.com/counter/" + encodeURIComponent(location.pathname) + ".json")
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (d) { el.textContent = "👁 " + d.count + " views · እይታዎች"; el.hidden = false; })
+    .catch(function () {});
+})();
+</script>
 </footer>
 
 <script>
